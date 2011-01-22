@@ -1,0 +1,17 @@
+//
+//  Game.h
+//  Chipmunk
+//
+//  Created by Ronald Mathies on 12/27/10.
+//  Copyright Sodeso 2010. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#include "Ball.h"
+
+@interface Game : SPStage <UIAccelerometerDelegate> {
+	
+}
+
+@end

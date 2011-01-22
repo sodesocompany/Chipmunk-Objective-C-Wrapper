@@ -1,0 +1,16 @@
+//
+//  CM.h
+//  Chipmunk
+//
+//  Created by Ronald Mathies on 12/28/10.
+//  Copyright 2010 Sodeso. All rights reserved.
+//
+
+#ifndef CHIPMUNK_MANAGER_HEADER
+#define CHIPMUNK_MANAGER_HEADER
+
+#import "CMShape.h"
+#import "CMBody.h"
+#import "CMManager.h"
+
+#endif

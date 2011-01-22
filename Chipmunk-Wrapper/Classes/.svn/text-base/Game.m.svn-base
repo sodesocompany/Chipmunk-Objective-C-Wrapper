@@ -1,0 +1,135 @@
+//
+//  Game.m
+//  Chipmunk
+//
+//  Created by Ronald Mathies on 12/27/10.
+//  Copyright Sodeso 2010. All rights reserved.
+//
+
+#import "Game.h" 
+
+// --- Static inline methods -----------------------------------------------------------------------
+
+// --- private interface ---------------------------------------------------------------------------
+
+@interface Game ()
+
+- (void)initChipmunk;
+- (void)tick:(SPEnterFrameEvent *)event;
+- (void)addBallAtPoint:(SPPoint *)touchPoint;
+
+void updateShape(void *cpShapePtr, void* unused);
+
+@end
+
+// --- Class implementation ------------------------------------------------------------------------
+
+@implementation Game
+
+- (id)initWithWidth:(float)width height:(float)height {
+    if (self = [super initWithWidth:width height:height]) {
+		
+		[self initChipmunk];
+		
+		UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
+		accelerometer.updateInterval = 1.0f/60.0f;
+		accelerometer.delegate = self;
+		
+		[self addEventListener:@selector(onTouch:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+    }
+	
+    return self;
+}
+
+- (void)initChipmunk {
+	cpInitChipmunk(); // Initialize chipmunk itself.
+	
+	[[CMManager inst] setGravity:cpv(0, -100)];
+	
+	// Add event listener so that everytime that Sparrow has
+	// performed the rendering of a frame that we can update
+	// the physics world.
+	[self addEventListener:@selector(tick:) atObject:self forType:SP_EVENT_TYPE_ENTER_FRAME];
+}
+
+- (void)tick:(SPEnterFrameEvent *)event {
+	cpSpaceStep([[CMManager inst] space], CHIPMUNK_FRAMERATE);
+	cpSpaceHashEach([[CMManager inst] space]->activeShapes, &updateShape, nil);
+}
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+	[[CMManager inst] setGravity:cpv(acceleration.x*500, acceleration.y*500)];
+}
+
+// --- c functions ---
+
+void updateShape(void *cpShapePtr, void* unused) {
+	cpShape *shape = (cpShape*)cpShapePtr;
+	if(shape == nil || shape->body == nil || shape->data == nil) {
+		NSLog(@"Unexpected shape please debug here...");
+		return;
+	}
+	if([shape->data isKindOfClass:[SPSprite class]]) {
+		[(SPSprite *)shape->data setX:shape->body->p.x];
+		[(SPSprite *)shape->data setY:480-shape->body->p.y];
+	}
+	else {
+		NSLog(@"The shape data wasn't updateable using this code.");
+	}
+}
+
+// --
+
+
+- (void)onTouch:(SPTouchEvent *)event {
+	SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
+	if (touch) {
+		SPPoint *touchPosition = [touch locationInSpace:self];
+		if (touchPosition.x <= 50 || touchPosition.x >= 270 || touchPosition.y <= 50 || touchPosition.y >= 430) {
+			return;
+		}
+		else {
+			[self addBallAtPoint:touchPosition];
+		}
+	}
+}
+
+- (void)addBallAtPoint:(SPPoint *)touchPoint {
+	NSLog(@"Touched position (%f, %f)", touchPoint.x, touchPoint.y);
+	Ball *newBall = [[Ball alloc] init];
+	newBall.x = touchPoint.x;
+	newBall.y = touchPoint.y;
+	[self addChild:newBall];
+	
+	int mass[] = {120,100,80,60,40};
+	int randomMass = mass[rand()%5];
+	
+	int elasticity[] = {1.4,1.0,0.8,0.4};
+	int randomElasticity = elasticity[rand()%4];
+	
+	CMBody *body = [[CMManager inst] createBodyWithMass:randomMass moment:INFINITY];
+	[body setPosition:cpv(touchPoint.x, 480-touchPoint.y)];
+	[body addToSpace];
+	
+	CMShape *shape = [body createCircleWithRadius:25];
+	[shape setElasticity:randomElasticity];
+	[shape setFriction:0.8];
+	[shape setCollisionType:1];
+	[shape setData:newBall];
+	[shape addToSpace];
+	
+	/*cpBody *ballBody = cpBodyNew(randomMass, INFINITY);
+	ballBody->p = cpv(touchPoint.x, 480-touchPoint.y);
+	cpSpaceAddBody(space, ballBody);
+	
+	cpShape *ballShape = cpCircleShapeNew(ballBody, 25.0, cpvzero);
+	int elasticity[] = {1.4,1.0,0.8,0.4};
+	int randomElasticity = elasticity[rand()%4];
+	ballShape->e = randomElasticity;
+	ballShape->u = 0.8;
+	ballShape->data = newBall;
+	ballShape->collision_type = 1;
+	cpSpaceAddShape(space, ballShape);*/
+}
+
+@end
