@@ -6,7 +6,7 @@ The Chipmunk Objective-C Wrapper was created because a lot of people find the co
 This Wrapper also add some functionality so that it can integrate very well with Sparrow.
 
 Version details:
-================
+----------------
 
 Current head release:
 
@@ -20,7 +20,7 @@ Current head release:
 - CMManager is now CMSpace, another difference is that the CMSpace is no longer a singleton, this makes it possible to have multiple Chipmunk environments running. By default it will create an empty cpSpace.
 
 Version compatibility:
-======================
+----------------------
 
 Sparrow 1.1
 Chipmunk 5.3.4
@@ -32,12 +32,12 @@ methods that are used by this project have existed since the early versions and 
 For Chipmunk it could be a different story, if you really need the upgrade to a newer version i would suggest it to try it out and see what happens, a lot of problems should already occur during the compilation process.
 
 How to use:
-===========
+-----------
 
 This part still needs to be described, not sure if i will do it in documentation style or using a screen cast.
 
 API Documentation:
-==================
+------------------
 
 Since it is basically a wrapper with some extra functionality the Chipmunk documentation should do fine. Specific documentation can be found in the .h files and there are plenty code samples within the download. These code samples include a sample for every constraint and shape type. In just plain Chipmunk and in combination with Sparrow (later is not yet completed).
 
