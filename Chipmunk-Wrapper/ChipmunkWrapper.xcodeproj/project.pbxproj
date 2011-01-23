@@ -20,6 +20,9 @@
 		A1527AB711BD8F8100995392 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1527AB611BD8F8100995392 /* OpenAL.framework */; };
 		A1527AF811BD8F9000995392 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1527AF711BD8F9000995392 /* AVFoundation.framework */; };
 		A1527AFC11BD8F9900995392 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1527AFB11BD8F9900995392 /* AudioToolbox.framework */; };
+		A178431112ECCB6800EE1713 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = A178431012ECCB6800EE1713 /* football.png */; };
+		A178431B12ECCBA600EE1713 /* BallDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431A12ECCBA600EE1713 /* BallDemo.m */; };
+		A178431E12ECCC0700EE1713 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431D12ECCC0700EE1713 /* Ball.m */; };
 		A19EA7C812EA1D080073D2A1 /* DampedRotarySpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */; };
 		A19EA7C912EA1D080073D2A1 /* DampedSpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B612EA1D070073D2A1 /* DampedSpringConstraintDemo.m */; };
 		A19EA7CA12EA1D080073D2A1 /* GearJointConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B812EA1D070073D2A1 /* GearJointConstraintDemo.m */; };
@@ -106,6 +109,11 @@
 		A1527AB611BD8F8100995392 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		A1527AF711BD8F9000995392 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1527AFB11BD8F9900995392 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A178431012ECCB6800EE1713 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
+		A178431912ECCBA600EE1713 /* BallDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallDemo.h; sourceTree = "<group>"; };
+		A178431A12ECCBA600EE1713 /* BallDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallDemo.m; sourceTree = "<group>"; };
+		A178431C12ECCC0700EE1713 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		A178431D12ECCC0700EE1713 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 		A19EA7B312EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DampedRotarySpringConstraintDemo.h; sourceTree = "<group>"; };
 		A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DampedRotarySpringConstraintDemo.m; sourceTree = "<group>"; };
 		A19EA7B512EA1D070073D2A1 /* DampedSpringConstraintDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DampedSpringConstraintDemo.h; sourceTree = "<group>"; };
@@ -349,6 +357,10 @@
 		A19EA7E012EA1DFA0073D2A1 /* Sparrow-Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A178431912ECCBA600EE1713 /* BallDemo.h */,
+				A178431A12ECCBA600EE1713 /* BallDemo.m */,
+				A178431C12ECCC0700EE1713 /* Ball.h */,
+				A178431D12ECCC0700EE1713 /* Ball.m */,
 			);
 			path = "Sparrow-Demos";
 			sourceTree = "<group>";
@@ -478,6 +490,7 @@
 		A1C70AD912DCE430003C506C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A178431012ECCB6800EE1713 /* football.png */,
 				A1C70ADA12DCE430003C506C /* left.png */,
 				A1C70ADB12DCE430003C506C /* right.png */,
 			);
@@ -585,6 +598,7 @@
 				A135139A119868D9007C9395 /* MainWindow.xib in Resources */,
 				A1C70ADC12DCE430003C506C /* left.png in Resources */,
 				A1C70ADD12DCE430003C506C /* right.png in Resources */,
+				A178431112ECCB6800EE1713 /* football.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +649,8 @@
 				A19EA7DB12EA1DCE0073D2A1 /* PolyDemo.m in Sources */,
 				A19EA7FC12EA1FF90073D2A1 /* BaseDemo.m in Sources */,
 				A1AF693712EC3C36006322AF /* CarDemo.m in Sources */,
+				A178431B12ECCBA600EE1713 /* BallDemo.m in Sources */,
+				A178431E12ECCC0700EE1713 /* Ball.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

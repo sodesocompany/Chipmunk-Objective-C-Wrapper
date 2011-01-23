@@ -72,7 +72,6 @@
 		if (mTouchShape) {
 			touch_point = [spPoint toCpVect];
 			touch_last = touch_point;
-				//			cpVect point = [spPoint toCpVect];
 			[mTouchBody setPosition:touch_point];
 			
 			CMBody *body = [mTouchShape getBody];

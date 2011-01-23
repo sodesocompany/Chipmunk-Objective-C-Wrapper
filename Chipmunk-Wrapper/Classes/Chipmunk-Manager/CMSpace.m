@@ -66,14 +66,19 @@ static void collisionSeparate(cpArbiter *arbiter, struct cpSpace *space, void *d
 
 void updateShape(void *cpShapePtr, void* unused) {
 	cpShape *shape = (cpShape*)cpShapePtr;
-	if(shape == nil || shape->body == nil || shape->data == nil) {
+	if(shape == nil || shape->body == nil || shape->body->data == nil) {
 		return;
 	}
 	
-	if([shape->data isKindOfClass:[SPDisplayObject class]]) {
-		[(SPDisplayObject *)shape->data setX:shape->body->p.x];
-		[(SPDisplayObject *)shape->data setY:480-shape->body->p.y];
-		[(SPDisplayObject *)shape->data setRotation:480-shape->body->a];
+	if([shape->body->data isKindOfClass:[CMData class]]) {
+		CMData *data = (CMData*)shape->body->data;
+		
+		SPDisplayObject *spObject = (SPDisplayObject*)[data data];
+		
+		NSLog(@"x: %f, y: %f", shape->body->p.x, 480-shape->body->p.y);
+		[spObject setX:shape->body->p.x];
+		[spObject setY:480-(shape->body->p.y)];
+		[spObject setRotation:shape->body->a];
 	}
 }
 
@@ -158,10 +163,21 @@ void updateShape(void *cpShapePtr, void* unused) {
 	CMBody *body = [self addStaticBody];
 	
 	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
+	[topWall setElasticity:0.5];
+	[topWall setFriction:0.1];
+	
 	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width, height) to:cpv(width, 0) radius:1];
+	[rightWall setElasticity:0.5];
+	[rightWall setFriction:0.1];
+	
 	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 0) to:cpv(width, 0) radius:1];
+	[bottomWall setElasticity:0.5];
+	[bottomWall setFriction:0.1];
+	
 	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:1];
-
+	[leftWall setElasticity:0.5];
+	[leftWall setFriction:0.1];
+	
 	[topWall addToSpace];
 	[rightWall addToSpace];
 	[bottomWall addToSpace];
