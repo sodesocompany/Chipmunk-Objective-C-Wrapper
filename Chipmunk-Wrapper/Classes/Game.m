@@ -81,7 +81,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 10;
+			selected = 11;
 		}
 	
 		[self switchDemo];
@@ -93,7 +93,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 11) {
+		if (selected == 12) {
 			selected = 0;
 		}
 	
@@ -152,6 +152,10 @@
 		case 10:
 			[textField setText:@"Poly Demo"];
 			demo = [[PolyDemo alloc] init];
+			break;
+		case 11:
+			[textField setText:@"Car Demo"];
+			demo = [[CarDemo alloc] init];
 			break;			
 	}
 	

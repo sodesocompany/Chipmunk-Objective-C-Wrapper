@@ -36,6 +36,7 @@
 		A1A78FD812DDCB51006FC41B /* CMData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A78FD712DDCB51006FC41B /* CMData.m */; };
 		A1A7926712DDF160006FC41B /* CMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7926612DDF160006FC41B /* CMObject.m */; };
 		A1AF685312EA2916006322AF /* libChipmunk-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AF685212EA2916006322AF /* libChipmunk-iPhone.a */; };
+		A1AF693712EC3C36006322AF /* CarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AF693512EC3C36006322AF /* CarDemo.m */; };
 		A1C70AC512DCE403003C506C /* CMBody.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C70A9A12DCE403003C506C /* CMBody.m */; };
 		A1C70AC612DCE403003C506C /* CMSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C70A9C12DCE403003C506C /* CMSpace.m */; };
 		A1C70AC812DCE403003C506C /* CMConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C70AA312DCE403003C506C /* CMConstraint.m */; };
@@ -164,6 +165,8 @@
 		A1AF685012EA2916006322AF /* cpSpaceHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpaceHash.h; sourceTree = "<group>"; };
 		A1AF685112EA2916006322AF /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
 		A1AF685212EA2916006322AF /* libChipmunk-iPhone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libChipmunk-iPhone.a"; sourceTree = "<group>"; };
+		A1AF693512EC3C36006322AF /* CarDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDemo.m; sourceTree = "<group>"; };
+		A1AF693612EC3C36006322AF /* CarDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDemo.h; sourceTree = "<group>"; };
 		A1C70A9812DCE403003C506C /* ChipmunkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkManager.h; sourceTree = "<group>"; };
 		A1C70A9912DCE403003C506C /* CMBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBody.h; sourceTree = "<group>"; };
 		A1C70A9A12DCE403003C506C /* CMBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBody.m; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 				A19EA7C412EA1D080073D2A1 /* RotaryLimitConstraintDemo.m */,
 				A19EA7C512EA1D080073D2A1 /* SimpleMotorJointConstraintDemo.h */,
 				A19EA7C612EA1D080073D2A1 /* SimpleMotorJointConstraintDemo.m */,
+				A1AF693612EC3C36006322AF /* CarDemo.h */,
+				A1AF693512EC3C36006322AF /* CarDemo.m */,
 			);
 			path = "Chipmunk-Demos";
 			sourceTree = "<group>";
@@ -629,6 +634,7 @@
 				A19EA7D712EA1D530073D2A1 /* SlideJointConstraintDemo.m in Sources */,
 				A19EA7DB12EA1DCE0073D2A1 /* PolyDemo.m in Sources */,
 				A19EA7FC12EA1FF90073D2A1 /* BaseDemo.m in Sources */,
+				A1AF693712EC3C36006322AF /* CarDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

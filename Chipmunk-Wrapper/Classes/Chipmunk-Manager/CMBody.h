@@ -319,19 +319,25 @@
   *
   * @param cmBody The body which will function as the second body of the constraint.
   * @param grooveA The start of the line segment on the first body. 
-  * @param grooveB The end of the line segment on the first body. 
+  * @param grooveB The end of the line segment on the second body. 
   * @param anchor1 The anchor point on the second body that is held to the line segment on the first. 
   */
 - (CMGrooveJointConstraint*) addGrooveJointConstraintWithBody:(CMBody*)cmBody grooveA:(cpVect)grooveA grooveB:(cpVect)grooveB anchor1:(cpVect)anchor1;
 
+/**
+ * Constructs a new groove joint constraint.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param anchor1 The start of the line segment on the first body. 
+ * @param anchor2 The end of the line segment on the second body.
+ */
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2;
 
 /**
   * Constructs a new pivot joing using two anchors.
   *
   * @param cmBody The body which will function as the second body of the constraint.
-  * @param anchor1 The anchor point on the first body. 
-  * @param anchor2 The anchor point on the second body. 
+  * @param pivot The pivot coordinate in the world. 
   */
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody pivot:(cpVect)pivot;
 
@@ -355,7 +361,7 @@
 /**
  * Constructs a new Slide joing constraint.
  *
-  * @param cmBody The body which will function as the second body of the constraint.
+ * @param cmBody The body which will function as the second body of the constraint.
  * @param anchor1 The anchor point on the first body. 
  * @param anchor2 The anchor point on the second body. 
  * @param min The minimum allowed distance between anchor points. 

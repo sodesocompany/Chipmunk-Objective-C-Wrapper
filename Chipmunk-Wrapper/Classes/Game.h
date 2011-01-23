@@ -20,6 +20,7 @@
 #include "RotaryLimitConstraintDemo.h"
 #include "SlideJointConstraintDemo.h"
 #include "PolyDemo.h"
+#include "CarDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

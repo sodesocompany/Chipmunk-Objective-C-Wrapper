@@ -55,6 +55,15 @@
  */
 - (void)setCollisionType:(cpCollisionType)type;
 
+/**
+ * Shapes in the same non-zero group do not generate collisions. 
+ * Useful when creating an object out of many shapes that you 
+ * don’t want to self collide. Defaults to CP_NO_GROUP.
+ *
+ * @param group the group
+ */
+- (void)setGroup:(cpGroup)group;
+
 #pragma mark -
 
 #pragma mark Data

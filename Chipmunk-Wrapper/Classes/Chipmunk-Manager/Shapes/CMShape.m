@@ -36,6 +36,10 @@
 	mShape->collision_type = type;
 }
 
+- (void)setGroup:(cpGroup)group {
+	mShape->group = group;
+}
+
 #pragma mark -
 
 #pragma mark Data
