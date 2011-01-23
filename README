@@ -8,11 +8,21 @@ This Wrapper also add some functionality so that it can integrate very well with
 Version details:
 ================
 
+Current head release:
+
+- New demo: Sparrow in combination with Chipmunk, ball demo.
+- Added the group attribute to the shapes
+- Set the elasticity and friction for the borders of the addWindowContainmentWithWidth method to 0.5 and 0.1
+- Updated the updateShape method, now it will check the CMBody's data to see if a SPDisplayObject has been attached.
+- New demo: Car demo, which will display a sort of car with suspension, it uses the groove joint and the damped spring constraint.
+- Checked compatibility with Sparrow 1.1
+- Added optional offsets for the shapes, if a body uses multiple shapes you can set the offset to get the shape in the correct position.
+- CMManager is now CMSpace, another difference is that the CMSpace is no longer a singleton, this makes it possible to have multiple Chipmunk environments running. By default it will create an empty cpSpace.
 
 Version compatibility:
 ======================
 
-Sparrow 1.0
+Sparrow 1.1
 Chipmunk 5.3.4
 
 NOTE: Both frameworks are already quite mature, in general
