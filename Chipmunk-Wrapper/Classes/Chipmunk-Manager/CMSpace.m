@@ -166,11 +166,11 @@ void updateShape(void *cpShapePtr, void* unused) {
 	[topWall setElasticity:0.5];
 	[topWall setFriction:0.1];
 	
-	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width, height) to:cpv(width, 0) radius:1];
+	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width + 1, height) to:cpv(width + 1, 0) radius:1];
 	[rightWall setElasticity:0.5];
 	[rightWall setFriction:0.1];
 	
-	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 0) to:cpv(width, 0) radius:1];
+	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:1];
 	[bottomWall setElasticity:0.5];
 	[bottomWall setFriction:0.1];
 	

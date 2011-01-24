@@ -25,6 +25,8 @@
 @implementation BallDemo
 
 - (void) initializeChipmunkObjects {
+	inverseGravity = YES;
+	
 	ball = [[Ball alloc] init];
 	[ball setX:80];
 	[ball setY:320];

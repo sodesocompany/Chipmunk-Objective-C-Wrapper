@@ -17,16 +17,17 @@
 @interface BaseDemo : SPSprite <UIAccelerometerDelegate> {
 
 @protected
-	CMSpace *mSpace;
-	
 	SPDebugDraw *debugDraw;
-	cpVect touch_point;
-	cpVect touch_last;
 
+	cpVect mTouchPoint;
+	cpVect mTouchLast;
+
+	CMSpace *mSpace;
 	CMBody *mTouchBody;
 	CMShape *mTouchShape;
 	CMConstraint *mTouchJoint;
 
+	BOOL inverseGravity;
 }
 
 /**
@@ -38,6 +39,8 @@
  * Method for initializing the Chipmunk bodies, shapes and constraints.
  */
 - (void)initializeChipmunkObjects;
+
+- (void)switchBetweenSparrowAndChipmunk;
 
 - (void)startDemo;
 

@@ -32,7 +32,7 @@
 		
 		previousDemo = [SPImage imageWithContentsOfFile:@"left.png"];
 		previousDemo.x = 5;
-		previousDemo.y = 5;
+		previousDemo.y = 480 - 5 - 32;
 		[self addChild:previousDemo];
 		[previousDemo addEventListener:@selector(previousDemo:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 		
@@ -42,19 +42,26 @@
 		[textField setWidth:320 - ( 2 * 32) - 10];
 		[textField setHeight:32];
 		[textField setX:32 + 5];
-		[textField setY:5];
+		[textField setY:480 - 5 - 32];
+		[textField addEventListener:@selector(switchBetweenSparrowAndChipmunk:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 		
 		[self addChild:textField];
 		
-		
 		nextDemo = [SPImage imageWithContentsOfFile:@"right.png"];
 		nextDemo.x = self.stage.width - 5 - [nextDemo width];
-		nextDemo.y = 5;
+		nextDemo.y = 480 - 5 - 32;
 		[self addChild:nextDemo];
 		[nextDemo addEventListener:@selector(nextDemo:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
     }
 	
     return self;
+}
+
+- (void)switchBetweenSparrowAndChipmunk:(SPTouchEvent*)event {
+	SPTouch *touch = [[event touchesWithTarget:textField andPhase:SPTouchPhaseBegan] anyObject];
+	if (touch) {
+		[demo switchBetweenSparrowAndChipmunk];
+	}
 }
 
 /**
@@ -163,8 +170,7 @@
 			break;
 	}
 	
-	demo.x = 0;
-	demo.y = 32 + 5;
+	[demo setHeight:480 - 5 - 32];
 	
 	[self addChild:demo];
 	

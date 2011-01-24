@@ -26,7 +26,7 @@
 
 - (void) initializeChipmunkObjects {
 	// Create chassis
-	CMBody *chassis = [mSpace addBodyWithMass:5 moment:0.5];
+	CMBody *chassis = [mSpace addBodyWithMass:2 moment:0.5];
 	[chassis setPosition:cpv(80, 110)];
 	[chassis addToSpace];
 

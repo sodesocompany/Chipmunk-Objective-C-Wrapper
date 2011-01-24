@@ -24,10 +24,12 @@
 
 - (id) init {
 	if (self = [super init]) {
+		inverseGravity = NO;
+		
 		mSpace = [[CMSpace alloc] init];
 		[mSpace setSleepTimeThreshhold:0.5f];
 		
-		[mSpace addWindowContainmentWithWidth:318 height:443];
+		[mSpace addWindowContainmentWithWidth:320 height:480];
 		[self initializeChipmunkObjects];
 		
 		debugDraw = [[SPDebugDraw alloc] initWithManager:mSpace];
@@ -38,13 +40,17 @@
 		[self addEventListener:@selector(force:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 		
 		UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
-		accelerometer.updateInterval = 1.0f/60.0f;
+		accelerometer.updateInterval = 1.0f/30.0f;
 		accelerometer.delegate = self;
 	}
 	return self;
 }
 
-- (void) initializeChipmunkObjects {
+- (void)switchBetweenSparrowAndChipmunk {
+	[debugDraw setVisible:![debugDraw visible]];
+}
+
+- (void)initializeChipmunkObjects {
 	[NSException raise:NSInternalInconsistencyException 
 			format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
 
@@ -60,7 +66,7 @@
 }
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
-	[mSpace setGravity:cpv(acceleration.x*500, acceleration.y*500*-1)];
+	[mSpace setGravity:cpv(acceleration.x*500, acceleration.y*500 * (inverseGravity ? 1 : -1))];
 }
 
 - (void)force:(SPTouchEvent*)event {
@@ -70,13 +76,13 @@
 		
 		mTouchShape = [mSpace findShapeAtPoint:spPoint];
 		if (mTouchShape) {
-			touch_point = [spPoint toCpVect];
-			touch_last = touch_point;
-			[mTouchBody setPosition:touch_point];
+			mTouchPoint = [spPoint toCpVect];
+			mTouchLast = mTouchPoint;
+			[mTouchBody setPosition:mTouchPoint];
 			
 			CMBody *body = [mTouchShape getBody];
 			
-			mTouchJoint = [mTouchBody addPivotJointConstraintWithBody:body anchor1:cpvzero anchor2:cpBodyWorld2Local([body construct], touch_point)];
+			mTouchJoint = [mTouchBody addPivotJointConstraintWithBody:body anchor1:cpvzero anchor2:cpBodyWorld2Local([body construct], mTouchPoint)];
 			[mTouchJoint setMaxForce:50000.00f];
 			[mTouchJoint setBiasCoef:0.15f];
 			[mTouchJoint addToSpace];
@@ -87,7 +93,7 @@
 	if (touch && mTouchJoint != nil) {
 		SPPoint *spPoint = [touch locationInSpace:self];
 		cpVect point = [spPoint toCpVect];
-		touch_point = point;
+		mTouchPoint = point;
 	}
 	
 	touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseEnded] anyObject];
@@ -99,11 +105,11 @@
 
 - (void)step:(SPEnterFrameEvent *)event {
 	if (mTouchJoint != nil) {
-		cpVect newPoint = cpvlerp(touch_last, touch_point, 0.25f);
+		cpVect newPoint = cpvlerp(mTouchLast, mTouchPoint, 0.25f);
 		[mTouchBody setPosition:newPoint];
-		[mTouchBody setVelocity:cpvmult(cpvsub(newPoint, touch_last), 60.0f)];
+		[mTouchBody setVelocity:cpvmult(cpvsub(newPoint, mTouchLast), 30.0f)];
 	
-		touch_last = newPoint;
+		mTouchLast = newPoint;
 	}
 	
 	[mSpace step:CHIPMUNK_FRAMERATE];
