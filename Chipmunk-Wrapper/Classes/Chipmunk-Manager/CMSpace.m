@@ -51,6 +51,8 @@ static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct 
 		[invocation getReturnValue:&retVal];
 	}
 	
+	[cmArbiter release];
+	
 	return retVal;
 }
 
