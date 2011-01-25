@@ -10,9 +10,11 @@ Version details:
 
 Current head release:
 
-- Added the following method:
-  - (void)setIgnoreWindowContainmentCollisions:(BOOL)ignoreWindowContainmentCollisions;
-  
+- Changed the following method:
+  -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
+
+  This method now has an extra argument: ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions;
+
   By default the wrapper will not pass along collision events between the shapes and the window containment.
   If you do want to receive these events set this to NO.
 
