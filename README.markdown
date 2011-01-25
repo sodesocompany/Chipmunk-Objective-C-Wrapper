@@ -10,6 +10,8 @@ Version details:
 
 Current head release:
 
+- Build a switch on the demo title to enable / disable the debug view.
+- Moved the demo button bar to the bottom for easier navigation.
 - New demo: Sparrow in combination with Chipmunk, ball demo.
 - Added the group attribute to the shapes
 - Set the elasticity and friction for the borders of the addWindowContainmentWithWidth method to 0.5 and 0.1
