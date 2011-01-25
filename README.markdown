@@ -15,8 +15,7 @@ Current head release:
 
   This method now has an extra argument: ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions;
 
-  By default the wrapper will not pass along collision events between the shapes and the window containment.
-  If you do want to receive these events set this to NO.
+  If you do don't want to receive events about shapes colliding with the window containment then set this argument to YES.
 
 - Build a switch on the demo title to enable / disable the debug view.
 - Moved the demo button bar to the bottom for easier navigation.
