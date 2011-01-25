@@ -10,6 +10,12 @@ Version details:
 
 Current head release:
 
+- Added the following method:
+  - (void)setIgnoreWindowContainmentCollisions:(BOOL)ignoreWindowContainmentCollisions;
+  
+  By default the wrapper will not pass along collision events between the shapes and the window containment.
+  If you do want to receive these events set this to NO.
+
 - Build a switch on the demo title to enable / disable the debug view.
 - Moved the demo button bar to the bottom for easier navigation.
 - New demo: Sparrow in combination with Chipmunk, ball demo.
