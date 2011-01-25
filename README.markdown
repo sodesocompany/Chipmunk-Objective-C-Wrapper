@@ -10,6 +10,11 @@ Version details:
 
 Current head release:
 
+- Removed the CollisionMoment from the collision event selectors.
+- Added the CMArbiter class which wraps the cpArbiter.
+- Changed the way the selectors for the collision events should be build up, they now have the following definition:
+  - (BOOL) defaultBegin:(CMArbiter*)arbiter space:(CMSpace*)space 
+ 
 - Changed the following method:
   -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
 
