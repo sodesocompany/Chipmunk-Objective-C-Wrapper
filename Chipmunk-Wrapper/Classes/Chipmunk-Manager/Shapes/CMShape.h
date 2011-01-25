@@ -56,6 +56,13 @@
 - (void)setCollisionType:(cpCollisionType)type;
 
 /**
+ * Returns the user defined collision type.
+ *
+ * @return the user defined collision type.
+ */
+- (cpCollisionType)collisionType;
+
+/**
  * Shapes in the same non-zero group do not generate collisions. 
  * Useful when creating an object out of many shapes that you 
  * don’t want to self collide. Defaults to CP_NO_GROUP.

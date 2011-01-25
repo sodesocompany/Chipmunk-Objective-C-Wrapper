@@ -29,7 +29,7 @@
 	cpVect pos2 = cpv(160, 140);
 	cpVect pos3 = cpv(240, 140);
 	
-	[mSpace addDefaultCollisionHandler:self begin:@selector(defaultBegin:arbiter:space:) preSolve:@selector(defaultPreSolve:arbiter:space:) postSolve:@selector(defaultPostSolve:arbiter:space:) separate:@selector(defaultSeparate:arbiter:space:) ignoreContainmentCollisions:YES];
+	[mSpace addDefaultCollisionHandler:self begin:@selector(defaultBegin:space:) preSolve:@selector(defaultPreSolve:space:) postSolve:@selector(defaultPostSolve:space:) separate:@selector(defaultSeparate:space:) ignoreContainmentCollisions:YES];
 	
 	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
@@ -64,23 +64,25 @@
 	
 }
 
-- (BOOL) defaultBegin:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space {
-	NSLog(@"Collision: begin (between %d and %d)", arbiter->a->collision_type, arbiter->b->collision_type);
+- (BOOL) defaultBegin:(CMArbiter*)arbiter space:(CMSpace*)space {
+	NSLog(@"Collision: begin (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
+	[arbiter setElasticity:0.0f];
+	[arbiter setFriction:0.0f];
 	return YES;
 }
 
-- (BOOL) defaultPreSolve:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space {
-	NSLog(@"Collision: preSolve (between %d and %d)", arbiter->a->collision_type, arbiter->b->collision_type);
+- (BOOL) defaultPreSolve:(CMArbiter*)arbiter space:(CMSpace*)space {
+	NSLog(@"Collision: preSolve (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
 
-- (BOOL) defaultPostSolve:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space {
-	NSLog(@"Collision: postSolve (between %d and %d)", arbiter->a->collision_type, arbiter->b->collision_type);
+- (BOOL) defaultPostSolve:(CMArbiter*)arbiter space:(CMSpace*)space {
+	NSLog(@"Collision: postSolve (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
 
-- (BOOL) defaultSeparate:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space {
-	NSLog(@"Collision: separate (between %d and %d)", arbiter->a->collision_type, arbiter->b->collision_type);
+- (BOOL) defaultSeparate:(CMArbiter*)arbiter space:(CMSpace*)space {
+	NSLog(@"Collision: separate (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
 

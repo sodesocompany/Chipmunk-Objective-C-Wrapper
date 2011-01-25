@@ -31,10 +31,11 @@ static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct 
 		invocation = [handler invocationSeparate];
 	}
 	
+	CMArbiter *cmArbiter = [[CMArbiter alloc] initWithCpArbiter:arbiter];
+	CMSpace *cmSpace = [[cmArbiter shapeA] space];
 	@try {
-		[invocation setArgument:&moment atIndex:2];
-		[invocation setArgument:&arbiter atIndex:3];
-		[invocation setArgument:&space atIndex:4];
+		[invocation setArgument:&cmArbiter atIndex:2];
+		[invocation setArgument:&cmSpace atIndex:3];
 	}
 	@catch (NSException *e) {
 			//No biggie, continue!
@@ -105,7 +106,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 		
 		mCpSpace = cpSpaceNew();
 		mCpSpace->gravity = cpv(0, 9.8*10);
-		
 		mCpSpace->elasticIterations = mCpSpace->iterations;
 		
 		mCollisionHandlers = [[NSMutableArray alloc] init];

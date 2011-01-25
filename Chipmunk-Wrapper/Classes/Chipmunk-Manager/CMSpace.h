@@ -138,7 +138,7 @@
  *
  * A selector should have the following arguments:
  *
- * - (BOOL) collisionListenerBetweenBallAndSquare:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space;
+ * - (BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
  *
  * @param target the target object thet will recieve the event.
  * @param begin the selector method that will recieve the begin event.
@@ -154,7 +154,7 @@
  *
  * A selector should have the following arguments:
  *
- * - (BOOL) collisionListenerBetweenBallAndSquare:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space;
+ * - (BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
  *
  * @param typeA  the first collision type
  * @param typeB the second collision type

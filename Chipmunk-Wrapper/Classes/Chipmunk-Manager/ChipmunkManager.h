@@ -32,6 +32,7 @@
 #import "CMSlideJointConstraint.h"
 
 #import "CMBody.h"
+#import "CMArbiter.h"
 #import "CMCollisionHandler.h"
 #import "CMSpace.h"
 

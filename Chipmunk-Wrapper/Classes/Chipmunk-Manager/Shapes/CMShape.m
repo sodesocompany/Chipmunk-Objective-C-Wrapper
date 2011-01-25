@@ -36,6 +36,10 @@
 	mShape->collision_type = type;
 }
 
+- (cpCollisionType)collisionType {
+	return mShape->collision_type;
+}
+
 - (void)setGroup:(cpGroup)group {
 	mShape->group = group;
 }
