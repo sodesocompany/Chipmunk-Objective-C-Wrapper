@@ -88,7 +88,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 12;
+			selected = 13;
 		}
 	
 		[self switchDemo];
@@ -100,7 +100,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 13) {
+		if (selected == 14) {
 			selected = 0;
 		}
 	
@@ -165,6 +165,10 @@
 			demo = [[CarDemo alloc] init];
 			break;			
 		case 12:
+			[textField setText:@"Simple Collision Demo"];
+			demo = [[SimpleCollisionDemo alloc] init];
+			break;
+		case 13:
 			[textField setText:@"Sparrow Ball Demo"];
 			demo = [[BallDemo alloc] init];
 			break;

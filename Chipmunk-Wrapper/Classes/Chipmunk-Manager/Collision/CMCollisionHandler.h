@@ -24,6 +24,7 @@
 	NSInvocation *mInvocationSeparate;
 	unsigned int mTypeA;
 	unsigned int mTypeB;	
+	BOOL mIgnoreContainmentCollision;
 }
 
 @property (nonatomic, retain) NSInvocation *invocationBegin;
@@ -33,6 +34,7 @@
 
 @property (nonatomic, readwrite) unsigned int typeA;
 @property (nonatomic, readwrite) unsigned int typeB;
+@property (nonatomic, readwrite) BOOL ignoreContainmentCollision;
 
 /**
  * Default initialization method.

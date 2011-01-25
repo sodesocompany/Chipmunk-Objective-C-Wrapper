@@ -30,6 +30,7 @@
 @synthesize invocationPreSolve = mInvocationPreSolve;
 @synthesize invocationPostSolve = mInvocationPostSolve;
 @synthesize invocationSeparate = mInvocationSeparate;
+@synthesize ignoreContainmentCollision = mIgnoreContainmentCollision;
 
 - (id) init {
 	self = [super init];

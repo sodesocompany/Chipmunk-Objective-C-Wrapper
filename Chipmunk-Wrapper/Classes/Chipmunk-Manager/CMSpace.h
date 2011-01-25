@@ -21,7 +21,6 @@
 	cpSpace *mCpSpace;
 	NSMutableArray *mCollisionHandlers;
 	NSMutableArray *mBodies;
-	
 }
 
 @property (nonatomic, readonly) cpSpace *cpSpace;
@@ -146,8 +145,9 @@
  * @param preSolve the selector method that will recieve the preSolve event.
  * @param postSolve the selector method that will recieve the postSolve event.
  * @param separate the selector method that will recieve the separate event.
+ * @param ignoreContainmentCollisions set to NO if you want to recieve collision events between the shapes and the window containment.
  */
--(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
+-(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions;
 
 /**
  * Adds a default collision handler which will respond to all collisions.
@@ -165,6 +165,7 @@
  * @param separate the selector method that will recieve the separate event.
  */
 -(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
+
 
 /**
  * Adds a collision callback between two collisionTypes.

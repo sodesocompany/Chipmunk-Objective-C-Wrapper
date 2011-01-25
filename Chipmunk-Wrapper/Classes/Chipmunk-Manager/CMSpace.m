@@ -14,6 +14,11 @@
 
 static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct cpSpace *space, void *data) {
 	CMCollisionHandler *handler = (CMCollisionHandler*)data;
+	if ([handler ignoreContainmentCollision]) {
+		if (arbiter->a->collision_type == 1000000 || arbiter->b->collision_type == 1000000) {
+			return YES;
+		}
+	}
 	
 	NSInvocation *invocation;
 	if (moment == CMCollisionBegin) {
@@ -37,10 +42,10 @@ static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct 
 	
 	[invocation invoke];
 	
-		//default is yes, thats what it is in chipmunk
+	//default is yes, thats what it is in chipmunk
 	BOOL retVal = YES;
 	
-		//not sure how heavy these methods are...
+	//not sure how heavy these methods are...
 	if ([[invocation methodSignature]  methodReturnLength] > 0) {
 		[invocation getReturnValue:&retVal];
 	}
@@ -74,8 +79,7 @@ void updateShape(void *cpShapePtr, void* unused) {
 		CMData *data = (CMData*)shape->body->data;
 		
 		SPDisplayObject *spObject = (SPDisplayObject*)[data data];
-		
-		NSLog(@"x: %f, y: %f", shape->body->p.x, 480-shape->body->p.y);
+
 		[spObject setX:shape->body->p.x];
 		[spObject setY:480-(shape->body->p.y)];
 		[spObject setRotation:shape->body->a];
@@ -163,18 +167,22 @@ void updateShape(void *cpShapePtr, void* unused) {
 	CMBody *body = [self addStaticBody];
 	
 	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
+	[topWall setCollisionType:1000000];
 	[topWall setElasticity:0.5];
 	[topWall setFriction:0.1];
 	
 	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width + 1, height) to:cpv(width + 1, 0) radius:1];
+	[rightWall setCollisionType:1000000];
 	[rightWall setElasticity:0.5];
 	[rightWall setFriction:0.1];
 	
 	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:1];
+	[bottomWall setCollisionType:1000000];
 	[bottomWall setElasticity:0.5];
 	[bottomWall setFriction:0.1];
 	
 	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:1];
+	[leftWall setCollisionType:1000000];
 	[leftWall setElasticity:0.5];
 	[leftWall setFriction:0.1];
 	
@@ -214,12 +222,14 @@ void updateShape(void *cpShapePtr, void* unused) {
 
 #pragma mark Collission detection
 
--(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate {
+-(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions {
 	CMCollisionHandler *handler = [[CMCollisionHandler alloc] init];
 	[handler setInvocationBegin:target selector:begin];
 	[handler setInvocationPreSolve:target selector:preSolve];
 	[handler setInvocationPostSolve:target selector:postSolve];
 	[handler setInvocationSeparate:target selector:separate];
+	
+	[handler setIgnoreContainmentCollision:ignoreContainmentCollisions];
 	
 	cpSpaceSetDefaultCollisionHandler(mCpSpace, collisionBegin, collisionPreSolve, collisionPostSolve, collisionSeparate, handler);
 }
