@@ -10,6 +10,15 @@ Version details:
 
 Current head release:
 
+- Changed the following method:
+  -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
+
+  This method now has an extra argument: ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions;
+
+  If you do don't want to receive events about shapes colliding with the window containment then set this argument to YES.
+
+- Build a switch on the demo title to enable / disable the debug view.
+- Moved the demo button bar to the bottom for easier navigation.
 - New demo: Sparrow in combination with Chipmunk, ball demo.
 - Added the group attribute to the shapes
 - Set the elasticity and friction for the borders of the addWindowContainmentWithWidth method to 0.5 and 0.1
