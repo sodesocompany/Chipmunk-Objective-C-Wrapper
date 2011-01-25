@@ -10,6 +10,7 @@ Version details:
 
 Current head release:
 
+- Added a new demo: SimpleCollisionDemo
 - Removed the CollisionMoment from the collision event selectors.
 - Added the CMArbiter class which wraps the cpArbiter.
 - Changed the way the selectors for the collision events should be build up, they now have the following definition:
