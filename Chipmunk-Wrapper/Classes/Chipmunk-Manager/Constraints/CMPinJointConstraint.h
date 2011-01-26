@@ -31,5 +31,11 @@
  */
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2;
 
+/**
+ * Sets the distance between the two anchor points.
+ *
+ * @param distance the distance.
+ */
+- (void)setDistance:(float)distance;
 
 @end

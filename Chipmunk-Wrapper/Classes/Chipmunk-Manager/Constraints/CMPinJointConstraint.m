@@ -33,4 +33,8 @@
 	return self;
 }
 
+- (void)setDistance:(float)distance {
+	((cpPinJoint*)mConstraint)->dist = distance;
+}
+
 @end

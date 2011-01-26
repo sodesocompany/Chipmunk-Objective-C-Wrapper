@@ -33,11 +33,9 @@
 		cpBody *body = [cmBody construct];
 		
 		if (body->m != INFINITY) {
-			
-				// Calculate the moment.
+			// Calculate the moment.
 			cpFloat moment = cpMomentForCircle(body->m, 0.0f, radius, offset);
 			cpBodySetMoment(body, moment);
-			
 		}
 		
 		mShape = cpCircleShapeNew(body, radius, offset);

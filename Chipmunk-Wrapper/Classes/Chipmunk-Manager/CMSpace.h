@@ -101,8 +101,10 @@
  *
  * @param width the width of the containment area.
  * @param height the height of the containment area.
+ * @param elasticity the elasticity of the walls.
+ * @param friction the friction of the walls.
  */
--(CMBody*)addWindowContainmentWithWidth:(float)width height:(float)height;
+-(CMBody*)addWindowContainmentWithWidth:(float)width height:(float)height elasticity:(float)elasticity friction:(float)friction;
 
 #pragma mark -
 

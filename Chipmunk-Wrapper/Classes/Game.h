@@ -21,6 +21,7 @@
 #include "SlideJointConstraintDemo.h"
 #include "PolyDemo.h"
 #include "CarDemo.h"
+#include "TheoJansenDemo.h"
 #include "SimpleCollisionDemo.h"
 #include "BallDemo.h"
 
