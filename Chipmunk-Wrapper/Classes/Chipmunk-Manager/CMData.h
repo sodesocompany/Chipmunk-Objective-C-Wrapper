@@ -25,7 +25,7 @@
 @property (nonatomic, assign) id data;
 @property (nonatomic, assign) id object;
 
-- (id)init;
+- (id) initWithObject:(id)object;
 
 + (CMData*)createWithObject:(id)object;
 

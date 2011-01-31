@@ -9,6 +9,8 @@
 #ifndef CHIPMUNK_MANAGER_HEADER
 #define CHIPMUNK_MANAGER_HEADER
 
+#import "CMMacros.h"
+
 #import "CMTypes.h"
 #import "CMData.h"
 #import "CMObject.h"

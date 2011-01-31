@@ -48,6 +48,7 @@
 	[shape2 addToSpace];
 	
 	CMBody * staticBody = [mSpace addStaticBody];
+		//[staticBody	addToSpace];
 	
 	// Make sure the block stays fixed on his position
 	CMConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:pos1];

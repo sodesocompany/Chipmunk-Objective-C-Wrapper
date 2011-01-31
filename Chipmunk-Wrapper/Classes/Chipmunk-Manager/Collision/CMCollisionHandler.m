@@ -50,7 +50,8 @@
 }
 
 - (void)setInvocationBegin:(id)target selector:(SEL)selector {
-	[self setInvocationBegin:[self constructInvocation:target selector:selector]];
+	NSInvocation *invocation = [self constructInvocation:target selector:selector];
+	[self setInvocationBegin:invocation];
 }
 
 - (void)setInvocationPreSolve:(id)target selector:(SEL)selector {
@@ -78,5 +79,15 @@
 		return nil;
 	}
 }
+
+- (void) dealloc {
+	[mInvocationBegin release];
+	[mInvocationPreSolve release];
+	[mInvocationPostSolve release];
+	[mInvocationSeparate release];
+	
+	[super dealloc];
+}
+
 
 @end

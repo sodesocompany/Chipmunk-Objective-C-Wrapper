@@ -23,12 +23,12 @@
 @implementation CMBody
 
 - (id) initWithMass:(float)mass moment:(float)moment {
-		if (self = [super init]) {
-			mBody = cpBodyNew(mass, moment);
-			mBody->data =[[CMData createWithObject:self] retain];
+	if (self = [super init]) {
+		mBody = cpBodyNew(mass, moment);
+		mBody->data =[[CMData createWithObject:self] retain];
 			
-			mShapes = [[NSMutableArray alloc] init];
-			mConstraints = [[NSMutableArray alloc] init];
+		mShapes = [[NSMutableArray alloc] init];
+		mConstraints = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
@@ -142,9 +142,14 @@
 }
 
 - (CMCircleShape*) addCircleWithRadius:(float)radius offset:(cpVect)offset {
+	CM_CREATE_POOL(pool);
+	
 	CMCircleShape *shape = [[[CMCircleShape alloc] initWithBody:self radius:radius offset:offset] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return shape;
 }
 
@@ -153,13 +158,20 @@
 }
 
 - (CMRectShape*) addRectWithWidth:(float)width height:(float)height offset:(cpVect)offset {
+	CM_CREATE_POOL(pool);
+	
 	CMRectShape *shape = [[[CMRectShape alloc] initWithBody:self width:width height:height offset:offset] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return shape;
 }
 
 - (CMPolyShape*) addPolyWithPoints:(int)numberOfVertices vertices:(cpVect)vertices, ... {
+	CM_CREATE_POOL(pool);
+	
 	va_list args;
 	va_start(args,vertices);
 	
@@ -167,11 +179,15 @@
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
 	va_end(args);
+
+	CM_RELEASE_POOL(pool);
 	
 	return shape;
 }
 
 - (CMPolyShape*) addPolyWithPoints:(int)numberOfVertices offset:(cpVect)offset vertices:(cpVect)vertices, ... {
+	CM_CREATE_POOL(pool);
+	
 	va_list args;
 	va_start(args,vertices);
 	
@@ -180,13 +196,20 @@
 	[mShapes addObject:shape];
 	va_end(args);
 	
+	CM_RELEASE_POOL(pool);
+	
 	return shape;
 }
 
 - (CMSegmentShape*) addSegmentFrom:(cpVect)from to:(cpVect)to radius:(float)radius {
+	CM_CREATE_POOL(pool);
+	
 	CMSegmentShape *shape = [[[CMSegmentShape alloc] initWithBody:self from:from to:to radius:radius] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return shape;
 }
 
@@ -282,8 +305,11 @@
 
 - (void) dealloc {
 	CMData *cmData = mBody->data;
-	mBody->data = NULL;
 	[cmData release];
+
+	mBody->data = NULL;
+	mBody = NULL;
+
 	[mConstraints release];
 	[mShapes release];
 	

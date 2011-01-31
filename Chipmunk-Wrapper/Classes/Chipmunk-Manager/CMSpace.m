@@ -30,7 +30,7 @@ static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct 
 	} else if (moment == CMCollisionSeparate) {
 		invocation = [handler invocationSeparate];
 	}
-	
+
 	CMArbiter *cmArbiter = [[CMArbiter alloc] initWithCpArbiter:arbiter];
 	CMSpace *cmSpace = [[cmArbiter shapeA] space];
 	@try {
@@ -156,17 +156,15 @@ void updateShape(void *cpShapePtr, void* unused) {
 	cpSpaceHashEach(mCpSpace->activeShapes, &updateShape, nil);
 }
 
-- (void)free {
-	cpSpaceFreeChildren(mCpSpace);	
-	cpSpaceFree(mCpSpace);
-}
-
 #pragma mark -
 
 #pragma mark Window containment
 
 -(CMBody*)addWindowContainmentWithWidth:(float)width height:(float)height elasticity:(float)elasticity friction:(float)friction {
+	CM_CREATE_POOL(pool);
+	
 	CMBody *body = [self addStaticBody];
+		//[body addToSpace];
 	
 	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
 	[topWall setCollisionType:1000000];
@@ -193,6 +191,8 @@ void updateShape(void *cpShapePtr, void* unused) {
 	[bottomWall addToSpace];
 	[leftWall addToSpace];
 	
+	CM_RELEASE_POOL(pool);
+	
 	return body;
 }
 
@@ -201,9 +201,13 @@ void updateShape(void *cpShapePtr, void* unused) {
 #pragma mark Body create
 
 - (CMBody*)addStaticBody {
-	CMBody *body = [[[CMBody alloc] initStatic] autorelease];
-	[body setSpace:self];
-	[mBodies addObject:body];
+	CM_CREATE_POOL(pool);
+	
+		CMBody *body = [[[CMBody alloc] initStatic] autorelease];
+		[body setSpace:self];
+		[mBodies addObject:body];
+	
+	CM_RELEASE_POOL(pool);
 	return body;
 }
 
@@ -213,10 +217,14 @@ void updateShape(void *cpShapePtr, void* unused) {
 }
 
 - (CMBody*)addBodyWithMass:(float)mass moment:(float)moment {
-	CMBody *body = [[[CMBody alloc] initWithMass:mass moment:moment] autorelease];
-	[body setSpace:self];
-	[mBodies addObject:body];
+	CM_CREATE_POOL(pool);
 	
+		CMBody *body = [[[CMBody alloc] initWithMass:mass moment:moment] autorelease];
+		[body setSpace:self];
+		[mBodies addObject:body];
+
+	CM_RELEASE_POOL(pool);
+
 	return body; 
 }
 
@@ -225,15 +233,24 @@ void updateShape(void *cpShapePtr, void* unused) {
 #pragma mark Collission detection
 
 -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions {
-	CMCollisionHandler *handler = [[CMCollisionHandler alloc] init];
-	[handler setInvocationBegin:target selector:begin];
-	[handler setInvocationPreSolve:target selector:preSolve];
-	[handler setInvocationPostSolve:target selector:postSolve];
-	[handler setInvocationSeparate:target selector:separate];
+	CM_CREATE_POOL(pool);
 	
-	[handler setIgnoreContainmentCollision:ignoreContainmentCollisions];
+	if (mDefaultCollisionHandler != nil) {
+		// Cannot remove old default handler?
+		[mDefaultCollisionHandler release];
+	}
 	
-	cpSpaceSetDefaultCollisionHandler(mCpSpace, collisionBegin, collisionPreSolve, collisionPostSolve, collisionSeparate, handler);
+	mDefaultCollisionHandler = [[CMCollisionHandler alloc] init];
+	[mDefaultCollisionHandler setInvocationBegin:target selector:begin];
+	[mDefaultCollisionHandler setInvocationPreSolve:target selector:preSolve];
+	[mDefaultCollisionHandler setInvocationPostSolve:target selector:postSolve];
+	[mDefaultCollisionHandler setInvocationSeparate:target selector:separate];
+	
+	[mDefaultCollisionHandler setIgnoreContainmentCollision:ignoreContainmentCollisions];
+	
+	cpSpaceSetDefaultCollisionHandler(mCpSpace, collisionBegin, collisionPreSolve, collisionPostSolve, collisionSeparate, mDefaultCollisionHandler);
+	
+	CM_RELEASE_POOL(pool);
 }
 
 -(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target selector:(SEL)selector {
@@ -241,7 +258,9 @@ void updateShape(void *cpShapePtr, void* unused) {
 }
 
 -(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate {
-	CMCollisionHandler *handler = [[CMCollisionHandler alloc] initWithTypeA:typeA andTypeB:typeB];
+	CM_CREATE_POOL(pool);
+	
+	CMCollisionHandler *handler = [[[CMCollisionHandler alloc] initWithTypeA:typeA andTypeB:typeB] autorelease];
 	[handler setInvocationBegin:target selector:begin];
 	[handler setInvocationPreSolve:target selector:preSolve];
 	[handler setInvocationPostSolve:target selector:postSolve];
@@ -258,6 +277,7 @@ void updateShape(void *cpShapePtr, void* unused) {
 	//we'll keep a ref so it won't disappear, prob could just retain and clear hash later
 	[mCollisionHandlers addObject:handler];
 	
+	CM_RELEASE_POOL(pool);
 }
 
 -(void) removeCollisionHandlerFor:(unsigned int)typeA andTypeB:(unsigned int)typeB {
@@ -274,7 +294,15 @@ void updateShape(void *cpShapePtr, void* unused) {
 #pragma mark -
 
 - (void) dealloc {
+	cpSpaceFreeChildren(mCpSpace);	
+	cpSpaceFree(mCpSpace);
+	
 	[mBodies release];
+	
+	if (mDefaultCollisionHandler != nil) {
+		[mDefaultCollisionHandler release];
+	}
+	
 	[mCollisionHandlers release];
 	
 	[super dealloc];

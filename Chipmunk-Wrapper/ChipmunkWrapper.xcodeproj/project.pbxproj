@@ -109,6 +109,7 @@
 		A13512FE11986481007C9395 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		A13512FF11986481007C9395 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		A1351399119868D9007C9395 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		A141F52312F71FD700E7B4A4 /* CMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMacros.h; sourceTree = "<group>"; };
 		A1527AB611BD8F8100995392 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		A1527AF711BD8F9000995392 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1527AFB11BD8F9900995392 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -436,11 +437,12 @@
 				A1C70A9C12DCE403003C506C /* CMSpace.m */,
 				A1A78FD612DDCB51006FC41B /* CMData.h */,
 				A1A78FD712DDCB51006FC41B /* CMData.m */,
-				A1C70A9D12DCE403003C506C /* CMTypes.h */,
 				A1C70AB812DCE403003C506C /* drawSpace.c */,
 				A1C70AB912DCE403003C506C /* drawSpace.h */,
 				A1A7926512DDF160006FC41B /* CMObject.h */,
 				A1A7926612DDF160006FC41B /* CMObject.m */,
+				A1C70A9D12DCE403003C506C /* CMTypes.h */,
+				A141F52312F71FD700E7B4A4 /* CMMacros.h */,
 			);
 			path = "Chipmunk-Manager";
 			sourceTree = "<group>";
@@ -515,8 +517,8 @@
 		A1C70B0412DCE47C003C506C /* Demos */ = {
 			isa = PBXGroup;
 			children = (
-				A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */,
 				A19EA7FB12EA1FF90073D2A1 /* BaseDemo.h */,
+				A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */,
 				A19EA7E012EA1DFA0073D2A1 /* Sparrow-Demos */,
 				A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */,
 			);

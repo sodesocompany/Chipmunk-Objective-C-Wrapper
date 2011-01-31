@@ -48,7 +48,8 @@ void onUncaughtException(NSException *exception) {
     [window makeKeyAndVisible];
     [game release];    
     
-	[SPAudioEngine start];
+	// No audio needed.
+	//[SPAudioEngine start];
 	
     SP_RELEASE_POOL(pool);
 }
@@ -72,6 +73,7 @@ void onUncaughtException(NSException *exception) {
 }
 
 - (void)dealloc {
+	// No audio needed.
 	[SPAudioEngine stop];
     [window release];
     [super dealloc];

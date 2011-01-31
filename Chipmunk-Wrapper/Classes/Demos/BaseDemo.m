@@ -37,6 +37,7 @@
 		
 		
 		mTouchBody = [[mSpace addBody] retain];
+		[mTouchBody addToSpace];
 		[self addEventListener:@selector(force:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 		
 		UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
@@ -117,10 +118,10 @@
 }
 
 - (void) dealloc {
-	[mSpace release];
 	[debugDraw release];
-	[mSpace free];
-	
+	[mTouchBody release];
+	[mSpace release];
+	 
 	[super dealloc];
 }
 

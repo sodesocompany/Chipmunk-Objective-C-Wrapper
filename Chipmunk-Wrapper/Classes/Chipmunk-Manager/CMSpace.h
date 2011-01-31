@@ -19,6 +19,8 @@
 
 @private 
 	cpSpace *mCpSpace;
+	
+	CMCollisionHandler *mDefaultCollisionHandler;
 	NSMutableArray *mCollisionHandlers;
 	NSMutableArray *mBodies;
 }
@@ -86,11 +88,6 @@
  * Updates all SPDisplayObject objects that are attached to the bodies.
  */
 - (void)updateShapes;
-
-/**
- *  free all of the shapes, bodies and joints that have been added to space. 
- */
-- (void)free;
 
 #pragma mark -
 

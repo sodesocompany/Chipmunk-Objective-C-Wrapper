@@ -25,16 +25,15 @@
 @synthesize data = mData;
 @synthesize object = mObject;
 
-- (id) init {
+- (id) initWithObject:(id)object {
 	if (self = [super init]) {
+		[self setObject:object];
 	}
 	return self;
 }
 
 + (CMData*)createWithObject:(id)object {
-	CMData *data = [[[CMData alloc] init] autorelease];
-	[data setObject:object];
-	return data;
+	return [[[CMData alloc] initWithObject:object] autorelease];
 }
 
 /*
