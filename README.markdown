@@ -9,7 +9,9 @@ Version details:
 ----------------
 
 Current head release:
-
+- Added a new demo: TheoJansenDemo
+- Added elasticity and friction to the containment (user specified).
+- Added the ability to set the distance on a pin joint
 - Added a new demo: SimpleCollisionDemo
 - Removed the CollisionMoment from the collision event selectors.
 - Added the CMArbiter class which wraps the cpArbiter.
