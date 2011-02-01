@@ -9,6 +9,7 @@ Version details:
 ----------------
 
 Current head release:
+
 - Fixed CMCollisionHandler bug (resulting in a BAD_EXEC)
 - Fixed a number of memory leaks
 - Added a new demo: TheoJansenDemo
