@@ -9,6 +9,8 @@ Version details:
 ----------------
 
 Current head release:
+- Fixed CMCollisionHandler bug (resulting in a BAD_EXEC)
+- Fixed a number of memory leaks
 - Added a new demo: TheoJansenDemo
 - Added elasticity and friction to the containment (user specified).
 - Added the ability to set the distance on a pin joint
