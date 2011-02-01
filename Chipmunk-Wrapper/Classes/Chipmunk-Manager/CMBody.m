@@ -308,8 +308,13 @@
 	[cmData release];
 
 	mBody->data = NULL;
+	
+	if (cpBodyIsStatic(mBody)) {
+		cpBodyFree(mBody);
+	}	
+	
 	mBody = NULL;
-
+	
 	[mConstraints release];
 	[mShapes release];
 	

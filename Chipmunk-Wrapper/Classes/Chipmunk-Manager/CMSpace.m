@@ -164,7 +164,8 @@ void updateShape(void *cpShapePtr, void* unused) {
 	CM_CREATE_POOL(pool);
 	
 	CMBody *body = [self addStaticBody];
-		//[body addToSpace];
+	// TODO: Maybe not the best place..
+	[mBodies addObject:body];
 	
 	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
 	[topWall setCollisionType:1000000];
