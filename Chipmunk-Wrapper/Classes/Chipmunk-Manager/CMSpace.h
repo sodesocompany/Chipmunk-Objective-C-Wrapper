@@ -55,6 +55,23 @@
  */
 - (void)setSleepTimeThreshhold:(float)threshold;
 
+/**
+ * Allow you to control the accuracy of the solver. Defaults to 10.
+ *
+ * Chipmunk uses an iterative solver to figure out the forces between objects in the space. 
+ * What this means is that it builds a big list of all of the collisions, joints, and other 
+ * constraints between the bodies and makes several passes over the list considering each one 
+ * individually. The number of passes it makes is the iteration count, and each 
+ * iteration makes the solution more accurate. 
+ *
+ * If you use too many iterations, the physics should look nice and solid, but may use up too 
+ * much CPU time. If you use too few iterations, the simulation may seem mushy or bouncy when
+ * the objects should be solid. Setting the number of iterations lets you balance between CPU 
+ * usage and the accuracy of the physics. Chipmunk’s default of 10 iterations is sufficient
+ * for most simple games.
+ */
+- (void)setIterations:(int)iterations;
+
 #pragma mark -
 
 #pragma mark Operations

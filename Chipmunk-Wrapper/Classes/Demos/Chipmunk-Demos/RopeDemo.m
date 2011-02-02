@@ -56,16 +56,13 @@
 		[circleShape addToSpace];
 		
 		if (previousBody != nil) {
-			CMPivotJointConstraint *pjc2 = [newBody addPivotJointConstraintWithBody:previousBody pivot:cpv(320.0f / 2.0f, 20.0f + (index * 10.0f))];//anchor1:cpvzero anchor2:cpvzero
+			CMPivotJointConstraint *pjc2 = [newBody addPivotJointConstraintWithBody:previousBody pivot:cpv(320.0f / 2.0f, 20.0f + (index * 10.0f))];
 			[pjc2 addToSpace];
 		}
 		
 		previousBody = newBody;
 	}
 		
-		
-	
-	
 	[self createSquare];
 	[self createBall];
 	

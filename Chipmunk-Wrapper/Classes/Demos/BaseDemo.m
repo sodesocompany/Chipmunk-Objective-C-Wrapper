@@ -28,6 +28,8 @@
 		
 		mSpace = [[CMSpace alloc] init];
 		[mSpace setSleepTimeThreshhold:5.0f];
+		[mSpace setIterations:30];
+		
 		
 		[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:1.0];
 		[self initializeChipmunkObjects];

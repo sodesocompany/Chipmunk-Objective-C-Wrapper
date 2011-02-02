@@ -25,6 +25,7 @@
 #include "SimpleCollisionDemo.h"
 #include "BallDemo.h"
 #include "RopeDemo.h"
+#include "NewtonsCradleDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

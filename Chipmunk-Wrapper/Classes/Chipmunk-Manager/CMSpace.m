@@ -130,6 +130,11 @@ void updateShape(void *cpShapePtr, void* unused) {
 	mCpSpace->sleepTimeThreshold = threshold;
 }
 
+- (void)setIterations:(int)iterations {
+	mCpSpace->iterations = iterations;
+	mCpSpace->elasticIterations = iterations;
+}
+
 #pragma mark -
 
 #pragma mark Operations

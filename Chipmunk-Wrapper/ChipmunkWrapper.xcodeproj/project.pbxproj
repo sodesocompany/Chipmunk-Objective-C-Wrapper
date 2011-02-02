@@ -11,6 +11,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A124299412F94D7D00318730 /* NewtonsCradleDemo.m */; };
 		A13512F611986265007C9395 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13512F511986265007C9395 /* QuartzCore.framework */; };
 		A13512F811986270007C9395 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13512F711986270007C9395 /* OpenGLES.framework */; };
 		A13512FD11986427007C9395 /* ChipmunkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A13512FC11986427007C9395 /* ChipmunkAppDelegate.m */; };
@@ -101,6 +102,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ChipmunkWrapper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkWrapper_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ChipmunkWrapper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ChipmunkWrapper-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A124299312F94D7D00318730 /* NewtonsCradleDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewtonsCradleDemo.h; sourceTree = "<group>"; };
+		A124299412F94D7D00318730 /* NewtonsCradleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewtonsCradleDemo.m; sourceTree = "<group>"; };
 		A1259B3D12C92A2700EA5EA0 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		A135125C119860CA007C9395 /* Sparrow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Sparrow.xcodeproj; sourceTree = SPARROW_SRC; };
 		A13512F511986265007C9395 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -369,6 +372,8 @@
 				A1AF693512EC3C36006322AF /* CarDemo.m */,
 				A1AEBC0412F8B362001A45B2 /* RopeDemo.h */,
 				A1AEBC0512F8B362001A45B2 /* RopeDemo.m */,
+				A124299312F94D7D00318730 /* NewtonsCradleDemo.h */,
+				A124299412F94D7D00318730 /* NewtonsCradleDemo.m */,
 			);
 			path = "Chipmunk-Demos";
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				A178467F12EF651E00EE1713 /* CMArbiter.m in Sources */,
 				A17846FA12F0810A00EE1713 /* TheoJansenDemo.m in Sources */,
 				A1AEBC0612F8B362001A45B2 /* RopeDemo.m in Sources */,
+				A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
