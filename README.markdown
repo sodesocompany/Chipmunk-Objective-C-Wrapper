@@ -10,6 +10,12 @@ Version details:
 
 Current head release:
 
+2 February 2010:
+
+- Added a new demo: RopeDemo 
+
+1 February 2010 and before:
+
 - Fixed CMCollisionHandler bug (resulting in a BAD_EXEC)
 - Fixed a number of memory leaks
 - Added a new demo: TheoJansenDemo
