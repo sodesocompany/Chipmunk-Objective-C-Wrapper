@@ -29,7 +29,7 @@
 		mSpace = [[CMSpace alloc] init];
 		[mSpace setSleepTimeThreshhold:5.0f];
 		
-		[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:5.0];
+		[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:1.0];
 		[self initializeChipmunkObjects];
 		
 		debugDraw = [[SPDebugDraw alloc] initWithManager:mSpace];

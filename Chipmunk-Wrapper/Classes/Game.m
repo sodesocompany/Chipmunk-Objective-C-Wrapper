@@ -88,7 +88,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 14;
+			selected = 15;
 		}
 	
 		[self switchDemo];
@@ -100,7 +100,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 15) {
+		if (selected == 16) {
 			selected = 0;
 		}
 	
@@ -176,7 +176,10 @@
 			[textField setText:@"Theo Jansen Demo"];
 			demo = [[TheoJansenDemo alloc] init];
 			break;
-			
+		case 15:
+			[textField setText:@"Rope Demo"];
+			demo = [[RopeDemo alloc] init];
+			break;
 			
 	}
 	

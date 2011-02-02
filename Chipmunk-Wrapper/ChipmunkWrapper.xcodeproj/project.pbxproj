@@ -41,6 +41,7 @@
 		A1A78FD512DDCB47006FC41B /* SPPoint+Chipmunk.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A78FD412DDCB47006FC41B /* SPPoint+Chipmunk.m */; };
 		A1A78FD812DDCB51006FC41B /* CMData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A78FD712DDCB51006FC41B /* CMData.m */; };
 		A1A7926712DDF160006FC41B /* CMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7926612DDF160006FC41B /* CMObject.m */; };
+		A1AEBC0612F8B362001A45B2 /* RopeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AEBC0512F8B362001A45B2 /* RopeDemo.m */; };
 		A1AF685312EA2916006322AF /* libChipmunk-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AF685212EA2916006322AF /* libChipmunk-iPhone.a */; };
 		A1AF693712EC3C36006322AF /* CarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1AF693512EC3C36006322AF /* CarDemo.m */; };
 		A1C70AC512DCE403003C506C /* CMBody.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C70A9A12DCE403003C506C /* CMBody.m */; };
@@ -154,6 +155,8 @@
 		A1A78FD712DDCB51006FC41B /* CMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMData.m; sourceTree = "<group>"; };
 		A1A7926512DDF160006FC41B /* CMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMObject.h; sourceTree = "<group>"; };
 		A1A7926612DDF160006FC41B /* CMObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMObject.m; sourceTree = "<group>"; };
+		A1AEBC0412F8B362001A45B2 /* RopeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RopeDemo.h; sourceTree = "<group>"; };
+		A1AEBC0512F8B362001A45B2 /* RopeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RopeDemo.m; sourceTree = "<group>"; };
 		A1AF683512EA2916006322AF /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
 		A1AF683612EA2916006322AF /* chipmunk_ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_ffi.h; sourceTree = "<group>"; };
 		A1AF683712EA2916006322AF /* chipmunk_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_private.h; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				A178460712EF49B700EE1713 /* SimpleCollisionDemo.m */,
 				A1AF693612EC3C36006322AF /* CarDemo.h */,
 				A1AF693512EC3C36006322AF /* CarDemo.m */,
+				A1AEBC0412F8B362001A45B2 /* RopeDemo.h */,
+				A1AEBC0512F8B362001A45B2 /* RopeDemo.m */,
 			);
 			path = "Chipmunk-Demos";
 			sourceTree = "<group>";
@@ -671,6 +676,7 @@
 				A178460812EF49B700EE1713 /* SimpleCollisionDemo.m in Sources */,
 				A178467F12EF651E00EE1713 /* CMArbiter.m in Sources */,
 				A17846FA12F0810A00EE1713 /* TheoJansenDemo.m in Sources */,
+				A1AEBC0612F8B362001A45B2 /* RopeDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
