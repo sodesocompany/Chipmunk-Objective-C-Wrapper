@@ -12,7 +12,9 @@ Current head release:
 
 2 February 2010:
 
-- Added a new demo: RopeDemo 
+- Added a new demo: RopeDemo
+- Added a new demo: Newtons Cradle
+- Added setIterations on the CMSpace, read the API doc in the source before changing this.
 
 1 February 2010 and before:
 
