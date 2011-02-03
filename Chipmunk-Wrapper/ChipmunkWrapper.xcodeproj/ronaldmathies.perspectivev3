@@ -297,7 +297,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 169}, {368, 1308}}</string>
+							<string>{{0, 260}, {368, 1308}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,7 +314,7 @@
 							<real>368</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>960 -72 1973 1367 0 0 2560 1418 </string>
+						<string>1079 18 1973 1367 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -332,7 +332,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>A135121511985E0F007C9395</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BaseDemo.m</string>
+								<string>Game.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -340,11 +340,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A135121611985E0F007C9395</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BaseDemo.m</string>
+										<string>Game.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A1242CA812FB230A00318730</string>
+										<string>A1242CD012FB4A6900318730</string>
 										<key>history</key>
 										<array>
 											<string>A12CC0D612CA8D42003D1970</string>
@@ -484,9 +484,7 @@
 											<string>A1242A1D12F956B500318730</string>
 											<string>A1242A2412F956C600318730</string>
 											<string>A1242A9512F9614600318730</string>
-											<string>A1242ACC12F962BC00318730</string>
 											<string>A1242B5B12F9689100318730</string>
-											<string>A1242B7A12F96A9500318730</string>
 											<string>A1242BAE12F96B4A00318730</string>
 											<string>A1242BED12F9792600318730</string>
 											<string>A1242BFC12F995A600318730</string>
@@ -499,17 +497,18 @@
 											<string>A1242C3912FB1E8F00318730</string>
 											<string>A1242C3B12FB1E8F00318730</string>
 											<string>A1242C3C12FB1E8F00318730</string>
-											<string>A1242C3D12FB1E8F00318730</string>
 											<string>A1242C3E12FB1E8F00318730</string>
 											<string>A1242C4812FB1EA700318730</string>
 											<string>A1242C7712FB204A00318730</string>
 											<string>A1242C8D12FB216800318730</string>
-											<string>A1242C8E12FB216800318730</string>
-											<string>A1242C9812FB21EC00318730</string>
 											<string>A1242C9912FB21EC00318730</string>
 											<string>A1242C9A12FB21EC00318730</string>
 											<string>A1242CA612FB230A00318730</string>
-											<string>A1242CA712FB230A00318730</string>
+											<string>A1242CAB12FB485200318730</string>
+											<string>A1242CAC12FB485200318730</string>
+											<string>A1242CB912FB495A00318730</string>
+											<string>A1242CCA12FB4A3400318730</string>
+											<string>A1242CCF12FB4A6500318730</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -525,7 +524,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1583, 1009}}</string>
 								<key>RubberWindowFrame</key>
-								<string>960 -72 1973 1367 0 0 2560 1418 </string>
+								<string>1079 18 1973 1367 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -549,8 +548,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1583, 285}}</string>
-										<key>RubberWindowFrame</key>
-										<string>960 -72 1973 1367 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -625,7 +622,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1583, 275}}</string>
+										<string>{{10, 27}, {1583, 285}}</string>
+										<key>RubberWindowFrame</key>
+										<string>1079 18 1973 1367 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -852,7 +851,7 @@
 		<string>/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>960 -72 1973 1367 0 0 2560 1418 </string>
+	<string>1079 18 1973 1367 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

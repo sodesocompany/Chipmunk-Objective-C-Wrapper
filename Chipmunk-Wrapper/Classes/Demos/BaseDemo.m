@@ -17,6 +17,7 @@
 @interface BaseDemo ()
 
 - (BOOL)disableAccelerometer;
+- (void)displayFrameRate:(double)passedTime;
 
 @end
 
@@ -49,6 +50,14 @@
 			accelerometer.updateInterval = 1.0f/30.0f;
 			accelerometer.delegate = self;
 		}
+		
+		frameRateTextField = [SPTextField textFieldWithWidth:55 height:15 text:[NSString stringWithFormat:@"FPS: %.0f", 0]];
+		frameRateTextField.hAlign = SPHAlignLeft;
+		frameRateTextField.vAlign = SPVAlignBottom;
+		frameRateTextField.color = 0xffffff;
+		frameRateTextField.x = 5;
+		frameRateTextField.y = 5;
+		[self addChild:frameRateTextField];
 	}
 	return self;
 }
@@ -77,6 +86,22 @@
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
 	[mSpace setGravity:cpv(acceleration.x*500, acceleration.y*500 * (inverseGravity ? 1 : -1))];
+}
+
+- (void)displayFrameRate:(double)passedTime {
+	static int frameCount = 0;
+	static double timeCount = 0;
+	
+	frameCount++;
+	timeCount += passedTime;
+	if (timeCount >= 1.0f) {
+		frameRateTextField.text = [NSString stringWithFormat:@"FPS: %i", frameCount];
+		frameCount = 0;
+		timeCount -= 1.0f;
+	}
+	
+		//	if ([mStage childIndex:frameRateTextField] != mStage.numChildren-1) 
+		//		[mStage addChild:frameRateTextField];
 }
 
 - (void)force:(SPTouchEvent*)event {
@@ -122,8 +147,10 @@
 		mTouchLast = newPoint;
 	}
 	
-	[mSpace step:CHIPMUNK_FRAMERATE];
+	[mSpace step:1.0f / 15.0f];
 	[mSpace updateShapes];
+	
+	[self displayFrameRate:event.passedTime];
 }
 
 - (void) dealloc {

@@ -28,6 +28,8 @@
 	CMConstraint *mTouchJoint;
 
 	BOOL inverseGravity;
+	
+	SPTextField *frameRateTextField;
 }
 
 /**

@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#include	"DemoChooser.h"
-
 #include "BaseDemo.h"
 #include "SimpleMotorJointConstraintDemo.h"
 #include "DampedRotarySpringConstraintDemo.h"
