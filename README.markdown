@@ -12,6 +12,9 @@ Current head release:
 
 3 February 2010:
 
+- Dit a lot of code cleanup
+- Changed the default chipmunk step size for the demo's now it's set to 1/15th, looks more smooth.
+- Added a frames per second counter (thanks Shilo)
 - Changed the starting height of the CarDemo
 - Removed UIAccelerometer from NewtonsCradleDemo
 - Added a new demo: BlocksDemo
