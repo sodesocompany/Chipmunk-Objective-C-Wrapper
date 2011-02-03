@@ -19,9 +19,7 @@ static double timeCount = 0;
 
 @interface BaseDemo ()
 
-- (void)setupSpace
-
-- (BOOL)disableAccelerometer;
+- (void)setupSpace;
 - (void)displayFrameRate:(double)passedTime;
 
 @end
@@ -161,7 +159,7 @@ static double timeCount = 0;
 	[debugDraw release];
 	[mTouchBody release];
 	[mSpace release];
-	 
+	
 	[super dealloc];
 }
 

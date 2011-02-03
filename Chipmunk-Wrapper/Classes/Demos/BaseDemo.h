@@ -43,6 +43,7 @@
 - (void)initializeChipmunkObjects;
 
 - (void)showHideDebugDraw;
+- (BOOL)disableAccelerometer;
 
 - (void)startDemo;
 - (void)stopDemo;

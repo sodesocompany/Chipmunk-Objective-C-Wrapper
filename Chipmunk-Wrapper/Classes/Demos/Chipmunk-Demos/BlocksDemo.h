@@ -16,9 +16,6 @@
 
 @interface BlocksDemo : BaseDemo {
 
-@private
-	CMBody *staticBody;
-	
 }
 
 @end

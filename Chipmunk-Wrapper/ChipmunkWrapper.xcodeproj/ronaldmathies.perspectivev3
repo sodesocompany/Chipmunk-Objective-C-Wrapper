@@ -290,14 +290,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>36</integer>
+									<integer>35</integer>
 									<integer>34</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 260}, {368, 1308}}</string>
+							<string>{{0, 357}, {368, 1308}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,7 +314,7 @@
 							<real>368</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1079 18 1973 1367 0 0 2560 1418 </string>
+						<string>422 51 1973 1367 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -325,14 +325,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>A135121511985E0F007C9395</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Game.h</string>
+								<string>SPDisplayObject.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -340,11 +338,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A135121611985E0F007C9395</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Game.h</string>
+										<string>SPDisplayObject.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A1242CD012FB4A6900318730</string>
+										<string>A1242D0312FB4FDB00318730</string>
 										<key>history</key>
 										<array>
 											<string>A12CC0D612CA8D42003D1970</string>
@@ -357,7 +355,6 @@
 											<string>A1F2CB9A12D37D4C006BAAE3</string>
 											<string>A1F2CB9E12D37D4C006BAAE3</string>
 											<string>A1F2CBB812D37DE8006BAAE3</string>
-											<string>A1F2CBBB12D37E02006BAAE3</string>
 											<string>A1C32D8C12D61D0B00271F9B</string>
 											<string>A1C32D9612D61D6900271F9B</string>
 											<string>A1D63E4E12D9140B00302B15</string>
@@ -419,7 +416,6 @@
 											<string>A19EA7E612EA1FD10073D2A1</string>
 											<string>A19EA7E812EA1FD10073D2A1</string>
 											<string>A19EA7EA12EA1FD10073D2A1</string>
-											<string>A19EA7FD12EA20EA0073D2A1</string>
 											<string>A17841FD12EC76B700EE1713</string>
 											<string>A178431512ECCB8800EE1713</string>
 											<string>A178437B12ECCE7800EE1713</string>
@@ -429,7 +425,6 @@
 											<string>A17844E912ECE4CA00EE1713</string>
 											<string>A178450D12EE08F400EE1713</string>
 											<string>A178450E12EE08F400EE1713</string>
-											<string>A178451D12EE0A2900EE1713</string>
 											<string>A178453E12EE0B0100EE1713</string>
 											<string>A178454012EE0B0100EE1713</string>
 											<string>A178457212EE0D4700EE1713</string>
@@ -458,12 +453,8 @@
 											<string>A141F53912F7218000E7B4A4</string>
 											<string>A141F55712F7237000E7B4A4</string>
 											<string>A1AEBA1912F7285D001A45B2</string>
-											<string>A1AEBAE612F751E2001A45B2</string>
 											<string>A1AEBAE712F751E2001A45B2</string>
-											<string>A1AEBAE912F751E2001A45B2</string>
-											<string>A1AEBAEB12F751E2001A45B2</string>
 											<string>A1AEBAEE12F751E2001A45B2</string>
-											<string>A1AEBAEF12F751E2001A45B2</string>
 											<string>A1AEBB1A12F75425001A45B2</string>
 											<string>A1AEBB2712F7547A001A45B2</string>
 											<string>A1AEBB2F12F754E3001A45B2</string>
@@ -471,44 +462,51 @@
 											<string>A1AEBB8812F75760001A45B2</string>
 											<string>A1AEBB9812F757E7001A45B2</string>
 											<string>A1AEBBF212F7CC95001A45B2</string>
-											<string>A1AEBBF312F7CC95001A45B2</string>
 											<string>A1AEBBF412F7CC95001A45B2</string>
 											<string>A1AEBC1212F8B4D5001A45B2</string>
-											<string>A1AEBC3112F8B582001A45B2</string>
-											<string>A1AEBC7012F93977001A45B2</string>
 											<string>A1AEBCB712F93EFC001A45B2</string>
 											<string>A124296212F94A9700318730</string>
-											<string>A124299D12F94F1200318730</string>
-											<string>A124299E12F94F1200318730</string>
-											<string>A12429DE12F9535400318730</string>
 											<string>A1242A1D12F956B500318730</string>
 											<string>A1242A2412F956C600318730</string>
 											<string>A1242A9512F9614600318730</string>
 											<string>A1242B5B12F9689100318730</string>
 											<string>A1242BAE12F96B4A00318730</string>
 											<string>A1242BED12F9792600318730</string>
-											<string>A1242BFC12F995A600318730</string>
-											<string>A1242BFD12F995A600318730</string>
 											<string>A1242BFE12F995A600318730</string>
 											<string>A1242C0012F995A600318730</string>
 											<string>A1242C0212F995A600318730</string>
 											<string>A1242C0312F995A600318730</string>
 											<string>A1242C0412F995A600318730</string>
 											<string>A1242C3912FB1E8F00318730</string>
-											<string>A1242C3B12FB1E8F00318730</string>
 											<string>A1242C3C12FB1E8F00318730</string>
-											<string>A1242C3E12FB1E8F00318730</string>
-											<string>A1242C4812FB1EA700318730</string>
-											<string>A1242C7712FB204A00318730</string>
 											<string>A1242C8D12FB216800318730</string>
-											<string>A1242C9912FB21EC00318730</string>
-											<string>A1242C9A12FB21EC00318730</string>
-											<string>A1242CA612FB230A00318730</string>
-											<string>A1242CAB12FB485200318730</string>
 											<string>A1242CAC12FB485200318730</string>
-											<string>A1242CB912FB495A00318730</string>
-											<string>A1242CCA12FB4A3400318730</string>
-											<string>A1242CCF12FB4A6500318730</string>
+											<string>A1242CD512FB4DE000318730</string>
+											<string>A1242CD612FB4DE000318730</string>
+											<string>A1242CD712FB4DE000318730</string>
+											<string>A1242CD812FB4DE000318730</string>
+											<string>A1242CD912FB4DE000318730</string>
+											<string>A1242CDA12FB4DE000318730</string>
+											<string>A1242CDB12FB4DE000318730</string>
+											<string>A1242CDC12FB4DE000318730</string>
+											<string>A1242CDD12FB4DE000318730</string>
+											<string>A1242CDE12FB4DE000318730</string>
+											<string>A1242CDF12FB4DE000318730</string>
+											<string>A1242CE012FB4DE000318730</string>
+											<string>A1242CE112FB4DE000318730</string>
+											<string>A1242CE212FB4DE000318730</string>
+											<string>A1242CE312FB4DE000318730</string>
+											<string>A1242CE412FB4DE000318730</string>
+											<string>A1242CE512FB4DE000318730</string>
+											<string>A1242CE712FB4DE000318730</string>
+											<string>A1242CE812FB4DE000318730</string>
+											<string>A1242CFC12FB4FDB00318730</string>
+											<string>A1242CFD12FB4FDB00318730</string>
+											<string>A1242CFE12FB4FDB00318730</string>
+											<string>A1242CFF12FB4FDB00318730</string>
+											<string>A1242D0012FB4FDB00318730</string>
+											<string>A1242D0112FB4FDB00318730</string>
+											<string>A1242D0212FB4FDB00318730</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -524,7 +522,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1583, 1009}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1079 18 1973 1367 0 0 2560 1418 </string>
+								<string>422 51 1973 1367 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -624,7 +622,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1583, 285}}</string>
 										<key>RubberWindowFrame</key>
-										<string>1079 18 1973 1367 0 0 2560 1418 </string>
+										<string>422 51 1973 1367 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -851,7 +849,7 @@
 		<string>/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>1079 18 1973 1367 0 0 2560 1418 </string>
+	<string>422 51 1973 1367 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
