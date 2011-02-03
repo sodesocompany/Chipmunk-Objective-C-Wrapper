@@ -52,7 +52,7 @@
 		nextDemo.y = 480 - 5 - 32;
 		[self addChild:nextDemo];
 		[nextDemo addEventListener:@selector(nextDemo:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
-    }
+   }
 	
     return self;
 }
@@ -88,7 +88,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 16;
+			selected = 17;
 		}
 	
 		[self switchDemo];
@@ -100,7 +100,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 17) {
+		if (selected == 18) {
 			selected = 0;
 		}
 	
@@ -183,6 +183,10 @@
 		case 16:
 			[textField setText:@"Newtons Cradle Demo"];
 			demo = [[NewtonsCradleDemo alloc] init];
+			break;
+		case 17:
+			[textField setText:@"Blocks Demo"];
+			demo = [[BlocksDemo alloc] init];
 			break;
 	}
 	

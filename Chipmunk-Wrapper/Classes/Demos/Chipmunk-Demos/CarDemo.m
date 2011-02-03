@@ -27,7 +27,7 @@
 - (void) initializeChipmunkObjects {
 	// Create chassis
 	CMBody *chassis = [mSpace addBodyWithMass:2 moment:0.5];
-	[chassis setPosition:cpv(80, 110)];
+	[chassis setPosition:cpv(80, 410)];
 	[chassis addToSpace];
 
 	CMShape *shape = [chassis addPolyWithPoints:4 vertices:
@@ -43,7 +43,7 @@
 	
 	// Create the first wheel
 	CMBody *wheel1 = [mSpace addBodyWithMass:1 moment:0.5];
-	[wheel1 setPosition:cpv(50,160)];
+	[wheel1 setPosition:cpv(50,460)];
 	[wheel1 addToSpace];
 	
 	CMShape *wheel1Shape = [wheel1 addCircleWithRadius:15.0f];
@@ -54,7 +54,7 @@
 	
 	// Create the second wheel
 	CMBody *wheel2 = [mSpace addBodyWithMass:1 moment:0.5];
-	[wheel2 setPosition:cpv(110,160)];
+	[wheel2 setPosition:cpv(110,460)];
 	[wheel2 addToSpace];
 	
 	CMShape *wheel2Shape = [wheel2 addCircleWithRadius:15.0f];

@@ -39,6 +39,10 @@ const float ballTop = 180.0f;
 	}
 }
 
+- (BOOL)disableAccelerometer {
+	return YES;
+}
+
 - (void)createBall:(int)index {
 	float x = 40.0f + (index * 40);
 

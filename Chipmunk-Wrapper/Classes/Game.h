@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#include	"DemoChooser.h"
+
 #include "BaseDemo.h"
 #include "SimpleMotorJointConstraintDemo.h"
 #include "DampedRotarySpringConstraintDemo.h"
@@ -26,6 +28,7 @@
 #include "BallDemo.h"
 #include "RopeDemo.h"
 #include "NewtonsCradleDemo.h"
+#include "BlocksDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

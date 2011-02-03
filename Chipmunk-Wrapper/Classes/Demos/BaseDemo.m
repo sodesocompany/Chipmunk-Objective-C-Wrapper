@@ -16,6 +16,8 @@
 
 @interface BaseDemo ()
 
+- (BOOL)disableAccelerometer;
+
 @end
 
 // --- Class implementation ------------------------------------------------------------------------
@@ -42,9 +44,11 @@
 		[mTouchBody addToSpace];
 		[self addEventListener:@selector(force:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 		
-		UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
-		accelerometer.updateInterval = 1.0f/30.0f;
-		accelerometer.delegate = self;
+		if (![self disableAccelerometer]) {
+			UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
+			accelerometer.updateInterval = 1.0f/30.0f;
+			accelerometer.delegate = self;
+		}
 	}
 	return self;
 }
@@ -53,10 +57,13 @@
 	[debugDraw setVisible:![debugDraw visible]];
 }
 
+- (BOOL)disableAccelerometer {
+	return NO;
+}
+
 - (void)initializeChipmunkObjects {
 	[NSException raise:NSInternalInconsistencyException 
 			format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
-
 }
 
 - (void)startDemo {
@@ -120,6 +127,9 @@
 }
 
 - (void) dealloc {
+	UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
+	accelerometer.delegate = nil;
+	
 	[debugDraw release];
 	[mTouchBody release];
 	[mSpace release];
