@@ -46,8 +46,7 @@
 	[shape2 addToSpace];
 	
 	CMBody *staticBody = [mSpace addStaticBody];
-		//[staticBody addToSpace];
-	
+
 	// Add some pivot joints to make sure the bodies stay in one place.
 	CMPivotJointConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:cpv(320-106, 480-400)];
 	[pivotJointConstraint1 addToSpace];

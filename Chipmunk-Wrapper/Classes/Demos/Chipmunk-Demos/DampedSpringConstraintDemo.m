@@ -46,12 +46,11 @@
 	[shape2 addToSpace];
 	
 	CMBody * staticBody = [mSpace addStaticBody];
-		//[staticBody addToSpace];
-	
+
 	CMConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:cpv(160, 200)];
 	[pivotJointConstraint1 addToSpace];
 	
-	// Create the damped rotary constraint between them.
+	// Create the damped spring constraint between them.
 	CMDampedSpringConstraint *constraint = [body1 addDampedSpringConstraintWithBody:body2 anchor1:cpv(0,0) anchor2:cpv(0,0) restLength:20.0f stiffness:200.0f damping:0.2f];
 	[constraint addToSpace];
 }

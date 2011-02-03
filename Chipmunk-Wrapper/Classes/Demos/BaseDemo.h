@@ -42,10 +42,9 @@
  */
 - (void)initializeChipmunkObjects;
 
-- (void)switchBetweenSparrowAndChipmunk;
+- (void)showHideDebugDraw;
 
 - (void)startDemo;
-
 - (void)stopDemo;
 
 

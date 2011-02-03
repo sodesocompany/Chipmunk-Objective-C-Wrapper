@@ -28,10 +28,11 @@
 	cpVect pos1 = cpv(80, 140);
 	cpVect pos2 = cpv(160, 140);
 	cpVect pos3 = cpv(240, 140);
-	
+
+	// Add a default collision handler, this handler handles all
+	// collisions between all bodies / shapes in the space.
 	[mSpace addDefaultCollisionHandler:self begin:@selector(defaultBegin:space:) preSolve:@selector(defaultPreSolve:space:) postSolve:@selector(defaultPostSolve:space:) separate:@selector(defaultSeparate:space:) ignoreContainmentCollisions:YES];
 	
-	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
 	[body1 setPosition:pos1];
 	[body1 addToSpace];

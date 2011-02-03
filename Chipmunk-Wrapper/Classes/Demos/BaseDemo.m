@@ -10,11 +10,16 @@
 
 // --- Static variables ----------------------------------------------------------------------------
 
+static int frameCount = 0;
+static double timeCount = 0;
+
 // --- Static inline methods -----------------------------------------------------------------------
 
 // --- private interface ---------------------------------------------------------------------------
 
 @interface BaseDemo ()
+
+- (void)setupSpace
 
 - (BOOL)disableAccelerometer;
 - (void)displayFrameRate:(double)passedTime;
@@ -29,12 +34,7 @@
 	if (self = [super init]) {
 		inverseGravity = NO;
 		
-		mSpace = [[CMSpace alloc] init];
-		[mSpace setSleepTimeThreshhold:5.0f];
-		[mSpace setIterations:30];
-		
-		
-		[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:1.0];
+		[self setupSpace];
 		[self initializeChipmunkObjects];
 		
 		debugDraw = [[SPDebugDraw alloc] initWithManager:mSpace];
@@ -62,17 +62,24 @@
 	return self;
 }
 
-- (void)switchBetweenSparrowAndChipmunk {
+- (void)setupSpace {
+	mSpace = [[CMSpace alloc] init];
+	[mSpace setSleepTimeThreshhold:5.0f];
+	[mSpace setIterations:30];
+	
+	[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:1.0];
+}
+
+- (void)initializeChipmunkObjects {
+	[NSException raise:NSInternalInconsistencyException format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+}
+
+- (void)showHideDebugDraw {
 	[debugDraw setVisible:![debugDraw visible]];
 }
 
 - (BOOL)disableAccelerometer {
 	return NO;
-}
-
-- (void)initializeChipmunkObjects {
-	[NSException raise:NSInternalInconsistencyException 
-			format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
 }
 
 - (void)startDemo {
@@ -89,9 +96,6 @@
 }
 
 - (void)displayFrameRate:(double)passedTime {
-	static int frameCount = 0;
-	static double timeCount = 0;
-	
 	frameCount++;
 	timeCount += passedTime;
 	if (timeCount >= 1.0f) {
@@ -99,9 +103,6 @@
 		frameCount = 0;
 		timeCount -= 1.0f;
 	}
-	
-		//	if ([mStage childIndex:frameRateTextField] != mStage.numChildren-1) 
-		//		[mStage addChild:frameRateTextField];
 }
 
 - (void)force:(SPTouchEvent*)event {

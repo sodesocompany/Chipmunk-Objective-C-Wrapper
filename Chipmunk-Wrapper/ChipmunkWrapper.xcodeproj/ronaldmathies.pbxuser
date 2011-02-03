@@ -15,9 +15,9 @@
 			1D6058900D05DD3D006BFB54 /* ChipmunkWrapper */,
 		);
 		breakpoints = (
-			A1F1344C12DBA039001662B6 /* DampedRotarySpringConstraintDemo.m:64 */,
+			A1F1344C12DBA039001662B6 /* DampedRotarySpringConstraintDemo.m:62 */,
 			A1A7908A12DDD759006FC41B /* ChipmunkAppDelegate.m:17 */,
-			A1A7915512DDE2E3006FC41B /* SimpleMotorJointConstraintDemo.m:62 */,
+			A1A7915512DDE2E3006FC41B /* SimpleMotorJointConstraintDemo.m:61 */,
 			A1A791AE12DDE664006FC41B /* CMRectShape.h:44 */,
 			A1242B1D12F966A300318730 /* DemoChooser.m:121 */,
 		);
@@ -435,7 +435,7 @@
 		fRef = A19EA7D612EA1D530073D2A1 /* SlideJointConstraintDemo.m */;
 		name = "SlideJointConstraintDemo.m: 32";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 822;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 0;
@@ -535,7 +535,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 109";
 		rLen = 41;
-		rLoc = 4075;
+		rLoc = 3991;
 		rType = 0;
 		vrLen = 1852;
 		vrLoc = 1740;
@@ -630,7 +630,7 @@
 		fRef = A13512FF11986481007C9395 /* Game.m */;
 		name = "Game.m: 54";
 		rLen = 0;
-		rLoc = 1673;
+		rLoc = 1659;
 		rType = 0;
 		vrLen = 2065;
 		vrLoc = 562;
@@ -884,7 +884,7 @@
 		fRef = A13512FF11986481007C9395 /* Game.m */;
 		name = "Game.m: 188";
 		rLen = 0;
-		rLoc = 5069;
+		rLoc = 5027;
 		rType = 0;
 		vrLen = 1703;
 		vrLoc = 3439;
@@ -1244,7 +1244,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 60";
 		rLen = 28;
-		rLoc = 1900;
+		rLoc = 2167;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 457;
@@ -1324,7 +1324,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 60";
 		rLen = 28;
-		rLoc = 1900;
+		rLoc = 2167;
 		rType = 0;
 		vrLen = 1699;
 		vrLoc = 457;
@@ -1334,7 +1334,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 131";
 		rLen = 0;
-		rLoc = 4569;
+		rLoc = 4485;
 		rType = 0;
 		vrLen = 1839;
 		vrLoc = 512;
@@ -1354,7 +1354,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 131";
 		rLen = 0;
-		rLoc = 4569;
+		rLoc = 4485;
 		rType = 0;
 		vrLen = 1516;
 		vrLoc = 1724;
@@ -1364,7 +1364,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 131";
 		rLen = 0;
-		rLoc = 4569;
+		rLoc = 4485;
 		rType = 0;
 		vrLen = 2048;
 		vrLoc = 1461;
@@ -1394,7 +1394,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 131";
 		rLen = 0;
-		rLoc = 4569;
+		rLoc = 4485;
 		rType = 0;
 		vrLen = 1516;
 		vrLoc = 1724;
@@ -1424,7 +1424,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 131";
 		rLen = 0;
-		rLoc = 4569;
+		rLoc = 4485;
 		rType = 0;
 		vrLen = 2115;
 		vrLoc = 1419;
@@ -1434,7 +1434,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 48";
 		rLen = 15;
-		rLoc = 1288;
+		rLoc = 1191;
 		rType = 0;
 		vrLen = 2030;
 		vrLoc = 1008;
@@ -1464,7 +1464,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 125";
 		rLen = 12;
-		rLoc = 4361;
+		rLoc = 4277;
 		rType = 0;
 		vrLen = 1958;
 		vrLoc = 1861;
@@ -1474,7 +1474,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 125";
 		rLen = 0;
-		rLoc = 4373;
+		rLoc = 4289;
 		rType = 0;
 		vrLen = 1858;
 		vrLoc = 1955;
@@ -1484,7 +1484,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 125";
 		rLen = 0;
-		rLoc = 4373;
+		rLoc = 4289;
 		rType = 0;
 		vrLen = 1858;
 		vrLoc = 1955;
@@ -1494,7 +1494,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 125";
 		rLen = 0;
-		rLoc = 4373;
+		rLoc = 4289;
 		rType = 0;
 		vrLen = 1858;
 		vrLoc = 1955;
@@ -1514,7 +1514,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 125";
 		rLen = 0;
-		rLoc = 4370;
+		rLoc = 4286;
 		rType = 0;
 		vrLen = 1228;
 		vrLoc = 2579;
@@ -1524,7 +1524,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 125";
 		rLen = 0;
-		rLoc = 4370;
+		rLoc = 4286;
 		rType = 0;
 		vrLen = 1858;
 		vrLoc = 1955;
@@ -1534,7 +1534,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 100";
 		rLen = 0;
-		rLoc = 3639;
+		rLoc = 3555;
 		rType = 0;
 		vrLen = 1716;
 		vrLoc = 125;
@@ -1574,7 +1574,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 100";
 		rLen = 0;
-		rLoc = 3639;
+		rLoc = 3555;
 		rType = 0;
 		vrLen = 1763;
 		vrLoc = 77;
@@ -1584,7 +1584,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 60";
 		rLen = 0;
-		rLoc = 1788;
+		rLoc = 1691;
 		rType = 0;
 		vrLen = 1869;
 		vrLoc = 77;
@@ -1594,7 +1594,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 21";
 		rLen = 0;
-		rLoc = 556;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 1837;
 		vrLoc = 557;
@@ -1604,7 +1604,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 54";
 		rLen = 1;
-		rLoc = 1561;
+		rLoc = 1464;
 		rType = 0;
 		vrLen = 2012;
 		vrLoc = 834;
@@ -1614,7 +1614,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 60";
 		rLen = 0;
-		rLoc = 1758;
+		rLoc = 1661;
 		rType = 0;
 		vrLen = 1976;
 		vrLoc = 863;
@@ -1653,7 +1653,7 @@
 		fRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */;
 		name = "BaseDemo.m: 150";
 		rLen = 0;
-		rLoc = 4370;
+		rLoc = 4286;
 		rType = 0;
 		vrLen = 1467;
 		vrLoc = 2137;
@@ -2016,9 +2016,9 @@
 	};
 	A13512FF11986481007C9395 /* Game.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 3030}}";
-			sepNavSelRange = "{5069, 0}";
-			sepNavVisRange = "{3439, 1703}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 2940}}";
+			sepNavSelRange = "{142, 0}";
+			sepNavVisRange = "{0, 1971}";
 		};
 	};
 	A141F4FF12F71CAC00E7B4A4 /* PBXTextBookmark */ = {
@@ -2128,8 +2128,8 @@
 	};
 	A178431A12ECCBA600EE1713 /* BallDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 954}}";
-			sepNavSelRange = "{1116, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{707, 14}";
 			sepNavVisRange = "{0, 1198}";
 		};
 	};
@@ -2392,9 +2392,9 @@
 	};
 	A17846F812F0810A00EE1713 /* TheoJansenDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 1695}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 1680}}";
 			sepNavSelRange = "{288, 29}";
-			sepNavVisRange = "{0, 2344}";
+			sepNavVisRange = "{0, 2374}";
 		};
 	};
 	A17846F912F0810A00EE1713 /* TheoJansenDemo.h */ = {
@@ -2503,9 +2503,9 @@
 	};
 	A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 990}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
 			sepNavSelRange = "{838, 0}";
-			sepNavVisRange = "{0, 2022}";
+			sepNavVisRange = "{0, 1950}";
 		};
 	};
 	A19EA7B512EA1D070073D2A1 /* DampedSpringConstraintDemo.h */ = {
@@ -2517,9 +2517,9 @@
 	};
 	A19EA7B612EA1D070073D2A1 /* DampedSpringConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 987}}";
-			sepNavSelRange = "{1425, 0}";
-			sepNavVisRange = "{0, 1860}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1421, 0}";
+			sepNavVisRange = "{0, 1830}";
 		};
 	};
 	A19EA7B712EA1D070073D2A1 /* GearJointConstraintDemo.h */ = {
@@ -2531,9 +2531,9 @@
 	};
 	A19EA7B812EA1D070073D2A1 /* GearJointConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 987}}";
-			sepNavSelRange = "{1426, 0}";
-			sepNavVisRange = "{0, 1961}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1749, 0}";
+			sepNavVisRange = "{0, 1922}";
 		};
 	};
 	A19EA7B912EA1D070073D2A1 /* GrooveJointConstraintDemo.h */ = {
@@ -2545,9 +2545,9 @@
 	};
 	A19EA7BA12EA1D080073D2A1 /* GrooveJointConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 987}}";
-			sepNavSelRange = "{1319, 0}";
-			sepNavVisRange = "{0, 1587}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1368, 0}";
+			sepNavVisRange = "{0, 1586}";
 		};
 	};
 	A19EA7BB12EA1D080073D2A1 /* PinJointConstraintDemo.h */ = {
@@ -2559,9 +2559,9 @@
 	};
 	A19EA7BC12EA1D080073D2A1 /* PinJointConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 959}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1552}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1151, 0}";
+			sepNavVisRange = "{0, 1506}";
 		};
 	};
 	A19EA7BD12EA1D080073D2A1 /* PivotJointConstraintDemo.h */ = {
@@ -2573,14 +2573,14 @@
 	};
 	A19EA7BE12EA1D080073D2A1 /* PivotJointConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 959}}";
-			sepNavSelRange = "{962, 131}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1364, 0}";
 			sepNavVisRange = "{0, 1487}";
 		};
 	};
 	A19EA7C112EA1D080073D2A1 /* RatchetJointConstraintDemo.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1175, 1018}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 472}";
 		};
@@ -2594,9 +2594,9 @@
 	};
 	A19EA7C412EA1D080073D2A1 /* RotaryLimitConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 1005}}";
-			sepNavSelRange = "{1451, 0}";
-			sepNavVisRange = "{0, 2073}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 990}}";
+			sepNavSelRange = "{1447, 0}";
+			sepNavVisRange = "{0, 2044}";
 		};
 	};
 	A19EA7C512EA1D080073D2A1 /* SimpleMotorJointConstraintDemo.h */ = {
@@ -2608,9 +2608,9 @@
 	};
 	A19EA7C612EA1D080073D2A1 /* SimpleMotorJointConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 987}}";
-			sepNavSelRange = "{1534, 164}";
-			sepNavVisRange = "{0, 2071}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1433, 0}";
+			sepNavVisRange = "{0, 2041}";
 		};
 	};
 	A19EA7D512EA1D380073D2A1 /* SlideJointConstraintDemo.h */ = {
@@ -2622,16 +2622,16 @@
 	};
 	A19EA7D612EA1D530073D2A1 /* SlideJointConstraintDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 959}}";
-			sepNavSelRange = "{864, 0}";
-			sepNavVisRange = "{0, 1582}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
+			sepNavSelRange = "{1324, 0}";
+			sepNavVisRange = "{0, 1538}";
 		};
 	};
 	A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1522, 1365}}";
-			sepNavSelRange = "{1740, 0}";
-			sepNavVisRange = "{624, 1626}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 1185}}";
+			sepNavSelRange = "{822, 0}";
+			sepNavVisRange = "{252, 2004}";
 		};
 	};
 	A19EA7DC12EA1DE30073D2A1 /* PolyDemo.h */ = {
@@ -2683,16 +2683,16 @@
 	};
 	A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1912, 2445}}";
-			sepNavSelRange = "{4370, 0}";
-			sepNavVisRange = "{2137, 1467}";
+			sepNavIntBoundsRect = "{{0, 0}, {1522, 2535}}";
+			sepNavSelRange = "{2089, 0}";
+			sepNavVisRange = "{2854, 1728}";
 		};
 	};
 	A19EA7FB12EA1FF90073D2A1 /* BaseDemo.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1522, 977}}";
-			sepNavSelRange = "{685, 0}";
-			sepNavVisRange = "{0, 932}";
+			sepNavSelRange = "{870, 0}";
+			sepNavVisRange = "{0, 917}";
 		};
 	};
 	A19EA7FD12EA20EA0073D2A1 /* PBXTextBookmark */ = {
@@ -2805,7 +2805,7 @@
 		path = "/Users/ronaldmathies/Development/Frameworks/Chipmunk-5.3.4/src/cpHashSet.c";
 		sourceTree = "<absolute>";
 	};
-	A1A7915512DDE2E3006FC41B /* SimpleMotorJointConstraintDemo.m:62 */ = {
+	A1A7915512DDE2E3006FC41B /* SimpleMotorJointConstraintDemo.m:61 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2817,7 +2817,7 @@
 		functionName = "-dealloc";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 62;
+		lineNumber = 61;
 		location = ChipmunkWrapper;
 		modificationTime = 318336077.425472;
 		originalNumberOfMultipleMatches = 1;
@@ -2968,7 +2968,7 @@
 		fRef = A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */;
 		name = "PolyDemo.m: 67";
 		rLen = 0;
-		rLoc = 1740;
+		rLoc = 1775;
 		rType = 0;
 		vrLen = 1626;
 		vrLoc = 624;
@@ -2988,7 +2988,7 @@
 		fRef = A19EA7B612EA1D070073D2A1 /* DampedSpringConstraintDemo.m */;
 		name = "DampedSpringConstraintDemo.m: 49";
 		rLen = 0;
-		rLoc = 1425;
+		rLoc = 1421;
 		rType = 0;
 		vrLen = 1860;
 		vrLoc = 0;
@@ -3018,7 +3018,7 @@
 		fRef = A19EA7C412EA1D080073D2A1 /* RotaryLimitConstraintDemo.m */;
 		name = "RotaryLimitConstraintDemo.m: 51";
 		rLen = 0;
-		rLoc = 1451;
+		rLoc = 1447;
 		rType = 0;
 		vrLen = 2073;
 		vrLoc = 0;
@@ -3169,7 +3169,7 @@
 		fRef = A19EA7C612EA1D080073D2A1 /* SimpleMotorJointConstraintDemo.m */;
 		name = "SimpleMotorJointConstraintDemo.m: 52";
 		rLen = 164;
-		rLoc = 1534;
+		rLoc = 1504;
 		rType = 0;
 		vrLen = 2071;
 		vrLoc = 0;
@@ -3712,7 +3712,7 @@
 		path = /Users/ronaldmathies/Development/Frameworks/Sparrow_v1.0/sparrow/src/Classes/SPImage.m;
 		sourceTree = "<absolute>";
 	};
-	A1F1344C12DBA039001662B6 /* DampedRotarySpringConstraintDemo.m:64 */ = {
+	A1F1344C12DBA039001662B6 /* DampedRotarySpringConstraintDemo.m:62 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -3724,7 +3724,7 @@
 		functionName = "-touchEvent:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 64;
+		lineNumber = 62;
 		location = ChipmunkWrapper;
 		modificationTime = 318336077.425953;
 		originalNumberOfMultipleMatches = 1;

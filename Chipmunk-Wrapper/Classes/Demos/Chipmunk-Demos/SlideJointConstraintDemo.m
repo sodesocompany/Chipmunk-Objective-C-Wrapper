@@ -28,7 +28,6 @@
 	cpVect pos1 = cpv(80, 140);
 	cpVect pos2 = cpv(220, 140);
 	
-	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
 	[body1 setPosition:pos1];
 	[body1 addToSpace];
@@ -47,7 +46,7 @@
 	[shape2 setFriction:0.7];
 	[shape2 addToSpace];
 	
-	// Create the damped rotary constraint between them.
+	// Create the slide joint constraint between them.
 	CMConstraint *slideJointConstraint = [body1 addSlideJointConstraintWithBody:body2 anchor1:cpv(15,0) anchor2:cpv(-15,0) min:20.0f max:40.0f];
 	[slideJointConstraint addToSpace];
 	

@@ -43,7 +43,7 @@
 		[textField setHeight:32];
 		[textField setX:32 + 5];
 		[textField setY:480 - 5 - 32];
-		[textField addEventListener:@selector(switchBetweenSparrowAndChipmunk:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		[textField addEventListener:@selector(showHideDebugDraw:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 		
 		[self addChild:textField];
 		
@@ -57,10 +57,10 @@
     return self;
 }
 
-- (void)switchBetweenSparrowAndChipmunk:(SPTouchEvent*)event {
+- (void)showHideDebugDraw:(SPTouchEvent*)event {
 	SPTouch *touch = [[event touchesWithTarget:textField andPhase:SPTouchPhaseBegan] anyObject];
 	if (touch) {
-		[demo switchBetweenSparrowAndChipmunk];
+		[demo showHideDebugDraw];
 	}
 }
 

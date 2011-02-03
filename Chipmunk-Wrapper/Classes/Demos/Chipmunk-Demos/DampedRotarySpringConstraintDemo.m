@@ -28,7 +28,6 @@
 	cpVect pos1 = cpv(80, 140);
 	cpVect pos2 = cpv(220, 140);
 	
-	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
 	[body1 setPosition:pos1];
 	[body1 addToSpace];
@@ -48,8 +47,7 @@
 	[shape2 addToSpace];
 	
 	CMBody * staticBody = [mSpace addStaticBody];
-		//[staticBody addToSpace];
-	
+
 	CMConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:pos1];
 	[pivotJointConstraint1 addToSpace];
 	

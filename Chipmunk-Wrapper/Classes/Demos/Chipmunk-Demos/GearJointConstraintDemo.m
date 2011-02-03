@@ -48,17 +48,16 @@
 	[shape2 addToSpace];
 	
 	CMBody * staticBody = [mSpace addStaticBody];
-		//[staticBody addToSpace];
-	
+
 	CMConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:pos1];
 	[pivotJointConstraint1 addToSpace];
 	
 	CMConstraint *pivotJointConstraint2 = [body2 addPivotJointConstraintWithBody:staticBody pivot:pos2];
 	[pivotJointConstraint2 addToSpace];
 		
-	// Create the damped rotary constraint between them.
-	CMConstraint *dampedRotaryConstraint = [body1 addGearJointConstraintWithBody:body2 phase:0.0f ratio:2.0f];
-	[dampedRotaryConstraint addToSpace];
+	// Create the gear joint constraint between them.
+	CMConstraint *gearJointConstraint = [body1 addGearJointConstraintWithBody:body2 phase:0.0f ratio:2.0f];
+	[gearJointConstraint addToSpace];
 }
 
 @end

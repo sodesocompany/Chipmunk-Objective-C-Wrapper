@@ -28,26 +28,25 @@
 	cpVect pos1 = cpv(80, 140);
 	cpVect pos2 = cpv(220, 140);
 	
-	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:1.0f moment:0];
 	[body1 setPosition:pos1];
+	[body1 addToSpace];
 	
 	CMShape *shape1 = [body1 addCircleWithRadius:15.0f];
 	[shape1 setElasticity:0.0];
 	[shape1 setFriction:0.7];
-	[body1 addToSpace];
 	[shape1 addToSpace];
 	
 	CMBody *body2 = [mSpace addBodyWithMass:1.0f moment:1];
 	[body2 setPosition:pos2];
+	[body2 addToSpace];
 		
 	CMShape *shape2 = [body2 addCircleWithRadius:15.0f];
 	[shape2 setElasticity:0.0];
 	[shape2 setFriction:0.7];
-	[body2 addToSpace];
 	[shape2 addToSpace];
 	
-	// Create the damped rotary constraint between them.
+	// Create the pin joint constraint between them.
 	CMConstraint *dampedRotaryConstraint = [body1 addPinJointConstraintWithBody:body2 anchor1:cpv(15,0) anchor2:cpv(-15,0)];
 	[dampedRotaryConstraint addToSpace];
 }
