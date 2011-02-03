@@ -10,6 +10,12 @@ Version details:
 
 Current head release:
 
+3 February 2010:
+
+- Added a new demo: BlocksDemo
+- Fixed disabling UIAccelerometer, is now removed on dealloc of demo (might cause bugs)
+- Added the ability to disable UIAccelerometer in demos (programmatically)
+
 2 February 2010:
 
 - Added a new demo: RopeDemo
