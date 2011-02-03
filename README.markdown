@@ -12,6 +12,8 @@ Current head release:
 
 3 February 2010:
 
+- Changed the starting height of the CarDemo
+- Removed UIAccelerometer from NewtonsCradleDemo
 - Added a new demo: BlocksDemo
 - Fixed disabling UIAccelerometer, is now removed on dealloc of demo (might cause bugs)
 - Added the ability to disable UIAccelerometer in demos (programmatically)
