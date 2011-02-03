@@ -10,9 +10,19 @@ Version details:
 
 Current head release:
 
+3 February 2010:
+
+- Changed the starting height of the CarDemo
+- Removed UIAccelerometer from NewtonsCradleDemo
+- Added a new demo: BlocksDemo
+- Fixed disabling UIAccelerometer, is now removed on dealloc of demo (might cause bugs)
+- Added the ability to disable UIAccelerometer in demos (programmatically)
+
 2 February 2010:
 
-- Added a new demo: RopeDemo 
+- Added a new demo: RopeDemo
+- Added a new demo: Newtons Cradle
+- Added setIterations on the CMSpace, read the API doc in the source before changing this.
 
 1 February 2010 and before:
 
