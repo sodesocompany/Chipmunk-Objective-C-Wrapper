@@ -76,10 +76,10 @@ const float horizontalHeight = 10;
 }
 
 - (void)removeBlock:(SPTouchEvent*)event {
-	SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
-	if (touch) {
-		SPPoint *spPoint = [touch locationInSpace:self];
+	//SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
+	//if (touch) {
+	//	SPPoint *spPoint = [touch locationInSpace:self];
 		
-	}
+	//}
 }
 @end
