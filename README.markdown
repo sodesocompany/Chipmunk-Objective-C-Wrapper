@@ -18,9 +18,9 @@ General note:
 
 (i had to remove the hash sign because that causes an <hr/> to be displayed)
 
-define CP_GROUP_TYPE id
-define CP_COLLISION_TYPE_TYPE id
-define CP_DATA_POINTER_TYPE id
+* define CP_GROUP_TYPE id
+* define CP_COLLISION_TYPE_TYPE id
+* define CP_DATA_POINTER_TYPE id
 
 These types change the cpLayers, cpGroup and cpCollisionType. The cpLayers, cpGroup and cpCollisionType are now 
 by default defined as being an id (keyword), this has the advantage that you can specify an NSString or 
