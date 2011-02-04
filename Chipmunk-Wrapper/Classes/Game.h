@@ -27,6 +27,7 @@
 #include "RopeDemo.h"
 #include "NewtonsCradleDemo.h"
 #include "BlocksDemo.h"
+#include "ManyBlocksDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

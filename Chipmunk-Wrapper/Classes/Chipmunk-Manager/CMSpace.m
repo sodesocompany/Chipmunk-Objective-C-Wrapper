@@ -172,22 +172,22 @@ void updateShape(void *cpShapePtr, void* unused) {
 	// TODO: Maybe not the best place..
 	[mBodies addObject:body];
 	
-	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
+	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:5];
 	[topWall setCollisionType:1000000];
 	[topWall setElasticity:elasticity];
 	[topWall setFriction:friction];
 	
-	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width + 1, height) to:cpv(width + 1, 0) radius:1];
+	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width + 1, height) to:cpv(width + 1, 0) radius:5];
 	[rightWall setCollisionType:1000000];
 	[rightWall setElasticity:elasticity];
 	[rightWall setFriction:friction];
 	
-	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:1];
+	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:5];
 	[bottomWall setCollisionType:1000000];
 	[bottomWall setElasticity:elasticity];
 	[bottomWall setFriction:friction];
 	
-	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:1];
+	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:5];
 	[leftWall setCollisionType:1000000];
 	[leftWall setElasticity:elasticity];
 	[leftWall setFriction:friction];

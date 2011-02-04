@@ -68,6 +68,10 @@
 	
 }
 
+- (BOOL)disableAccelerometer {
+	return YES;
+}
+
 /**
  * Create a square on a fixed point on which the rope can collide by holding the device
  * in an angle.

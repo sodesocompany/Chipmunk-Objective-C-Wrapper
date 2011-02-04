@@ -88,7 +88,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 17;
+			selected = 18;
 		}
 	
 		[self switchDemo];
@@ -100,7 +100,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 18) {
+		if (selected == 19) {
 			selected = 0;
 		}
 	
@@ -187,6 +187,10 @@
 		case 17:
 			[textField setText:@"Blocks Demo"];
 			demo = [[BlocksDemo alloc] init];
+			break;
+		case 18:
+			[textField setText:@"Many Blocks Demo"];
+			demo = [[ManyBlocksDemo alloc] init];
 			break;
 	}
 	

@@ -13,6 +13,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A124299412F94D7D00318730 /* NewtonsCradleDemo.m */; };
 		A1242C2E12FB1D9D00318730 /* BlocksDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1242C2D12FB1D9D00318730 /* BlocksDemo.m */; };
+		A1242D0612FB537300318730 /* ManyBlocksDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1242D0412FB537300318730 /* ManyBlocksDemo.m */; };
 		A13512F611986265007C9395 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13512F511986265007C9395 /* QuartzCore.framework */; };
 		A13512F811986270007C9395 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13512F711986270007C9395 /* OpenGLES.framework */; };
 		A13512FD11986427007C9395 /* ChipmunkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A13512FC11986427007C9395 /* ChipmunkAppDelegate.m */; };
@@ -107,6 +108,8 @@
 		A124299412F94D7D00318730 /* NewtonsCradleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewtonsCradleDemo.m; sourceTree = "<group>"; };
 		A1242C2C12FB1D9D00318730 /* BlocksDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksDemo.h; sourceTree = "<group>"; };
 		A1242C2D12FB1D9D00318730 /* BlocksDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlocksDemo.m; sourceTree = "<group>"; };
+		A1242D0412FB537300318730 /* ManyBlocksDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManyBlocksDemo.m; sourceTree = "<group>"; };
+		A1242D0512FB537300318730 /* ManyBlocksDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManyBlocksDemo.h; sourceTree = "<group>"; };
 		A1259B3D12C92A2700EA5EA0 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		A135125C119860CA007C9395 /* Sparrow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Sparrow.xcodeproj; sourceTree = SPARROW_SRC; };
 		A13512F511986265007C9395 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -377,6 +380,8 @@
 				A1AEBC0512F8B362001A45B2 /* RopeDemo.m */,
 				A1242C2C12FB1D9D00318730 /* BlocksDemo.h */,
 				A1242C2D12FB1D9D00318730 /* BlocksDemo.m */,
+				A1242D0512FB537300318730 /* ManyBlocksDemo.h */,
+				A1242D0412FB537300318730 /* ManyBlocksDemo.m */,
 				A124299312F94D7D00318730 /* NewtonsCradleDemo.h */,
 				A124299412F94D7D00318730 /* NewtonsCradleDemo.m */,
 			);
@@ -689,6 +694,7 @@
 				A1AEBC0612F8B362001A45B2 /* RopeDemo.m in Sources */,
 				A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */,
 				A1242C2E12FB1D9D00318730 /* BlocksDemo.m in Sources */,
+				A1242D0612FB537300318730 /* ManyBlocksDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

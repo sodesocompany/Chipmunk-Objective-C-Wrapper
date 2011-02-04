@@ -85,10 +85,6 @@
 	}
 }
 
-- (void) free {
-	cpShapeFree(mShape);
-}
-
 - (cpShape*) construct {
 	return mShape;
 }

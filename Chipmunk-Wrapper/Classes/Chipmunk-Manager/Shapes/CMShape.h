@@ -116,8 +116,6 @@
  */
 - (void) removeFromSpace;
 
-- (void) free;
-
 /**
  * Returns the cpShape object.
  *
