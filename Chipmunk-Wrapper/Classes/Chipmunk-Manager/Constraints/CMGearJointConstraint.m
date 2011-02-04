@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody phase:(float)phase ratio:(float)ratio {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpGearJointNew(body1, body2, phase, ratio);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpGearJointNew(body1, body2, phase, ratio);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

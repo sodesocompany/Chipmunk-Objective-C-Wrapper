@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 restLength:(float)restLength stiffness:(float)stiffness damping:(float)damping {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpDampedSpringNew(body1, body2, anchor1, anchor2, restLength, stiffness, damping);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpDampedSpringNew(body1, body2, anchor1, anchor2, restLength, stiffness, damping);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

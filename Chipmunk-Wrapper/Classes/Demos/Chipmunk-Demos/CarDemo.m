@@ -38,7 +38,7 @@
 
 	[shape setElasticity:0.0];
 	[shape setFriction:0.7];
-	[shape setGroup:1];
+	[shape setGroup:CAR_GROUP_TYPE];
 	[shape addToSpace];
 	
 	// Create the first wheel
@@ -49,7 +49,7 @@
 	CMShape *wheel1Shape = [wheel1 addCircleWithRadius:15.0f];
 	[wheel1Shape setElasticity:0.0];
 	[wheel1Shape setFriction:0.7];
-	[wheel1Shape setGroup:1];
+	[wheel1Shape setGroup:CAR_GROUP_TYPE];
 	[wheel1Shape addToSpace];
 	
 	// Create the second wheel
@@ -60,7 +60,7 @@
 	CMShape *wheel2Shape = [wheel2 addCircleWithRadius:15.0f];
 	[wheel2Shape setElasticity:0.0];
 	[wheel2Shape setFriction:0.7];
-	[wheel2Shape setGroup:1];
+	[wheel2Shape setGroup:CAR_GROUP_TYPE];
 	[wheel2Shape addToSpace];
 	
 	CMGrooveJointConstraint *grooveJointConstraint1 = [chassis addGrooveJointConstraintWithBody:wheel1 grooveA:cpv(-30, -10) grooveB:cpv(-30, 40) anchor1:cpvzero];

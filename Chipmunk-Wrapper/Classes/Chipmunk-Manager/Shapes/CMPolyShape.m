@@ -37,7 +37,7 @@
 			vertices[index] = va_arg(vaVerticesList, cpVect);
 		}
 		
-		cpBody *body = [cmBody construct];
+		cpBody *body = [cmBody cpBody];
 		if (body->m != INFINITY) {
 			
 				// Calculate the moment.
@@ -45,8 +45,8 @@
 			cpBodySetMoment(body, moment);
 		}
 		
-		mShape = cpPolyShapeNew(body, numberOfVertices, vertices, offset);
-		mShape->data = [[CMData createWithObject:self] retain];
+		mCpShape = cpPolyShapeNew(body, numberOfVertices, vertices, offset);
+		mCpShape->data = [[CMData createWithObject:self] retain];
 	}
 	return self;
 }

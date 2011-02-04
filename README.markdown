@@ -10,6 +10,53 @@ Version details:
 
 Current head release:
 
+4 February 2010:
+
+General note:
+
+- Added the folowing definitions to CMTypes.h
+
+#define CP_GROUP_TYPE id
+#define CP_COLLISION_TYPE_TYPE id
+#define CP_DATA_POINTER_TYPE id
+
+These types change the cpLayers, cpGroup and cpCollisionType. The cpLayers, cpGroup and cpCollisionType are now 
+by default defined as being an id (keyword), this has the advantage that you can specify an NSString or 
+any object for that matter as a identification.
+
+This has one side effect, you can't include the chipmunk.h header file yourself, this is not handled by
+the ChipmunkManager.h file (the CMTypes.h file needs to be before the chipmunk.h header file otherwise
+this won't work).
+
+- Modified demos where applicable because of the collision change.
+- CMSpace: Changed the method: 
+
+(CMShape*)findShapeAtPoint:(SPPoint*)position; renamed to:  (CMShape*)queryFirstByPoint:(SPPoint*)point;
+
+- CMSpace: Changed the method:
+
+(CMShape*)findShapeAtPosition:(cpVect)position; renamed to:  (CMShape*)queryFirstByVect:(SPPoint*)point;
+
+- CMSpace: Added the method: - (void)removeBody:(CMBody*)body
+- CMSpace: Added the method: - (CMShape*)queryFirstByPoint:(SPPoint*)point layers:(cpLayers)layers group:(cpGroup)group;
+- CMSpace: Added the method: - (CMShape*)queryFirstByVect:(cpVect*)point layers:(cpLayers)layers group:(cpGroup)group;
+
+Both do the same but take a different first parameter. These functions return the first shape that is found
+at the specified point. The layers and group information is used to identify more specific which shape you are looking for.
+
+- CMConstraint: Removed the method: - (cpConstraint*) construct; (use [constraint cpConstraint] instead)
+- CMConstraint: Removed the method: - (void) free;
+
+- CMShape: Removed the method: - (cpShape*) construct; (use [shape cpShape] instead)
+- CMShape: Added the method: - (void) removeFromSpace;
+
+- CMBody: Removed the method: - (cpBody*) construct; (use [body cpBody] instead)
+- CMBody: Removed the method: - (void)free;
+- CMBody: Added the method: - (void) removeFromSpace;
+- CMBody: Added the method: - (void)removeShape:(CMShape*)shape
+- CMBody: Added the method: - (void)setLayer:(cpLayers)layer;
+- Changed collision handling: the types (A & B) are now defined as cpCollisionType
+
 3 February 2010:
 
 - Dit a lot of code cleanup

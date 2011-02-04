@@ -40,7 +40,7 @@
 	CMShape *shape1 = [body1 addCircleWithRadius:30.0f];
 	[shape1 setElasticity:0.0];
 	[shape1 setFriction:0.7];
-	[shape1 setCollisionType:1];
+	[shape1 setCollisionType:CIRCLE_1_COLLISION_TYPE];
 	[shape1 addToSpace];
 	
 	CMBody *body2 = [mSpace addBodyWithMass:2.0f moment:1];
@@ -50,7 +50,7 @@
 	CMShape *shape2 = [body2 addCircleWithRadius:30.0f];
 	[shape2 setElasticity:0.0];
 	[shape2 setFriction:0.7];
-	[shape2 setCollisionType:2];
+	[shape2 setCollisionType:CIRCLE_2_COLLISION_TYPE];
 	[shape2 addToSpace];
 
 	CMBody *body3 = [mSpace addBodyWithMass:2.0f moment:1];
@@ -60,30 +60,30 @@
 	CMShape *shape3 = [body3 addRectWithWidth:40.0f height:40.0f];
 	[shape3 setElasticity:0.0];
 	[shape3 setFriction:0.7];
-	[shape3 setCollisionType:3];
+	[shape3 setCollisionType:RECT_COLLISION_TYPE];
 	[shape3 addToSpace];
 	
 }
 
 - (BOOL) defaultBegin:(CMArbiter*)arbiter space:(CMSpace*)space {
-	NSLog(@"Collision: begin (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
+	NSLog(@"Collision: begin (between %@ and %@)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	[arbiter setElasticity:0.0f];
 	[arbiter setFriction:0.0f];
 	return YES;
 }
 
 - (BOOL) defaultPreSolve:(CMArbiter*)arbiter space:(CMSpace*)space {
-	NSLog(@"Collision: preSolve (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
+	NSLog(@"Collision: preSolve (between %@ and %@)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
 
 - (BOOL) defaultPostSolve:(CMArbiter*)arbiter space:(CMSpace*)space {
-	NSLog(@"Collision: postSolve (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
+	NSLog(@"Collision: postSolve (between %@ and %@)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
 
 - (BOOL) defaultSeparate:(CMArbiter*)arbiter space:(CMSpace*)space {
-	NSLog(@"Collision: separate (between %d and %d)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
+	NSLog(@"Collision: separate (between %@ and %@)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
 

@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody restAngle:(float)restAngle stiffness:(float)stiffness damping:(float)damping {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpDampedRotarySpringNew(body1, body2, restAngle, stiffness, damping);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpDampedRotarySpringNew(body1, body2, restAngle, stiffness, damping);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

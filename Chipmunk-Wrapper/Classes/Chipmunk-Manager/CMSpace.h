@@ -77,24 +77,6 @@
 #pragma mark Operations
 
 /**
- * Find a shape at the specified position.
- *
- * @param position the position
- *
- * @return the shape at the specified position or nil.
- */
-- (CMShape*)findShapeAtPosition:(cpVect)position;
-
-/**
- * Find a shape at the specified position.
- *
- * @param point the position
- *
- * @return the shape at the specified position or nil.
- */
-- (CMShape*)findShapeAtPoint:(SPPoint*)point;
-
-/**
  * Perform a step within the physics world.
  *
  * @param framerate frames pers second
@@ -122,7 +104,60 @@
 
 #pragma mark -
 
-#pragma mark Body create
+#pragma mark Query functions
+
+/**
+ * Returns the first shape at the specified position.
+ *
+ * @param point the position
+ *
+ * @return the shape that was found at the specified position or nil when nothing was there.
+ */
+- (CMShape*)queryFirstByPoint:(SPPoint*)point;
+
+/**
+ * Returns the first shape at the specified position.
+ * 
+ * @param point a point in space
+ *
+ * @return the shape that was found at the specified position or nil when nothing was there.
+ */
+- (CMShape*)queryFirstByVect:(cpVect)point;
+
+/**
+ * Returns the first shape that is found at the specified point with the specified layer and
+ * group information.
+ *
+ * About the cpLayers and cpGroup types, the cpLayers and cpGroup types are both by default 'id' (keyword), 
+ * you can override this by changes the CMTypes.h file.
+ * 
+ * @param point a point in space
+ * @param layers the layer information which is applicable for the shape to be found.
+ * @param group the group information which is applicable for the shape to be found.
+ *
+ * @return the shape that was found at the specified position or nil when nothing was there.
+ */
+- (CMShape*)queryFirstByPoint:(SPPoint*)point layers:(cpLayers)layers group:(cpGroup)group;
+
+
+/**
+ * Returns the first shape that is found at the specified point with the specified layer and
+ * group information.
+ *
+ * About the cpLayers and cpGroup types, the cpLayers and cpGroup types are both by default 'id' (keyword), 
+ * you can override this by changes the CMTypes.h file.
+ * 
+ * @param point a point in space
+ * @param layers the layer information which is applicable for the shape to be found.
+ * @param group the group information which is applicable for the shape to be found.
+ *
+ * @return the shape that was found at the specified position or nil when nothing was there.
+ */
+- (CMShape*)queryFirstByVect:(cpVect)point layers:(cpLayers)layers group:(cpGroup)group;
+
+#pragma mark -
+
+#pragma mark Body methods
 
 /**
  * Adds a new static body with the mass and moment set to INFINITY
@@ -145,6 +180,13 @@
  */
 - (CMBody*)addBodyWithMass:(float)mass moment:(float)moment;
 
+/**
+ * Removes a body from the space.
+ *
+ * @param body the body to remove.
+ */
+- (void)removeBody:(CMBody*)body;
+
 #pragma mark -
 
 #pragma mark Collission detection
@@ -155,6 +197,9 @@
  * A selector should have the following arguments:
  *
  * - (BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
+ *
+ * About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
+ * by changes the CMTypes.h file.
  *
  * @param target the target object thet will recieve the event.
  * @param begin the selector method that will recieve the begin event.
@@ -172,6 +217,9 @@
  *
  * - (BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
  *
+ * About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
+ * by changes the CMTypes.h file.
+ *
  * @param typeA  the first collision type
  * @param typeB the second collision type
  * @param target the target object thet will recieve the event.
@@ -180,7 +228,7 @@
  * @param postSolve the selector method that will recieve the postSolve event.
  * @param separate the selector method that will recieve the separate event.
  */
--(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
+-(void) addCollisionHandlerBetween:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
 
 
 /**
@@ -195,7 +243,7 @@
  * @param target the target object that will recieve the event.
  * @param selector the selector method that will be invoked upon collision between the types.
  */
--(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target selector:(SEL)selector;
+-(void) addCollisionHandlerBetween:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB target:(id)target selector:(SEL)selector;
 
 /**
  * Removes the collission handler between the two collision types.
@@ -203,7 +251,7 @@
  * @param typeA the first collision type
  * @param typeB the second collision type.
  */
--(void) removeCollisionHandlerFor:(unsigned int)typeA andTypeB:(unsigned int)typeB;
+-(void) removeCollisionHandlerFor:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB;
 
 #pragma mark -
 

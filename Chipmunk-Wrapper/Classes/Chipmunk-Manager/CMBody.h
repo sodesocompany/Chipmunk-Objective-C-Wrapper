@@ -35,13 +35,15 @@
 @interface CMBody : CMObject {
 
 @private	
-	cpBody *mBody;
+	cpBody *mCpBody;
 	
 	NSMutableArray *mShapes;
 	NSMutableArray *mConstraints;
 }
 
 - (id)initStatic;
+
+@property (nonatomic, readonly) cpBody *cpBody;
 
 /**
  * Constructs a new CMBody object with the given mass and moment.
@@ -179,13 +181,6 @@
  */
 - (void) removeFromSpace;
 
-- (void) free;
-
-/**
-  * Returns the cpBody.
-  */
-- (cpBody*) construct;
-
 #pragma mark -
 
 #pragma mark Shapes
@@ -259,6 +254,13 @@
  * @param radius The radius of the segment.
  */
 - (CMSegmentShape*) addSegmentFrom:(cpVect)from to:(cpVect)to radius:(float)radius;
+
+/**
+ * Removes the specified shape from the body and space.
+ *
+ * @param shape the shape to remove.
+ */
+- (void)removeShape:(CMShape*)shape;
 
 #pragma mark -
 

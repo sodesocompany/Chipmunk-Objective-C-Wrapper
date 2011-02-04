@@ -45,7 +45,7 @@ const float horizontalHeight = 10;
 		y = y - horizontalHeight;
 	}
 
-	[self addEventListener:@selector(remobeBlock:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+	[self addEventListener:@selector(removeBlock:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
 }
 
 - (void)horizontalBars:(float)y {
@@ -76,10 +76,14 @@ const float horizontalHeight = 10;
 }
 
 - (void)removeBlock:(SPTouchEvent*)event {
-	//SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
-	//if (touch) {
-	//	SPPoint *spPoint = [touch locationInSpace:self];
-		
-	//}
+	SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
+	if (touch) {
+		SPPoint *spPoint = [touch locationInSpace:self];
+		CMShape *shape = [mSpace queryFirstByPoint:spPoint];
+		if (shape != nil) {
+			CMBody *body = [shape getBody];
+			[body removeFromSpace];
+		}
+	}
 }
 @end

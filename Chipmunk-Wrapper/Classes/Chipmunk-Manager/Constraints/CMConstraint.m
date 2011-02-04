@@ -22,27 +22,29 @@
 
 @implementation CMConstraint
 
+@synthesize cpConstraint = mCpConstraint;
+
 #pragma mark Properties
 
 - (void)setMaxForce:(float)maxForce {
-	mConstraint->maxForce = maxForce;
+	mCpConstraint->maxForce = maxForce;
 }
 
 - (void)setMaxBias:(float)maxBias {
-	mConstraint->maxBias = maxBias;
+	mCpConstraint->maxBias = maxBias;
 }
 
 - (void)setBiasCoef:(float)biasCoef {
-	mConstraint->biasCoef = biasCoef;
+	mCpConstraint->biasCoef = biasCoef;
 }
 
 - (CMBody*)firstBody {
-	CMData *cmData = mConstraint->a->data;
+	CMData *cmData = mCpConstraint->a->data;
 	return [cmData object];
 }
 
 - (CMBody*)secondBody {
-	CMData *cmData = mConstraint->b->data;
+	CMData *cmData = mCpConstraint->b->data;
 	return [cmData object];
 }
 
@@ -51,12 +53,12 @@
 #pragma mark Data
 
 - (void)setData:(id)data {
-	CMData *cmData = (CMData*)mConstraint->data;
+	CMData *cmData = (CMData*)mCpConstraint->data;
 	[cmData setData:data];
 }
 
 - (id)getData {
-	CMData *cmData = (CMData*)mConstraint->data;
+	CMData *cmData = (CMData*)mCpConstraint->data;
 	return [cmData data];
 }
 #pragma mark -
@@ -64,27 +66,26 @@
 #pragma mark Operations
 
 - (void) addToSpace {
-	cpSpaceAddConstraint([mSpace cpSpace], mConstraint);
+	cpSpaceAddConstraint([mSpace cpSpace], mCpConstraint);
 }
 
 - (void) removeFromSpace {
-	cpSpaceRemoveConstraint([mSpace cpSpace], mConstraint);
-}
-
-- (void) free {
-	cpConstraintFree(mConstraint);
-}
-
-- (cpConstraint*) construct {
-	return mConstraint;
+	[[self firstBody] removeConstraint:self];
 }
 
 #pragma mark -
 
 - (void) dealloc {
-	CMData *cmData = mConstraint->data;
-	mConstraint->data = NULL;
+	CMData *cmData = mCpConstraint->data;
+	mCpConstraint->data = NULL;
 	[cmData release];
+	
+	cpSpaceRemoveConstraint([mSpace cpSpace], mCpConstraint);
+	mCpConstraint->a = NULL;
+	mCpConstraint->b = NULL;
+	
+	cpConstraintFree(mCpConstraint);
+	mCpConstraint = NULL;
 	
 	[super dealloc];
 }

@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody phase:(float)phase ratchet:(float)ratchet {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpRatchetJointNew(body1, body2, phase, ratchet);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpRatchetJointNew(body1, body2, phase, ratchet);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

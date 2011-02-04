@@ -24,7 +24,7 @@
 
 - (id) initWithBody:(CMBody*)cmBody from:(cpVect)from to:(cpVect)to radius:(float)radius {
 	if (self = [super init]) {
-		cpBody *body = [cmBody construct];
+		cpBody *body = [cmBody cpBody];
 		if (body->m != INFINITY) {
 			
 				// Calculate the moment.
@@ -32,8 +32,8 @@
 			cpBodySetMoment(body, moment);
 		}
 		
-		mShape = cpSegmentShapeNew(body, from, to, radius);
-		mShape->data =[[CMData createWithObject:self] retain];
+		mCpShape = cpSegmentShapeNew(body, from, to, radius);
+		mCpShape->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

@@ -39,7 +39,7 @@
 		vertices[2] = cpv( halfWidth,-halfHeight);
 		vertices[3] = cpv(-halfWidth,-halfHeight);
 		
-		cpBody *body = [cmBody construct];
+		cpBody *body = [cmBody cpBody];
 		if (body->m != INFINITY) {
 			
 				// Calculate the moment.
@@ -48,8 +48,8 @@
 		}
 		
 		
-		mShape = cpPolyShapeNew(body, 4, vertices, offset);
-		mShape->data = [[CMData createWithObject:self] retain];
+		mCpShape = cpPolyShapeNew(body, 4, vertices, offset);
+		mCpShape->data = [[CMData createWithObject:self] retain];
 	}
 	return self;
 }

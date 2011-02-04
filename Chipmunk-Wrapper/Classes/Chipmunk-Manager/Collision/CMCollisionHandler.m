@@ -40,7 +40,7 @@
 }
 
 
-- (id)initWithTypeA:(unsigned int)typeA andTypeB:(unsigned int)typeB {
+- (id)initWithTypeA:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB {
 	self = [super init];
 	if (self != nil) {
 		mTypeA = typeA;

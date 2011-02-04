@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody rate:(float)rate {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpSimpleMotorNew(body1, body2, rate);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpSimpleMotorNew(body1, body2, rate);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

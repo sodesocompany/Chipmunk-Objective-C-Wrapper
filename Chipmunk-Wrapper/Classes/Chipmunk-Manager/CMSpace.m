@@ -15,7 +15,8 @@
 static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct cpSpace *space, void *data) {
 	CMCollisionHandler *handler = (CMCollisionHandler*)data;
 	if ([handler ignoreContainmentCollision]) {
-		if (arbiter->a->collision_type == 1000000 || arbiter->b->collision_type == 1000000) {
+		if (arbiter->a->collision_type == CM_WINDOW_CONTAINMENT_COLLISION_TYPE || 
+			arbiter->b->collision_type == CM_WINDOW_CONTAINMENT_COLLISION_TYPE) {
 			return YES;
 		}
 	}
@@ -139,20 +140,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 
 #pragma mark Operations
 
-- (CMShape*)findShapeAtPosition:(cpVect)position {
-	cpShape *shape = cpSpacePointQueryFirst(mCpSpace, position, 1<<31, CP_NO_GROUP);
-	if (shape != NULL) {
-		CMData *cmData = (CMData*)shape->data;
-		return [cmData object];
-	}
-	
-	return nil;
-}
-
-- (CMShape*)findShapeAtPoint:(SPPoint*)point {
-	return [self findShapeAtPosition:[point toCpVect]];
-}
-
 - (void)step:(float)framerate {
 	cpSpaceStep(mCpSpace, framerate);
 }
@@ -172,23 +159,23 @@ void updateShape(void *cpShapePtr, void* unused) {
 	// TODO: Maybe not the best place..
 	[mBodies addObject:body];
 	
-	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:5];
-	[topWall setCollisionType:1000000];
+	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
+	[topWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[topWall setElasticity:elasticity];
 	[topWall setFriction:friction];
 	
-	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width + 1, height) to:cpv(width + 1, 0) radius:5];
-	[rightWall setCollisionType:1000000];
+	CMSegmentShape *rightWall = [body addSegmentFrom:cpv(width + 1, height) to:cpv(width + 1, 0) radius:1];
+	[rightWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[rightWall setElasticity:elasticity];
 	[rightWall setFriction:friction];
 	
-	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:5];
-	[bottomWall setCollisionType:1000000];
+	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:1];
+	[bottomWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[bottomWall setElasticity:elasticity];
 	[bottomWall setFriction:friction];
 	
-	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:5];
-	[leftWall setCollisionType:1000000];
+	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:1];
+	[leftWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[leftWall setElasticity:elasticity];
 	[leftWall setFriction:friction];
 	
@@ -204,7 +191,33 @@ void updateShape(void *cpShapePtr, void* unused) {
 
 #pragma mark -
 
-#pragma mark Body create
+#pragma mark Query functions
+
+- (CMShape*)queryFirstByPoint:(SPPoint*)point {
+	return [self queryFirstByVect:[point toCpVect]];
+}
+
+- (CMShape*)queryFirstByVect:(cpVect)point {
+	return [self queryFirstByVect:point layers:1<<31 group:CP_NO_GROUP];
+}
+
+- (CMShape*)queryFirstByPoint:(SPPoint*)point layers:(cpLayers)layers group:(cpGroup)group {
+	return [self queryFirstByVect:[point toCpVect] layers:layers group:group];
+}
+
+- (CMShape*)queryFirstByVect:(cpVect)vect layers:(cpLayers)layers group:(cpGroup)group {
+	cpShape *shape = cpSpacePointQueryFirst(mCpSpace, vect, layers, group);
+	if (shape != NULL) {
+		CMData *cmData = (CMData*)shape->data;
+		return [cmData object];
+	}
+	
+	return nil;
+}
+
+#pragma mark -
+
+#pragma mark Body methods
 
 - (CMBody*)addStaticBody {
 	CM_CREATE_POOL(pool);
@@ -234,6 +247,10 @@ void updateShape(void *cpShapePtr, void* unused) {
 	return body; 
 }
 
+- (void)removeBody:(CMBody*)body {
+	[mBodies removeObject:body];
+}
+
 #pragma mark -
 
 #pragma mark Collission detection
@@ -259,11 +276,11 @@ void updateShape(void *cpShapePtr, void* unused) {
 	CM_RELEASE_POOL(pool);
 }
 
--(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target selector:(SEL)selector {
+-(void) addCollisionHandlerBetween:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB target:(id)target selector:(SEL)selector {
 	[self addCollisionHandlerBetween:typeA andTypeB:typeB target:target begin:selector preSolve:selector postSolve:selector separate:selector];
 }
 
--(void) addCollisionHandlerBetween:(unsigned int)typeA andTypeB:(unsigned int)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate {
+-(void) addCollisionHandlerBetween:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate {
 	CM_CREATE_POOL(pool);
 	
 	CMCollisionHandler *handler = [[[CMCollisionHandler alloc] initWithTypeA:typeA andTypeB:typeB] autorelease];
@@ -286,7 +303,7 @@ void updateShape(void *cpShapePtr, void* unused) {
 	CM_RELEASE_POOL(pool);
 }
 
--(void) removeCollisionHandlerFor:(unsigned int)typeA andTypeB:(unsigned int)typeB {
+-(void) removeCollisionHandlerFor:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB {
 	for (CMCollisionHandler *handler in mCollisionHandlers) {
 		if (handler.typeA == typeA && handler.typeB == typeB) {
 			[mCollisionHandlers removeObject:handler];
@@ -300,10 +317,9 @@ void updateShape(void *cpShapePtr, void* unused) {
 #pragma mark -
 
 - (void) dealloc {
-	cpSpaceFreeChildren(mCpSpace);	
-	cpSpaceFree(mCpSpace);
-	
 	[mBodies release];
+
+	cpSpaceFree(mCpSpace);
 	
 	if (mDefaultCollisionHandler != nil) {
 		[mDefaultCollisionHandler release];

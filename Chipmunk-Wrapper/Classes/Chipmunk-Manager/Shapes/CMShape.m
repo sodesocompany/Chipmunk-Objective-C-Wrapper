@@ -22,26 +22,32 @@
 
 @implementation CMShape
 
+@synthesize cpShape = mCpShape;
+
 #pragma mark Properties
 
 - (void)setElasticity:(float)elasticity {
-	mShape->e = elasticity;
+	mCpShape->e = elasticity;
 }
 
 - (void)setFriction:(float)friction {
-	mShape->u = friction;
+	mCpShape->u = friction;
 }
 
 - (void)setCollisionType:(cpCollisionType)type {
-	mShape->collision_type = type;
+	mCpShape->collision_type = type;
 }
 
 - (cpCollisionType)collisionType {
-	return mShape->collision_type;
+	return mCpShape->collision_type;
 }
 
 - (void)setGroup:(cpGroup)group {
-	mShape->group = group;
+	mCpShape->group = group;
+}
+
+- (void)setLayer:(cpLayers)layer {
+	mCpShape->layers = layer;
 }
 
 #pragma mark -
@@ -49,12 +55,12 @@
 #pragma mark Data
 
 - (void)setData:(id)data {
-	CMData *cmData = (CMData*)mShape->data;
+	CMData *cmData = (CMData*)mCpShape->data;
 	[cmData setData:data];
 }
 
 - (id)getData {
-	CMData *cmData = (CMData*)mShape->data;
+	CMData *cmData = (CMData*)mCpShape->data;
 	return [cmData data];
 }
 
@@ -63,39 +69,37 @@
 #pragma mark Operations
 
 - (CMBody*) getBody {
-	CMData *cmData = (CMData*)mShape->body->data;
+	CMData *cmData = (CMData*)mCpShape->body->data;
 	return [cmData object];
 }
 
 - (void) addToSpace {
 	mStatic = NO;
-	cpSpaceAddShape([mSpace cpSpace], mShape);
+	cpSpaceAddShape([mSpace cpSpace], mCpShape);
 }
 
 - (void) addToSpaceAsStatic {
 	mStatic = YES;
-	cpSpaceAddStaticShape([mSpace cpSpace], mShape);
+	cpSpaceAddStaticShape([mSpace cpSpace], mCpShape);
 }
 
 - (void) removeFromSpace {
-	if (mStatic == YES) {
-		cpSpaceRemoveStaticShape([mSpace cpSpace], mShape);
-	} else {
-		cpSpaceRemoveShape([mSpace cpSpace], mShape);
-	}
-}
-
-- (cpShape*) construct {
-	return mShape;
+	[[self getBody] removeShape:self];
 }
 
 #pragma mark -
 
 - (void) dealloc {
-	CMData *cmData = mShape->data;
-	mShape->data = NULL;
+	CMData *cmData = mCpShape->data;
+	mCpShape->data = NULL;
 	[cmData release];
-
+	
+	cpSpaceRemoveShape([mSpace cpSpace], mCpShape);
+	mCpShape->body = NULL;
+	
+	cpShapeFree(mCpShape);
+	mCpShape = NULL;
+	
 	[super dealloc];
 }
 

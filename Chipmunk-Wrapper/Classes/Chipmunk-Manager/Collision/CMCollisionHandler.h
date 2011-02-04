@@ -22,8 +22,10 @@
 	NSInvocation *mInvocationPreSolve;
 	NSInvocation *mInvocationPostSolve;
 	NSInvocation *mInvocationSeparate;
-	unsigned int mTypeA;
-	unsigned int mTypeB;	
+	
+	cpCollisionType mTypeA;
+	cpCollisionType mTypeB;	
+	
 	BOOL mIgnoreContainmentCollision;
 }
 
@@ -32,8 +34,9 @@
 @property (nonatomic, retain) NSInvocation *invocationPostSolve;
 @property (nonatomic, retain) NSInvocation *invocationSeparate;
 
-@property (nonatomic, readwrite) unsigned int typeA;
-@property (nonatomic, readwrite) unsigned int typeB;
+@property (nonatomic, assign) cpCollisionType typeA;
+@property (nonatomic, assign) cpCollisionType typeB;
+
 @property (nonatomic, readwrite) BOOL ignoreContainmentCollision;
 
 /**
@@ -47,7 +50,7 @@
  * @param typeA the first collision type
  * @param typeB the second collision type
  */
-- (id)initWithTypeA:(unsigned int)typeA andTypeB:(unsigned int)typeB;
+- (id)initWithTypeA:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB;
 
 /**
  * Method for setting the begin selector.

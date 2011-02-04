@@ -7,7 +7,6 @@
     #import <UIKit/UIKit.h>
 
     #import "Sparrow.h"
-	#import "chipmunk.h"
 	#import "ChipmunkManager.h"
 
 	#import "Macros.h"

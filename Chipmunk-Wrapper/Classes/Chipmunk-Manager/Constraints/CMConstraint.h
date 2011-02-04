@@ -20,9 +20,11 @@
 @interface CMConstraint : CMObject {
 
 @protected
-	cpConstraint *mConstraint;
+	cpConstraint *mCpConstraint;
 	
 }
+
+@property (nonatomic, readonly) cpConstraint *cpConstraint;
 
 #pragma mark Properties
 
@@ -85,13 +87,6 @@
 #pragma mark Operations
 
 /**
- * Returns the cpConstraint object.
- *
- * @return the cpConstraint object.
- */
-- (cpConstraint*) construct;
-
-/**
  * Add this constraint to the Chipmunk space.
  */
 - (void) addToSpace;
@@ -100,8 +95,6 @@
  * Removes this constraint fro mthe Chipmunk space.
  */
 - (void) removeFromSpace;
-
-- (void) free;
 
 #pragma mark -
 

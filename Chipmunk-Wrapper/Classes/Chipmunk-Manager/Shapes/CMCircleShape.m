@@ -30,7 +30,7 @@
 
 - (id) initWithBody:(CMBody*)cmBody radius:(float)radius offset:(cpVect)offset {
 	if (self = [super init]) {
-		cpBody *body = [cmBody construct];
+		cpBody *body = [cmBody cpBody];
 		
 		if (body->m != INFINITY) {
 			// Calculate the moment.
@@ -38,8 +38,8 @@
 			cpBodySetMoment(body, moment);
 		}
 		
-		mShape = cpCircleShapeNew(body, radius, offset);
-		mShape->data =[[CMData createWithObject:self] retain];
+		mCpShape = cpCircleShapeNew(body, radius, offset);
+		mCpShape->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

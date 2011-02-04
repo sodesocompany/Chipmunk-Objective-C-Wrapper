@@ -24,22 +24,22 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpPivotJointNew2(body1, body2, anchor1, anchor2);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpPivotJointNew2(body1, body2, anchor1, anchor2);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody pivot:(cpVect)pivot {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpPivotJointNew(body1, body2, pivot);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpPivotJointNew(body1, body2, pivot);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

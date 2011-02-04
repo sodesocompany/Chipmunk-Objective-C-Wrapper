@@ -12,6 +12,9 @@
 #import "CMMacros.h"
 
 #import "CMTypes.h"
+
+#import "chipmunk.h"
+
 #import "CMData.h"
 #import "CMObject.h"
 

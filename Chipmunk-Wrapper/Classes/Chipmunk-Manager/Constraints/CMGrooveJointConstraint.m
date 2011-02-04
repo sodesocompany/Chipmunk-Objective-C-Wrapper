@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody grooveA:(cpVect)grooveA grooveB:(cpVect)grooveB anchor1:(cpVect)anchor1 {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpGrooveJointNew(body1, body2, grooveA, grooveB, anchor1);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpGrooveJointNew(body1, body2, grooveA, grooveB, anchor1);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }

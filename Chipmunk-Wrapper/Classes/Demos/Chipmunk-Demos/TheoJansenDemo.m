@@ -39,14 +39,14 @@ const float crankRadius = 13.0f;
 	[chassisBody addToSpace];
 
 	CMShape *chassisShape = [chassisBody addSegmentFrom:cpv(-offset, 0.0f) to:cpv(offset, 0.0f) radius:3.0f];
-	[chassisShape setGroup:1];
+	[chassisShape setGroup:TJ_GROUP];
 	[chassisShape addToSpace];
 
 	CMBody *crankBody = [mSpace addBodyWithMass:1.0f moment:0];
 	[crankBody setPosition:cpv(100, 100)];
 	[crankBody addToSpace];
 	CMShape *crankShape = [crankBody addCircleWithRadius:crankRadius offset:cpvzero];
-	[crankShape setGroup:1];
+	[crankShape setGroup:TJ_GROUP];
 	[crankShape addToSpace];
 	
 	CMPivotJointConstraint *chassisCrankPivotConstraint = [chassisBody addPivotJointConstraintWithBody:crankBody anchor1:cpvzero anchor2:cpvzero];
@@ -75,10 +75,10 @@ const float crankRadius = 13.0f;
 	[lowerLegBody addToSpace];
 	
 	CMShape *lowerLegSegmentShape = [lowerLegBody addSegmentFrom:cpvzero to:cpv(0.0f, -1.0f * side) radius:3.0f];
-	[lowerLegSegmentShape setGroup:1];
+	[lowerLegSegmentShape setGroup:TJ_GROUP];
 	[lowerLegSegmentShape addToSpace];
 	CMShape *lowerLegCircleShape = [lowerLegBody addCircleWithRadius:3.0f*2.0f offset:cpv(0.0f, -1.0f*side)];
-	[lowerLegCircleShape setGroup:1];
+	[lowerLegCircleShape setGroup:TJ_GROUP];
 	[lowerLegCircleShape setElasticity:0.0f];
 	[lowerLegCircleShape setFriction:1.0f];
 	[lowerLegCircleShape addToSpace];

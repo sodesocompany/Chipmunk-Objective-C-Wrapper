@@ -63,7 +63,7 @@ static double timeCount = 0;
 - (void)setupSpace {
 	mSpace = [[CMSpace alloc] init];
 	[mSpace setSleepTimeThreshhold:5.0f];
-	[mSpace setIterations:30];
+	[mSpace setIterations:25];
 	
 	[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:1.0];
 }
@@ -108,7 +108,7 @@ static double timeCount = 0;
 	if (touch) {
 		SPPoint *spPoint = [touch locationInSpace:self];
 		
-		mTouchShape = [mSpace findShapeAtPoint:spPoint];
+		mTouchShape = [mSpace queryFirstByPoint:spPoint];
 		if (mTouchShape) {
 			mTouchPoint = [spPoint toCpVect];
 			mTouchLast = mTouchPoint;
@@ -116,7 +116,7 @@ static double timeCount = 0;
 			
 			CMBody *body = [mTouchShape getBody];
 			
-			mTouchJoint = [mTouchBody addPivotJointConstraintWithBody:body anchor1:cpvzero anchor2:cpBodyWorld2Local([body construct], mTouchPoint)];
+			mTouchJoint = [mTouchBody addPivotJointConstraintWithBody:body anchor1:cpvzero anchor2:cpBodyWorld2Local([body cpBody], mTouchPoint)];
 			[mTouchJoint setMaxForce:50000.00f];
 			[mTouchJoint setBiasCoef:0.15f];
 			[mTouchJoint addToSpace];

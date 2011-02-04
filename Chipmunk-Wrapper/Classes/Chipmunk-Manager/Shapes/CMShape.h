@@ -20,9 +20,11 @@
 @interface CMShape : CMObject {
 
 @protected
-	cpShape *mShape;
+	cpShape *mCpShape;
 	BOOL mStatic;
 }
+
+@property (nonatomic, readonly) cpShape *cpShape;
 
 #pragma mark Properties
 
@@ -71,6 +73,20 @@
  */
 - (void)setGroup:(cpGroup)group;
 
+/**
+ * Shapes only collide if they are in the same bit-planes. 
+ * i.e. (a->layers & b->layers) != 0 By default, a shape 
+ * occupies all bit-planes. 
+ *
+ * Wikipedia has a nice article on bitmasks if you are
+ * unfamiliar with how to use them. Defaults to CP_ALL_LAYERS.
+ *
+ * http://en.wikipedia.org/wiki/Mask_(computing)#top
+ *
+ * @param layer the layer
+ */
+- (void)setLayer:(cpLayers)layer;
+
 #pragma mark -
 
 #pragma mark Data
@@ -115,13 +131,6 @@
  * Remove this shape from the Chipmunk space. (it will determine by itself if the Shape is static or not)
  */
 - (void) removeFromSpace;
-
-/**
- * Returns the cpShape object.
- *
- * @return the cpShape object.
- */
-- (cpShape*) construct;
 
 #pragma mark -
 

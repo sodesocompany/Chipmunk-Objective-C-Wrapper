@@ -22,10 +22,12 @@
 
 @implementation CMBody
 
+@synthesize cpBody = mCpBody;
+
 - (id) initWithMass:(float)mass moment:(float)moment {
 	if (self = [super init]) {
-		mBody = cpBodyNew(mass, moment);
-		mBody->data =[[CMData createWithObject:self] retain];
+		mCpBody = cpBodyNew(mass, moment);
+		mCpBody->data =[[CMData createWithObject:self] retain];
 			
 		mShapes = [[NSMutableArray alloc] init];
 		mConstraints = [[NSMutableArray alloc] init];
@@ -35,8 +37,8 @@
 
 - (id) initStatic {
 	if (self = [super init]) {
-		mBody = cpBodyNewStatic();
-		mBody->data =[[CMData createWithObject:self] retain];
+		mCpBody = cpBodyNewStatic();
+		mCpBody->data =[[CMData createWithObject:self] retain];
 		
 		mShapes = [[NSMutableArray alloc] init];
 		mConstraints = [[NSMutableArray alloc] init];
@@ -48,35 +50,35 @@
 #pragma mark Properties
 
 - (void)setMass:(float)mass {
-	cpBodySetMass(mBody, mass);
+	cpBodySetMass(mCpBody, mass);
 }
 
 - (void)setMoment:(float)moment {
-	cpBodySetMoment(mBody, moment);
+	cpBodySetMoment(mCpBody, moment);
 }
 
 - (void) setVelocity:(cpVect)velocity {
-	cpBodySetVel(mBody, velocity);
+	cpBodySetVel(mCpBody, velocity);
 }
 
 - (void) setForce:(cpVect)force {
-	mBody->f = force;
+	mCpBody->f = force;
 }
 
 - (void) setPosition:(cpVect)coordinate {
-	mBody->p = coordinate;
+	mCpBody->p = coordinate;
 }
 
 - (void) setAngle:(float)angle {
-	cpBodySetAngle(mBody, angle);
+	cpBodySetAngle(mCpBody, angle);
 }
 
 - (void) setAngularVelocity:(float)velocity {
-	mBody->w = velocity;
+	mCpBody->w = velocity;
 }
 
 - (void) setTorque:(float)torque {
-	mBody->t = torque;
+	mCpBody->t = torque;
 }
 
 #pragma mark -
@@ -84,12 +86,12 @@
 #pragma mark Data
 
 - (void)setData:(id)data {
-	CMData *cmData = (CMData*)mBody->data;
+	CMData *cmData = (CMData*)mCpBody->data;
 	[cmData setData:data];
 }
 
 - (id)getData {
-	CMData *cmData = (CMData*)mBody->data;
+	CMData *cmData = (CMData*)mCpBody->data;
 	return [cmData data];
 }
 
@@ -98,39 +100,35 @@
 #pragma mark Operations
 
 - (void) applyImpulse:(cpVect)impulse offset:(cpVect)offset {
-	cpBodyApplyImpulse(mBody, impulse, offset);
+	cpBodyApplyImpulse(mCpBody, impulse, offset);
 }
 
 - (void) applyForce:(cpVect)force offset:(cpVect)offset {
-	cpBodyApplyForce(mBody, force, offset);
+	cpBodyApplyForce(mCpBody, force, offset);
 }
 
 - (void) resetForces {
-	cpBodyResetForces(mBody);
+	cpBodyResetForces(mCpBody);
 }
 
 - (void) sleep {
-	cpBodySleep(mBody);
+	cpBodySleep(mCpBody);
 }
 
 - (void) wakeUp {
-	cpBodyActivate(mBody);
+	cpBodyActivate(mCpBody);
 }
 
 - (void) addToSpace {
-	cpSpaceAddBody([mSpace cpSpace], mBody);
+	cpSpaceAddBody([mSpace cpSpace], mCpBody);
 }
 
 - (void) removeFromSpace {
-	cpSpaceRemoveBody([mSpace cpSpace], mBody);
-}
-
-- (void) free {
-	cpBodyFree(mBody);
+	[mSpace removeBody:self];
 }
 
 - (cpBody*) construct {
-	return mBody;
+	return mCpBody;
 }
 
 #pragma mark -
@@ -213,110 +211,167 @@
 	return shape;
 }
 
+- (void)removeShape:(CMShape*)shape {
+	[mShapes removeObject:shape];
+}
 
 #pragma mark -
 
 #pragma mark Constraints
 
 - (void)removeConstraint:(CMConstraint*)constraint {
-	[constraint removeFromSpace];
-	[constraint free];
 	[mConstraints removeObject:constraint];
 }
 
 - (CMSimpleMotorConstraint*) addSimpleMotorConstraintWithBody:(CMBody*)cmBody rate:(float)rate {
+	CM_CREATE_POOL(pool);
+	
 	CMSimpleMotorConstraint *constraint = [[[CMSimpleMotorConstraint alloc] initBetweenBody:self andBody:cmBody rate:rate] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMPinJointConstraint*) addPinJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 {
+	CM_CREATE_POOL(pool);
+	
 	CMPinJointConstraint *constraint = [[[CMPinJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMDampedRotarySpringConstraint*) addDampedRotaryConstraintWithBody:(CMBody*)cmBody restAngle:(float)restAngle stiffness:(float)stiffness damping:(float)damping {
+	CM_CREATE_POOL(pool);
+	
 	CMDampedRotarySpringConstraint *constraint = [[[CMDampedRotarySpringConstraint alloc] initBetweenBody:self andBody:cmBody restAngle:restAngle stiffness:stiffness damping:damping] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMDampedSpringConstraint*) addDampedSpringConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 restLength:(float)restLength stiffness:(float)stiffness damping:(float)damping {
+	CM_CREATE_POOL(pool);
+	
 	CMDampedSpringConstraint *constraint = [[[CMDampedSpringConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2 restLength:restLength stiffness:stiffness damping:damping] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMGearJointConstraint*) addGearJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratio:(float)ratio {
+	CM_CREATE_POOL(pool);
+	
 	CMGearJointConstraint *constraint = [[[CMGearJointConstraint alloc] initBetweenBody:self andBody:cmBody phase:phase ratio:ratio] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMGrooveJointConstraint*) addGrooveJointConstraintWithBody:(CMBody*)cmBody grooveA:(cpVect)grooveA grooveB:(cpVect)grooveB anchor1:(cpVect)anchor1 {
+	CM_CREATE_POOL(pool);
+	
 	CMGrooveJointConstraint *constraint = [[[CMGrooveJointConstraint alloc] initBetweenBody:self andBody:cmBody grooveA:grooveA grooveB:grooveB anchor1:anchor1] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 {
+	CM_CREATE_POOL(pool);
+	
 	CMPivotJointConstraint *constraint = [[[CMPivotJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody pivot:(cpVect)pivot {
+	CM_CREATE_POOL(pool);
+	
 	CMPivotJointConstraint *constraint = [[[CMPivotJointConstraint alloc] initBetweenBody:self andBody:cmBody pivot:pivot] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMRatchetJointConstraint*) addRatchetJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratchet:(float)ratchet {
+	CM_CREATE_POOL(pool);
+	
 	CMRatchetJointConstraint *constraint = [[[CMRatchetJointConstraint alloc] initBetweenBody:self andBody:cmBody phase:phase ratchet:ratchet] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMRotaryLimitConstraint*) addRotaryLimitConstraintWithBody:(CMBody*)cmBody min:(float)min max:(float)max {
+	CM_CREATE_POOL(pool);
+	
 	CMRotaryLimitConstraint *constraint = [[[CMRotaryLimitConstraint alloc] initBetweenBody:self andBody:cmBody min:min max:max] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+	
+	CM_RELEASE_POOL(pool);
+	
 	return constraint;
 }
 
 - (CMSlideJointConstraint*) addSlideJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 min:(float)min max:(float)max {
+	CM_CREATE_POOL(pool);
+	
 	CMSlideJointConstraint *constraint = [[[CMSlideJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2 min:min max:max] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
+
+	CM_RELEASE_POOL(pool);
+
 	return constraint;
 }
 
 #pragma mark -
 
 - (void) dealloc {
-	CMData *cmData = mBody->data;
-	[cmData release];
-
-	mBody->data = NULL;
-	
-	if (cpBodyIsStatic(mBody)) {
-		cpBodyFree(mBody);
-	}	
-	
-	mBody = NULL;
-	
 	[mConstraints release];
 	[mShapes release];
+	
+	CMData *cmData = mCpBody->data;
+	[cmData release];
+
+	mCpBody->data = NULL;
+	
+	if (!cpBodyIsStatic(mCpBody)) {
+		cpSpaceRemoveBody([mSpace cpSpace], mCpBody);
+	}
+	
+	cpBodyFree(mCpBody);
+	mCpBody = NULL;
 	
 	[super dealloc];
 }

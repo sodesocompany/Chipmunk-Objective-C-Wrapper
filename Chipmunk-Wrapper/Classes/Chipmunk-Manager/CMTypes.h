@@ -12,3 +12,9 @@ typedef enum {
 	CMCollisionPostSolve, 
 	CMCollisionSeparate
 } CollisionMoment;
+
+#define CP_GROUP_TYPE id
+#define CP_COLLISION_TYPE_TYPE id
+#define CP_DATA_POINTER_TYPE id
+
+#define CM_WINDOW_CONTAINMENT_COLLISION_TYPE @"CM_WALL"

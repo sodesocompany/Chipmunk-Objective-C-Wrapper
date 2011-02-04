@@ -24,11 +24,11 @@
 
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody min:(float)min max:(float)max {
 	if (self = [super init]) {
-		cpBody *body1 = [cmBody construct];
-		cpBody *body2 = [andCmBody construct];
+		cpBody *body1 = [cmBody cpBody];
+		cpBody *body2 = [andCmBody cpBody];
 		
-		mConstraint = cpRotaryLimitJointNew(body1, body2, min, max);
-		mConstraint->data =[[CMData createWithObject:self] retain];
+		mCpConstraint = cpRotaryLimitJointNew(body1, body2, min, max);
+		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}
 	return self;
 }
