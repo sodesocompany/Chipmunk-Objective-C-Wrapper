@@ -16,7 +16,7 @@ General note:
 
 - Added the folowing definitions to CMTypes.h
 
-(i had to remove the hash sign because that causes an <hr/> to be displayed)
+(i had to remove the hash sign because that causes an html horizontal rule to be displayed)
 
 * define CP_GROUP_TYPE id
 * define CP_COLLISION_TYPE_TYPE id
