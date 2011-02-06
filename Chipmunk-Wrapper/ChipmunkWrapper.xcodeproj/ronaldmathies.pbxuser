@@ -411,6 +411,15 @@
 			A190700612FF2CBE00FFF013 /* PBXTextBookmark */ = A190700612FF2CBE00FFF013 /* PBXTextBookmark */;
 			A190700712FF2CBE00FFF013 /* PBXTextBookmark */ = A190700712FF2CBE00FFF013 /* PBXTextBookmark */;
 			A190700812FF2CBE00FFF013 /* PlistBookmark */ = A190700812FF2CBE00FFF013 /* PlistBookmark */;
+			A190701312FF45E300FFF013 /* PBXTextBookmark */ = A190701312FF45E300FFF013 /* PBXTextBookmark */;
+			A190701412FF45E300FFF013 /* PBXTextBookmark */ = A190701412FF45E300FFF013 /* PBXTextBookmark */;
+			A190701512FF45E300FFF013 /* PBXTextBookmark */ = A190701512FF45E300FFF013 /* PBXTextBookmark */;
+			A190701612FF45E300FFF013 /* PBXTextBookmark */ = A190701612FF45E300FFF013 /* PBXTextBookmark */;
+			A190701712FF45E300FFF013 /* PBXTextBookmark */ = A190701712FF45E300FFF013 /* PBXTextBookmark */;
+			A190701812FF45E300FFF013 /* PBXTextBookmark */ = A190701812FF45E300FFF013 /* PBXTextBookmark */;
+			A190701912FF45E300FFF013 /* PBXTextBookmark */ = A190701912FF45E300FFF013 /* PBXTextBookmark */;
+			A190701A12FF45E300FFF013 /* PBXTextBookmark */ = A190701A12FF45E300FFF013 /* PBXTextBookmark */;
+			A190701B12FF45E300FFF013 /* PlistBookmark */ = A190701B12FF45E300FFF013 /* PlistBookmark */;
 			A19EA7E612EA1FD10073D2A1 = A19EA7E612EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7E812EA1FD10073D2A1 = A19EA7E812EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7EA12EA1FD10073D2A1 = A19EA7EA12EA1FD10073D2A1 /* PBXTextBookmark */;
@@ -1264,9 +1273,9 @@
 	};
 	A11282CC12FEFBF700696CFE /* CMLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 5070}}";
-			sepNavSelRange = "{4875, 0}";
-			sepNavVisRange = "{4219, 3228}";
+			sepNavIntBoundsRect = "{{0, 0}, {1772, 4755}}";
+			sepNavSelRange = "{11781, 0}";
+			sepNavVisRange = "{8744, 3538}";
 			sepNavWindowFrame = "{{15, 4}, {1094, 1414}}";
 		};
 	};
@@ -3885,6 +3894,97 @@
 		rLen = 0;
 		rLoc = 9223372036854775807;
 	};
+	A190701312FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA412DCE403003C506C /* CMDampedRotarySpringConstraint.h */;
+		name = "CMDampedRotarySpringConstraint.h: 24";
+		rLen = 0;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 1285;
+		vrLoc = 0;
+	};
+	A190701412FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA512DCE403003C506C /* CMDampedRotarySpringConstraint.m */;
+		name = "CMDampedRotarySpringConstraint.m: 20";
+		rLen = 0;
+		rLoc = 540;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 0;
+	};
+	A190701512FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA712DCE403003C506C /* CMDampedSpringConstraint.m */;
+		name = "CMDampedSpringConstraint.m: 31";
+		rLen = 0;
+		rLoc = 1088;
+		rType = 0;
+		vrLen = 1162;
+		vrLoc = 0;
+	};
+	A190701612FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA812DCE403003C506C /* CMGearJointConstraint.h */;
+		name = "CMGearJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 530;
+		rType = 0;
+		vrLen = 1183;
+		vrLoc = 0;
+	};
+	A190701712FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AAA12DCE403003C506C /* CMGrooveJointConstraint.h */;
+		name = "CMGrooveJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 1291;
+		vrLoc = 0;
+	};
+	A190701812FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AAB12DCE403003C506C /* CMGrooveJointConstraint.m */;
+		name = "CMGrooveJointConstraint.m: 31";
+		rLen = 0;
+		rLoc = 1006;
+		rType = 0;
+		vrLen = 1080;
+		vrLoc = 0;
+	};
+	A190701912FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
+		name = "CMLoader.m: 259";
+		rLen = 78;
+		rLoc = 9994;
+		rType = 0;
+		vrLen = 3408;
+		vrLoc = 8744;
+	};
+	A190701A12FF45E300FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
+		name = "CMLoader.m: 294";
+		rLen = 0;
+		rLoc = 11781;
+		rType = 0;
+		vrLen = 3538;
+		vrLoc = 8744;
+	};
+	A190701B12FF45E300FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	A19EA7B312EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
@@ -4372,14 +4472,14 @@
 	};
 	A1C70AA412DCE403003C506C /* CMDampedRotarySpringConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1156, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{543, 0}";
 			sepNavVisRange = "{0, 1285}";
 		};
 	};
 	A1C70AA512DCE403003C506C /* CMDampedRotarySpringConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{540, 0}";
 			sepNavVisRange = "{0, 1117}";
 		};
@@ -4393,14 +4493,14 @@
 	};
 	A1C70AA712DCE403003C506C /* CMDampedSpringConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1564, 766}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{1088, 0}";
 			sepNavVisRange = "{0, 1162}";
 		};
 	};
 	A1C70AA812DCE403003C506C /* CMGearJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{530, 0}";
 			sepNavVisRange = "{0, 1183}";
 		};
@@ -4414,14 +4514,14 @@
 	};
 	A1C70AAA12DCE403003C506C /* CMGrooveJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1116, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{575, 0}";
 			sepNavVisRange = "{0, 1291}";
 		};
 	};
 	A1C70AAB12DCE403003C506C /* CMGrooveJointConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1124, 766}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{1006, 0}";
 			sepNavVisRange = "{0, 1080}";
 		};

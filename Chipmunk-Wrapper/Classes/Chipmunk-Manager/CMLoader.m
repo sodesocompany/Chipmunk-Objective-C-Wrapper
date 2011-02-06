@@ -236,25 +236,49 @@ static inline cpVect CPVectFromString(NSString *position) {
 + (void) createDampedRotarySpringConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
 	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
 	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+
+	NSNumber *restAngle = [constraintConfig valueForKey:@"restAngle"];
+	NSNumber *stiffness = [constraintConfig valueForKey:@"stiffness"];
+	NSNumber *damping = [constraintConfig valueForKey:@"damping"];
 	
 	CMBody* from = [cmSpace findBody:fromBody];
 	CMBody *to = [cmSpace findBody:toBody];
+	
+	CMDampedRotarySpringConstraint *constraint = [from addDampedRotaryConstraintWithBody:to restAngle:[restAngle floatValue] stiffness:[stiffness floatValue] damping:[damping floatValue]];
+	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[constraint addToSpace];
 }
 
 + (void) createDampedSpringConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
 	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
 	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
-	
+	NSNumber *restLength = [constraintConfig valueForKey:@"restLength"];
+	NSNumber *stiffness = [constraintConfig valueForKey:@"stiffness"];
+	NSNumber *damping = [constraintConfig valueForKey:@"damping"];
+
+	cpVect anchor1 = CPVectFromString([constraintConfig valueForKey:@"anchor1"]);
+	cpVect anchor2 = CPVectFromString([constraintConfig valueForKey:@"anchor2"]);
+
 	CMBody* from = [cmSpace findBody:fromBody];
 	CMBody *to = [cmSpace findBody:toBody];
+	
+	CMDampedSpringConstraint *constraint = [from addDampedSpringConstraintWithBody:to anchor1:anchor1 anchor2:anchor2 restLength:[restLength floatValue] stiffness:[stiffness floatValue] damping:[damping floatValue]];	
+	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[constraint addToSpace];
 }
 
 + (void) createGearJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
 	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
 	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	NSNumber *phase = [constraintConfig valueForKey:@"phase"];
+	NSNumber *ratio = [constraintConfig valueForKey:@"ratio"];
 	
 	CMBody* from = [cmSpace findBody:fromBody];
 	CMBody *to = [cmSpace findBody:toBody];
+	
+	CMGearJointConstraint *constraint = [from addGearJointConstraintWithBody:to phase:[phase floatValue] ratio:[ratio floatValue]];
+	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[constraint addToSpace];							 
 }
 
 + (void) createGrooveJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
@@ -263,6 +287,11 @@ static inline cpVect CPVectFromString(NSString *position) {
 	
 	CMBody* from = [cmSpace findBody:fromBody];
 	CMBody *to = [cmSpace findBody:toBody];
+	
+	cpVect anchor1 = CPVectFromString([constraintConfig valueForKey:@"anchor1"]);
+	cpVect grooveA = CPVectFromString([constraintConfig valueForKey:@"groove_a"]);
+	cpVect grooveB = CPVectFromString([constraintConfig valueForKey:@"groove_b"]);
+	
 }
 
 + (void) createPivotJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
