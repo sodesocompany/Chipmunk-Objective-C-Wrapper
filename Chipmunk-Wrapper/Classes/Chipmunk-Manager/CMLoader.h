@@ -14,6 +14,13 @@
 
 }
 
+/**
+ * Loads the configuration from the specified .plist and add's it to the
+ * space.
+ *
+ * @param cmSpace the space.
+ * @param configuration the name of the .plist wile (without the extension)
+ */
 + (void)loadFromConfiguration:(CMSpace*)cmSpace configuration:(NSString *)configuration;
 
 @end

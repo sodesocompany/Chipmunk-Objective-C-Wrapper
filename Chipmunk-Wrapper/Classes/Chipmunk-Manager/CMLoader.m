@@ -21,12 +21,95 @@ static inline cpVect CPVectFromString(NSString *position) {
 
 @interface CMLoader ()
 
+/**
+ * Constructs a new body, the definition in the .plist file would look like:
+ *
+ * Root
+ *   bodies
+ *     Item 0
+ *       name: myBody
+ *       position: {160,240}
+ *       mass: 5
+ *       moment: 0
+ *
+ * @param cmBody the body for which this shape is created.
+ * @param shapeConfig the configuration of the shape.
+ */
 + (void) createBody:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig;
 
+/**
+ * Constructs a new circle shape, the definition in the .plist file would look like:
+ *
+ * Root
+ *   bodies
+ *     Item 0
+ *       {body properties}
+ *       Shapes
+ *         Item 0
+ *           name: circleShape
+ *           type: circle
+ *           radius: 15
+ *
+ * @param cmBody the body for which this shape is created.
+ * @param shapeConfig the configuration of the shape.
+ */
 + (void) createCircleShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig;
+
+/**
+ * Constructs a new rectangle shape, the definition in the .plist file would look like:
+ *
+ * Root
+ *   bodies
+ *     Item 0
+ *       {body properties}
+ *       Shapes
+ *         Item 0
+ *           name: rectangleShape
+ *           type: rectangle
+ *           width: 20
+ *           height: 20
+ *
+ * @param cmBody the body for which this shape is created.
+ * @param shapeConfig the configuration of the shape.
+ */
 + (void) createRectangleShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig;
+
+/**
+ * Constructs a new rectangle shape, the definition in the .plist file would look like:
+ *
+ * Root
+ *   bodies
+ *     Item 0
+ *       {body properties}
+ *       Shapes
+ *         Item 0
+ *           name: segmentShape
+ *           type: segment
+ *           radius: 3
+ *           from: {-15,-15}
+ *           to: {15,15}
+ *
+ * @param cmBody the body for which this shape is created.
+ * @param shapeConfig the configuration of the shape.
+ */
 + (void) createSegmentShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig;
 
+/**
+ * Constructs a new rectangle shape, the definition in the .plist file would look like:
+ *
+ * Root
+ *   constraints
+ *     Item 0
+ *       name: myPinJoint
+ *       type: pin_joint
+ *       fromBody: myCircleBody
+ *       toBody: myRectBody
+ *       anchor1: {15,0}
+ *       anchor2: {-15,0}
+ *
+ * @param cmSpace the space.
+ * @param constraintConfig the configuration of the constraint.
+ */
 + (void) createPinJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
 
 @end
@@ -55,20 +138,6 @@ static inline cpVect CPVectFromString(NSString *position) {
 	
 }
 
-/**
- * Constructs a new body, the definition in the .plist file would look like:
- *
- * Root
- *   bodies
- *     Item 0
- *       name: myBody
- *       position: {160,240}
- *       mass: 5
- *       moment: 0
- *
- * @param cmBody the body for which this shape is created.
- * @param shapeConfig the configuration of the shape.
- */
 + (void) createBody:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig {
 	NSNumber *mass = [bodyConfig valueForKey:@"mass"];
 	NSNumber *moment = [bodyConfig valueForKey:@"moment"];
@@ -91,22 +160,6 @@ static inline cpVect CPVectFromString(NSString *position) {
 	}
 }
 
-/**
- * Constructs a new circle shape, the definition in the .plist file would look like:
- *
- * Root
- *   bodies
- *     Item 0
- *       {body properties}
- *       Shapes
- *         Item 0
- *           name: circleShape
- *           type: circle
- *           radius: 15
- *
- * @param cmBody the body for which this shape is created.
- * @param shapeConfig the configuration of the shape.
- */
 + (void) createCircleShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
 	NSNumber *radius = [shapeConfig valueForKey:@"radius"];
 	
@@ -116,23 +169,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 }
 
 
-/**
- * Constructs a new rectangle shape, the definition in the .plist file would look like:
- *
- * Root
- *   bodies
- *     Item 0
- *       {body properties}
- *       Shapes
- *         Item 0
- *           name: rectangleShape
- *           type: rectangle
- *           width: 20
- *           height: 20
- *
- * @param cmBody the body for which this shape is created.
- * @param shapeConfig the configuration of the shape.
- */
+
 + (void) createRectangleShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
 	NSNumber *width = [shapeConfig valueForKey:@"width"];
 	NSNumber *height = [shapeConfig valueForKey:@"height"];
@@ -142,24 +179,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	[shape addToSpace];
 }
 
-/**
- * Constructs a new rectangle shape, the definition in the .plist file would look like:
- *
- * Root
- *   bodies
- *     Item 0
- *       {body properties}
- *       Shapes
- *         Item 0
- *           name: segmentShape
- *           type: segment
- *           radius: 3
- *           from: {-15,-15}
- *           to: {15,15}
- *
- * @param cmBody the body for which this shape is created.
- * @param shapeConfig the configuration of the shape.
- */
+
 + (void) createSegmentShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
 	NSNumber *radius = [shapeConfig valueForKey:@"radius"];
 	cpVect from = CPVectFromString([shapeConfig valueForKey:@"from"]);

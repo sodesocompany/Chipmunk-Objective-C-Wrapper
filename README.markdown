@@ -17,6 +17,7 @@ This is till work in progress..
 
 - Added appledoc documentation (read below on how to use it)
 - General: Added a lot of documentation again
+- CMSpace: Added the method: - (CMBody*)findBody:(NSString*)name;
 - CMPolyShape: Added the method: - (id) initWithBody:(CMBody *)cmBody points:(NSArray*)points
 - CMBody: Added the method: - (void) setPositionUsingPoint:(SPPoint*)coordinate
 - CMBody: Added the method: - (CMPolyShape*) addPolyWithPoints:(NSArray*)points;
