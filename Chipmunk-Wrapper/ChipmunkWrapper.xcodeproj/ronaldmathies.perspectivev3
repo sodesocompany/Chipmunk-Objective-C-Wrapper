@@ -293,7 +293,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>53</integer>
+									<integer>55</integer>
 									<integer>6</integer>
 									<integer>4</integer>
 									<integer>0</integer>
@@ -317,7 +317,7 @@
 							<real>368</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>518 174 1564 1186 0 0 2560 1418 </string>
+						<string>1012 197 1564 1186 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -335,7 +335,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>A135121511985E0F007C9395</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CarDemo.m</string>
+								<string>CMSpace.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -343,11 +343,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A135121611985E0F007C9395</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CarDemo.m</string>
+										<string>CMSpace.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A1127FF012FEB82D00696CFE</string>
+										<string>A112800412FEC60700696CFE</string>
 										<key>history</key>
 										<array>
 											<string>A12CC0D612CA8D42003D1970</string>
@@ -489,10 +489,7 @@
 											<string>A1127FA512FEB03000696CFE</string>
 											<string>A1127FAC12FEB06D00696CFE</string>
 											<string>A1127FB212FEB53E00696CFE</string>
-											<string>A1127FCD12FEB80D00696CFE</string>
-											<string>A1127FCE12FEB80D00696CFE</string>
 											<string>A1127FCF12FEB80D00696CFE</string>
-											<string>A1127FD012FEB80D00696CFE</string>
 											<string>A1127FD112FEB80D00696CFE</string>
 											<string>A1127FD212FEB80D00696CFE</string>
 											<string>A1127FD312FEB80D00696CFE</string>
@@ -512,7 +509,10 @@
 											<string>A1127FE212FEB80D00696CFE</string>
 											<string>A1127FE312FEB80D00696CFE</string>
 											<string>A1127FEA12FEB82000696CFE</string>
-											<string>A1127FEF12FEB82B00696CFE</string>
+											<string>A1127FF312FEC39400696CFE</string>
+											<string>A1127FF512FEC39400696CFE</string>
+											<string>A112800212FEC60700696CFE</string>
+											<string>A112800312FEC60700696CFE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -528,7 +528,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1174, 805}}</string>
 								<key>RubberWindowFrame</key>
-								<string>518 174 1564 1186 0 0 2560 1418 </string>
+								<string>1012 197 1564 1186 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -628,7 +628,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1174, 308}}</string>
 										<key>RubberWindowFrame</key>
-										<string>518 174 1564 1186 0 0 2560 1418 </string>
+										<string>1012 197 1564 1186 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -853,7 +853,7 @@
 		<string>/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>518 174 1564 1186 0 0 2560 1418 </string>
+	<string>1012 197 1564 1186 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

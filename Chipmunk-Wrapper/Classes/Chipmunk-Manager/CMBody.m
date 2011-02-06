@@ -144,13 +144,9 @@
 }
 
 - (CMCircleShape*) addCircleWithRadius:(float)radius offset:(cpVect)offset {
-	CM_CREATE_POOL(pool);
-	
 	CMCircleShape *shape = [[[CMCircleShape alloc] initWithBody:self radius:radius offset:offset] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return shape;
 }
@@ -160,20 +156,14 @@
 }
 
 - (CMRectShape*) addRectWithWidth:(float)width height:(float)height offset:(cpVect)offset {
-	CM_CREATE_POOL(pool);
-	
 	CMRectShape *shape = [[[CMRectShape alloc] initWithBody:self width:width height:height offset:offset] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return shape;
 }
 
 - (CMPolyShape*) addPolyWithPoints:(int)numberOfVertices vertices:(cpVect)vertices, ... {
-	CM_CREATE_POOL(pool);
-	
 	va_list args;
 	va_start(args,vertices);
 	
@@ -182,14 +172,10 @@
 	[mShapes addObject:shape];
 	va_end(args);
 
-	CM_RELEASE_POOL(pool);
-	
 	return shape;
 }
 
 - (CMPolyShape*) addPolyWithPoints:(int)numberOfVertices offset:(cpVect)offset vertices:(cpVect)vertices, ... {
-	CM_CREATE_POOL(pool);
-	
 	va_list args;
 	va_start(args,vertices);
 	
@@ -198,19 +184,13 @@
 	[mShapes addObject:shape];
 	va_end(args);
 	
-	CM_RELEASE_POOL(pool);
-	
 	return shape;
 }
 
 - (CMSegmentShape*) addSegmentFrom:(cpVect)from to:(cpVect)to radius:(float)radius {
-	CM_CREATE_POOL(pool);
-	
 	CMSegmentShape *shape = [[[CMSegmentShape alloc] initWithBody:self from:from to:to radius:radius] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return shape;
 }
@@ -228,133 +208,89 @@
 }
 
 - (CMSimpleMotorConstraint*) addSimpleMotorConstraintWithBody:(CMBody*)cmBody rate:(float)rate {
-	CM_CREATE_POOL(pool);
-	
 	CMSimpleMotorConstraint *constraint = [[[CMSimpleMotorConstraint alloc] initBetweenBody:self andBody:cmBody rate:rate] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMPinJointConstraint*) addPinJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 {
-	CM_CREATE_POOL(pool);
-	
 	CMPinJointConstraint *constraint = [[[CMPinJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMDampedRotarySpringConstraint*) addDampedRotaryConstraintWithBody:(CMBody*)cmBody restAngle:(float)restAngle stiffness:(float)stiffness damping:(float)damping {
-	CM_CREATE_POOL(pool);
-	
 	CMDampedRotarySpringConstraint *constraint = [[[CMDampedRotarySpringConstraint alloc] initBetweenBody:self andBody:cmBody restAngle:restAngle stiffness:stiffness damping:damping] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMDampedSpringConstraint*) addDampedSpringConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 restLength:(float)restLength stiffness:(float)stiffness damping:(float)damping {
-	CM_CREATE_POOL(pool);
-	
 	CMDampedSpringConstraint *constraint = [[[CMDampedSpringConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2 restLength:restLength stiffness:stiffness damping:damping] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMGearJointConstraint*) addGearJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratio:(float)ratio {
-	CM_CREATE_POOL(pool);
-	
 	CMGearJointConstraint *constraint = [[[CMGearJointConstraint alloc] initBetweenBody:self andBody:cmBody phase:phase ratio:ratio] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMGrooveJointConstraint*) addGrooveJointConstraintWithBody:(CMBody*)cmBody grooveA:(cpVect)grooveA grooveB:(cpVect)grooveB anchor1:(cpVect)anchor1 {
-	CM_CREATE_POOL(pool);
-	
 	CMGrooveJointConstraint *constraint = [[[CMGrooveJointConstraint alloc] initBetweenBody:self andBody:cmBody grooveA:grooveA grooveB:grooveB anchor1:anchor1] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 {
-	CM_CREATE_POOL(pool);
-	
 	CMPivotJointConstraint *constraint = [[[CMPivotJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody pivot:(cpVect)pivot {
-	CM_CREATE_POOL(pool);
-	
 	CMPivotJointConstraint *constraint = [[[CMPivotJointConstraint alloc] initBetweenBody:self andBody:cmBody pivot:pivot] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMRatchetJointConstraint*) addRatchetJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratchet:(float)ratchet {
-	CM_CREATE_POOL(pool);
-	
 	CMRatchetJointConstraint *constraint = [[[CMRatchetJointConstraint alloc] initBetweenBody:self andBody:cmBody phase:phase ratchet:ratchet] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMRotaryLimitConstraint*) addRotaryLimitConstraintWithBody:(CMBody*)cmBody min:(float)min max:(float)max {
-	CM_CREATE_POOL(pool);
-	
 	CMRotaryLimitConstraint *constraint = [[[CMRotaryLimitConstraint alloc] initBetweenBody:self andBody:cmBody min:min max:max] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-	
-	CM_RELEASE_POOL(pool);
 	
 	return constraint;
 }
 
 - (CMSlideJointConstraint*) addSlideJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 min:(float)min max:(float)max {
-	CM_CREATE_POOL(pool);
-	
 	CMSlideJointConstraint *constraint = [[[CMSlideJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2 min:min max:max] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-
-	CM_RELEASE_POOL(pool);
 
 	return constraint;
 }

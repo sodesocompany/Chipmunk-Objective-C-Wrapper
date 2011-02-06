@@ -202,13 +202,10 @@ void updateShape(void *cpShapePtr, void* unused) {
 }
 
 - (CMBody*)addStaticBody {
-	CM_CREATE_POOL(pool);
+	CMBody *body = [[[CMBody alloc] initStatic] autorelease];
+	[body setSpace:self];
+	[mBodies addObject:body];
 	
-		CMBody *body = [[[CMBody alloc] initStatic] autorelease];
-		[body setSpace:self];
-		[mBodies addObject:body];
-	
-	CM_RELEASE_POOL(pool);
 	return body;
 }
 
@@ -218,13 +215,9 @@ void updateShape(void *cpShapePtr, void* unused) {
 }
 
 - (CMBody*)addBodyWithMass:(float)mass moment:(float)moment {
-	CM_CREATE_POOL(pool);
-	
-		CMBody *body = [[[CMBody alloc] initWithMass:mass moment:moment] autorelease];
-		[body setSpace:self];
-		[mBodies addObject:body];
-
-	CM_RELEASE_POOL(pool);
+	CMBody *body = [[[CMBody alloc] initWithMass:mass moment:moment] autorelease];
+	[body setSpace:self];
+	[mBodies addObject:body];
 
 	return body; 
 }
