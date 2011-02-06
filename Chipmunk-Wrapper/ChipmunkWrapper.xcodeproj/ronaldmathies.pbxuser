@@ -21,8 +21,8 @@
 			A1A791AE12DDE664006FC41B /* CMRectShape.h:48 */,
 			A1242B1D12F966A300318730 /* DemoChooser.m:121 */,
 			A123A0E112FC63C800B751A5 /* ManyBlocksDemo.m:81 */,
-			A1906FC912FF270100FFF013 /* CMLoader.m:195 */,
-			A1906FD712FF271B00FFF013 /* CMLoader.m:129 */,
+			A1906FC912FF270100FFF013 /* CMLoader.m:222 */,
+			A1906FD712FF271B00FFF013 /* CMLoader.m:138 */,
 		);
 		codeSenseManager = A135121C11985E0F007C9395 /* Code sense */;
 		executables = (
@@ -407,6 +407,10 @@
 			A190700012FF2B7F00FFF013 /* PBXTextBookmark */ = A190700012FF2B7F00FFF013 /* PBXTextBookmark */;
 			A190700112FF2B7F00FFF013 /* PBXTextBookmark */ = A190700112FF2B7F00FFF013 /* PBXTextBookmark */;
 			A190700412FF2B7F00FFF013 /* PlistBookmark */ = A190700412FF2B7F00FFF013 /* PlistBookmark */;
+			A190700512FF2CBE00FFF013 /* PBXTextBookmark */ = A190700512FF2CBE00FFF013 /* PBXTextBookmark */;
+			A190700612FF2CBE00FFF013 /* PBXTextBookmark */ = A190700612FF2CBE00FFF013 /* PBXTextBookmark */;
+			A190700712FF2CBE00FFF013 /* PBXTextBookmark */ = A190700712FF2CBE00FFF013 /* PBXTextBookmark */;
+			A190700812FF2CBE00FFF013 /* PlistBookmark */ = A190700812FF2CBE00FFF013 /* PlistBookmark */;
 			A19EA7E612EA1FD10073D2A1 = A19EA7E612EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7E812EA1FD10073D2A1 = A19EA7E812EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7EA12EA1FD10073D2A1 = A19EA7EA12EA1FD10073D2A1 /* PBXTextBookmark */;
@@ -1260,9 +1264,9 @@
 	};
 	A11282CC12FEFBF700696CFE /* CMLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 3315}}";
-			sepNavSelRange = "{2939, 0}";
-			sepNavVisRange = "{1873, 2240}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 5070}}";
+			sepNavSelRange = "{4875, 0}";
+			sepNavVisRange = "{4219, 3228}";
 			sepNavWindowFrame = "{{15, 4}, {1094, 1414}}";
 		};
 	};
@@ -1321,7 +1325,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "PhysicsEditorLoader.m: 44";
 		rLen = 0;
-		rLoc = 4765;
+		rLoc = 6950;
 		rType = 0;
 		vrLen = 1874;
 		vrLoc = 49;
@@ -2402,7 +2406,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 123;
+		rLoc = 132;
 		rType = 1;
 	};
 	A1906F0512FF189A00FFF013 /* PBXTextBookmark */ = {
@@ -2410,7 +2414,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 36";
 		rLen = 0;
-		rLoc = 3434;
+		rLoc = 4384;
 		rType = 0;
 		vrLen = 1637;
 		vrLoc = 0;
@@ -2474,7 +2478,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 54";
 		rLen = 0;
-		rLoc = 4442;
+		rLoc = 6627;
 		rType = 0;
 		vrLen = 1832;
 		vrLoc = 0;
@@ -2484,7 +2488,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 55";
 		rLen = 0;
-		rLoc = 4531;
+		rLoc = 6716;
 		rType = 0;
 		vrLen = 1869;
 		vrLoc = 0;
@@ -2540,7 +2544,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 55";
 		rLen = 0;
-		rLoc = 4498;
+		rLoc = 6683;
 		rType = 0;
 		vrLen = 1892;
 		vrLoc = 0;
@@ -2550,7 +2554,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 52";
 		rLen = 0;
-		rLoc = 3835;
+		rLoc = 6020;
 		rType = 0;
 		vrLen = 2180;
 		vrLoc = 145;
@@ -2616,7 +2620,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 29";
 		rLen = 0;
-		rLoc = 3078;
+		rLoc = 4028;
 		rType = 0;
 		vrLen = 2398;
 		vrLoc = 0;
@@ -2732,7 +2736,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 71";
 		rLen = 0;
-		rLoc = 4578;
+		rLoc = 6763;
 		rType = 0;
 		vrLen = 2257;
 		vrLoc = 797;
@@ -2834,7 +2838,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 102";
 		rLen = 0;
-		rLoc = 5062;
+		rLoc = 7247;
 		rType = 0;
 		vrLen = 2216;
 		vrLoc = 1104;
@@ -3040,7 +3044,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 124;
+		rLoc = 133;
 		rType = 1;
 	};
 	A1906F8712FF230700FFF013 /* PBXTextBookmark */ = {
@@ -3048,7 +3052,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 154";
 		rLen = 0;
-		rLoc = 5715;
+		rLoc = 7900;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3058,7 +3062,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 154";
 		rLen = 0;
-		rLoc = 5715;
+		rLoc = 7900;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3091,7 +3095,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 154";
 		rLen = 0;
-		rLoc = 5715;
+		rLoc = 7900;
 		rType = 0;
 		vrLen = 1069;
 		vrLoc = 4003;
@@ -3101,7 +3105,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 152";
 		rLen = 0;
-		rLoc = 5621;
+		rLoc = 7806;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3111,7 +3115,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 152";
 		rLen = 0;
-		rLoc = 5621;
+		rLoc = 7806;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3137,7 +3141,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 152";
 		rLen = 0;
-		rLoc = 5621;
+		rLoc = 7806;
 		rType = 0;
 		vrLen = 1069;
 		vrLoc = 4003;
@@ -3187,7 +3191,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 152";
 		rLen = 0;
-		rLoc = 5621;
+		rLoc = 7806;
 		rType = 0;
 		vrLen = 2152;
 		vrLoc = 2920;
@@ -3197,7 +3201,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 124";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3207,7 +3211,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 124";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3233,7 +3237,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 124";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 1067;
 		vrLoc = 4005;
@@ -3243,7 +3247,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 124";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3253,7 +3257,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 124";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 2889;
@@ -3278,7 +3282,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 124";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 1067;
 		vrLoc = 4005;
@@ -3298,7 +3302,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 34";
 		rLen = 0;
-		rLoc = 3193;
+		rLoc = 4143;
 		rType = 0;
 		vrLen = 2374;
 		vrLoc = 0;
@@ -3370,7 +3374,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 130";
 		rLen = 0;
-		rLoc = 5172;
+		rLoc = 7357;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 2863;
@@ -3411,7 +3415,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 200;
+		rLoc = 227;
 		rType = 1;
 	};
 	A1906FC412FF26E000FFF013 /* PBXTextBookmark */ = {
@@ -3419,7 +3423,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 185";
 		rLen = 0;
-		rLoc = 6509;
+		rLoc = 8694;
 		rType = 0;
 		vrLen = 2370;
 		vrLoc = 3796;
@@ -3429,7 +3433,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 185";
 		rLen = 0;
-		rLoc = 6509;
+		rLoc = 8694;
 		rType = 0;
 		vrLen = 2370;
 		vrLoc = 3796;
@@ -3446,7 +3450,7 @@
 		rLen = 0;
 		rLoc = 9223372036854775807;
 	};
-	A1906FC912FF270100FFF013 /* CMLoader.m:195 */ = {
+	A1906FC912FF270100FFF013 /* CMLoader.m:222 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -3458,7 +3462,7 @@
 		functionName = "+createPinJointConstraint:constraintConfig:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 195;
+		lineNumber = 222;
 		location = ChipmunkWrapper;
 		modificationTime = 318711595.716789;
 		originalNumberOfMultipleMatches = 1;
@@ -3469,7 +3473,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 185";
 		rLen = 0;
-		rLoc = 6509;
+		rLoc = 8694;
 		rType = 0;
 		vrLen = 2370;
 		vrLoc = 3796;
@@ -3500,7 +3504,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 185";
 		rLen = 0;
-		rLoc = 6509;
+		rLoc = 8694;
 		rType = 0;
 		vrLen = 1382;
 		vrLoc = 4784;
@@ -3522,7 +3526,7 @@
 		vrLen = 838;
 		vrLoc = 2545;
 	};
-	A1906FD712FF271B00FFF013 /* CMLoader.m:129 */ = {
+	A1906FD712FF271B00FFF013 /* CMLoader.m:138 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -3534,7 +3538,7 @@
 		functionName = "+loadFromConfiguration:configuration:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 129;
+		lineNumber = 138;
 		location = ChipmunkWrapper;
 		modificationTime = 318711593.775248;
 		originalNumberOfMultipleMatches = 1;
@@ -3555,7 +3559,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 46";
 		rLen = 11;
-		rLoc = 3567;
+		rLoc = 4517;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 0;
@@ -3565,7 +3569,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 46";
 		rLen = 11;
-		rLoc = 3567;
+		rLoc = 4517;
 		rType = 0;
 		vrLen = 2312;
 		vrLoc = 0;
@@ -3575,7 +3579,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 46";
 		rLen = 11;
-		rLoc = 3567;
+		rLoc = 4517;
 		rType = 0;
 		vrLen = 2183;
 		vrLoc = 0;
@@ -3596,7 +3600,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 46";
 		rLen = 11;
-		rLoc = 3567;
+		rLoc = 4517;
 		rType = 0;
 		vrLen = 2272;
 		vrLoc = 0;
@@ -3627,7 +3631,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 48";
 		rLen = 0;
-		rLoc = 3672;
+		rLoc = 4622;
 		rType = 0;
 		vrLen = 1350;
 		vrLoc = 4817;
@@ -3637,7 +3641,7 @@
 		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		name = "CMLoader.m: 48";
 		rLen = 0;
-		rLoc = 3672;
+		rLoc = 4622;
 		rType = 0;
 		vrLen = 2370;
 		vrLoc = 3797;
@@ -3830,6 +3834,47 @@
 		vrLoc = 0;
 	};
 	A190700412FF2B7F00FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A190700512FF2CBE00FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A11282CB12FEFBF700696CFE /* CMLoader.h */;
+		name = "CMLoader.h: 22";
+		rLen = 0;
+		rLoc = 428;
+		rType = 0;
+		vrLen = 528;
+		vrLoc = 0;
+	};
+	A190700612FF2CBE00FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
+		name = "CMLoader.m: 111";
+		rLen = 0;
+		rLoc = 2939;
+		rType = 0;
+		vrLen = 2240;
+		vrLoc = 1873;
+	};
+	A190700712FF2CBE00FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A11282CC12FEFBF700696CFE /* CMLoader.m */;
+		name = "CMLoader.m: 144";
+		rLen = 0;
+		rLoc = 4875;
+		rType = 0;
+		vrLen = 3228;
+		vrLoc = 4219;
+	};
+	A190700812FF2CBE00FFF013 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
 		fallbackIsa = PBXBookmark;

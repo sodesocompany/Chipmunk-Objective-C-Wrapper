@@ -111,6 +111,15 @@ static inline cpVect CPVectFromString(NSString *position) {
  * @param constraintConfig the configuration of the constraint.
  */
 + (void) createPinJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createDampedRotarySpringConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createDampedSpringConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createGearJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createGrooveJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createPivotJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createRatchetJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createRotaryLimitConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createSimpleMotorConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
++ (void) createSlideJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
 
 @end
 
@@ -131,6 +140,24 @@ static inline cpVect CPVectFromString(NSString *position) {
 		NSString *type = [constraintConfig valueForKey:@"type"];
 		if ([type isEqualToString:@"pin_joint"]) {
 			[self createPinJointConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"damped_rotary_spring"]) {
+			[self createDampedRotarySpringConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"damped_spring"]) {
+			[self createDampedSpringConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"gear_joint"]) {
+			[self createGearJointConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"groove_joint"]) {
+			[self createGrooveJointConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"pivot_joint"]) {
+			[self createPivotJointConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"ratchet_joint"]) {
+			[self createRatchetJointConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"rotary_limit"]) {
+			[self createRotaryLimitConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"simple_motor"]) {
+			[self createSimpleMotorConstraint:cmSpace constraintConfig:constraintConfig];
+		} else if ([type isEqualToString:@"slide_joint"]) {
+			[self createSlideJointConstraint:cmSpace constraintConfig:constraintConfig];
 		}
 	};
 	
@@ -204,6 +231,78 @@ static inline cpVect CPVectFromString(NSString *position) {
 	CMPinJointConstraint *constraint = [from addPinJointConstraintWithBody:to anchor1:anchor1 anchor2:anchor2];
 	[constraint setName:[constraintConfig valueForKey:@"name"]];
 	[constraint addToSpace];
+}
+
++ (void) createDampedRotarySpringConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createDampedSpringConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createGearJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createGrooveJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createPivotJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createRatchetJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createRotaryLimitConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createSimpleMotorConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
+}
+
++ (void) createSlideJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
+	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];
+	NSString* toBody = [constraintConfig valueForKey:@"toBody"];
+	
+	CMBody* from = [cmSpace findBody:fromBody];
+	CMBody *to = [cmSpace findBody:toBody];
 }
 
 @end
