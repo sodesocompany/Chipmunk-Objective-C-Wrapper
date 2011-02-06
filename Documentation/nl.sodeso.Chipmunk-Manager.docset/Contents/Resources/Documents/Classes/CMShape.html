@@ -1,0 +1,724 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMShape Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMShape Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="CMObject.html">CMObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMShape.h<br />CMShape.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>Base shape class which is used by all the shapes.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cpShape"> cpShape</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpShape">cpShape</a>.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Properties</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setElasticity:">- setElasticity:</a></code>
+		<span class="tooltip">Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a ìperfectî bounce.
+However due to inaccuracies in the simulation using 1.0 or greater is not recommended however.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setFriction:">- setFriction:</a></code>
+		<span class="tooltip">Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setCollisionType:">- setCollisionType:</a></code>
+		<span class="tooltip">A user defined collision type which can be used to identify a type
+of object on screen. (is used by the collision detection)</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collisionType">- collisionType</a></code>
+		<span class="tooltip">Returns the user defined collision type.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setGroup:">- setGroup:</a></code>
+		<span class="tooltip">Shapes in the same non-zero group do not generate collisions.
+Useful when creating an object out of many shapes that you
+don’t want to self collide. Defaults to CP<em>NO</em>GROUP.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setLayer:">- setLayer:</a></code>
+		<span class="tooltip">Shapes only collide if they are in the same bit-planes.
+i.e. (a->layers & b->layers) != 0 By default, a shape
+occupies all bit-planes.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setData:">- setData:</a></code>
+		<span class="tooltip">Associates an object with this shape, it is not used by Chipmunk but can be used
+to create a binding between an Sparrow object and a <a href="#//api/name/cpShape">cpShape</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getData">- getData</a></code>
+		<span class="tooltip">Returns the associated object with this body.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Operations</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getBody">- getBody</a></code>
+		<span class="tooltip">Returns the body associated with this shape.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addToSpace">- addToSpace</a></code>
+		<span class="tooltip">Add this shape to the Chipmunk space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addToSpaceAsStatic">- addToSpaceAsStatic</a></code>
+		<span class="tooltip">Add this body to the Chipmunk space as a static object.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeFromSpace">- removeFromSpace</a></code>
+		<span class="tooltip">Remove this shape from the Chipmunk space. (it will determine by itself if the Shape is static or not)</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/addToSpace" title="addToSpace"></a>
+	<h3 class="subsubtitle method-title">addToSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add this shape to the Chipmunk space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addToSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addToSpaceAsStatic" title="addToSpaceAsStatic"></a>
+	<h3 class="subsubtitle method-title">addToSpaceAsStatic</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add this body to the Chipmunk space as a static object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addToSpaceAsStatic</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/collisionType" title="collisionType"></a>
+	<h3 class="subsubtitle method-title">collisionType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the user defined collision type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpCollisionType)collisionType</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the user defined collision type.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/getBody" title="getBody"></a>
+	<h3 class="subsubtitle method-title">getBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the body associated with this shape.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)getBody</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the body associated with this shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/getData" title="getData"></a>
+	<h3 class="subsubtitle method-title">getData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the associated object with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)getData</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the associated object with this body.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeFromSpace" title="removeFromSpace"></a>
+	<h3 class="subsubtitle method-title">removeFromSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove this shape from the Chipmunk space. (it will determine by itself if the Shape is static or not)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeFromSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setCollisionType:" title="setCollisionType:"></a>
+	<h3 class="subsubtitle method-title">setCollisionType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A user defined collision type which can be used to identify a type
+of object on screen. (is used by the collision detection)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setCollisionType:(cpCollisionType)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd>the type</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>A user defined collision type which can be used to identify a type
+of object on screen. (is used by the collision detection)</p>
+		
+		<p>For example, if a have a ball and a block on the screen i could identify
+the ball as type 1 and the block as type 2.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setData:" title="setData:"></a>
+	<h3 class="subsubtitle method-title">setData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associates an object with this shape, it is not used by Chipmunk but can be used
+to create a binding between an Sparrow object and a <a href="#//api/name/cpShape">cpShape</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setData:(id)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd>an object to associate</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setElasticity:" title="setElasticity:"></a>
+	<h3 class="subsubtitle method-title">setElasticity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a ìperfectî bounce.
+However due to inaccuracies in the simulation using 1.0 or greater is not recommended however.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setElasticity:(float)<em>elasticity</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>elasticity</em></dt>
+			<dd>a value between 0.0 and (adviced) 1.0</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setFriction:" title="setFriction:"></a>
+	<h3 class="subsubtitle method-title">setFriction:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setFriction:(float)<em>friction</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>friction</em></dt>
+			<dd>a value 0f 0.0 is frictionless</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.</p>
+		
+		<p>For a listing of various frictions see:
+<a href="http://www.roymech.co.uk/Useful">http://www.roymech.co.uk/Useful</a><em>Tables/Tribology/co</em>of_frict.htm</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setGroup:" title="setGroup:"></a>
+	<h3 class="subsubtitle method-title">setGroup:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shapes in the same non-zero group do not generate collisions.
+Useful when creating an object out of many shapes that you
+don’t want to self collide. Defaults to CP<em>NO</em>GROUP.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setGroup:(cpGroup)<em>group</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd>the group</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setLayer:" title="setLayer:"></a>
+	<h3 class="subsubtitle method-title">setLayer:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shapes only collide if they are in the same bit-planes.
+i.e. (a->layers & b->layers) != 0 By default, a shape
+occupies all bit-planes.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setLayer:(cpLayers)<em>layer</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layer</em></dt>
+			<dd>the layer</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Shapes only collide if they are in the same bit-planes.
+i.e. (a->layers & b->layers) != 0 By default, a shape
+occupies all bit-planes.</p>
+		
+		<p>Wikipedia has a nice article on bitmasks if you are
+unfamiliar with how to use them. Defaults to CP<em>ALL</em>LAYERS.</p>
+		
+		<p><a href="http://en.wikipedia.org/wiki/Mask_(computing)">http://en.wikipedia.org/wiki/Mask_(computing)</a>#top</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Properties</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/cpShape" title="cpShape"></a>
+	<h3 class="subsubtitle method-title">cpShape</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpShape">cpShape</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) cpShape *cpShape</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

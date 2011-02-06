@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMPolyShape Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMPolyShape Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="CMShape.html">CMShape</a> : <a href="CMObject.html">CMObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMPolyShape.h<br />CMPolyShape.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>A poly shape is a shape that consists of a number of vertices that make up the object.
+Please note to specify the vertices in a clock-wise maner.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					
+<h3 class="subsubtitle task-title">Initialization</h3>
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBody:numberOfVertices:offset:vertices:">- initWithBody:numberOfVertices:offset:vertices:</a></code>
+		<span class="tooltip">Constructs a new poly shape with the specified vertices.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBody:numberOfVertices:vertices:">- initWithBody:numberOfVertices:vertices:</a></code>
+		<span class="tooltip">Constructs a new poly shape with the specified vertices.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBody:numberOfVertices:firstVertice:withParameters:">- initWithBody:numberOfVertices:firstVertice:withParameters:</a></code>
+		<span class="tooltip">Constructs a new poly shape with the specified vertices.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBody:numberOfVertices:offset:firstVertice:withParameters:">- initWithBody:numberOfVertices:offset:firstVertice:withParameters:</a></code>
+		<span class="tooltip">Constructs a new poly shape with the specified vertices.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithBody:numberOfVertices:firstVertice:withParameters:" title="initWithBody:numberOfVertices:firstVertice:withParameters:"></a>
+	<h3 class="subsubtitle method-title">initWithBody:numberOfVertices:firstVertice:withParameters:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new poly shape with the specified vertices.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithBody:(CMBody *)<em>cmBody</em> numberOfVertices:(int)<em>numberOfVertices</em> firstVertice:(cpVect)<em>firstVertice</em> withParameters:(va_list)<em>vaVerticesList</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body to wich this shape is associated.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfVertices</em></dt>
+			<dd>the number of points this poly consists of.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>firstVertice</em></dt>
+			<dd>the first coordinate of the vertice</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vaVerticesList</em></dt>
+			<dd>a va_list containing the rest of the coordinates of the vertices</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPolyShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithBody:numberOfVertices:offset:firstVertice:withParameters:" title="initWithBody:numberOfVertices:offset:firstVertice:withParameters:"></a>
+	<h3 class="subsubtitle method-title">initWithBody:numberOfVertices:offset:firstVertice:withParameters:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new poly shape with the specified vertices.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithBody:(CMBody *)<em>cmBody</em> numberOfVertices:(int)<em>numberOfVertices</em> offset:(cpVect)<em>offset</em> firstVertice:(cpVect)<em>firstVertice</em> withParameters:(va_list)<em>vaVerticesList</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body to wich this shape is associated.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfVertices</em></dt>
+			<dd>the number of points this poly consists of.
+@paran offset the offset of the shapoe in relation to the body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>firstVertice</em></dt>
+			<dd>the first coordinate of the vertice</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vaVerticesList</em></dt>
+			<dd>a va_list containing the rest of the coordinates of the vertices</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPolyShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithBody:numberOfVertices:offset:vertices:" title="initWithBody:numberOfVertices:offset:vertices:"></a>
+	<h3 class="subsubtitle method-title">initWithBody:numberOfVertices:offset:vertices:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new poly shape with the specified vertices.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithBody:(CMBody *)<em>cmBody</em> numberOfVertices:(int)<em>numberOfVertices</em> offset:(cpVect)<em>offset</em> vertices:(cpVect)<em>vertices</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body to wich this shape is associated.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfVertices</em></dt>
+			<dd>the number of points this poly consists of.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd>the offset of the shape in relation to the body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vertices</em></dt>
+			<dd>the coordinates of the vertices</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>...</em></dt>
+			<dd>the rest of the vertices</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPolyShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithBody:numberOfVertices:vertices:" title="initWithBody:numberOfVertices:vertices:"></a>
+	<h3 class="subsubtitle method-title">initWithBody:numberOfVertices:vertices:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new poly shape with the specified vertices.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithBody:(CMBody *)<em>cmBody</em> numberOfVertices:(int)<em>numberOfVertices</em> vertices:(cpVect)<em>vertices</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body to wich this shape is associated.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfVertices</em></dt>
+			<dd>the number of points this poly consists of.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vertices</em></dt>
+			<dd>the coordinates of the vertices</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>...</em></dt>
+			<dd>the rest of the vertices.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPolyShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

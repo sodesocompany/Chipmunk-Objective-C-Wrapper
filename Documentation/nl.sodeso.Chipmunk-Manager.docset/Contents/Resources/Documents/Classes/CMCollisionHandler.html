@@ -1,0 +1,772 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMCollisionHandler Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMCollisionHandler Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMCollisionHandler.h<br />CMCollisionHandler.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>Class combining all the selectors for a collision handler.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/invocationBegin"> invocationBegin</a></code>
+		<span class="tooltip">The prepared invocation begin event method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/invocationPreSolve"> invocationPreSolve</a></code>
+		<span class="tooltip">The prepared invocation pre-solve event method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/invocationPostSolve"> invocationPostSolve</a></code>
+		<span class="tooltip">The prepared invocation post solve method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/invocationSeparate"> invocationSeparate</a></code>
+		<span class="tooltip">The prepared invocation separate method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/typeA"> typeA</a></code>
+		<span class="tooltip">The first collision type.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/typeB"> typeB</a></code>
+		<span class="tooltip">The second collision type.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ignoreContainmentCollision"> ignoreContainmentCollision</a></code>
+		<span class="tooltip">Flag indicating if containment collisions should be ignored.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Initialization</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">- init</a></code>
+		<span class="tooltip">Default initialization method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithTypeA:andTypeB:">- initWithTypeA:andTypeB:</a></code>
+		<span class="tooltip">Initialization method</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Properties</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setInvocationBegin:selector:">- setInvocationBegin:selector:</a></code>
+		<span class="tooltip">Method for setting the begin selector.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setInvocationPreSolve:selector:">- setInvocationPreSolve:selector:</a></code>
+		<span class="tooltip">Method for setting the pre solve selector.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setInvocationPostSolve:selector:">- setInvocationPostSolve:selector:</a></code>
+		<span class="tooltip">Method for setting the post solve selector.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setInvocationSeparate:selector:">- setInvocationSeparate:selector:</a></code>
+		<span class="tooltip">Method for setting the separate selector.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/constructInvocation:selector:">- constructInvocation:selector:</a></code>
+		<span class="tooltip">Constructs a new invocation method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">- dealloc</a></code>
+		<span class="tooltip">Default <a href="#//api/name/dealloc">dealloc</a> method.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/constructInvocation:selector:" title="constructInvocation:selector:"></a>
+	<h3 class="subsubtitle method-title">constructInvocation:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new invocation method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSInvocation *)constructInvocation:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target to be invoked.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector to be invoked.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default <a href="#//api/name/dealloc">dealloc</a> method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default initialization method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)init</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithTypeA:andTypeB:" title="initWithTypeA:andTypeB:"></a>
+	<h3 class="subsubtitle method-title">initWithTypeA:andTypeB:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialization method</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithTypeA:(cpCollisionType)<em>typeA</em> andTypeB:(cpCollisionType)<em>typeB</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeA</em></dt>
+			<dd>the first collision type</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeB</em></dt>
+			<dd>the second collision type</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setInvocationBegin:selector:" title="setInvocationBegin:selector:"></a>
+	<h3 class="subsubtitle method-title">setInvocationBegin:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method for setting the begin selector.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setInvocationBegin:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector method that will be invoked upon collision between the types.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setInvocationPostSolve:selector:" title="setInvocationPostSolve:selector:"></a>
+	<h3 class="subsubtitle method-title">setInvocationPostSolve:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method for setting the post solve selector.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setInvocationPostSolve:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector method that will be invoked upon collision between the types.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setInvocationPreSolve:selector:" title="setInvocationPreSolve:selector:"></a>
+	<h3 class="subsubtitle method-title">setInvocationPreSolve:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method for setting the pre solve selector.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setInvocationPreSolve:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector method that will be invoked upon collision between the types.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setInvocationSeparate:selector:" title="setInvocationSeparate:selector:"></a>
+	<h3 class="subsubtitle method-title">setInvocationSeparate:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method for setting the separate selector.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setInvocationSeparate:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector method that will be invoked upon collision between the types.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Properties</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/ignoreContainmentCollision" title="ignoreContainmentCollision"></a>
+	<h3 class="subsubtitle method-title">ignoreContainmentCollision</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag indicating if containment collisions should be ignored.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) BOOL ignoreContainmentCollision</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/invocationBegin" title="invocationBegin"></a>
+	<h3 class="subsubtitle method-title">invocationBegin</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The prepared invocation begin event method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSInvocation *invocationBegin</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/invocationPostSolve" title="invocationPostSolve"></a>
+	<h3 class="subsubtitle method-title">invocationPostSolve</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The prepared invocation post solve method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSInvocation *invocationPostSolve</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/invocationPreSolve" title="invocationPreSolve"></a>
+	<h3 class="subsubtitle method-title">invocationPreSolve</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The prepared invocation pre-solve event method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSInvocation *invocationPreSolve</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/invocationSeparate" title="invocationSeparate"></a>
+	<h3 class="subsubtitle method-title">invocationSeparate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The prepared invocation separate method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSInvocation *invocationSeparate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/typeA" title="typeA"></a>
+	<h3 class="subsubtitle method-title">typeA</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The first collision type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) cpCollisionType typeA</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/typeB" title="typeB"></a>
+	<h3 class="subsubtitle method-title">typeB</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The second collision type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) cpCollisionType typeB</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMCollisionHandler.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

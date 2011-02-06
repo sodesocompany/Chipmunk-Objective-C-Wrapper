@@ -1,0 +1,2381 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMBody Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMBody Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="CMObject.html">CMObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMBody.h<br />CMBody.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>The body is used to specify an object. A body consists of one or more shapes and joints that make up
+the complete object.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cpBody"> cpBody</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Initialization</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initStatic">- initStatic</a></code>
+		<span class="tooltip">Constructs a new static <a href="CMBody.html">CMBody</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithMass:moment:">- initWithMass:moment:</a></code>
+		<span class="tooltip">Constructs a new <a href="CMBody.html">CMBody</a> object with the given mass and moment.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Properties</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMass:">- setMass:</a></code>
+		<span class="tooltip">Set the mass.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMoment:">- setMoment:</a></code>
+		<span class="tooltip">Set the moment.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setVelocity:">- setVelocity:</a></code>
+		<span class="tooltip">Sets the velocity of the body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setForce:">- setForce:</a></code>
+		<span class="tooltip">Sets the force.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPositionUsingVect:">- setPositionUsingVect:</a></code>
+		<span class="tooltip">Sets the position.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPositionUsingPoint:">- setPositionUsingPoint:</a></code>
+		<span class="tooltip">Sets the position.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setAngle:">- setAngle:</a></code>
+		<span class="tooltip">Sets the angle of this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getAngle">- getAngle</a></code>
+		<span class="tooltip">Returns the current rotational angle of the body in radians.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setAngularVelocity:">- setAngularVelocity:</a></code>
+		<span class="tooltip">Sets the angulair velocity.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setTorque:">- setTorque:</a></code>
+		<span class="tooltip">Sets the torque</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getTorque">- getTorque</a></code>
+		<span class="tooltip">Current torque being applied to the body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setData:">- setData:</a></code>
+		<span class="tooltip">Associates an object with this body, it is not used by Chipmunk but can be used
+to create a binding between an Sparrow object and a <a href="#//api/name/cpBody">cpBody</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getData">- getData</a></code>
+		<span class="tooltip">Returns the associated object with this body.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Operations</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applyImpulse:offset:">- applyImpulse:offset:</a></code>
+		<span class="tooltip">Apply an impulse to this body at a relative offset from the center of gravity. Both the impulse and the offset are in world coordinates. offset is relative to the position of the body, but not the rotation.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applyForce:offset:">- applyForce:offset:</a></code>
+		<span class="tooltip">Apply (accumulate) the force on the body at a relative offset (important!) from the center of gravity. Both the force and offset are in world coordinates.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetForces">- resetForces</a></code>
+		<span class="tooltip">Zero both the forces and torques accumulated on body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sleep">- sleep</a></code>
+		<span class="tooltip">Force the body to <a href="#//api/name/sleep">sleep</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/wakeUp">- wakeUp</a></code>
+		<span class="tooltip">Force the body to wake up from <a href="#//api/name/sleep">sleep</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addToSpace">- addToSpace</a></code>
+		<span class="tooltip">Adds this body to the space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeFromSpace">- removeFromSpace</a></code>
+		<span class="tooltip">Remove this body from the space.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Shapes &amp; Constraints</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCircleWithRadius:">- addCircleWithRadius:</a></code>
+		<span class="tooltip">Create a new Circle shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCircleWithRadius:offset:">- addCircleWithRadius:offset:</a></code>
+		<span class="tooltip">Create a new Circle shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addRectWithWidth:height:">- addRectWithWidth:height:</a></code>
+		<span class="tooltip">Create a new Rectangulair shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addRectWithWidth:height:offset:">- addRectWithWidth:height:offset:</a></code>
+		<span class="tooltip">Create a new Rectangulair shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPolyWithPoints:vertices:">- addPolyWithPoints:vertices:</a></code>
+		<span class="tooltip">Create a new Polygon shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPolyWithPoints:offset:vertices:">- addPolyWithPoints:offset:vertices:</a></code>
+		<span class="tooltip">Create a new Polygon shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addSegmentFrom:to:radius:">- addSegmentFrom:to:radius:</a></code>
+		<span class="tooltip">Create a new Segment shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeShape:">- removeShape:</a></code>
+		<span class="tooltip">Removes the specified shape from the body and space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addSimpleMotorConstraintWithBody:rate:">- addSimpleMotorConstraintWithBody:rate:</a></code>
+		<span class="tooltip">Creates a new motor constraint between this body and the given body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPinJointConstraintWithBody:anchor1:anchor2:">- addPinJointConstraintWithBody:anchor1:anchor2:</a></code>
+		<span class="tooltip">Constructs a new pin joint constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addDampedRotaryConstraintWithBody:restAngle:stiffness:damping:">- addDampedRotaryConstraintWithBody:restAngle:stiffness:damping:</a></code>
+		<span class="tooltip">Constructs a new damped rotary constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addDampedSpringConstraintWithBody:anchor1:anchor2:restLength:stiffness:damping:">- addDampedSpringConstraintWithBody:anchor1:anchor2:restLength:stiffness:damping:</a></code>
+		<span class="tooltip">Constructs a new damped spring.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addGearJointConstraintWithBody:phase:ratio:">- addGearJointConstraintWithBody:phase:ratio:</a></code>
+		<span class="tooltip">Constructs a new gear joint constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addGrooveJointConstraintWithBody:grooveA:grooveB:anchor1:">- addGrooveJointConstraintWithBody:grooveA:grooveB:anchor1:</a></code>
+		<span class="tooltip">Constructs a new groove joint constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPivotJointConstraintWithBody:anchor1:anchor2:">- addPivotJointConstraintWithBody:anchor1:anchor2:</a></code>
+		<span class="tooltip">Constructs a new groove joint constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPivotJointConstraintWithBody:pivot:">- addPivotJointConstraintWithBody:pivot:</a></code>
+		<span class="tooltip">Constructs a new pivot joing using two anchors.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addRatchetJointConstraintWithBody:phase:ratchet:">- addRatchetJointConstraintWithBody:phase:ratchet:</a></code>
+		<span class="tooltip">Constructs a new pivot joint using a pivot.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addRotaryLimitConstraintWithBody:min:max:">- addRotaryLimitConstraintWithBody:min:max:</a></code>
+		<span class="tooltip">Constructs a new rotary limit constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addSlideJointConstraintWithBody:anchor1:anchor2:min:max:">- addSlideJointConstraintWithBody:anchor1:anchor2:min:max:</a></code>
+		<span class="tooltip">Constructs a new Slide joing constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeConstraint:">- removeConstraint:</a></code>
+		<span class="tooltip">Remover the specified constraint from this body.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/addCircleWithRadius:" title="addCircleWithRadius:"></a>
+	<h3 class="subsubtitle method-title">addCircleWithRadius:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Circle shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMCircleShape *)addCircleWithRadius:(float)<em>radius</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the radius of the circle.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The circle shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addCircleWithRadius:offset:" title="addCircleWithRadius:offset:"></a>
+	<h3 class="subsubtitle method-title">addCircleWithRadius:offset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Circle shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMCircleShape *)addCircleWithRadius:(float)<em>radius</em> offset:(cpVect)<em>offset</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the radius of the circle.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd>the offset of the shape in relation to the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The circle shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addDampedRotaryConstraintWithBody:restAngle:stiffness:damping:" title="addDampedRotaryConstraintWithBody:restAngle:stiffness:damping:"></a>
+	<h3 class="subsubtitle method-title">addDampedRotaryConstraintWithBody:restAngle:stiffness:damping:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new damped rotary constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMDampedRotarySpringConstraint *)addDampedRotaryConstraintWithBody:(CMBody *)<em>cmBody</em> restAngle:(float)<em>restAngle</em> stiffness:(float)<em>stiffness</em> damping:(float)<em>damping</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>restAngle</em></dt>
+			<dd>The angular offset the spring attempts to keep between the two bodies.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>stiffness</em></dt>
+			<dd>The young's modulus of the spring.  (<a href="http://en.wikipedia.org/wiki/Young%27s_modulus)">http://en.wikipedia.org/wiki/Young%27s_modulus)</a></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>damping</em></dt>
+			<dd>The amount of viscous damping to apply.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addDampedSpringConstraintWithBody:anchor1:anchor2:restLength:stiffness:damping:" title="addDampedSpringConstraintWithBody:anchor1:anchor2:restLength:stiffness:damping:"></a>
+	<h3 class="subsubtitle method-title">addDampedSpringConstraintWithBody:anchor1:anchor2:restLength:stiffness:damping:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new damped spring.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMDampedSpringConstraint *)addDampedSpringConstraintWithBody:(CMBody *)<em>cmBody</em> anchor1:(cpVect)<em>anchor1</em> anchor2:(cpVect)<em>anchor2</em> restLength:(float)<em>restLength</em> stiffness:(float)<em>stiffness</em> damping:(float)<em>damping</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>The anchor point on the first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor2</em></dt>
+			<dd>The anchor point on the second body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>restLength</em></dt>
+			<dd>The length the spring wants to contract or expand to.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>stiffness</em></dt>
+			<dd>The young's modulus of the spring.  (<a href="http://en.wikipedia.org/wiki/Young%27s_modulus)">http://en.wikipedia.org/wiki/Young%27s_modulus)</a></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>damping</em></dt>
+			<dd>The amount of viscous damping to apply.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addGearJointConstraintWithBody:phase:ratio:" title="addGearJointConstraintWithBody:phase:ratio:"></a>
+	<h3 class="subsubtitle method-title">addGearJointConstraintWithBody:phase:ratio:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new gear joint constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMGearJointConstraint *)addGearJointConstraintWithBody:(CMBody *)<em>cmBody</em> phase:(float)<em>phase</em> ratio:(float)<em>ratio</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>phase</em></dt>
+			<dd>The angular offset of the ratchet positions in radians.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ratio</em></dt>
+			<dd>The angle in radians of each ratchet position. Negative values cause the ratchet to operate in the opposite direction.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addGrooveJointConstraintWithBody:grooveA:grooveB:anchor1:" title="addGrooveJointConstraintWithBody:grooveA:grooveB:anchor1:"></a>
+	<h3 class="subsubtitle method-title">addGrooveJointConstraintWithBody:grooveA:grooveB:anchor1:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new groove joint constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMGrooveJointConstraint *)addGrooveJointConstraintWithBody:(CMBody *)<em>cmBody</em> grooveA:(cpVect)<em>grooveA</em> grooveB:(cpVect)<em>grooveB</em> anchor1:(cpVect)<em>anchor1</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grooveA</em></dt>
+			<dd>The start of the line segment on the first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grooveB</em></dt>
+			<dd>The end of the line segment on the second body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>The anchor point on the second body that is held to the line segment on the first.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addPinJointConstraintWithBody:anchor1:anchor2:" title="addPinJointConstraintWithBody:anchor1:anchor2:"></a>
+	<h3 class="subsubtitle method-title">addPinJointConstraintWithBody:anchor1:anchor2:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new pin joint constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMPinJointConstraint *)addPinJointConstraintWithBody:(CMBody *)<em>cmBody</em> anchor1:(cpVect)<em>anchor1</em> anchor2:(cpVect)<em>anchor2</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>The anchor point on the first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor2</em></dt>
+			<dd>The anchor point on the second body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addPivotJointConstraintWithBody:anchor1:anchor2:" title="addPivotJointConstraintWithBody:anchor1:anchor2:"></a>
+	<h3 class="subsubtitle method-title">addPivotJointConstraintWithBody:anchor1:anchor2:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new groove joint constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMPivotJointConstraint *)addPivotJointConstraintWithBody:(CMBody *)<em>cmBody</em> anchor1:(cpVect)<em>anchor1</em> anchor2:(cpVect)<em>anchor2</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>The start of the line segment on the first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor2</em></dt>
+			<dd>The end of the line segment on the second body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addPivotJointConstraintWithBody:pivot:" title="addPivotJointConstraintWithBody:pivot:"></a>
+	<h3 class="subsubtitle method-title">addPivotJointConstraintWithBody:pivot:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new pivot joing using two anchors.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMPivotJointConstraint *)addPivotJointConstraintWithBody:(CMBody *)<em>cmBody</em> pivot:(cpVect)<em>pivot</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pivot</em></dt>
+			<dd>The pivot coordinate in the world.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addPolyWithPoints:offset:vertices:" title="addPolyWithPoints:offset:vertices:"></a>
+	<h3 class="subsubtitle method-title">addPolyWithPoints:offset:vertices:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Polygon shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMPolyShape *)addPolyWithPoints:(int)<em>numberOfVertices</em> offset:(cpVect)<em>offset</em> vertices:(cpVect)<em>vertices</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfVertices</em></dt>
+			<dd>the number of points</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd>the offset of the shape in relation to the body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vertices</em></dt>
+			<dd>the vertices</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>...</em></dt>
+			<dd>the vertices</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The polygon shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addPolyWithPoints:vertices:" title="addPolyWithPoints:vertices:"></a>
+	<h3 class="subsubtitle method-title">addPolyWithPoints:vertices:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Polygon shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMPolyShape *)addPolyWithPoints:(int)<em>numberOfVertices</em> vertices:(cpVect)<em>vertices</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>numberOfVertices</em></dt>
+			<dd>the number of points</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vertices</em></dt>
+			<dd>the vertices</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>...</em></dt>
+			<dd>the vertices</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The polygon shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addRatchetJointConstraintWithBody:phase:ratchet:" title="addRatchetJointConstraintWithBody:phase:ratchet:"></a>
+	<h3 class="subsubtitle method-title">addRatchetJointConstraintWithBody:phase:ratchet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new pivot joint using a pivot.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMRatchetJointConstraint *)addRatchetJointConstraintWithBody:(CMBody *)<em>cmBody</em> phase:(float)<em>phase</em> ratchet:(float)<em>ratchet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>phase</em></dt>
+			<dd>The phase.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ratchet</em></dt>
+			<dd>The ratchet.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addRectWithWidth:height:" title="addRectWithWidth:height:"></a>
+	<h3 class="subsubtitle method-title">addRectWithWidth:height:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Rectangulair shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMRectShape *)addRectWithWidth:(float)<em>width</em> height:(float)<em>height</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>width</em></dt>
+			<dd>the width of the rectangle (full-width)</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>height</em></dt>
+			<dd>the height of the rectangle (full-height)</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the rectangulair shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addRectWithWidth:height:offset:" title="addRectWithWidth:height:offset:"></a>
+	<h3 class="subsubtitle method-title">addRectWithWidth:height:offset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Rectangulair shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMRectShape *)addRectWithWidth:(float)<em>width</em> height:(float)<em>height</em> offset:(cpVect)<em>offset</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>width</em></dt>
+			<dd>the width of the rectangle (full-width)</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>height</em></dt>
+			<dd>the height of the rectangle (full-height)</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd>the offset of the shape in relation to the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the rectangulair shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addRotaryLimitConstraintWithBody:min:max:" title="addRotaryLimitConstraintWithBody:min:max:"></a>
+	<h3 class="subsubtitle method-title">addRotaryLimitConstraintWithBody:min:max:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new rotary limit constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMRotaryLimitConstraint *)addRotaryLimitConstraintWithBody:(CMBody *)<em>cmBody</em> min:(float)<em>min</em> max:(float)<em>max</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>min</em></dt>
+			<dd>The minimum angular delta of the joint in radians.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>max</em></dt>
+			<dd>The maximum angular delta of the joint in radians.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addSegmentFrom:to:radius:" title="addSegmentFrom:to:radius:"></a>
+	<h3 class="subsubtitle method-title">addSegmentFrom:to:radius:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new Segment shape associated with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMSegmentShape *)addSegmentFrom:(cpVect)<em>from</em> to:(cpVect)<em>to</em> radius:(float)<em>radius</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>from</em></dt>
+			<dd>The starting point of the segment.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>to</em></dt>
+			<dd>The ending point of the segment.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>The radius of the segment.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addSimpleMotorConstraintWithBody:rate:" title="addSimpleMotorConstraintWithBody:rate:"></a>
+	<h3 class="subsubtitle method-title">addSimpleMotorConstraintWithBody:rate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new motor constraint between this body and the given body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMSimpleMotorConstraint *)addSimpleMotorConstraintWithBody:(CMBody *)<em>cmBody</em> rate:(float)<em>rate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rate</em></dt>
+			<dd>the rate (angle) how much it should rotate within a single frame.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addSlideJointConstraintWithBody:anchor1:anchor2:min:max:" title="addSlideJointConstraintWithBody:anchor1:anchor2:min:max:"></a>
+	<h3 class="subsubtitle method-title">addSlideJointConstraintWithBody:anchor1:anchor2:min:max:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new Slide joing constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMSlideJointConstraint *)addSlideJointConstraintWithBody:(CMBody *)<em>cmBody</em> anchor1:(cpVect)<em>anchor1</em> anchor2:(cpVect)<em>anchor2</em> min:(float)<em>min</em> max:(float)<em>max</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The body which will function as the second body of the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>The anchor point on the first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor2</em></dt>
+			<dd>The anchor point on the second body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>min</em></dt>
+			<dd>The minimum allowed distance between anchor points.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>max</em></dt>
+			<dd>The maximum allowed distance between anchor points.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addToSpace" title="addToSpace"></a>
+	<h3 class="subsubtitle method-title">addToSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds this body to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addToSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/applyForce:offset:" title="applyForce:offset:"></a>
+	<h3 class="subsubtitle method-title">applyForce:offset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Apply (accumulate) the force on the body at a relative offset (important!) from the center of gravity. Both the force and offset are in world coordinates.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)applyForce:(cpVect)<em>force</em> offset:(cpVect)<em>offset</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>the force</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd>the offset</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/applyImpulse:offset:" title="applyImpulse:offset:"></a>
+	<h3 class="subsubtitle method-title">applyImpulse:offset:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Apply an impulse to this body at a relative offset from the center of gravity. Both the impulse and the offset are in world coordinates. offset is relative to the position of the body, but not the rotation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)applyImpulse:(cpVect)<em>impulse</em> offset:(cpVect)<em>offset</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>impulse</em></dt>
+			<dd>the impulse relative to the center of gravity.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd>the offset relative to the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/getAngle" title="getAngle"></a>
+	<h3 class="subsubtitle method-title">getAngle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current rotational angle of the body in radians.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)getAngle</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/getData" title="getData"></a>
+	<h3 class="subsubtitle method-title">getData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the associated object with this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)getData</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the associated object with this body.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/getTorque" title="getTorque"></a>
+	<h3 class="subsubtitle method-title">getTorque</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Current torque being applied to the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)getTorque</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Current torque being applied to the body.</p>
+		
+		<p>Does not reset automatically as in some physics engines.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initStatic" title="initStatic"></a>
+	<h3 class="subsubtitle method-title">initStatic</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new static <a href="CMBody.html">CMBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initStatic</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the new <a href="CMBody.html">CMBody</a></p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Constructs a new static <a href="CMBody.html">CMBody</a>.</p>
+		
+		<p>Static shapes should NOT be added to the space.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithMass:moment:" title="initWithMass:moment:"></a>
+	<h3 class="subsubtitle method-title">initWithMass:moment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new <a href="CMBody.html">CMBody</a> object with the given mass and moment.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithMass:(float)<em>mass</em> moment:(float)<em>moment</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>mass</em></dt>
+			<dd>Mass of the body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>moment</em></dt>
+			<dd>Moment of inertia (MoI or sometimes just moment) of the body.
+The moment is like the rotational mass of a body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the new <a href="CMBody.html">CMBody</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeConstraint:" title="removeConstraint:"></a>
+	<h3 class="subsubtitle method-title">removeConstraint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remover the specified constraint from this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeConstraint:(CMConstraint *)<em>constraint</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>constraint</em></dt>
+			<dd>the constraint to remove from this body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeFromSpace" title="removeFromSpace"></a>
+	<h3 class="subsubtitle method-title">removeFromSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove this body from the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeFromSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeShape:" title="removeShape:"></a>
+	<h3 class="subsubtitle method-title">removeShape:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the specified shape from the body and space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeShape:(CMShape *)<em>shape</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>shape</em></dt>
+			<dd>the shape to remove.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/resetForces" title="resetForces"></a>
+	<h3 class="subsubtitle method-title">resetForces</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Zero both the forces and torques accumulated on body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)resetForces</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setAngle:" title="setAngle:"></a>
+	<h3 class="subsubtitle method-title">setAngle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the angle of this body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setAngle:(float)<em>angle</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>angle</em></dt>
+			<dd>the angle in radians.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Sets the angle of this body.</p>
+		
+		<p>When using Sparrow you can use the SP_D2R function
+to convert from degrees to radians.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setAngularVelocity:" title="setAngularVelocity:"></a>
+	<h3 class="subsubtitle method-title">setAngularVelocity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the angulair velocity.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setAngularVelocity:(float)<em>velocity</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>velocity</em></dt>
+			<dd>the velocity.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setData:" title="setData:"></a>
+	<h3 class="subsubtitle method-title">setData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associates an object with this body, it is not used by Chipmunk but can be used
+to create a binding between an Sparrow object and a <a href="#//api/name/cpBody">cpBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setData:(id)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd>an object to associate</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setForce:" title="setForce:"></a>
+	<h3 class="subsubtitle method-title">setForce:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the force.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setForce:(cpVect)<em>force</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>Current force being applied to the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Sets the force.</p>
+		
+		<p>Does not reset automatically as in some physics engines.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setMass:" title="setMass:"></a>
+	<h3 class="subsubtitle method-title">setMass:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the mass.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setMass:(float)<em>mass</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>mass</em></dt>
+			<dd>the mass of the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setMoment:" title="setMoment:"></a>
+	<h3 class="subsubtitle method-title">setMoment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the moment.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setMoment:(float)<em>moment</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>moment</em></dt>
+			<dd>of inertia (MoI or sometimes just moment) of the body.
+The moment is like the rotational mass of a body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setPositionUsingPoint:" title="setPositionUsingPoint:"></a>
+	<h3 class="subsubtitle method-title">setPositionUsingPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the position.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setPositionUsingPoint:(SPPoint *)<em>coordinate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>coordinate</em></dt>
+			<dd>Position of the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setPositionUsingVect:" title="setPositionUsingVect:"></a>
+	<h3 class="subsubtitle method-title">setPositionUsingVect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the position.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setPositionUsingVect:(cpVect)<em>coordinate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>coordinate</em></dt>
+			<dd>Position of the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setTorque:" title="setTorque:"></a>
+	<h3 class="subsubtitle method-title">setTorque:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the torque</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setTorque:(float)<em>torque</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>torque</em></dt>
+			<dd>the torque</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setVelocity:" title="setVelocity:"></a>
+	<h3 class="subsubtitle method-title">setVelocity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the velocity of the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setVelocity:(cpVect)<em>velocity</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>velocity</em></dt>
+			<dd>Velocity of the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/sleep" title="sleep"></a>
+	<h3 class="subsubtitle method-title">sleep</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Force the body to <a href="#//api/name/sleep">sleep</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)sleep</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/wakeUp" title="wakeUp"></a>
+	<h3 class="subsubtitle method-title">wakeUp</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Force the body to wake up from <a href="#//api/name/sleep">sleep</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)wakeUp</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Properties</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/cpBody" title="cpBody"></a>
+	<h3 class="subsubtitle method-title">cpBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) cpBody *cpBody</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

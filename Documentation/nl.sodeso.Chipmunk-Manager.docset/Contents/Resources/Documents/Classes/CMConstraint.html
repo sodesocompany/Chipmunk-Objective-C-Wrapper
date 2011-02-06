@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMConstraint Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMConstraint Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="CMObject.html">CMObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMConstraint.h<br />CMConstraint.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>Base class for the various constraint types.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cpConstraint"> cpConstraint</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpConstraint">cpConstraint</a>.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Properties</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMaxForce:">- setMaxForce:</a></code>
+		<span class="tooltip">Sets the maximum force that the constraint can use to act on the two bodies. Defaults to INFINITY.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setMaxBias:">- setMaxBias:</a></code>
+		<span class="tooltip">Sets the maximum speed at which the constraint can apply error correction. Defaults to INFINITY.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBiasCoef:">- setBiasCoef:</a></code>
+		<span class="tooltip">Sets the percentage of error corrected each step of the space. (Can cause issues if you donít use a constant time step) Defaults to 0.1.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/firstBody">- firstBody</a></code>
+		<span class="tooltip">Returns the first body that this constraint is attached to.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/secondBody">- secondBody</a></code>
+		<span class="tooltip">Returns the second body that this constraint is attached to.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setData:">- setData:</a></code>
+		<span class="tooltip">Associates an object with this constraint, it is not used by Chipmunk but can be used
+to create a binding between an Sparrow object and a <a href="#//api/name/cpConstraint">cpConstraint</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getData">- getData</a></code>
+		<span class="tooltip">Returns the associated object with this constraint.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Operations</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addToSpace">- addToSpace</a></code>
+		<span class="tooltip">Add this constraint to the Chipmunk space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeFromSpace">- removeFromSpace</a></code>
+		<span class="tooltip">Removes this constraint fro mthe Chipmunk space.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/addToSpace" title="addToSpace"></a>
+	<h3 class="subsubtitle method-title">addToSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add this constraint to the Chipmunk space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addToSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/firstBody" title="firstBody"></a>
+	<h3 class="subsubtitle method-title">firstBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first body that this constraint is attached to.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)firstBody</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>returns the first body that this constraint is attached to.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/getData" title="getData"></a>
+	<h3 class="subsubtitle method-title">getData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the associated object with this constraint.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)getData</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the associated object with this constraint.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeFromSpace" title="removeFromSpace"></a>
+	<h3 class="subsubtitle method-title">removeFromSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes this constraint fro mthe Chipmunk space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeFromSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/secondBody" title="secondBody"></a>
+	<h3 class="subsubtitle method-title">secondBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the second body that this constraint is attached to.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)secondBody</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>returns the second body that this constraint is attached to.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setBiasCoef:" title="setBiasCoef:"></a>
+	<h3 class="subsubtitle method-title">setBiasCoef:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the percentage of error corrected each step of the space. (Can cause issues if you donít use a constant time step) Defaults to 0.1.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setBiasCoef:(float)<em>biasCoef</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>biasCoef</em></dt>
+			<dd>the percentage of error correction.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setData:" title="setData:"></a>
+	<h3 class="subsubtitle method-title">setData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Associates an object with this constraint, it is not used by Chipmunk but can be used
+to create a binding between an Sparrow object and a <a href="#//api/name/cpConstraint">cpConstraint</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setData:(id)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd>an object to associate</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setMaxBias:" title="setMaxBias:"></a>
+	<h3 class="subsubtitle method-title">setMaxBias:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the maximum speed at which the constraint can apply error correction. Defaults to INFINITY.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setMaxBias:(float)<em>maxBias</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxBias</em></dt>
+			<dd>the maxBias.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setMaxForce:" title="setMaxForce:"></a>
+	<h3 class="subsubtitle method-title">setMaxForce:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the maximum force that the constraint can use to act on the two bodies. Defaults to INFINITY.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setMaxForce:(float)<em>maxForce</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>maxForce</em></dt>
+			<dd>the force.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Properties</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/cpConstraint" title="cpConstraint"></a>
+	<h3 class="subsubtitle method-title">cpConstraint</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpConstraint">cpConstraint</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) cpConstraint *cpConstraint</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

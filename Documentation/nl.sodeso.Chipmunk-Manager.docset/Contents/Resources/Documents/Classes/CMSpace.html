@@ -1,0 +1,1332 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMSpace Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMSpace Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMSpace.h<br />CMSpace.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>The <a href="CMSpace.html">CMSpace</a> is the entry point, here you create the bodies and setup the space.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cpSpace"> cpSpace</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpSpace">cpSpace</a>.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Initialization</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/init">- init</a></code>
+		<span class="tooltip">Standard initialization method.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setGravity:">- setGravity:</a></code>
+		<span class="tooltip">Sets the gravity of the Chipmunk world.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDamping:">- setDamping:</a></code>
+		<span class="tooltip">Amount of viscous damping to apply to the space. A value of 0.9 means that each body will
+lose 10% of itís velocity per second. Defaults to 1. Like gravity can be overridden on a per body basis.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setSleepTimeThreshhold:">- setSleepTimeThreshhold:</a></code>
+		<span class="tooltip">Elapsed time before a group of idle bodies is put to sleep (defaults to infinity which disables sleeping).</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setIterations:">- setIterations:</a></code>
+		<span class="tooltip">Allow you to control the accuracy of the solver. Defaults to 10.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Operations</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/step:">- step:</a></code>
+		<span class="tooltip">Perform a step within the physics world.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateShapes">- updateShapes</a></code>
+		<span class="tooltip">Updates all SPDisplayObject objects that are attached to the bodies.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addWindowContainmentWithWidth:height:elasticity:friction:">- addWindowContainmentWithWidth:height:elasticity:friction:</a></code>
+		<span class="tooltip">Creates a containment area with the size and width.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Query functions</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/queryFirstByPoint:">- queryFirstByPoint:</a></code>
+		<span class="tooltip">Returns the first shape at the specified position.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/queryFirstByVect:">- queryFirstByVect:</a></code>
+		<span class="tooltip">Returns the first shape at the specified position.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/queryFirstByPoint:layers:group:">- queryFirstByPoint:layers:group:</a></code>
+		<span class="tooltip">Returns the first shape that is found at the specified point with the specified layer and
+group information.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/queryFirstByVect:layers:group:">- queryFirstByVect:layers:group:</a></code>
+		<span class="tooltip">Returns the first shape that is found at the specified point with the specified layer and
+group information.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Bodies</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addStaticBody">- addStaticBody</a></code>
+		<span class="tooltip">Adds a new static body with the mass and moment set to INFINITY</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBody">- addBody</a></code>
+		<span class="tooltip">Constructs a body with the mass and moment set to INFINITY.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addBodyWithMass:moment:">- addBodyWithMass:moment:</a></code>
+		<span class="tooltip">Constructs a body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeBody:">- removeBody:</a></code>
+		<span class="tooltip">Removes a body from the space.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Collision detection</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addDefaultCollisionHandler:begin:preSolve:postSolve:separate:ignoreContainmentCollisions:">- addDefaultCollisionHandler:begin:preSolve:postSolve:separate:ignoreContainmentCollisions:</a></code>
+		<span class="tooltip">Adds a default collision handler which will respond to all collisions.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCollisionHandlerBetween:andTypeB:target:begin:preSolve:postSolve:separate:">- addCollisionHandlerBetween:andTypeB:target:begin:preSolve:postSolve:separate:</a></code>
+		<span class="tooltip">Adds a default collision handler which will respond to all collisions.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCollisionHandlerBetween:andTypeB:target:selector:">- addCollisionHandlerBetween:andTypeB:target:selector:</a></code>
+		<span class="tooltip">Adds a collision callback between two collisionTypes.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeCollisionHandlerFor:andTypeB:">- removeCollisionHandlerFor:andTypeB:</a></code>
+		<span class="tooltip">Removes the collission handler between the two collision types.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">- dealloc</a></code>
+		<span class="tooltip">Dealocates the <a href="CMSpace.html">CMSpace</a> object.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/addBody" title="addBody"></a>
+	<h3 class="subsubtitle method-title">addBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a body with the mass and moment set to INFINITY.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)addBody</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addBodyWithMass:moment:" title="addBodyWithMass:moment:"></a>
+	<h3 class="subsubtitle method-title">addBodyWithMass:moment:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)addBodyWithMass:(float)<em>mass</em> moment:(float)<em>moment</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>mass</em></dt>
+			<dd>Mass of the body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>moment</em></dt>
+			<dd>Moment of inertia (MoI or sometimes just moment) of the body. The moment is like the rotational mass of a body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addCollisionHandlerBetween:andTypeB:target:begin:preSolve:postSolve:separate:" title="addCollisionHandlerBetween:andTypeB:target:begin:preSolve:postSolve:separate:"></a>
+	<h3 class="subsubtitle method-title">addCollisionHandlerBetween:andTypeB:target:begin:preSolve:postSolve:separate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a default collision handler which will respond to all collisions.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addCollisionHandlerBetween:(cpCollisionType)<em>typeA</em> andTypeB:(cpCollisionType)<em>typeB</em> target:(id)<em>target</em> begin:(SEL)<em>begin</em> preSolve:(SEL)<em>preSolve</em> postSolve:(SEL)<em>postSolve</em> separate:(SEL)<em>separate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeA</em></dt>
+			<dd>the first collision type</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeB</em></dt>
+			<dd>the second collision type</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object thet will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>begin</em></dt>
+			<dd>the selector method that will recieve the begin event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>preSolve</em></dt>
+			<dd>the selector method that will recieve the preSolve event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>postSolve</em></dt>
+			<dd>the selector method that will recieve the postSolve event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>separate</em></dt>
+			<dd>the selector method that will recieve the separate event.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Adds a default collision handler which will respond to all collisions.</p>
+		
+		<p>A selector should have the following arguments:<ul><li>(BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter<strong>)arbiter space:(CMSpace</strong>)space;</li></ul></p>
+		
+		<p>About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
+by changes the CMTypes.h file.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addCollisionHandlerBetween:andTypeB:target:selector:" title="addCollisionHandlerBetween:andTypeB:target:selector:"></a>
+	<h3 class="subsubtitle method-title">addCollisionHandlerBetween:andTypeB:target:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a collision callback between two collisionTypes.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addCollisionHandlerBetween:(cpCollisionType)<em>typeA</em> andTypeB:(cpCollisionType)<em>typeB</em> target:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeA</em></dt>
+			<dd>the first collision type</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeB</em></dt>
+			<dd>the second collision type</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector method that will be invoked upon collision between the types.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Adds a collision callback between two collisionTypes.</p>
+		
+		<p>A selector should have the following arguments:<ul><li>(BOOL) collisionListenerBetweenBallAndSquare:(CollisionMoment)moment arbiter:(cpArbiter<strong>)arbiter space:(cpSpace</strong>)space;</li></ul></p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addDefaultCollisionHandler:begin:preSolve:postSolve:separate:ignoreContainmentCollisions:" title="addDefaultCollisionHandler:begin:preSolve:postSolve:separate:ignoreContainmentCollisions:"></a>
+	<h3 class="subsubtitle method-title">addDefaultCollisionHandler:begin:preSolve:postSolve:separate:ignoreContainmentCollisions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a default collision handler which will respond to all collisions.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addDefaultCollisionHandler:(id)<em>target</em> begin:(SEL)<em>begin</em> preSolve:(SEL)<em>preSolve</em> postSolve:(SEL)<em>postSolve</em> separate:(SEL)<em>separate</em> ignoreContainmentCollisions:(BOOL)<em>ignoreContainmentCollisions</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object thet will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>begin</em></dt>
+			<dd>the selector method that will recieve the begin event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>preSolve</em></dt>
+			<dd>the selector method that will recieve the preSolve event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>postSolve</em></dt>
+			<dd>the selector method that will recieve the postSolve event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>separate</em></dt>
+			<dd>the selector method that will recieve the separate event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ignoreContainmentCollisions</em></dt>
+			<dd>set to NO if you want to recieve collision events between the shapes and the window containment.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Adds a default collision handler which will respond to all collisions.</p>
+		
+		<p>A selector should have the following arguments:<ul><li>(BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter<strong>)arbiter space:(CMSpace</strong>)space;</li></ul></p>
+		
+		<p>About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
+by changes the CMTypes.h file.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addStaticBody" title="addStaticBody"></a>
+	<h3 class="subsubtitle method-title">addStaticBody</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a new static body with the mass and moment set to INFINITY</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)addStaticBody</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addWindowContainmentWithWidth:height:elasticity:friction:" title="addWindowContainmentWithWidth:height:elasticity:friction:"></a>
+	<h3 class="subsubtitle method-title">addWindowContainmentWithWidth:height:elasticity:friction:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a containment area with the size and width.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)addWindowContainmentWithWidth:(float)<em>width</em> height:(float)<em>height</em> elasticity:(float)<em>elasticity</em> friction:(float)<em>friction</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>width</em></dt>
+			<dd>the width of the containment area.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>height</em></dt>
+			<dd>the height of the containment area.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>elasticity</em></dt>
+			<dd>the elasticity of the walls.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>friction</em></dt>
+			<dd>the friction of the walls.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Dealocates the <a href="CMSpace.html">CMSpace</a> object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/init" title="init"></a>
+	<h3 class="subsubtitle method-title">init</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Standard initialization method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)init</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/queryFirstByPoint:" title="queryFirstByPoint:"></a>
+	<h3 class="subsubtitle method-title">queryFirstByPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first shape at the specified position.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMShape *)queryFirstByPoint:(SPPoint *)<em>point</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd>the position</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/queryFirstByPoint:layers:group:" title="queryFirstByPoint:layers:group:"></a>
+	<h3 class="subsubtitle method-title">queryFirstByPoint:layers:group:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first shape that is found at the specified point with the specified layer and
+group information.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMShape *)queryFirstByPoint:(SPPoint *)<em>point</em> layers:(cpLayers)<em>layers</em> group:(cpGroup)<em>group</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd>a point in space</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layers</em></dt>
+			<dd>the layer information which is applicable for the shape to be found.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd>the group information which is applicable for the shape to be found.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Returns the first shape that is found at the specified point with the specified layer and
+group information.</p>
+		
+		<p>About the cpLayers and cpGroup types, the cpLayers and cpGroup types are both by default 'id' (keyword),
+you can override this by changes the CMTypes.h file.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/queryFirstByVect:" title="queryFirstByVect:"></a>
+	<h3 class="subsubtitle method-title">queryFirstByVect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first shape at the specified position.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMShape *)queryFirstByVect:(cpVect)<em>point</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd>a point in space</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/queryFirstByVect:layers:group:" title="queryFirstByVect:layers:group:"></a>
+	<h3 class="subsubtitle method-title">queryFirstByVect:layers:group:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first shape that is found at the specified point with the specified layer and
+group information.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMShape *)queryFirstByVect:(cpVect)<em>point</em> layers:(cpLayers)<em>layers</em> group:(cpGroup)<em>group</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd>a point in space</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layers</em></dt>
+			<dd>the layer information which is applicable for the shape to be found.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd>the group information which is applicable for the shape to be found.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Returns the first shape that is found at the specified point with the specified layer and
+group information.</p>
+		
+		<p>About the cpLayers and cpGroup types, the cpLayers and cpGroup types are both by default 'id' (keyword),
+you can override this by changes the CMTypes.h file.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeBody:" title="removeBody:"></a>
+	<h3 class="subsubtitle method-title">removeBody:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes a body from the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeBody:(CMBody *)<em>body</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>body</em></dt>
+			<dd>the body to remove.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/removeCollisionHandlerFor:andTypeB:" title="removeCollisionHandlerFor:andTypeB:"></a>
+	<h3 class="subsubtitle method-title">removeCollisionHandlerFor:andTypeB:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the collission handler between the two collision types.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeCollisionHandlerFor:(cpCollisionType)<em>typeA</em> andTypeB:(cpCollisionType)<em>typeB</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeA</em></dt>
+			<dd>the first collision type</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>typeB</em></dt>
+			<dd>the second collision type.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setDamping:" title="setDamping:"></a>
+	<h3 class="subsubtitle method-title">setDamping:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Amount of viscous damping to apply to the space. A value of 0.9 means that each body will
+lose 10% of itís velocity per second. Defaults to 1. Like gravity can be overridden on a per body basis.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setDamping:(float)<em>damping</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>damping</em></dt>
+			<dd>the damping</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setGravity:" title="setGravity:"></a>
+	<h3 class="subsubtitle method-title">setGravity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the gravity of the Chipmunk world.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setGravity:(cpVect)<em>gravity</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gravity</em></dt>
+			<dd>the x/y gravity.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Sets the gravity of the Chipmunk world.</p>
+		
+		<p>The real-world gravity is calculated as: 9.8 * 10 so it would be:</p>
+		
+		<p>gravity = cpv(0, -9.8 * 10)</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setIterations:" title="setIterations:"></a>
+	<h3 class="subsubtitle method-title">setIterations:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allow you to control the accuracy of the solver. Defaults to 10.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setIterations:(int)<em>iterations</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>iterations</em></dt>
+			<dd>the iterations</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Allow you to control the accuracy of the solver. Defaults to 10.</p>
+		
+		<p>Chipmunk uses an iterative solver to figure out the forces between objects in the space.
+What this means is that it builds a big list of all of the collisions, joints, and other
+constraints between the bodies and makes several passes over the list considering each one
+individually. The number of passes it makes is the iteration count, and each
+iteration makes the solution more accurate.</p>
+		
+		<p>If you use too many iterations, the physics should look nice and solid, but may use up too
+much CPU time. If you use too few iterations, the simulation may seem mushy or bouncy when
+the objects should be solid. Setting the number of iterations lets you balance between CPU
+usage and the accuracy of the physics. Chipmunk’s default of 10 iterations is sufficient
+for most simple games.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setSleepTimeThreshhold:" title="setSleepTimeThreshhold:"></a>
+	<h3 class="subsubtitle method-title">setSleepTimeThreshhold:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Elapsed time before a group of idle bodies is put to sleep (defaults to infinity which disables sleeping).</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setSleepTimeThreshhold:(float)<em>threshold</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>threshold</em></dt>
+			<dd>the threshold.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/step:" title="step:"></a>
+	<h3 class="subsubtitle method-title">step:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Perform a step within the physics world.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)step:(float)<em>framerate</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>framerate</em></dt>
+			<dd>frames pers second</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/updateShapes" title="updateShapes"></a>
+	<h3 class="subsubtitle method-title">updateShapes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Updates all SPDisplayObject objects that are attached to the bodies.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)updateShapes</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Properties</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/cpSpace" title="cpSpace"></a>
+	<h3 class="subsubtitle method-title">cpSpace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpSpace">cpSpace</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) cpSpace *cpSpace</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

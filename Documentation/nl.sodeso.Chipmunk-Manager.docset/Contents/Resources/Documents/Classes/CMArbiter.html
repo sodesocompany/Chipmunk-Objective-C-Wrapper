@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMArbiter Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMArbiter Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMArbiter.h<br />CMArbiter.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>The <a href="CMArbiter.html">CMArbiter</a> is used for collision detection, this class can specify
+more information about the collision itself.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Initialization</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithCpArbiter:">- initWithCpArbiter:</a></code>
+		<span class="tooltip">Creates a new arbiter based on the chipmunk arbiter.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Operations</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shapeA">- shapeA</a></code>
+		<span class="tooltip">Returns the first shape.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shapeB">- shapeB</a></code>
+		<span class="tooltip">Returns the second shape.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setElasticity:">- setElasticity:</a></code>
+		<span class="tooltip">Set the new elasticity which will go into effect when this step is over.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setFriction:">- setFriction:</a></code>
+		<span class="tooltip">Set the new friction which will go into effect when this step is over.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfContacts">- numberOfContacts</a></code>
+		<span class="tooltip">Returns the number of contacts that occured in this collision.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/areShapesSwapped">- areShapesSwapped</a></code>
+		<span class="tooltip">Flag indicating if the shapes (<a href="#//api/name/shapeA">shapeA</a> and <a href="#//api/name/shapeB">shapeB</a>) are swapped.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dealloc">- dealloc</a></code>
+		<span class="tooltip">Default <a href="#//api/name/dealloc">dealloc</a> method.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/areShapesSwapped" title="areShapesSwapped"></a>
+	<h3 class="subsubtitle method-title">areShapesSwapped</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag indicating if the shapes (<a href="#//api/name/shapeA">shapeA</a> and <a href="#//api/name/shapeB">shapeB</a>) are swapped.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)areShapesSwapped</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default <a href="#//api/name/dealloc">dealloc</a> method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithCpArbiter:" title="initWithCpArbiter:"></a>
+	<h3 class="subsubtitle method-title">initWithCpArbiter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a new arbiter based on the chipmunk arbiter.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithCpArbiter:(cpArbiter *)<em>arbiter</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>arbiter</em></dt>
+			<dd>the Chipmunk arbiter.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/numberOfContacts" title="numberOfContacts"></a>
+	<h3 class="subsubtitle method-title">numberOfContacts</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the number of contacts that occured in this collision.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)numberOfContacts</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setElasticity:" title="setElasticity:"></a>
+	<h3 class="subsubtitle method-title">setElasticity:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the new elasticity which will go into effect when this step is over.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setElasticity:(float)<em>elasticity</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>elasticity</em></dt>
+			<dd>the elasticity.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setFriction:" title="setFriction:"></a>
+	<h3 class="subsubtitle method-title">setFriction:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the new friction which will go into effect when this step is over.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setFriction:(float)<em>friction</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>friction</em></dt>
+			<dd>the friction.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/shapeA" title="shapeA"></a>
+	<h3 class="subsubtitle method-title">shapeA</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first shape.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMShape *)shapeA</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/shapeB" title="shapeB"></a>
+	<h3 class="subsubtitle method-title">shapeB</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the second shape.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMShape *)shapeB</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMArbiter.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMPivotJointConstraint Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMPivotJointConstraint Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="CMConstraint.html">CMConstraint</a> : <a href="CMObject.html">CMObject</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMPivotJointConstraint.h<br />CMPivotJointConstraint.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>Pivot joints hold two points on two bodies together allowing them to rotate freely around the pivot.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					
+<h3 class="subsubtitle task-title">Initialization</h3>
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initBetweenBody:andBody:anchor1:anchor2:">- initBetweenBody:andBody:anchor1:anchor2:</a></code>
+		<span class="tooltip">Constructs a new pivot joing using two anchors.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initBetweenBody:andBody:pivot:">- initBetweenBody:andBody:pivot:</a></code>
+		<span class="tooltip">Constructs a new pivot joint using a pivot.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/initBetweenBody:andBody:anchor1:anchor2:" title="initBetweenBody:andBody:anchor1:anchor2:"></a>
+	<h3 class="subsubtitle method-title">initBetweenBody:andBody:anchor1:anchor2:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new pivot joing using two anchors.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initBetweenBody:(CMBody *)<em>cmBody</em> andBody:(CMBody *)<em>andCmBody</em> anchor1:(cpVect)<em>anchor1</em> anchor2:(cpVect)<em>anchor2</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>andCmBody</em></dt>
+			<dd>The second body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>The anchor point on the first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor2</em></dt>
+			<dd>The anchor point on the second body.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPivotJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initBetweenBody:andBody:pivot:" title="initBetweenBody:andBody:pivot:"></a>
+	<h3 class="subsubtitle method-title">initBetweenBody:andBody:pivot:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new pivot joint using a pivot.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initBetweenBody:(CMBody *)<em>cmBody</em> andBody:(CMBody *)<em>andCmBody</em> pivot:(cpVect)<em>pivot</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>The first body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>andCmBody</em></dt>
+			<dd>The second body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pivot</em></dt>
+			<dd>The pivot point.
+  </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPivotJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

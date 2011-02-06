@@ -1,0 +1,18 @@
+{
+	"CFBundleDevelopmentRegion" = en;
+	CFBundleIdentifier = "nl.sodeso.Chipmunk-Manager";
+	CFBundleName = "Chipmunk-Manager Documentation";
+	"CFBundleShortVersionString" = "0.1";
+	CFBundleVersion = "0.1";
+	"DocSetCertificateIssuer" = "";
+	"DocSetCertificateSigner" = "";
+	DocSetDescription = "";
+	DocSetFallbackURL = "";
+	DocSetFeedName = "Chipmunk-Manager Documentation";
+	DocSetFeedURL = "";
+	"DocSetMinimumXcodeVersion" = "3.0";
+	DocSetPlatformFamily = "";
+	"DocSetPublisherIdentifier" = "nl.sodeso.documentation";
+	DocSetPublisherName = "Sodeso";
+	"NSHumanReadableCopyright" = "Copyright © 2011 Sodeso. All rights reserved.";
+}
