@@ -24,12 +24,19 @@
 	BOOL mStatic;
 }
 
+/**
+ * The Chipmunk cpShape.
+ */
 @property (nonatomic, readonly) cpShape *cpShape;
+
+///---------------------------------------------------------------------------------------
+/// @name Properties
+///---------------------------------------------------------------------------------------
 
 #pragma mark Properties
 
 /**
- * Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a ìperfectî bounce. 
+ * Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a √¨perfect√Æ bounce. 
  * However due to inaccuracies in the simulation using 1.0 or greater is not recommended however.
  *
   * @param elasticity a value between 0.0 and (adviced) 1.0
@@ -67,7 +74,7 @@
 /**
  * Shapes in the same non-zero group do not generate collisions. 
  * Useful when creating an object out of many shapes that you 
- * don’t want to self collide. Defaults to CP_NO_GROUP.
+ * don‚Äôt want to self collide. Defaults to CP_NO_GROUP.
  *
  * @param group the group
  */
@@ -87,10 +94,6 @@
  */
 - (void)setLayer:(cpLayers)layer;
 
-#pragma mark -
-
-#pragma mark Data
-
 /**
  * Associates an object with this shape, it is not used by Chipmunk but can be used
  * to create a binding between an Sparrow object and a cpShape.
@@ -107,6 +110,10 @@
 - (id)getData;
 
 #pragma mark -
+
+///---------------------------------------------------------------------------------------
+/// @name Operations
+///---------------------------------------------------------------------------------------
 
 #pragma mark Operations
 

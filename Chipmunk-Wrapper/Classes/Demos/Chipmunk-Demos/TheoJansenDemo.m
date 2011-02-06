@@ -35,7 +35,7 @@ const float crankRadius = 13.0f;
 
 - (void) initializeChipmunkObjects {
 	CMBody *chassisBody = [mSpace addBodyWithMass:2.0f moment:0];
-	[chassisBody setPosition:cpv(100, 100)];
+	[chassisBody setPositionUsingVect:cpv(100, 100)];
 	[chassisBody addToSpace];
 
 	CMShape *chassisShape = [chassisBody addSegmentFrom:cpv(-offset, 0.0f) to:cpv(offset, 0.0f) radius:3.0f];
@@ -43,7 +43,7 @@ const float crankRadius = 13.0f;
 	[chassisShape addToSpace];
 
 	CMBody *crankBody = [mSpace addBodyWithMass:1.0f moment:0];
-	[crankBody setPosition:cpv(100, 100)];
+	[crankBody setPositionUsingVect:cpv(100, 100)];
 	[crankBody addToSpace];
 	CMShape *crankShape = [crankBody addCircleWithRadius:crankRadius offset:cpvzero];
 	[crankShape setGroup:TJ_GROUP];
@@ -61,7 +61,7 @@ const float crankRadius = 13.0f;
 
 - (void)addLeg:(float)side offset:(float)offset chassis:(CMBody*)chassisBody crank:(CMBody*)crankBody anchor:(cpVect)anchor {
 	CMBody *upperLegBody = [mSpace addBodyWithMass:legMass moment:0];
-	[upperLegBody setPosition:cpvadd(cpv(offset, 0.0f), cpv(100, 100))];
+	[upperLegBody setPositionUsingVect:cpvadd(cpv(offset, 0.0f), cpv(100, 100))];
 	[upperLegBody addToSpace];
 	
 	CMShape *upperLegShape = [upperLegBody addSegmentFrom:cpvzero to:cpv(0.0f, side) radius:3.0f];
@@ -71,7 +71,7 @@ const float crankRadius = 13.0f;
 	
 	
 	CMBody *lowerLegBody = [mSpace addBodyWithMass:legMass moment:0];
-	[lowerLegBody setPosition:cpvadd(cpv(offset, -side), cpv(100, 100))];
+	[lowerLegBody setPositionUsingVect:cpvadd(cpv(offset, -side), cpv(100, 100))];
 	[lowerLegBody addToSpace];
 	
 	CMShape *lowerLegSegmentShape = [lowerLegBody addSegmentFrom:cpvzero to:cpv(0.0f, -1.0f * side) radius:3.0f];

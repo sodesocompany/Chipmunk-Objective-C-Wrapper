@@ -29,15 +29,44 @@
 	BOOL mIgnoreContainmentCollision;
 }
 
+/**
+ * The prepared invocation begin event method.
+ */
 @property (nonatomic, retain) NSInvocation *invocationBegin;
+
+/**
+ * The prepared invocation pre-solve event method.
+ */
 @property (nonatomic, retain) NSInvocation *invocationPreSolve;
+
+/**
+ * The prepared invocation post solve method.
+ */
 @property (nonatomic, retain) NSInvocation *invocationPostSolve;
+
+/**
+ * The prepared invocation separate method.
+ */
 @property (nonatomic, retain) NSInvocation *invocationSeparate;
 
+/**
+ * The first collision type.
+ */
 @property (nonatomic, assign) cpCollisionType typeA;
+
+/**
+ * The second collision type.
+ */
 @property (nonatomic, assign) cpCollisionType typeB;
 
+/**
+ * Flag indicating if containment collisions should be ignored.
+ */
 @property (nonatomic, readwrite) BOOL ignoreContainmentCollision;
+
+///---------------------------------------------------------------------------------------
+/// @name Initialization
+///---------------------------------------------------------------------------------------
 
 /**
  * Default initialization method.
@@ -51,6 +80,10 @@
  * @param typeB the second collision type
  */
 - (id)initWithTypeA:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB;
+
+///---------------------------------------------------------------------------------------
+/// @name Properties
+///---------------------------------------------------------------------------------------
 
 /**
  * Method for setting the begin selector.

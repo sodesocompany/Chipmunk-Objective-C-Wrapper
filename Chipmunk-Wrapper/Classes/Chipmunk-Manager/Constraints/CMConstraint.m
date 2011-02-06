@@ -75,6 +75,9 @@
 
 #pragma mark -
 
+/**
+ * Default dealloc method.
+ */
 - (void) dealloc {
 	CMData *cmData = mCpConstraint->data;
 	mCpConstraint->data = NULL;

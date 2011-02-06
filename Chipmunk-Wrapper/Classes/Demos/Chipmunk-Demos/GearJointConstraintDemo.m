@@ -30,7 +30,7 @@
 	
 	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body1 setPosition:pos1];
+	[body1 setPositionUsingVect:pos1];
 	[body1 addToSpace];
 	
 	CMShape *shape1 = [body1 addSegmentFrom:cpv(30,30) to:cpv(-30, -30) radius:5.0f];
@@ -39,7 +39,7 @@
 	[shape1 addToSpace];
 	
 	CMBody *body2 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body2 setPosition:pos2];
+	[body2 setPositionUsingVect:pos2];
 	[body2 addToSpace];	
 	
 	CMShape *shape2 = [body2 addSegmentFrom:cpv(30,30) to:cpv(-30, -30) radius:5.0f];

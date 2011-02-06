@@ -85,7 +85,7 @@ void updateShape(void *cpShapePtr, void* unused) {
 		SPDisplayObject *spObject = (SPDisplayObject*)[data data];
 
 		[spObject setX:shape->body->p.x];
-		[spObject setY:480-(shape->body->p.y)];
+		[spObject setY:shape->body->p.y];
 		[spObject setRotation:shape->body->a];
 	}
 }
@@ -117,8 +117,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 	return self;
 }
 
-#pragma mark General properties
-
 - (void)setGravity:(cpVect)gravity {
 	mCpSpace->gravity = gravity;
 }
@@ -136,10 +134,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 	mCpSpace->elasticIterations = iterations;
 }
 
-#pragma mark -
-
-#pragma mark Operations
-
 - (void)step:(float)framerate {
 	cpSpaceStep(mCpSpace, framerate);
 }
@@ -147,10 +141,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 - (void)updateShapes {
 	cpSpaceHashEach(mCpSpace->activeShapes, &updateShape, nil);
 }
-
-#pragma mark -
-
-#pragma mark Window containment
 
 -(CMBody*)addWindowContainmentWithWidth:(float)width height:(float)height elasticity:(float)elasticity friction:(float)friction {
 	CM_CREATE_POOL(pool);
@@ -189,10 +179,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 	return body;
 }
 
-#pragma mark -
-
-#pragma mark Query functions
-
 - (CMShape*)queryFirstByPoint:(SPPoint*)point {
 	return [self queryFirstByVect:[point toCpVect]];
 }
@@ -214,10 +200,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 	
 	return nil;
 }
-
-#pragma mark -
-
-#pragma mark Body methods
 
 - (CMBody*)addStaticBody {
 	CM_CREATE_POOL(pool);
@@ -250,10 +232,6 @@ void updateShape(void *cpShapePtr, void* unused) {
 - (void)removeBody:(CMBody*)body {
 	[mBodies removeObject:body];
 }
-
-#pragma mark -
-
-#pragma mark Collission detection
 
 -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions {
 	CM_CREATE_POOL(pool);
@@ -314,8 +292,9 @@ void updateShape(void *cpShapePtr, void* unused) {
 	cpSpaceRemoveCollisionHandler(mCpSpace, typeA, typeB);
 }
 
-#pragma mark -
-
+/**
+ * Dealocates the CMSpace object.
+ */
 - (void) dealloc {
 	[mBodies release];
 
@@ -329,6 +308,5 @@ void updateShape(void *cpShapePtr, void* unused) {
 	
 	[super dealloc];
 }
-
 
 @end

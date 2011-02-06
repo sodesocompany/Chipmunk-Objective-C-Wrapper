@@ -16,6 +16,12 @@
 
 @interface CMCollisionHandler ()
 
+/**
+ * Constructs a new invocation method.
+ *
+ * @param target the target to be invoked.
+ * @param selector the selector to be invoked.
+ */
 - (NSInvocation*)constructInvocation:(id)target selector:(SEL)selector;
 
 @end
@@ -80,6 +86,9 @@
 	}
 }
 
+/**
+ * Default dealloc method.
+ */
 - (void) dealloc {
 	[mInvocationBegin release];
 	[mInvocationPreSolve release];

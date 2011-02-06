@@ -10,6 +10,10 @@
 
 @class CMSpace;
 
+/**
+ * The CMObject functions as a base class for a number of other classes
+ * which all have a relation with the space.
+ */
 @interface CMObject : NSObject {
 
 @protected
@@ -18,7 +22,14 @@
 
 }
 
+/**
+ * The space under which this object was created.
+ */
 @property (nonatomic, assign) CMSpace *space;
+
+/**
+ * A user customizable name for this instance.
+ */
 @property (nonatomic, assign) NSString *name;
 
 @end

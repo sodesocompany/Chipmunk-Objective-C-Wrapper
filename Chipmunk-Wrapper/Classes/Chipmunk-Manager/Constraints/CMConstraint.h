@@ -24,14 +24,21 @@
 	
 }
 
+/**
+ * The Chipmunk cpConstraint.
+ */
 @property (nonatomic, readonly) cpConstraint *cpConstraint;
+
+///---------------------------------------------------------------------------------------
+/// @name Properties
+///---------------------------------------------------------------------------------------
 
 #pragma mark Properties
 
 /**
  * Sets the maximum force that the constraint can use to act on the two bodies. Defaults to INFINITY.
  *
- * @param force the force.
+ * @param maxForce the force.
  */
 - (void)setMaxForce:(float)maxForce;
 
@@ -43,7 +50,7 @@
 - (void)setMaxBias:(float)maxBias;
 
 /**
- * Sets the percentage of error corrected each step of the space. (Can cause issues if you donít use a constant time step) Defaults to 0.1.
+ * Sets the percentage of error corrected each step of the space. (Can cause issues if you don√≠t use a constant time step) Defaults to 0.1.
  *
  * @param biasCoef the percentage of error correction.
  */
@@ -63,10 +70,6 @@
  */
 - (CMBody*)secondBody;
 
-#pragma mark -
-
-#pragma mark Data
-
 /**
  * Associates an object with this constraint, it is not used by Chipmunk but can be used
  * to create a binding between an Sparrow object and a cpConstraint.
@@ -84,6 +87,10 @@
 
 #pragma mark -
 
+///---------------------------------------------------------------------------------------
+/// @name Operations
+///---------------------------------------------------------------------------------------
+
 #pragma mark Operations
 
 /**
@@ -93,6 +100,7 @@
 
 /**
  * Removes this constraint fro mthe Chipmunk space.
+ *
  */
 - (void) removeFromSpace;
 

@@ -27,7 +27,7 @@
 - (void) initializeChipmunkObjects {
 	// Create the first body with its shape.
 	CMBody *body1 = [mSpace addBodyWithMass:100 moment:INFINITY];
-	[body1 setPosition:cpv(160, 200)];
+	[body1 setPositionUsingVect:cpv(160, 200)];
 	[body1 addToSpace];
 	
 	CMRectShape *shape1 = [body1 addRectWithWidth:64 height:64];
@@ -37,7 +37,7 @@
 	
 		// Create the second body with its shape.
 	CMBody *body2 = [mSpace addBodyWithMass:100 moment:INFINITY];
-	[body2 setPosition:cpv(180, 400)];
+	[body2 setPositionUsingVect:cpv(180, 400)];
 	[body2 addToSpace];
 	
 	CMRectShape *shape2 = [body2 addRectWithWidth:64 height:64];

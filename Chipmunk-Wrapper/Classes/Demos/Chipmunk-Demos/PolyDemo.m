@@ -40,7 +40,7 @@
 		SPPoint *spPoint = [touch locationInSpace:self];
 		
 		CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
-		[body1 setPosition:[spPoint toCpVect]];
+		[body1 setPositionUsingVect:[spPoint toCpVect]];
 		[body1 addToSpace];
 		
 		float offset = 10.0f;

@@ -66,7 +66,7 @@ const float horizontalHeight = 10;
 
 - (void)createBlock:(cpVect)position width:(float)width height:(float)height {
 	CMBody *squareBody = [mSpace addBodyWithMass:1 moment:0];
-	[squareBody setPosition:position];
+	[squareBody setPositionUsingVect:position];
 	[squareBody addToSpace];
 	
 	CMShape *squareShape = [squareBody addRectWithWidth:width height:height];

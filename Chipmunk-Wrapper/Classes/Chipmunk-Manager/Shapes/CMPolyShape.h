@@ -22,6 +22,10 @@
 @interface CMPolyShape : CMShape {
 }
 
+///---------------------------------------------------------------------------------------
+/// @name Initialization
+///---------------------------------------------------------------------------------------
+
 /**
  * Constructs a new poly shape with the specified vertices.
  *
@@ -29,6 +33,7 @@
  * @param numberOfVertices the number of points this poly consists of.
  * @param offset the offset of the shape in relation to the body.
  * @param vertices the coordinates of the vertices
+ * @param ... the rest of the vertices
  */
 - (id) initWithBody:(CMBody*)cmBody numberOfVertices:(int)numberOfVertices offset:(cpVect)offset vertices:(cpVect)vertices,...;
 
@@ -38,6 +43,7 @@
  * @param cmBody the body to wich this shape is associated.
  * @param numberOfVertices the number of points this poly consists of.
  * @param vertices the coordinates of the vertices
+ * @param ... the rest of the vertices.
  */
 - (id) initWithBody:(CMBody*)cmBody numberOfVertices:(int)numberOfVertices vertices:(cpVect)vertices,...;
 

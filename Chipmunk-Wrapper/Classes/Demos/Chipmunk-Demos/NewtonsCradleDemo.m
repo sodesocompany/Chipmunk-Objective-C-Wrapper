@@ -48,7 +48,7 @@ const float ballTop = 180.0f;
 
 	// Create the block on which the ball will be hanging. 
 	CMBody *blockBody = [mSpace addBodyWithMass:1.0f moment:0];
-	[blockBody setPosition:cpv(x, blockTop)];
+	[blockBody setPositionUsingVect:cpv(x, blockTop)];
 	[blockBody addToSpace];
 	
 	CMRectShape *blockShape = [blockBody addRectWithWidth:20.0f height:20.0f];
@@ -60,7 +60,7 @@ const float ballTop = 180.0f;
 	
 	// Create the ball
 	CMBody *ballBody = [mSpace addBodyWithMass:PI * 20 * 2 moment:0.0f];
-	[ballBody setPosition:cpv(x, ballTop)];
+	[ballBody setPositionUsingVect:cpv(x, ballTop)];
 	[ballBody addToSpace];
 	
 	CMCircleShape *ballShape = [ballBody addCircleWithRadius:20.0f];

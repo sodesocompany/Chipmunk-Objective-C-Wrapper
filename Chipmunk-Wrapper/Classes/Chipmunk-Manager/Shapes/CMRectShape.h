@@ -22,6 +22,10 @@
 @interface CMRectShape : CMShape {
 }
 
+///---------------------------------------------------------------------------------------
+/// @name Initialization
+///---------------------------------------------------------------------------------------
+
 /**
  * Constructs a new CMRect object with the specified width and height.
  *

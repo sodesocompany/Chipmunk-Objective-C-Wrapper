@@ -21,6 +21,10 @@
 
 }
 
+///---------------------------------------------------------------------------------------
+/// @name Initialization
+///---------------------------------------------------------------------------------------
+
 /**
  * Constructs a new pin joint constraint.
  *
@@ -30,6 +34,10 @@
  * @param anchor2 The anchor point on the second body. 
  */
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2;
+
+///---------------------------------------------------------------------------------------
+/// @name Properties
+///---------------------------------------------------------------------------------------
 
 /**
  * Sets the distance between the two anchor points.

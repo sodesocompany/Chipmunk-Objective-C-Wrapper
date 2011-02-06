@@ -34,7 +34,7 @@
 	
 	// Create the first body with its shape.
 	CMBody *body = [mSpace addBodyWithMass:50 moment:INFINITY];
-	[body setPosition:cpv(80, 140)];
+	[body setPositionUsingVect:cpv(80, 140)];
 	[body addToSpace];
 	[body setData:ball];
 	

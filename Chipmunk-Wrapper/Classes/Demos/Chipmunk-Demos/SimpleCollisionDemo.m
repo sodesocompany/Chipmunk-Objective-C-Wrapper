@@ -34,7 +34,7 @@
 	[mSpace addDefaultCollisionHandler:self begin:@selector(defaultBegin:space:) preSolve:@selector(defaultPreSolve:space:) postSolve:@selector(defaultPostSolve:space:) separate:@selector(defaultSeparate:space:) ignoreContainmentCollisions:YES];
 	
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body1 setPosition:pos1];
+	[body1 setPositionUsingVect:pos1];
 	[body1 addToSpace];
 	
 	CMShape *shape1 = [body1 addCircleWithRadius:30.0f];
@@ -44,7 +44,7 @@
 	[shape1 addToSpace];
 	
 	CMBody *body2 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body2 setPosition:pos2];
+	[body2 setPositionUsingVect:pos2];
 	[body2 addToSpace];	
 	
 	CMShape *shape2 = [body2 addCircleWithRadius:30.0f];
@@ -54,7 +54,7 @@
 	[shape2 addToSpace];
 
 	CMBody *body3 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body3 setPosition:pos3];
+	[body3 setPositionUsingVect:pos3];
 	[body3 addToSpace];	
 	
 	CMShape *shape3 = [body3 addRectWithWidth:40.0f height:40.0f];

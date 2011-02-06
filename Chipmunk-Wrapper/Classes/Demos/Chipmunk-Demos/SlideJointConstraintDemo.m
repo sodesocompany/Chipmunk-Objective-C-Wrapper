@@ -29,7 +29,7 @@
 	cpVect pos2 = cpv(220, 140);
 	
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body1 setPosition:pos1];
+	[body1 setPositionUsingVect:pos1];
 	[body1 addToSpace];
 	
 	CMShape *shape1 = [body1 addCircleWithRadius:15.0f];
@@ -38,7 +38,7 @@
 	[shape1 addToSpace];
 	
 	CMBody *body2 = [mSpace addBodyWithMass:2.0f moment:1];
-	[body2 setPosition:pos2];
+	[body2 setPositionUsingVect:pos2];
 	[body2 addToSpace];	
 	
 	CMShape *shape2 = [body2 addCircleWithRadius:15.0f];

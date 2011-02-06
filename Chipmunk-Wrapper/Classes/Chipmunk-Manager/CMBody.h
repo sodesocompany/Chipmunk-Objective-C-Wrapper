@@ -30,7 +30,7 @@
 
 /**
  * The body is used to specify an object. A body consists of one or more shapes and joints that make up
-  * the complete object.
+ * the complete object.
  */
 @interface CMBody : CMObject {
 
@@ -41,9 +41,23 @@
 	NSMutableArray *mConstraints;
 }
 
-- (id)initStatic;
-
+/**
+ * The Chipmunk cpBody.
+ */
 @property (nonatomic, readonly) cpBody *cpBody;
+
+///---------------------------------------------------------------------------------------
+/// @name Initialization
+///---------------------------------------------------------------------------------------
+
+/**
+ * Constructs a new static CMBody.
+ *
+ * Static shapes should NOT be added to the space.
+ *
+ * @return the new CMBody
+ */
+- (id)initStatic;
 
 /**
  * Constructs a new CMBody object with the given mass and moment.
@@ -51,13 +65,19 @@
  * @param mass Mass of the body.
  * @param moment Moment of inertia (MoI or sometimes just moment) of the body. 
  *               The moment is like the rotational mass of a body.
+ * @return the new CMBody
  */
 - (id) initWithMass:(float)mass moment:(float)moment;
+
+///---------------------------------------------------------------------------------------
+/// @name Properties
+///---------------------------------------------------------------------------------------
 
 #pragma mark Properties
 
 /**
  * Set the mass.
+ *
  * @param mass the mass of the body.
  */
 - (void)setMass:(float)mass;
@@ -80,7 +100,7 @@
 /**
  * Sets the force.
  *
- * Note: does not reset automatically as in some physics engines.
+ * Does not reset automatically as in some physics engines.
  *
  * @param force Current force being applied to the body.
  */
@@ -91,17 +111,29 @@
  *
  * @param coordinate Position of the body.
  */
-- (void) setPosition:(cpVect)coordinate;
+- (void) setPositionUsingVect:(cpVect)coordinate;
 
 /**
- * Sets the angle.
+ * Sets the position.
  *
- * NOTE: When using Sparrow you can use the SP_D2R function 
+ * @param coordinate Position of the body.
+ */
+- (void) setPositionUsingPoint:(SPPoint*)coordinate;
+
+/**
+ * Sets the angle of this body.
+ *
+ * When using Sparrow you can use the SP_D2R function 
  * to convert from degrees to radians.
  *
  * @param angle the angle in radians.
  */
 - (void) setAngle:(float)angle;
+
+/**
+ * Returns the current rotational angle of the body in radians.
+ */
+- (float) getAngle;
 
 /**
  * Sets the angulair velocity.
@@ -113,13 +145,16 @@
 /**
  * Sets the torque
  *
- * @param the torque
+ * @param torque the torque
  */
 - (void) setTorque:(float)torque;
 
-#pragma mark -
-
-#pragma mark Data
+/**
+ * Current torque being applied to the body.
+ *
+ * Does not reset automatically as in some physics engines.
+ */
+- (float) getTorque;
 
 /**
  * Associates an object with this body, it is not used by Chipmunk but can be used
@@ -137,6 +172,10 @@
 - (id)getData;
 
 #pragma mark -
+
+///---------------------------------------------------------------------------------------
+/// @name Operations
+///---------------------------------------------------------------------------------------
 
 #pragma mark Operations
 
@@ -182,6 +221,10 @@
 - (void) removeFromSpace;
 
 #pragma mark -
+
+///---------------------------------------------------------------------------------------
+/// @name Shapes & Constraints
+///---------------------------------------------------------------------------------------
 
 #pragma mark Shapes
 
@@ -230,6 +273,7 @@
  *
  * @param numberOfVertices the number of points
  * @param vertices the vertices
+ * @param ... the vertices
  *
  * @return The polygon shape.
  */
@@ -241,6 +285,7 @@
  * @param numberOfVertices the number of points
  * @param offset the offset of the shape in relation to the body.
  * @param vertices the vertices
+ * @param ... the vertices
  *
  * @return The polygon shape.
  */
@@ -265,8 +310,6 @@
 #pragma mark -
 
 #pragma mark Constraints
-
-- (void)removeConstraint:(CMConstraint*)constraint;
 
 /**
  * Creates a new motor constraint between this body and the given body.
@@ -347,7 +390,8 @@
   * Constructs a new pivot joint using a pivot.
   *
   * @param cmBody The body which will function as the second body of the constraint.
-  * @param pivot The pivot point.
+  * @param phase The phase.
+  * @param ratchet The ratchet.
   */
 - (CMRatchetJointConstraint*) addRatchetJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratchet:(float)ratchet;
 
@@ -370,6 +414,14 @@
  * @param max The maximum allowed distance between anchor points. 
  */
 - (CMSlideJointConstraint*) addSlideJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 min:(float)min max:(float)max;
+
+/**
+ * Remover the specified constraint from this body.
+ *
+ * @param constraint the constraint to remove from this body.
+ */
+- (void)removeConstraint:(CMConstraint*)constraint;
+
 
 #pragma mark -
 

@@ -56,6 +56,9 @@
 	return (BOOL)mArbiter->swappedColl;
 }
 
+/**
+ * Default dealloc method.
+ */
 - (void) dealloc {
 	// Nothing to dealloc, everything
 	// is only assigned but not retained.

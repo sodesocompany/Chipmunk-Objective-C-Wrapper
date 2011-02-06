@@ -28,7 +28,7 @@
 	if (self = [super init]) {
 		mCpBody = cpBodyNew(mass, moment);
 		mCpBody->data =[[CMData createWithObject:self] retain];
-			
+
 		mShapes = [[NSMutableArray alloc] init];
 		mConstraints = [[NSMutableArray alloc] init];
 	}
@@ -65,12 +65,20 @@
 	mCpBody->f = force;
 }
 
-- (void) setPosition:(cpVect)coordinate {
+- (void) setPositionUsingVect:(cpVect)coordinate {
 	mCpBody->p = coordinate;
+}
+
+- (void) setPositionUsingPoint:(SPPoint*)coordinate {
+	mCpBody->p = [coordinate toCpVect];
 }
 
 - (void) setAngle:(float)angle {
 	cpBodySetAngle(mCpBody, angle);
+}
+
+- (float) getAngle {
+	return mCpBody->a;
 }
 
 - (void) setAngularVelocity:(float)velocity {
@@ -81,9 +89,9 @@
 	mCpBody->t = torque;
 }
 
-#pragma mark -
-
-#pragma mark Data
+- (float) getTorque {
+	return mCpBody->t;
+} 
 
 - (void)setData:(id)data {
 	CMData *cmData = (CMData*)mCpBody->data;
@@ -125,10 +133,6 @@
 
 - (void) removeFromSpace {
 	[mSpace removeBody:self];
-}
-
-- (cpBody*) construct {
-	return mCpBody;
 }
 
 #pragma mark -
@@ -357,6 +361,9 @@
 
 #pragma mark -
 
+/**
+ * Default dealloc method.
+ */
 - (void) dealloc {
 	[mConstraints release];
 	[mShapes release];

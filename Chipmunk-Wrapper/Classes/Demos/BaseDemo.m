@@ -112,7 +112,7 @@ static double timeCount = 0;
 		if (mTouchShape) {
 			mTouchPoint = [spPoint toCpVect];
 			mTouchLast = mTouchPoint;
-			[mTouchBody setPosition:mTouchPoint];
+			[mTouchBody setPositionUsingPoint:spPoint];
 			
 			CMBody *body = [mTouchShape getBody];
 			
@@ -140,7 +140,7 @@ static double timeCount = 0;
 - (void)step:(SPEnterFrameEvent *)event {
 	if (mTouchJoint != nil) {
 		cpVect newPoint = cpvlerp(mTouchLast, mTouchPoint, 0.25f);
-		[mTouchBody setPosition:newPoint];
+		[mTouchBody setPositionUsingVect:newPoint];
 		[mTouchBody setVelocity:cpvmult(cpvsub(newPoint, mTouchLast), 30.0f)];
 	
 		mTouchLast = newPoint;

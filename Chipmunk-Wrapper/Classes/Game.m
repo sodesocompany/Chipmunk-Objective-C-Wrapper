@@ -64,24 +64,6 @@
 	}
 }
 
-/**
- * The listener method for recieving events about collisions between
- * the ball and the block.
- */
-- (BOOL) collisionBetweenBallAndBlock:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space {
-	NSLog(@"Collission between ball and block!");
-	return YES;
-}
-
-/**
- * The listener method for recieving events about collisions between
- * the ball and the block.
- */
-- (BOOL) collisionBetweenTriangleAndBlock:(CollisionMoment)moment arbiter:(cpArbiter*)arbiter space:(cpSpace*)space {
-	NSLog(@"Collission between triangle and block!");
-	return YES;
-}
-
 - (void)previousDemo:(SPTouchEvent*)event {
 	SPTouch *touch = [[event touchesWithTarget:previousDemo andPhase:SPTouchPhaseBegan] anyObject];
 	if (touch) {

@@ -15,6 +15,9 @@
 
 // --- Interface ---------------------------------------------------------------------------------------
 
+/**
+ * The CMSpace is the entry point, here you create the bodies and setup the space.
+ */
 @interface CMSpace : NSObject {
 
 @private 
@@ -25,9 +28,19 @@
 	NSMutableArray *mBodies;
 }
 
+/**
+ * The Chipmunk cpSpace.
+ */
 @property (nonatomic, readonly) cpSpace *cpSpace;
 
-#pragma mark General properties
+///---------------------------------------------------------------------------------------
+/// @name Initialization
+///---------------------------------------------------------------------------------------
+
+/**
+ * Standard initialization method.
+ */
+- (id) init;
 
 /**
  * Sets the gravity of the Chipmunk world.
@@ -42,7 +55,7 @@
 
 /**
  * Amount of viscous damping to apply to the space. A value of 0.9 means that each body will 
- * lose 10% of itís velocity per second. Defaults to 1. Like gravity can be overridden on a per body basis.
+ * lose 10% of it√≠s velocity per second. Defaults to 1. Like gravity can be overridden on a per body basis.
  *
  * @param damping the damping
  */
@@ -67,14 +80,16 @@
  * If you use too many iterations, the physics should look nice and solid, but may use up too 
  * much CPU time. If you use too few iterations, the simulation may seem mushy or bouncy when
  * the objects should be solid. Setting the number of iterations lets you balance between CPU 
- * usage and the accuracy of the physics. Chipmunk’s default of 10 iterations is sufficient
+ * usage and the accuracy of the physics. Chipmunk‚Äôs default of 10 iterations is sufficient
  * for most simple games.
+ *
+ * @param iterations the iterations
  */
 - (void)setIterations:(int)iterations;
 
-#pragma mark -
-
-#pragma mark Operations
+///---------------------------------------------------------------------------------------
+/// @name Operations
+///---------------------------------------------------------------------------------------
 
 /**
  * Perform a step within the physics world.
@@ -88,10 +103,6 @@
  */
 - (void)updateShapes;
 
-#pragma mark -
-
-#pragma mark Window containment
-
 /**
  * Creates a containment area with the size and width.
  *
@@ -102,16 +113,14 @@
  */
 -(CMBody*)addWindowContainmentWithWidth:(float)width height:(float)height elasticity:(float)elasticity friction:(float)friction;
 
-#pragma mark -
-
-#pragma mark Query functions
+///---------------------------------------------------------------------------------------
+/// @name Query functions
+///---------------------------------------------------------------------------------------
 
 /**
  * Returns the first shape at the specified position.
  *
  * @param point the position
- *
- * @return the shape that was found at the specified position or nil when nothing was there.
  */
 - (CMShape*)queryFirstByPoint:(SPPoint*)point;
 
@@ -119,8 +128,6 @@
  * Returns the first shape at the specified position.
  * 
  * @param point a point in space
- *
- * @return the shape that was found at the specified position or nil when nothing was there.
  */
 - (CMShape*)queryFirstByVect:(cpVect)point;
 
@@ -134,8 +141,6 @@
  * @param point a point in space
  * @param layers the layer information which is applicable for the shape to be found.
  * @param group the group information which is applicable for the shape to be found.
- *
- * @return the shape that was found at the specified position or nil when nothing was there.
  */
 - (CMShape*)queryFirstByPoint:(SPPoint*)point layers:(cpLayers)layers group:(cpGroup)group;
 
@@ -150,14 +155,12 @@
  * @param point a point in space
  * @param layers the layer information which is applicable for the shape to be found.
  * @param group the group information which is applicable for the shape to be found.
- *
- * @return the shape that was found at the specified position or nil when nothing was there.
  */
 - (CMShape*)queryFirstByVect:(cpVect)point layers:(cpLayers)layers group:(cpGroup)group;
 
-#pragma mark -
-
-#pragma mark Body methods
+///---------------------------------------------------------------------------------------
+/// @name Bodies
+///---------------------------------------------------------------------------------------
 
 /**
  * Adds a new static body with the mass and moment set to INFINITY
@@ -166,8 +169,6 @@
 
 /**
  * Constructs a body with the mass and moment set to INFINITY.
- *
- * @return the CMBody constructed.
  */
 - (CMBody*)addBody;
 
@@ -176,7 +177,6 @@
  *
  * @param mass Mass of the body.
  * @param moment Moment of inertia (MoI or sometimes just moment) of the body. The moment is like the rotational mass of a body.
- * @return the CMBody constructed.
  */
 - (CMBody*)addBodyWithMass:(float)mass moment:(float)moment;
 
@@ -187,9 +187,9 @@
  */
 - (void)removeBody:(CMBody*)body;
 
-#pragma mark -
-
-#pragma mark Collission detection
+///---------------------------------------------------------------------------------------
+/// @name Collision detection
+///---------------------------------------------------------------------------------------
 
 /**
  * Adds a default collision handler which will respond to all collisions.
@@ -230,7 +230,6 @@
  */
 -(void) addCollisionHandlerBetween:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB target:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate;
 
-
 /**
  * Adds a collision callback between two collisionTypes.
  *
@@ -252,7 +251,5 @@
  * @param typeB the second collision type.
  */
 -(void) removeCollisionHandlerFor:(cpCollisionType)typeA andTypeB:(cpCollisionType)typeB;
-
-#pragma mark -
 
 @end

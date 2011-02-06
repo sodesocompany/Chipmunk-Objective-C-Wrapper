@@ -36,7 +36,7 @@
 	// Create the first body which is fixed in space to which the rope will
 	// be attached.
 	CMBody *previousBody = [mSpace addBodyWithMass:1.0f moment:0];
-	[previousBody setPosition:cpv(320.0f / 2.0f, 20.0f)];
+	[previousBody setPositionUsingVect:cpv(320.0f / 2.0f, 20.0f)];
 	[previousBody addToSpace];
 	
 	CMCircleShape *circleShape = [previousBody addCircleWithRadius:5.0f];
@@ -49,7 +49,7 @@
 	// Create all the parts of the rope.
 	for (int index = 1; index < numberOfBodies; index++) {
 		CMBody *newBody = [mSpace addBodyWithMass:1.0f moment:0];
-		[newBody setPosition:cpv(320.0f / 2.0f, 20.0f + (index * 10.0f))];
+		[newBody setPositionUsingVect:cpv(320.0f / 2.0f, 20.0f + (index * 10.0f))];
 		[newBody addToSpace];
 
 		CMCircleShape *circleShape = [newBody addCircleWithRadius:5.0f];
@@ -78,7 +78,7 @@
  */
 - (void)createSquare {
 	CMBody *squareBody = [mSpace addBodyWithMass:100 moment:0.5];
-	[squareBody setPosition:cpv(230, 80)];
+	[squareBody setPositionUsingVect:cpv(230, 80)];
 	[squareBody addToSpace];
 	
 	CMShape *squareShape = [squareBody addRectWithWidth:64 height:64];
@@ -95,7 +95,7 @@
  */
 - (void)createBall {
 	CMBody *ballBody = [mSpace addBodyWithMass:2.0f moment:1];
-	[ballBody setPosition:cpv(320.0f / 2.0f, 480-30)];
+	[ballBody setPositionUsingVect:cpv(320.0f / 2.0f, 480-30)];
 	[ballBody addToSpace];	
 	
 	CMShape *ballShape = [ballBody addCircleWithRadius:30.0f];

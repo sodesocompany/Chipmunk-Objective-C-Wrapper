@@ -89,6 +89,9 @@
 
 #pragma mark -
 
+/**
+ * Default dealloc method.
+ */
 - (void) dealloc {
 	CMData *cmData = mCpShape->data;
 	mCpShape->data = NULL;

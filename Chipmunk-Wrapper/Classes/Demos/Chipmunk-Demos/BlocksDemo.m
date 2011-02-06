@@ -54,7 +54,7 @@
 
 - (void)createBlock:(cpVect)position width:(float)width height:(float)height {
 	CMBody *squareBody = [mSpace addBodyWithMass:5 moment:0];
-	[squareBody setPosition:position];
+	[squareBody setPositionUsingVect:position];
 	[squareBody addToSpace];
 	
 	CMShape *squareShape = [squareBody addRectWithWidth:width height:height];
@@ -68,7 +68,7 @@
  */
 - (void)createBall {
 	CMBody *ballBody = [mSpace addBodyWithMass:20 moment:0];
-	[ballBody setPosition:cpv(60, 420)];
+	[ballBody setPositionUsingVect:cpv(60, 420)];
 	[ballBody addToSpace];	
 	
 	CMShape *ballShape = [ballBody addCircleWithRadius:30.0f];
