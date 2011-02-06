@@ -10,6 +10,15 @@ Version details:
 
 Current head release:
 
+6 February 2010:
+
+- Added appledoc documentation (read below on how to use it)
+- General: Added a lot of documentation again
+- CMBody: Added the method: - (void) setPositionUsingPoint:(SPPoint*)coordinate
+- CMBody: Changed the method: 
+
+(void) setPosition:(cpVect)coordinate; renamed to: - (void) setPositionUsingVect:(cpVect)coordinate;
+
 4 February 2010:
 
 General note:
@@ -127,5 +136,7 @@ This part still needs to be described, not sure if i will do it in documentation
 API Documentation:
 ------------------
 
-Since it is basically a wrapper with some extra functionality the Chipmunk documentation should do fine. Specific documentation can be found in the .h files and there are plenty code samples within the download. These code samples include a sample for every constraint and shape type. In just plain Chipmunk and in combination with Sparrow (later is not yet completed).
+There are two ways in which you can read the API documentation:
+
+First method is by opening the docset within the doumentation folder. Another method is reading the documentation directly from tythe .h files and there are plenty code samples within the download. These code samples include a sample for every constraint and shape type. In just plain Chipmunk and in combination with Sparrow (later is not yet completed).
 
