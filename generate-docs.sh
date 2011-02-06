@@ -1,0 +1,1 @@
+./appledoc -t Appledoc-Templates/ -o Documentation/ -p Chipmunk-Manager -v 0.1 -c Sodeso -h --keep-undocumented-objects --keep-undocumented-members  --verbose 4 --company-id nl.sodeso Chipmunk-Wrapper/Classes/Chipmunk-Manager/
