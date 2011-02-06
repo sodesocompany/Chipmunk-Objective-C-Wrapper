@@ -51,7 +51,7 @@ const float ballTop = 180.0f;
 	[blockBody setPositionUsingVect:cpv(x, blockTop)];
 	[blockBody addToSpace];
 	
-	CMRectShape *blockShape = [blockBody addRectWithWidth:20.0f height:20.0f];
+	CMRectShape *blockShape = [blockBody addRectangleWithWidth:20.0f height:20.0f];
 	[blockShape addToSpace];
 	
 	// Make sure the block stays fixed in a single position.

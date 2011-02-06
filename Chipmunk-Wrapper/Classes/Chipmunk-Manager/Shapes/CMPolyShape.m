@@ -22,6 +22,30 @@
 
 @implementation CMPolyShape
 
+- (id) initWithBody:(CMBody *)cmBody points:(NSArray*)points {
+	if (self = [super init]) {
+		
+		cpVect vertices[[points count]];
+		for (int index = 0; index < [points count] ; index++) {
+			NSString *point = [points objectAtIndex:index];
+			CGPoint cgPoint = CGPointFromString(point);
+			vertices[index] = cpv(cgPoint.x, cgPoint.y);
+		}
+		
+		cpBody *body = [cmBody cpBody];
+		if (body->m != INFINITY) {
+			
+			// Calculate the moment.
+			cpFloat moment = cpMomentForPoly(body->m, [points count], vertices, cpvzero);
+			cpBodySetMoment(body, moment);
+		}
+		
+		mCpShape = cpPolyShapeNew(body, [points count], vertices, cpvzero);
+		mCpShape->data = [[CMData createWithObject:self] retain];
+	}
+	return self;
+}
+
 - (id) initWithBody:(CMBody *)cmBody numberOfVertices:(int)numberOfVertices firstVertice:(cpVect)firstVertice withParameters:(va_list)vaVerticesList {
 	if (self = [self initWithBody:cmBody numberOfVertices:numberOfVertices offset:cpvzero firstVertice:firstVertice withParameters:vaVerticesList]) {
 	}

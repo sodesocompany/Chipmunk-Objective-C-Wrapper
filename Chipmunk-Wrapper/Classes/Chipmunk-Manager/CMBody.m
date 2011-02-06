@@ -23,6 +23,8 @@
 @implementation CMBody
 
 @synthesize cpBody = mCpBody;
+@synthesize shapes = mShapes;
+@synthesize constraints = mConstraints;
 
 - (id) initWithMass:(float)mass moment:(float)moment {
 	if (self = [super init]) {
@@ -151,11 +153,11 @@
 	return shape;
 }
 
-- (CMRectShape*) addRectWithWidth:(float)width height:(float)height {
-	return [self addRectWithWidth:width height:height offset:cpvzero];
+- (CMRectShape*) addRectangleWithWidth:(float)width height:(float)height {
+	return [self addRectangleWithWidth:width height:height offset:cpvzero];
 }
 
-- (CMRectShape*) addRectWithWidth:(float)width height:(float)height offset:(cpVect)offset {
+- (CMRectShape*) addRectangleWithWidth:(float)width height:(float)height offset:(cpVect)offset {
 	CMRectShape *shape = [[[CMRectShape alloc] initWithBody:self width:width height:height offset:offset] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
@@ -185,6 +187,15 @@
 	va_end(args);
 	
 	return shape;
+}
+
+- (CMPolyShape*) addPolyWithPoints:(NSArray*)points {
+	CMPolyShape *shape = [[[CMPolyShape alloc] initWithBody:self points:points] autorelease];
+	[shape setSpace:mSpace];
+	[mShapes addObject:shape];
+	
+	return shape;
+	
 }
 
 - (CMSegmentShape*) addSegmentFrom:(cpVect)from to:(cpVect)to radius:(float)radius {

@@ -12,12 +12,21 @@ Current head release:
 
 6 February 2010:
 
+- Added the CMLoader class which allows you to load a complete space configuration from a .plist file.
+This is till work in progress..
+
 - Added appledoc documentation (read below on how to use it)
 - General: Added a lot of documentation again
+- CMPolyShape: Added the method: - (id) initWithBody:(CMBody *)cmBody points:(NSArray*)points
 - CMBody: Added the method: - (void) setPositionUsingPoint:(SPPoint*)coordinate
+- CMBody: Added the method: - (CMPolyShape*) addPolyWithPoints:(NSArray*)points;
 - CMBody: Changed the method: 
 
 (void) setPosition:(cpVect)coordinate; renamed to: - (void) setPositionUsingVect:(cpVect)coordinate;
+
+- CMBody: Changed the methods:
+
+- (CMRectShape*) addRectWithWidth:.... renamed to: - (CMRectShape*) addRectangleWithWidth:....
 
 4 February 2010:
 

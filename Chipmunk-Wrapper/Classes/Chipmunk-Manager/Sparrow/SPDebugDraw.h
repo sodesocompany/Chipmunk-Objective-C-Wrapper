@@ -25,6 +25,13 @@
 	
 }
 
+/**
+ * Constructs a new drawspace area which will display
+ * the information that the space knows to the screen
+ * as a form of debugging.
+ *
+ * @param space the CMSpace
+ */
 - (id)initWithManager:(CMSpace*)space;
 
 @end

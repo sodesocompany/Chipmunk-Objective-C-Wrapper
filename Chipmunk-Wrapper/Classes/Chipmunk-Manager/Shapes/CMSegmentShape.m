@@ -27,7 +27,7 @@
 		cpBody *body = [cmBody cpBody];
 		if (body->m != INFINITY) {
 			
-				// Calculate the moment.
+			// Calculate the moment.
 			cpFloat moment = cpMomentForSegment(body->m, from, to);
 			cpBodySetMoment(body, moment);
 		}

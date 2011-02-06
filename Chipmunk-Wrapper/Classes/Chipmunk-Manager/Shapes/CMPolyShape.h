@@ -26,6 +26,8 @@
 /// @name Initialization
 ///---------------------------------------------------------------------------------------
 
+- (id) initWithBody:(CMBody *)cmBody points:(NSArray*)points;
+
 /**
  * Constructs a new poly shape with the specified vertices.
  *

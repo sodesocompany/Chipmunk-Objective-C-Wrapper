@@ -45,19 +45,12 @@
  * The Chipmunk cpBody.
  */
 @property (nonatomic, readonly) cpBody *cpBody;
+@property (nonatomic, readonly) NSMutableArray *shapes;
+@property (nonatomic, readonly) NSMutableArray *constraints;
 
 ///---------------------------------------------------------------------------------------
 /// @name Initialization
 ///---------------------------------------------------------------------------------------
-
-/**
- * Constructs a new static CMBody.
- *
- * Static shapes should NOT be added to the space.
- *
- * @return the new CMBody
- */
-- (id)initStatic;
 
 /**
  * Constructs a new CMBody object with the given mass and moment.
@@ -68,6 +61,15 @@
  * @return the new CMBody
  */
 - (id) initWithMass:(float)mass moment:(float)moment;
+
+/**
+ * Constructs a new static CMBody.
+ *
+ * Static shapes should NOT be added to the space.
+ *
+ * @return the new CMBody
+ */
+- (id)initStatic;
 
 ///---------------------------------------------------------------------------------------
 /// @name Properties
@@ -255,7 +257,7 @@
  *
  * @return the rectangulair shape.
  */
-- (CMRectShape*) addRectWithWidth:(float)width height:(float)height;
+- (CMRectShape*) addRectangleWithWidth:(float)width height:(float)height;
 
 /**
  * Create a new Rectangulair shape associated with this body.
@@ -266,7 +268,7 @@
  *
  * @return the rectangulair shape.
  */
-- (CMRectShape*) addRectWithWidth:(float)width height:(float)height offset:(cpVect)offset;
+- (CMRectShape*) addRectangleWithWidth:(float)width height:(float)height offset:(cpVect)offset;
 
 /**
  * Create a new Polygon shape associated with this body.
@@ -290,6 +292,9 @@
  * @return The polygon shape.
  */
 - (CMPolyShape*) addPolyWithPoints:(int)numberOfVertices offset:(cpVect)offset vertices:(cpVect)vertices, ...;
+
+- (CMPolyShape*) addPolyWithPoints:(NSArray*)points;
+
 
 /**
  * Create a new Segment shape associated with this body.

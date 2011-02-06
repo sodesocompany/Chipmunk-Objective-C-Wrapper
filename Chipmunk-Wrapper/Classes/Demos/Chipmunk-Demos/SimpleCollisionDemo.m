@@ -57,7 +57,7 @@
 	[body3 setPositionUsingVect:pos3];
 	[body3 addToSpace];	
 	
-	CMShape *shape3 = [body3 addRectWithWidth:40.0f height:40.0f];
+	CMShape *shape3 = [body3 addRectangleWithWidth:40.0f height:40.0f];
 	[shape3 setElasticity:0.0];
 	[shape3 setFriction:0.7];
 	[shape3 setCollisionType:RECT_COLLISION_TYPE];

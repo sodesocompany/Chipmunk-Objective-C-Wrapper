@@ -222,6 +222,16 @@ void updateShape(void *cpShapePtr, void* unused) {
 	return body; 
 }
 
+- (CMBody*)findBody:(NSString*)name {
+	for (CMBody *body in mBodies) {
+		if ([[body name] isEqualToString:name]) {
+			return body;
+		}
+	}
+	
+	return nil;
+}
+
 - (void)removeBody:(CMBody*)body {
 	[mBodies removeObject:body];
 }

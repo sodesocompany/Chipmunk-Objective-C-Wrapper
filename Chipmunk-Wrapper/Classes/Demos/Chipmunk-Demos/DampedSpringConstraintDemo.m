@@ -30,7 +30,7 @@
 	[body1 setPositionUsingVect:cpv(160, 200)];
 	[body1 addToSpace];
 	
-	CMRectShape *shape1 = [body1 addRectWithWidth:64 height:64];
+	CMRectShape *shape1 = [body1 addRectangleWithWidth:64 height:64];
 	[shape1 setElasticity:0.5];
 	[shape1 setFriction:0.5];
 	[shape1 addToSpace];
@@ -40,7 +40,7 @@
 	[body2 setPositionUsingVect:cpv(180, 400)];
 	[body2 addToSpace];
 	
-	CMRectShape *shape2 = [body2 addRectWithWidth:64 height:64];
+	CMRectShape *shape2 = [body2 addRectangleWithWidth:64 height:64];
 	[shape2 setElasticity:0.5];
 	[shape2 setFriction:0.5];
 	[shape2 addToSpace];

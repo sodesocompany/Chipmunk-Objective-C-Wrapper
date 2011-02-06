@@ -15,6 +15,8 @@
 
 #import "chipmunk.h"
 
+#import "CMLoader.h"
+
 #import "CMData.h"
 #import "CMObject.h"
 

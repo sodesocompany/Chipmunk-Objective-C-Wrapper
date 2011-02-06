@@ -69,7 +69,7 @@ const float horizontalHeight = 10;
 	[squareBody setPositionUsingVect:position];
 	[squareBody addToSpace];
 	
-	CMShape *squareShape = [squareBody addRectWithWidth:width height:height];
+	CMShape *squareShape = [squareBody addRectangleWithWidth:width height:height];
 	[squareShape setElasticity:0.0];
 	[squareShape setFriction:0.7];
 	[squareShape addToSpace];

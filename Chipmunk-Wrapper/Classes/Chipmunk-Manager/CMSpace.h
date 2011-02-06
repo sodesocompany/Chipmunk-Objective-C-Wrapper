@@ -144,7 +144,6 @@
  */
 - (CMShape*)queryFirstByPoint:(SPPoint*)point layers:(cpLayers)layers group:(cpGroup)group;
 
-
 /**
  * Returns the first shape that is found at the specified point with the specified layer and
  * group information.
@@ -186,6 +185,13 @@
  * @param body the body to remove.
  */
 - (void)removeBody:(CMBody*)body;
+
+/**
+ * Finds a body with the specified name.
+ *
+ * @param name the name of the body.
+ */
+- (CMBody*)findBody:(NSString*)name;
 
 ///---------------------------------------------------------------------------------------
 /// @name Collision detection

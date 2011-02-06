@@ -11,6 +11,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		A112805612FED21B00696CFE /* ConfigurationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A112805512FED21B00696CFE /* ConfigurationDemo.m */; };
+		A11282CD12FEFBF700696CFE /* CMLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A11282CC12FEFBF700696CFE /* CMLoader.m */; };
 		A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A124299412F94D7D00318730 /* NewtonsCradleDemo.m */; };
 		A1242C2E12FB1D9D00318730 /* BlocksDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1242C2D12FB1D9D00318730 /* BlocksDemo.m */; };
 		A1242D0612FB537300318730 /* ManyBlocksDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1242D0412FB537300318730 /* ManyBlocksDemo.m */; };
@@ -29,6 +31,7 @@
 		A178460812EF49B700EE1713 /* SimpleCollisionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A178460712EF49B700EE1713 /* SimpleCollisionDemo.m */; };
 		A178467F12EF651E00EE1713 /* CMArbiter.m in Sources */ = {isa = PBXBuildFile; fileRef = A178467E12EF651E00EE1713 /* CMArbiter.m */; };
 		A17846FA12F0810A00EE1713 /* TheoJansenDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A17846F812F0810A00EE1713 /* TheoJansenDemo.m */; };
+		A1906EB012FF119800FFF013 /* Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1906EAF12FF119800FFF013 /* Demo.plist */; };
 		A19EA7C812EA1D080073D2A1 /* DampedRotarySpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */; };
 		A19EA7C912EA1D080073D2A1 /* DampedSpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B612EA1D070073D2A1 /* DampedSpringConstraintDemo.m */; };
 		A19EA7CA12EA1D080073D2A1 /* GearJointConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B812EA1D070073D2A1 /* GearJointConstraintDemo.m */; };
@@ -104,6 +107,10 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ChipmunkWrapper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkWrapper_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ChipmunkWrapper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ChipmunkWrapper-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		A112805412FED21B00696CFE /* ConfigurationDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationDemo.h; sourceTree = "<group>"; };
+		A112805512FED21B00696CFE /* ConfigurationDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationDemo.m; sourceTree = "<group>"; };
+		A11282CB12FEFBF700696CFE /* CMLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoader.h; sourceTree = "<group>"; };
+		A11282CC12FEFBF700696CFE /* CMLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLoader.m; sourceTree = "<group>"; };
 		A124299312F94D7D00318730 /* NewtonsCradleDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewtonsCradleDemo.h; sourceTree = "<group>"; };
 		A124299412F94D7D00318730 /* NewtonsCradleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewtonsCradleDemo.m; sourceTree = "<group>"; };
 		A1242C2C12FB1D9D00318730 /* BlocksDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksDemo.h; sourceTree = "<group>"; };
@@ -134,6 +141,7 @@
 		A178467E12EF651E00EE1713 /* CMArbiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMArbiter.m; sourceTree = "<group>"; };
 		A17846F812F0810A00EE1713 /* TheoJansenDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheoJansenDemo.m; sourceTree = "<group>"; };
 		A17846F912F0810A00EE1713 /* TheoJansenDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheoJansenDemo.h; sourceTree = "<group>"; };
+		A1906EAF12FF119800FFF013 /* Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demo.plist; sourceTree = "<group>"; };
 		A19EA7B312EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DampedRotarySpringConstraintDemo.h; sourceTree = "<group>"; };
 		A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DampedRotarySpringConstraintDemo.m; sourceTree = "<group>"; };
 		A19EA7B512EA1D070073D2A1 /* DampedSpringConstraintDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DampedSpringConstraintDemo.h; sourceTree = "<group>"; };
@@ -314,6 +322,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1906EAF12FF119800FFF013 /* Demo.plist */,
 				A1C70AD912DCE430003C506C /* images */,
 				A1351399119868D9007C9395 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* ChipmunkWrapper-Info.plist */,
@@ -336,6 +345,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A11282CA12FEFBC600696CFE /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				A11282CB12FEFBF700696CFE /* CMLoader.h */,
+				A11282CC12FEFBF700696CFE /* CMLoader.m */,
+			);
+			name = Loader;
+			sourceTree = "<group>";
+		};
 		A1351372119867C6007C9395 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +366,8 @@
 		A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A112805412FED21B00696CFE /* ConfigurationDemo.h */,
+				A112805512FED21B00696CFE /* ConfigurationDemo.m */,
 				A17846F912F0810A00EE1713 /* TheoJansenDemo.h */,
 				A17846F812F0810A00EE1713 /* TheoJansenDemo.m */,
 				A19EA7D512EA1D380073D2A1 /* SlideJointConstraintDemo.h */,
@@ -446,6 +466,7 @@
 		A1C70A9712DCE403003C506C /* Chipmunk-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A11282CA12FEFBC600696CFE /* Loader */,
 				A1C70A9E12DCE403003C506C /* Collision */,
 				A1C70AA112DCE403003C506C /* Constraints */,
 				A1C70ABA12DCE403003C506C /* Shapes */,
@@ -636,6 +657,7 @@
 				A1C70ADC12DCE430003C506C /* left.png in Resources */,
 				A1C70ADD12DCE430003C506C /* right.png in Resources */,
 				A178431112ECCB6800EE1713 /* football.png in Resources */,
+				A1906EB012FF119800FFF013 /* Demo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +717,8 @@
 				A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */,
 				A1242C2E12FB1D9D00318730 /* BlocksDemo.m in Sources */,
 				A1242D0612FB537300318730 /* ManyBlocksDemo.m in Sources */,
+				A112805612FED21B00696CFE /* ConfigurationDemo.m in Sources */,
+				A11282CD12FEFBF700696CFE /* CMLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

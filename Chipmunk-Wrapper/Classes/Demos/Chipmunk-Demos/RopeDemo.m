@@ -81,7 +81,7 @@
 	[squareBody setPositionUsingVect:cpv(230, 80)];
 	[squareBody addToSpace];
 	
-	CMShape *squareShape = [squareBody addRectWithWidth:64 height:64];
+	CMShape *squareShape = [squareBody addRectangleWithWidth:64 height:64];
 	[squareShape setElasticity:0.5];
 	[squareShape setFriction:0.5];
 	[squareShape addToSpace];

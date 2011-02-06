@@ -90,7 +90,7 @@ static double timeCount = 0;
 }
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
-	[mSpace setGravity:cpv(acceleration.x*500, acceleration.y*500 * (inverseGravity ? 1 : -1))];
+	[mSpace setGravity:cpv(acceleration.x * 9.8 * 10, acceleration.y * 9.8 * 10 * (inverseGravity ? 1 : -1))];
 }
 
 - (void)displayFrameRate:(double)passedTime {
