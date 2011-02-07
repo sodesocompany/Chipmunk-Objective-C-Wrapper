@@ -437,6 +437,21 @@
 			A1907048130057D700FFF013 /* PBXTextBookmark */ = A1907048130057D700FFF013 /* PBXTextBookmark */;
 			A1907049130057D700FFF013 /* PBXTextBookmark */ = A1907049130057D700FFF013 /* PBXTextBookmark */;
 			A190704A130057D700FFF013 /* PBXTextBookmark */ = A190704A130057D700FFF013 /* PBXTextBookmark */;
+			A190704F13008A6E00FFF013 /* PBXBookmark */ = A190704F13008A6E00FFF013 /* PBXBookmark */;
+			A190705413008B5600FFF013 /* PBXTextBookmark */ = A190705413008B5600FFF013 /* PBXTextBookmark */;
+			A190705513008B5600FFF013 /* PBXTextBookmark */ = A190705513008B5600FFF013 /* PBXTextBookmark */;
+			A190705613008B5600FFF013 /* PBXTextBookmark */ = A190705613008B5600FFF013 /* PBXTextBookmark */;
+			A190705713008B5600FFF013 /* PBXTextBookmark */ = A190705713008B5600FFF013 /* PBXTextBookmark */;
+			A190705813008B5600FFF013 /* PBXTextBookmark */ = A190705813008B5600FFF013 /* PBXTextBookmark */;
+			A190705913008B5600FFF013 /* PBXTextBookmark */ = A190705913008B5600FFF013 /* PBXTextBookmark */;
+			A190705C13008B5600FFF013 /* PlistBookmark */ = A190705C13008B5600FFF013 /* PlistBookmark */;
+			A190705E13008B6800FFF013 /* PBXTextBookmark */ = A190705E13008B6800FFF013 /* PBXTextBookmark */;
+			A190705F13008B6800FFF013 /* PBXTextBookmark */ = A190705F13008B6800FFF013 /* PBXTextBookmark */;
+			A190706213008C2700FFF013 /* PBXTextBookmark */ = A190706213008C2700FFF013 /* PBXTextBookmark */;
+			A190706313008C2700FFF013 /* PBXTextBookmark */ = A190706313008C2700FFF013 /* PBXTextBookmark */;
+			A190706413008C2700FFF013 /* PBXTextBookmark */ = A190706413008C2700FFF013 /* PBXTextBookmark */;
+			A190706513008C2700FFF013 /* PBXTextBookmark */ = A190706513008C2700FFF013 /* PBXTextBookmark */;
+			A190706613008C2700FFF013 /* PlistBookmark */ = A190706613008C2700FFF013 /* PlistBookmark */;
 			A19EA7E612EA1FD10073D2A1 = A19EA7E612EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7E812EA1FD10073D2A1 = A19EA7E812EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7EA12EA1FD10073D2A1 = A19EA7EA12EA1FD10073D2A1 /* PBXTextBookmark */;
@@ -1442,7 +1457,7 @@
 		ignoreCount = 0;
 		lineNumber = 81;
 		location = ChipmunkWrapper;
-		modificationTime = 318711592.527582;
+		modificationTime = 318802776.972326;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1585,7 +1600,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 121;
-		modificationTime = 318712099.56189;
+		modificationTime = 318802895.772564;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3498,11 +3513,11 @@
 		delayBeforeContinue = 0;
 		fileReference = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		functionName = "+createPinJointConstraint:constraintConfig:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 404;
 		location = ChipmunkWrapper;
-		modificationTime = 318711595.716789;
+		modificationTime = 318802776.972669;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3574,11 +3589,11 @@
 		delayBeforeContinue = 0;
 		fileReference = A11282CC12FEFBF700696CFE /* CMLoader.m */;
 		functionName = "+loadFromConfiguration:configuration:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 305;
 		location = ChipmunkWrapper;
-		modificationTime = 318711593.775248;
+		modificationTime = 318802776.973039;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -4094,6 +4109,20 @@
 		vrLen = 2068;
 		vrLoc = 1891;
 	};
+	A19070351300567200FFF013 /* CMLoader.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
+			sepNavSelRange = "{15, 0}";
+			sepNavVisRange = "{0, 735}";
+		};
+	};
+	A19070361300567200FFF013 /* CMLoader.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 8940}}";
+			sepNavSelRange = "{32, 0}";
+			sepNavVisRange = "{0, 2883}";
+		};
+	};
 	A1907040130057AF00FFF013 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = A1C70ABE12DCE403003C506C /* CMPolyShape.m */;
@@ -4183,6 +4212,164 @@
 		rType = 0;
 		vrLen = 2680;
 		vrLoc = 0;
+	};
+	A190704F13008A6E00FFF013 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+	};
+	A190705413008B5600FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70ABD12DCE403003C506C /* CMPolyShape.h */;
+		name = "CMPolyShape.h: 75";
+		rLen = 6;
+		rLoc = 2761;
+		rType = 0;
+		vrLen = 2990;
+		vrLoc = 160;
+	};
+	A190705513008B5600FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070351300567200FFF013 /* CMLoader.h */;
+		name = "CMLoader.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 528;
+		vrLoc = 0;
+	};
+	A190705613008B5600FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 412";
+		rLen = 0;
+		rLoc = 18341;
+		rType = 0;
+		vrLen = 2894;
+		vrLoc = 15946;
+	};
+	A190705713008B5600FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */;
+		name = "PolyDemo.m: 36";
+		rLen = 0;
+		rLoc = 880;
+		rType = 0;
+		vrLen = 2193;
+		vrLoc = 77;
+	};
+	A190705813008B5600FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */;
+		name = "PolyDemo.m: 34";
+		rLen = 0;
+		rLoc = 829;
+		rType = 0;
+		vrLen = 2145;
+		vrLoc = 125;
+	};
+	A190705913008B5600FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */;
+		name = "PolyDemo.m: 34";
+		rLen = 0;
+		rLoc = 829;
+		rType = 0;
+		vrLen = 2145;
+		vrLoc = 125;
+	};
+	A190705C13008B5600FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			bodies,
+			3,
+			shapes,
+			0,
+			vertices,
+			2,
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A190705E13008B6800FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70A9C12DCE403003C506C /* CMSpace.m */;
+		name = "CMSpace.m: 111";
+		rLen = 0;
+		rLoc = 3199;
+		rType = 0;
+		vrLen = 837;
+		vrLoc = 2545;
+	};
+	A190705F13008B6800FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */;
+		name = "PolyDemo.m: 34";
+		rLen = 0;
+		rLoc = 829;
+		rType = 0;
+		vrLen = 1253;
+		vrLoc = 735;
+	};
+	A190706213008C2700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */;
+		name = "PolyDemo.m: 25";
+		rLen = 0;
+		rLoc = 649;
+		rType = 0;
+		vrLen = 2181;
+		vrLoc = 0;
+	};
+	A190706313008C2700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070351300567200FFF013 /* CMLoader.h */;
+		name = "CMLoader.h: 2";
+		rLen = 0;
+		rLoc = 15;
+		rType = 0;
+		vrLen = 735;
+		vrLoc = 0;
+	};
+	A190706413008C2700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 118";
+		rLen = 0;
+		rLoc = 5147;
+		rType = 0;
+		vrLen = 3708;
+		vrLoc = 2290;
+	};
+	A190706513008C2700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 3";
+		rLen = 0;
+		rLoc = 32;
+		rType = 0;
+		vrLen = 2883;
+		vrLoc = 0;
+	};
+	A190706613008C2700FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			bodies,
+			3,
+			shapes,
+			0,
+			vertices,
+			2,
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	A19EA7B312EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.h */ = {
 		uiCtxt = {
@@ -4320,8 +4507,8 @@
 	A19EA7DA12EA1DCE0073D2A1 /* PolyDemo.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1568, 1185}}";
-			sepNavSelRange = "{880, 0}";
-			sepNavVisRange = "{128, 2142}";
+			sepNavSelRange = "{649, 0}";
+			sepNavVisRange = "{0, 2181}";
 		};
 	};
 	A19EA7DC12EA1DE30073D2A1 /* PolyDemo.h */ = {
@@ -4417,7 +4604,7 @@
 		ignoreCount = 0;
 		lineNumber = 17;
 		location = ChipmunkWrapper;
-		modificationTime = 318711592.525639;
+		modificationTime = 318802776.970911;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -4459,7 +4646,7 @@
 		ignoreCount = 0;
 		lineNumber = 61;
 		location = ChipmunkWrapper;
-		modificationTime = 318712099.562394;
+		modificationTime = 318802895.772309;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -4475,7 +4662,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 48;
-		modificationTime = 318712099.562745;
+		modificationTime = 318802895.772861;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -4642,9 +4829,9 @@
 	};
 	A1C70A9C12DCE403003C506C /* CMSpace.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1958, 4770}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1958, 5010}}";
 			sepNavSelRange = "{3199, 0}";
-			sepNavVisRange = "{2545, 838}";
+			sepNavVisRange = "{2545, 837}";
 		};
 	};
 	A1C70A9D12DCE403003C506C /* CMTypes.h */ = {
@@ -4839,9 +5026,9 @@
 	};
 	A1C70ABD12DCE403003C506C /* CMPolyShape.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 1275}}";
-			sepNavSelRange = "{980, 0}";
-			sepNavVisRange = "{0, 2680}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1245}}";
+			sepNavSelRange = "{2761, 6}";
+			sepNavVisRange = "{160, 2990}";
 		};
 	};
 	A1C70ABE12DCE403003C506C /* CMPolyShape.m */ = {
@@ -5069,7 +5256,7 @@
 		ignoreCount = 0;
 		lineNumber = 62;
 		location = ChipmunkWrapper;
-		modificationTime = 318712099.563895;
+		modificationTime = 318802895.772712;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};

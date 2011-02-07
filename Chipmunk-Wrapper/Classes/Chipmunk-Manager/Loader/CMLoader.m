@@ -1,5 +1,5 @@
 //
-//  PhysicsEditorLoader.m
+//  CMLoader.m
 //  ChipmunkWrapper
 //
 //  Created by Ronald Mathies on 2/6/11.
@@ -96,6 +96,27 @@ static inline cpVect CPVectFromString(NSString *position) {
  * @param shapeConfig the configuration of the shape.
  */
 + (void) createSegmentShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig;
+
+/**
+ * Constructs a new polygon shape, the definition in the .plist file would look like:
+ *
+ * Root<br/>
+ * &nbsp;&nbsp;bodies<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{body properties}<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shapes<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: polyShape<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: polygon<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertices:<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0: {-2.8,3.1}<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1: {8.8,-9.1}<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 2: {-3.0-8.9} (optional)<br/>
+ *
+ * @param cmBody the body for which this shape is created.
+ * @param shapeConfig the configuration of the shape.
+ */
++ (void) createPolygonShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig;
 
 /**
  * Constructs a pin joint constraint, the definition in the .plist file would look like:
@@ -350,6 +371,8 @@ static inline cpVect CPVectFromString(NSString *position) {
 			[self createRectangleShape:cmBody shapeConfig:shapeConfig];
 		} else if ([type isEqualToString:@"segment"]) {
 			[self createSegmentShape:cmBody shapeConfig:shapeConfig];
+		} else if ([type isEqualToString:@"polygon"]) {
+			[self createPolygonShape:cmBody shapeConfig:shapeConfig];
 		}
 	}
 }
@@ -399,6 +422,12 @@ static inline cpVect CPVectFromString(NSString *position) {
 	
 }
 
++ (void) createPolygonShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
+	NSArray *vertices = [shapeConfig valueForKey:@"vertices"];
+	CMPolyShape *shape = [cmBody addPolyWithPoints:vertices];
+	[shape setName:[shapeConfig valueForKey:@"name"]];
+	[shape addToSpace];
+}
 
 + (void) createPinJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
 	NSString* fromBody = [constraintConfig valueForKey:@"fromBody"];

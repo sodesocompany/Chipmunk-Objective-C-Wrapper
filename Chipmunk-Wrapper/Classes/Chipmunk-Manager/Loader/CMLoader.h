@@ -1,5 +1,5 @@
 //
-//  PhysicsEditorLoader.h
+//  CMLoader.h
 //  ChipmunkWrapper
 //
 //  Created by Ronald Mathies on 2/6/11.
@@ -10,6 +10,11 @@
 
 @class CMSpace;
 
+/**
+ * The CMLoader class can be used to load complete definitions of bodies and shapes with
+ * their constraints into the space. It can be done individual (single body at a time) or
+ * multimple at the same time.
+ */
 @interface CMLoader : NSObject {
 
 }
