@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>A190705A13008B5600FFF013</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>Demo.plist</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>A190705B13008B5600FFF013</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>Demo.plist</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>A190708D13008F7D00FFF013</string>
-						<key>history</key>
-						<array>
-							<string>A190704F13008A6E00FFF013</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1094, 1317}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 60 1094 1358 0 0 2560 1418 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>2019</integer>
@@ -339,7 +298,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {368, 1311}}</string>
+							<string>{{0, 68}, {368, 1311}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -356,7 +315,7 @@
 							<real>368</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>303 -167 2019 1370 0 0 2560 1418 </string>
+						<string>402 48 2019 1370 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -386,7 +345,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A190708C13008F7D00FFF013</string>
+										<string>A19070A013009F6600FFF013</string>
 										<key>history</key>
 										<array>
 											<string>A12CC0D612CA8D42003D1970</string>
@@ -491,7 +450,6 @@
 											<string>A112803E12FED0C900696CFE</string>
 											<string>A112804C12FED20500696CFE</string>
 											<string>A112805F12FED2E900696CFE</string>
-											<string>A112806012FED2E900696CFE</string>
 											<string>A112806712FED2E900696CFE</string>
 											<string>A112814412FEE61900696CFE</string>
 											<string>A112814612FEE61900696CFE</string>
@@ -500,7 +458,6 @@
 											<string>A112829412FEF51300696CFE</string>
 											<string>A11282B512FEF9F400696CFE</string>
 											<string>A11282B612FEF9F400696CFE</string>
-											<string>A11282C512FEFB5900696CFE</string>
 											<string>A11282C612FEFB5900696CFE</string>
 											<string>A11282C712FEFB5900696CFE</string>
 											<string>A1906EF612FF189A00FFF013</string>
@@ -511,11 +468,9 @@
 											<string>A1906EFD12FF189A00FFF013</string>
 											<string>A1906EFE12FF189A00FFF013</string>
 											<string>A1906EFF12FF189A00FFF013</string>
-											<string>A1906F1712FF19E700FFF013</string>
 											<string>A1906F3112FF1E1900FFF013</string>
 											<string>A1906F3212FF1E1900FFF013</string>
 											<string>A1906F3312FF1E1900FFF013</string>
-											<string>A1906F3612FF1E1900FFF013</string>
 											<string>A1906F5412FF20FC00FFF013</string>
 											<string>A1906F5512FF20FC00FFF013</string>
 											<string>A1906F5612FF20FC00FFF013</string>
@@ -523,7 +478,6 @@
 											<string>A1906F5812FF20FC00FFF013</string>
 											<string>A1906F5912FF20FC00FFF013</string>
 											<string>A1906F8112FF230700FFF013</string>
-											<string>A1906F8212FF230700FFF013</string>
 											<string>A1906F9512FF235800FFF013</string>
 											<string>A1906FAD12FF25B200FFF013</string>
 											<string>A1906FAF12FF25B200FFF013</string>
@@ -545,7 +499,6 @@
 											<string>A1907048130057D700FFF013</string>
 											<string>A190705413008B5600FFF013</string>
 											<string>A190706213008C2700FFF013</string>
-											<string>A190706313008C2700FFF013</string>
 											<string>A190706913008CB700FFF013</string>
 											<string>A190706A13008CB700FFF013</string>
 											<string>A190706B13008CB700FFF013</string>
@@ -557,8 +510,14 @@
 											<string>A190707C13008E3500FFF013</string>
 											<string>A190707D13008E3500FFF013</string>
 											<string>A190707E13008E3500FFF013</string>
-											<string>A190707F13008E3500FFF013</string>
-											<string>A190708713008F0A00FFF013</string>
+											<string>A190709813009F6600FFF013</string>
+											<string>A190709913009F6600FFF013</string>
+											<string>A190709A13009F6600FFF013</string>
+											<string>A190709B13009F6600FFF013</string>
+											<string>A190709C13009F6600FFF013</string>
+											<string>A190709D13009F6600FFF013</string>
+											<string>A190709E13009F6600FFF013</string>
+											<string>A190709F13009F6600FFF013</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -574,7 +533,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1629, 1114}}</string>
 								<key>RubberWindowFrame</key>
-								<string>303 -167 2019 1370 0 0 2560 1418 </string>
+								<string>402 48 2019 1370 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -674,7 +633,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1629, 183}}</string>
 										<key>RubberWindowFrame</key>
-										<string>303 -167 2019 1370 0 0 2560 1418 </string>
+										<string>402 48 2019 1370 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -898,11 +857,10 @@
 	<array>
 		<string>A1906FD012FF270400FFF013</string>
 		<string>A1906FD112FF270400FFF013</string>
-		<string>A190705A13008B5600FFF013</string>
 		<string>/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>303 -167 2019 1370 0 0 2560 1418 </string>
+	<string>402 48 2019 1370 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
