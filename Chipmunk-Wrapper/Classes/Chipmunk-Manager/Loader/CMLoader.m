@@ -128,6 +128,10 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: pin_joint<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distance: 10 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {15,0}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor2: {-15,0}<br/>
  *
@@ -146,6 +150,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: damped_rotary_spring<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restAngle: 1<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stiffness: 1<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;damping: 1<br/>
@@ -165,6 +172,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: damped_spring<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restAngle: 1<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stiffness: 1<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;damping: 1<br/>
@@ -186,6 +196,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: gear_joint<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phase: 1<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ratio: 1<br/>
  *
@@ -204,6 +217,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: groove_joint<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {10,10}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grooveA: {-15,-15}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grooveB: {15,15}<br/>
@@ -223,6 +239,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: pivot_joint<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * <br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now you need to choose either pivot:<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pivot: {10,10}<br/>
@@ -246,6 +265,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: ratchet_joint<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phase: 5<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ratchet: 5<br/>
  *
@@ -264,6 +286,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: rotary_limit<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min: 30<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max: 50<br/>
  *
@@ -282,6 +307,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: simple_motor<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate: 20<br/>
  *
  * @param cmSpace the space.
@@ -299,6 +327,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: slide_joint<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_force: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_bias: 2 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {-15,15}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {15,15}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min: 30<br/>
@@ -308,6 +339,15 @@ static inline cpVect CPVectFromString(NSString *position) {
  * @param constraintConfig the configuration of the constraint.
  */
 + (void) createSlideJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig;
+
+/**
+ * Sets the general properties of a constraint (max_force, max_bias, bias_coef) which
+ * are shared among all constraints.
+ *
+ * @param cmConstraint the constraint.
+ * @param constraintConfig the configuration of the constraint.
+ */
++ (void) updateConstraintWithGeneralProperties:(CMConstraint*)cmConstraint constraintConfig:(NSDictionary*)constraintConfig;
 
 @end
 
@@ -440,7 +480,13 @@ static inline cpVect CPVectFromString(NSString *position) {
 	cpVect anchor2 = CPVectFromString([constraintConfig valueForKey:@"anchor2"]);
 	
 	CMPinJointConstraint *constraint = [from addPinJointConstraintWithBody:to anchor1:anchor1 anchor2:anchor2];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	
+	NSNumber *distance = [constraintConfig valueForKey:@"distance"];
+	if (distance != nil) {
+		[constraint setDistance:[distance floatValue]];
+	}
+	
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -456,7 +502,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	CMBody *to = [cmSpace findBody:toBody];
 	
 	CMDampedRotarySpringConstraint *constraint = [from addDampedRotaryConstraintWithBody:to restAngle:[restAngle floatValue] stiffness:[stiffness floatValue] damping:[damping floatValue]];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -474,7 +520,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	CMBody *to = [cmSpace findBody:toBody];
 	
 	CMDampedSpringConstraint *constraint = [from addDampedSpringConstraintWithBody:to anchor1:anchor1 anchor2:anchor2 restLength:[restLength floatValue] stiffness:[stiffness floatValue] damping:[damping floatValue]];	
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -488,7 +534,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	CMBody *to = [cmSpace findBody:toBody];
 	
 	CMGearJointConstraint *constraint = [from addGearJointConstraintWithBody:to phase:[phase floatValue] ratio:[ratio floatValue]];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];							 
 }
 
@@ -504,7 +550,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	cpVect grooveB = CPVectFromString([constraintConfig valueForKey:@"groove_b"]);
 	
 	CMGrooveJointConstraint *constraint = [from addGrooveJointConstraintWithBody:to grooveA:grooveA grooveB:grooveB anchor1:anchor1];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -525,7 +571,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 		constraint = [from addPivotJointConstraintWithBody:to anchor1:anchor1 anchor2:anchor2];
 	}
 	
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -540,7 +586,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *ratchet = [constraintConfig valueForKey:@"ratchet"];
 	
 	CMRatchetJointConstraint *constraint = [from addRatchetJointConstraintWithBody:to phase:[phase floatValue] ratchet:[ratchet floatValue]];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -555,7 +601,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *max = [constraintConfig valueForKey:@"max"];
 	
 	CMRotaryLimitConstraint *constraint = [from addRotaryLimitConstraintWithBody:to min:[min floatValue] max:[max floatValue]];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -569,7 +615,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *rate = [constraintConfig valueForKey:@"rate"];
 	
 	CMSimpleMotorConstraint *constraint = [from addSimpleMotorConstraintWithBody:to rate:[rate floatValue]];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
 }
 
@@ -587,8 +633,27 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *max = [constraintConfig valueForKey:@"max"];
 	
 	CMSlideJointConstraint *constraint = [from addSlideJointConstraintWithBody:to anchor1:anchor1 anchor2:anchor2 min:[min floatValue] max:[max floatValue]];
-	[constraint setName:[constraintConfig valueForKey:@"name"]];
+	[self updateConstraintWithGeneralProperties:constraint constraintConfig:constraintConfig];
 	[constraint addToSpace];
+}
+
++ (void) updateConstraintWithGeneralProperties:(CMConstraint*)cmConstraint constraintConfig:(NSDictionary*)constraintConfig {
+	[cmConstraint setName:[constraintConfig valueForKey:@"name"]];
+	
+	NSNumber *maxForce = [constraintConfig valueForKey:@"max_force"];
+	if (maxForce != nil) {
+		[cmConstraint setMaxForce:[maxForce floatValue]];
+	}
+	
+	NSNumber *maxBias = [constraintConfig valueForKey:@"max_bias"];
+	if (maxForce != nil) {
+		[cmConstraint setMaxBias:[maxBias floatValue]];
+	}
+	
+	NSNumber *biasCoef = [constraintConfig valueForKey:@"bias_coef"];
+	if (maxForce != nil) {
+		[cmConstraint setBiasCoef:[biasCoef floatValue]];
+	}
 }
 
 @end

@@ -452,6 +452,29 @@
 			A190706413008C2700FFF013 /* PBXTextBookmark */ = A190706413008C2700FFF013 /* PBXTextBookmark */;
 			A190706513008C2700FFF013 /* PBXTextBookmark */ = A190706513008C2700FFF013 /* PBXTextBookmark */;
 			A190706613008C2700FFF013 /* PlistBookmark */ = A190706613008C2700FFF013 /* PlistBookmark */;
+			A190706913008CB700FFF013 /* PBXTextBookmark */ = A190706913008CB700FFF013 /* PBXTextBookmark */;
+			A190706A13008CB700FFF013 /* PBXTextBookmark */ = A190706A13008CB700FFF013 /* PBXTextBookmark */;
+			A190706B13008CB700FFF013 /* PBXTextBookmark */ = A190706B13008CB700FFF013 /* PBXTextBookmark */;
+			A190706C13008CB700FFF013 /* PBXTextBookmark */ = A190706C13008CB700FFF013 /* PBXTextBookmark */;
+			A190706D13008CB700FFF013 /* PBXTextBookmark */ = A190706D13008CB700FFF013 /* PBXTextBookmark */;
+			A190706E13008CB700FFF013 /* PBXTextBookmark */ = A190706E13008CB700FFF013 /* PBXTextBookmark */;
+			A190706F13008CB700FFF013 /* PBXTextBookmark */ = A190706F13008CB700FFF013 /* PBXTextBookmark */;
+			A190707013008CB700FFF013 /* PBXTextBookmark */ = A190707013008CB700FFF013 /* PBXTextBookmark */;
+			A190707113008CB700FFF013 /* PlistBookmark */ = A190707113008CB700FFF013 /* PlistBookmark */;
+			A190707A13008E3500FFF013 /* PBXTextBookmark */ = A190707A13008E3500FFF013 /* PBXTextBookmark */;
+			A190707B13008E3500FFF013 /* PBXTextBookmark */ = A190707B13008E3500FFF013 /* PBXTextBookmark */;
+			A190707C13008E3500FFF013 /* PBXTextBookmark */ = A190707C13008E3500FFF013 /* PBXTextBookmark */;
+			A190707D13008E3500FFF013 /* PBXTextBookmark */ = A190707D13008E3500FFF013 /* PBXTextBookmark */;
+			A190707E13008E3500FFF013 /* PBXTextBookmark */ = A190707E13008E3500FFF013 /* PBXTextBookmark */;
+			A190707F13008E3500FFF013 /* PBXTextBookmark */ = A190707F13008E3500FFF013 /* PBXTextBookmark */;
+			A190708013008E3500FFF013 /* XCBuildMessageTextBookmark */ = A190708013008E3500FFF013 /* XCBuildMessageTextBookmark */;
+			A190708113008E3500FFF013 /* PBXTextBookmark */ = A190708113008E3500FFF013 /* PBXTextBookmark */;
+			A190708213008E3500FFF013 /* PlistBookmark */ = A190708213008E3500FFF013 /* PlistBookmark */;
+			A190708713008F0A00FFF013 /* XCBuildMessageTextBookmark */ = A190708713008F0A00FFF013 /* XCBuildMessageTextBookmark */;
+			A190708813008F0A00FFF013 /* PBXTextBookmark */ = A190708813008F0A00FFF013 /* PBXTextBookmark */;
+			A190708913008F0A00FFF013 /* PlistBookmark */ = A190708913008F0A00FFF013 /* PlistBookmark */;
+			A190708C13008F7D00FFF013 /* PBXTextBookmark */ = A190708C13008F7D00FFF013 /* PBXTextBookmark */;
+			A190708D13008F7D00FFF013 /* PlistBookmark */ = A190708D13008F7D00FFF013 /* PlistBookmark */;
 			A19EA7E612EA1FD10073D2A1 = A19EA7E612EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7E812EA1FD10073D2A1 = A19EA7E812EA1FD10073D2A1 /* PBXTextBookmark */;
 			A19EA7EA12EA1FD10073D2A1 = A19EA7EA12EA1FD10073D2A1 /* PBXTextBookmark */;
@@ -4118,9 +4141,9 @@
 	};
 	A19070361300567200FFF013 /* CMLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 8940}}";
-			sepNavSelRange = "{32, 0}";
-			sepNavVisRange = "{0, 2883}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 10095}}";
+			sepNavSelRange = "{15129, 0}";
+			sepNavVisRange = "{13673, 3365}";
 		};
 	};
 	A1907040130057AF00FFF013 /* PBXTextBookmark */ = {
@@ -4242,7 +4265,7 @@
 		fRef = A19070361300567200FFF013 /* CMLoader.m */;
 		name = "CMLoader.m: 412";
 		rLen = 0;
-		rLoc = 18341;
+		rLoc = 20802;
 		rType = 0;
 		vrLen = 2894;
 		vrLoc = 15946;
@@ -4355,6 +4378,262 @@
 		vrLoc = 0;
 	};
 	A190706613008C2700FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			bodies,
+			3,
+			shapes,
+			0,
+			vertices,
+			2,
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A190706913008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB612DCE403003C506C /* CMSlideJointConstraint.h */;
+		name = "CMSlideJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 557;
+		rType = 0;
+		vrLen = 1287;
+		vrLoc = 0;
+	};
+	A190706A13008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB412DCE403003C506C /* CMSimpleMotorConstraint.h */;
+		name = "CMSimpleMotorConstraint.h: 24";
+		rLen = 0;
+		rLoc = 528;
+		rType = 0;
+		vrLen = 1037;
+		vrLoc = 0;
+	};
+	A190706B13008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB212DCE403003C506C /* CMRotaryLimitConstraint.h */;
+		name = "CMRotaryLimitConstraint.h: 24";
+		rLen = 0;
+		rLoc = 506;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 0;
+	};
+	A190706C13008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB012DCE403003C506C /* CMRatchetJointConstraint.h */;
+		name = "CMRatchetJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 531;
+		rType = 0;
+		vrLen = 1193;
+		vrLoc = 0;
+	};
+	A190706D13008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AAE12DCE403003C506C /* CMPivotJointConstraint.h */;
+		name = "CMPivotJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 565;
+		rType = 0;
+		vrLen = 1388;
+		vrLoc = 0;
+	};
+	A190706E13008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AAC12DCE403003C506C /* CMPinJointConstraint.h */;
+		name = "CMPinJointConstraint.h: 39";
+		rLen = 0;
+		rLoc = 1193;
+		rType = 0;
+		vrLen = 1425;
+		vrLoc = 0;
+	};
+	A190706F13008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 3";
+		rLen = 0;
+		rLoc = 32;
+		rType = 0;
+		vrLen = 3434;
+		vrLoc = 17831;
+	};
+	A190707013008CB700FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 131";
+		rLen = 0;
+		rLoc = 5929;
+		rType = 0;
+		vrLen = 3437;
+		vrLoc = 4146;
+	};
+	A190707113008CB700FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			bodies,
+			3,
+			shapes,
+			0,
+			vertices,
+			2,
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A190707A13008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AAB12DCE403003C506C /* CMGrooveJointConstraint.m */;
+		name = "CMGrooveJointConstraint.m: 31";
+		rLen = 0;
+		rLoc = 1006;
+		rType = 0;
+		vrLen = 1080;
+		vrLoc = 0;
+	};
+	A190707B13008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AAA12DCE403003C506C /* CMGrooveJointConstraint.h */;
+		name = "CMGrooveJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 1291;
+		vrLoc = 0;
+	};
+	A190707C13008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA812DCE403003C506C /* CMGearJointConstraint.h */;
+		name = "CMGearJointConstraint.h: 24";
+		rLen = 0;
+		rLoc = 530;
+		rType = 0;
+		vrLen = 1183;
+		vrLoc = 0;
+	};
+	A190707D13008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA612DCE403003C506C /* CMDampedSpringConstraint.h */;
+		name = "CMDampedSpringConstraint.h: 25";
+		rLen = 0;
+		rLoc = 601;
+		rType = 0;
+		vrLen = 1477;
+		vrLoc = 0;
+	};
+	A190707E13008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA412DCE403003C506C /* CMDampedRotarySpringConstraint.h */;
+		name = "CMDampedRotarySpringConstraint.h: 24";
+		rLen = 0;
+		rLoc = 543;
+		rType = 0;
+		vrLen = 1285;
+		vrLoc = 0;
+	};
+	A190707F13008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA312DCE403003C506C /* CMConstraint.m */;
+		name = "CMConstraint.m: 29";
+		rLen = 228;
+		rLoc = 697;
+		rType = 0;
+		vrLen = 1532;
+		vrLoc = 0;
+	};
+	A190708013008E3500FFF013 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'CMConstraint' may not respond to '-setMaxBiasCoef:'";
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 654;
+		rType = 1;
+	};
+	A190708113008E3500FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 332";
+		rLen = 0;
+		rLoc = 15129;
+		rType = 0;
+		vrLen = 3351;
+		vrLoc = 13255;
+	};
+	A190708213008E3500FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			bodies,
+			3,
+			shapes,
+			0,
+			vertices,
+			2,
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A190708713008F0A00FFF013 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'constraint' undeclared (first use in this function)";
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 640;
+		rType = 1;
+	};
+	A190708813008F0A00FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 641";
+		rLen = 0;
+		rLoc = 28962;
+		rType = 0;
+		vrLen = 3186;
+		vrLoc = 26128;
+	};
+	A190708913008F0A00FFF013 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			bodies,
+			3,
+			shapes,
+			0,
+			vertices,
+			2,
+		);
+		name = "/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/Demo.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	A190708C13008F7D00FFF013 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A19070361300567200FFF013 /* CMLoader.m */;
+		name = "CMLoader.m: 332";
+		rLen = 0;
+		rLoc = 15129;
+		rType = 0;
+		vrLen = 3365;
+		vrLoc = 13673;
+	};
+	A190708D13008F7D00FFF013 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = A1906EAF12FF119800FFF013 /* Demo.plist */;
 		fallbackIsa = PBXBookmark;
@@ -4851,9 +5130,9 @@
 	};
 	A1C70AA312DCE403003C506C /* CMConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 1458}}";
-			sepNavSelRange = "{1585, 0}";
-			sepNavVisRange = "{3, 1146}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1415}}";
+			sepNavSelRange = "{697, 228}";
+			sepNavVisRange = "{0, 1532}";
 		};
 	};
 	A1C70AA412DCE403003C506C /* CMDampedRotarySpringConstraint.h */ = {
@@ -4872,7 +5151,7 @@
 	};
 	A1C70AA612DCE403003C506C /* CMDampedSpringConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1556, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{601, 0}";
 			sepNavVisRange = "{0, 1477}";
 		};
@@ -4914,7 +5193,7 @@
 	};
 	A1C70AAC12DCE403003C506C /* CMPinJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{1193, 0}";
 			sepNavVisRange = "{0, 1425}";
 		};
@@ -4928,7 +5207,7 @@
 	};
 	A1C70AAE12DCE403003C506C /* CMPivotJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{565, 0}";
 			sepNavVisRange = "{0, 1388}";
 		};
@@ -4942,7 +5221,7 @@
 	};
 	A1C70AB012DCE403003C506C /* CMRatchetJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{531, 0}";
 			sepNavVisRange = "{0, 1193}";
 		};
@@ -4956,7 +5235,7 @@
 	};
 	A1C70AB212DCE403003C506C /* CMRotaryLimitConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{506, 0}";
 			sepNavVisRange = "{0, 1076}";
 		};
@@ -4970,7 +5249,7 @@
 	};
 	A1C70AB412DCE403003C506C /* CMSimpleMotorConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{528, 0}";
 			sepNavVisRange = "{0, 1037}";
 		};
@@ -4984,7 +5263,7 @@
 	};
 	A1C70AB612DCE403003C506C /* CMSlideJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 773}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
 			sepNavSelRange = "{557, 0}";
 			sepNavVisRange = "{0, 1287}";
 		};

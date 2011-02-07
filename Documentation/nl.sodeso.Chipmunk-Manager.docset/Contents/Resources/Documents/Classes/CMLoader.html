@@ -33,6 +33,15 @@
 				
 				
 				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>The <a href="CMLoader.html">CMLoader</a> class can be used to load complete definitions of bodies and shapes with
+their constraints into the space. It can be done individual (single body at a time) or
+multimple at the same time.</p>
+
+				</div>
+				
 				
 				
 				
@@ -77,6 +86,12 @@ space.</span>
 	<span class="tooltip">
 		<code><a href="#//api/name/createSegmentShape:shapeConfig:">+ createSegmentShape:shapeConfig:</a></code>
 		<span class="tooltip">Constructs a new segment shape, the definition in the .plist file would look like:</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createPolygonShape:shapeConfig:">+ createPolygonShape:shapeConfig:</a></code>
+		<span class="tooltip">Constructs a new polygon shape, the definition in the .plist file would look like:</span>
 	</span>
 	
 </li><li>
@@ -137,6 +152,13 @@ space.</span>
 	<span class="tooltip">
 		<code><a href="#//api/name/createSlideJointConstraint:constraintConfig:">+ createSlideJointConstraint:constraintConfig:</a></code>
 		<span class="tooltip">Constructs a new slide joint constraint, the definition in the .plist file would look like:</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateConstraintWithGeneralProperties:constraintConfig:">+ updateConstraintWithGeneralProperties:constraintConfig:</a></code>
+		<span class="tooltip">Sets the general properties of a constraint (max<em>force, max</em>bias, bias_coef) which
+are shared among all constraints.</span>
 	</span>
 	
 </li>
@@ -323,6 +345,9 @@ space.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: damped<em>rotary</em>spring<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias_coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restAngle: 1<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stiffness: 1<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;damping: 1<br/></p>
@@ -385,9 +410,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myDampedSpring<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: damped_spring<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: damped<em>spring<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;restAngle: 1<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stiffness: 1<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;damping: 1<br/>
@@ -452,9 +480,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myGearJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: gear_joint<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: gear<em>joint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phase: 1<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ratio: 1<br/></p>
 		
@@ -516,9 +547,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myGrooveJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: groove_joint<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: groove<em>joint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {10,10}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grooveA: {-15,-15}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grooveB: {15,15}<br/></p>
@@ -581,9 +615,13 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myPinJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: pin_joint<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: pin<em>joint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distance: 10 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {15,0}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor2: {-15,0}<br/></p>
 		
@@ -645,9 +683,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myPivotJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: pivot_joint<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: pivot<em>joint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now you need to choose either pivot:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pivot: {10,10}<br/>
@@ -655,6 +696,73 @@ space.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or anchor1, anchor2:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {-15,-15}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor2: {15,15}<br/></p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoader.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/createPolygonShape:shapeConfig:" title="createPolygonShape:shapeConfig:"></a>
+	<h3 class="subsubtitle method-title">createPolygonShape:shapeConfig:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new polygon shape, the definition in the .plist file would look like:</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)createPolygonShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body for which this shape is created.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>shapeConfig</em></dt>
+			<dd>the configuration of the shape.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Constructs a new polygon shape, the definition in the .plist file would look like:</p>
+		
+		<p>Root<br/>
+&nbsp;&nbsp;bodies<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{body properties}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shapes<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: polyShape<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: polygon<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertices:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0: {-2.8,3.1}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1: {8.8,-9.1}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 2: {-3.0-8.9} (optional)<br/></p>
 		
 	</div>
 	
@@ -714,9 +822,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myRatchetJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: ratchet_joint<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: ratchet<em>joint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phase: 5<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ratchet: 5<br/></p>
 		
@@ -844,9 +955,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: myRotaryLimit<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: rotary_limit<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: rotary<em>limit<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min: 30<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max: 50<br/></p>
 		
@@ -975,9 +1089,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: mySimpleMotorJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: simple_motor<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: simple<em>motor<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate: 20<br/></p>
 		
 	</div>
@@ -1038,9 +1155,12 @@ space.</span>
 &nbsp;&nbsp;constraints<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: mySlideJointJoint<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: slide_joint<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: slide<em>joint<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fromBody: myCircleBody<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toBody: myRectBody<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max</em>force: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max<em>bias: 2 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bias</em>coef: 2 (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {-15,15}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor1: {15,15}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min: 30<br/>
@@ -1105,6 +1225,54 @@ space.</p>
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">CMLoader.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/updateConstraintWithGeneralProperties:constraintConfig:" title="updateConstraintWithGeneralProperties:constraintConfig:"></a>
+	<h3 class="subsubtitle method-title">updateConstraintWithGeneralProperties:constraintConfig:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the general properties of a constraint (max<em>force, max</em>bias, bias_coef) which
+are shared among all constraints.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)updateConstraintWithGeneralProperties:(CMConstraint *)<em>cmConstraint</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmConstraint</em></dt>
+			<dd>the constraint.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>constraintConfig</em></dt>
+			<dd>the configuration of the constraint.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoader.m</code><br />
 	</div>				
 	
 	
