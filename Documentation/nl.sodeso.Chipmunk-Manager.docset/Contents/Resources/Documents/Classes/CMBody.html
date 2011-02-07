@@ -36,7 +36,7 @@
 				<div class="section section-overview">
 					<h2 class="subtitle subtitle-overview">Overview</h2>
 					
-<p>The body is used to specify an object. A body consists of one or more shapes and joints that make up
+<p>The body is used to specify an object. A body consists of one or more <a href="#//api/name/shapes">shapes</a> and joints that make up
 the complete object.</p>
 
 				</div>
@@ -56,6 +56,18 @@ the complete object.</p>
 		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
 	</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shapes"> shapes</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/constraints"> constraints</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
+	</span>
+	
 </li>
 					</ul>
 					
@@ -64,14 +76,14 @@ the complete object.</p>
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initStatic">- initStatic</a></code>
-		<span class="tooltip">Constructs a new static <a href="CMBody.html">CMBody</a>.</span>
+		<code><a href="#//api/name/initWithMass:moment:">- initWithMass:moment:</a></code>
+		<span class="tooltip">Constructs a new <a href="CMBody.html">CMBody</a> object with the given mass and moment.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithMass:moment:">- initWithMass:moment:</a></code>
-		<span class="tooltip">Constructs a new <a href="CMBody.html">CMBody</a> object with the given mass and moment.</span>
+		<code><a href="#//api/name/initStatic">- initStatic</a></code>
+		<span class="tooltip">Constructs a new static <a href="CMBody.html">CMBody</a>.</span>
 	</span>
 	
 </li>
@@ -227,13 +239,13 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addRectWithWidth:height:">- addRectWithWidth:height:</a></code>
+		<code><a href="#//api/name/addRectangleWithWidth:height:">- addRectangleWithWidth:height:</a></code>
 		<span class="tooltip">Create a new Rectangulair shape associated with this body.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/addRectWithWidth:height:offset:">- addRectWithWidth:height:offset:</a></code>
+		<code><a href="#//api/name/addRectangleWithWidth:height:offset:">- addRectangleWithWidth:height:offset:</a></code>
 		<span class="tooltip">Create a new Rectangulair shape associated with this body.</span>
 	</span>
 	
@@ -247,6 +259,14 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	<span class="tooltip">
 		<code><a href="#//api/name/addPolyWithPoints:offset:vertices:">- addPolyWithPoints:offset:vertices:</a></code>
 		<span class="tooltip">Create a new Polygon shape associated with this body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPolyWithPoints:">- addPolyWithPoints:</a></code>
+		<span class="tooltip">Constructs a new poly shape with the specified vertices. The
+NSArray must be filled with string with the following formatting:
+{x,y} (including the brackets)</span>
 	</span>
 	
 </li><li>
@@ -836,6 +856,55 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 </div>
 					
 					<div class="section-method">
+	<a name="//api/name/addPolyWithPoints:" title="addPolyWithPoints:"></a>
+	<h3 class="subsubtitle method-title">addPolyWithPoints:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Constructs a new poly shape with the specified vertices. The
+NSArray must be filled with string with the following formatting:
+{x,y} (including the brackets)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMPolyShape *)addPolyWithPoints:(NSArray *)<em>vertices</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>vertices</em></dt>
+			<dd>an array containing the vertices.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The polygon shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/addPolyWithPoints:offset:vertices:" title="addPolyWithPoints:offset:vertices:"></a>
 	<h3 class="subsubtitle method-title">addPolyWithPoints:offset:vertices:</h3>
 	
@@ -1008,8 +1077,8 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/addRectWithWidth:height:" title="addRectWithWidth:height:"></a>
-	<h3 class="subsubtitle method-title">addRectWithWidth:height:</h3>
+	<a name="//api/name/addRectangleWithWidth:height:" title="addRectangleWithWidth:height:"></a>
+	<h3 class="subsubtitle method-title">addRectangleWithWidth:height:</h3>
 	
 	
 	
@@ -1018,7 +1087,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (CMRectShape *)addRectWithWidth:(float)<em>width</em> height:(float)<em>height</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (CMRectShape *)addRectangleWithWidth:(float)<em>width</em> height:(float)<em>height</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1060,8 +1129,8 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/addRectWithWidth:height:offset:" title="addRectWithWidth:height:offset:"></a>
-	<h3 class="subsubtitle method-title">addRectWithWidth:height:offset:</h3>
+	<a name="//api/name/addRectangleWithWidth:height:offset:" title="addRectangleWithWidth:height:offset:"></a>
+	<h3 class="subsubtitle method-title">addRectangleWithWidth:height:offset:</h3>
 	
 	
 	
@@ -1070,7 +1139,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (CMRectShape *)addRectWithWidth:(float)<em>width</em> height:(float)<em>height</em> offset:(cpVect)<em>offset</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (CMRectShape *)addRectangleWithWidth:(float)<em>width</em> height:(float)<em>height</em> offset:(cpVect)<em>offset</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1594,7 +1663,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 		
 		<p>Constructs a new static <a href="CMBody.html">CMBody</a>.</p>
 		
-		<p>Static shapes should NOT be added to the space.</p>
+		<p>Static <a href="#//api/name/shapes">shapes</a> should NOT be added to the space.</p>
 		
 	</div>
 	
@@ -2326,6 +2395,38 @@ The moment is like the rotational mass of a body.</dd>
 					<h2 class="subtitle subtitle-methods">Properties</h2>
 					
 					<div class="section-method">
+	<a name="//api/name/constraints" title="constraints"></a>
+	<h3 class="subsubtitle method-title">constraints</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSMutableArray *constraints</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/cpBody" title="cpBody"></a>
 	<h3 class="subsubtitle method-title">cpBody</h3>
 	
@@ -2337,6 +2438,38 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) cpBody *cpBody</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/shapes" title="shapes"></a>
+	<h3 class="subsubtitle method-title">shapes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSMutableArray *shapes</code></div>
 	
 	
 	
@@ -2370,7 +2503,7 @@ The moment is like the rotational mass of a body.</dd>
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-06)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

@@ -189,8 +189,8 @@
 	return shape;
 }
 
-- (CMPolyShape*) addPolyWithPoints:(NSArray*)points {
-	CMPolyShape *shape = [[[CMPolyShape alloc] initWithBody:self points:points] autorelease];
+- (CMPolyShape*) addPolyWithPoints:(NSArray*)vertices {
+	CMPolyShape *shape = [[[CMPolyShape alloc] initWithBody:self vertices:vertices] autorelease];
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
 	

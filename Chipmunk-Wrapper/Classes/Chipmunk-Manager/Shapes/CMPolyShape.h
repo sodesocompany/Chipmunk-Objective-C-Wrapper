@@ -26,7 +26,15 @@
 /// @name Initialization
 ///---------------------------------------------------------------------------------------
 
-- (id) initWithBody:(CMBody *)cmBody points:(NSArray*)points;
+/**
+ * Constructs a new poly shape with the specified vertices. The
+ * NSArray must be filled with string with the following formatting:
+ * {x,y} (including the brackets)
+ *
+ * @param cmBody the body to wich this shape is associated.
+ * @param vertices an array containing the vertices.
+ */
+- (id) initWithBody:(CMBody *)cmBody vertices:(NSArray*)vertices;
 
 /**
  * Constructs a new poly shape with the specified vertices.

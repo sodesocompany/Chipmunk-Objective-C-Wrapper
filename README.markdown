@@ -13,7 +13,7 @@ Current head release:
 6 February 2010:
 
 - Added the CMLoader class which allows you to load a complete space configuration from a .plist file.
-This is till work in progress..
+Check out the documentation and the sample Demo.plist for usage.
 
 - Added appledoc documentation (read below on how to use it)
 - General: Added a lot of documentation again

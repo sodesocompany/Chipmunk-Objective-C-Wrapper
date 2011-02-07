@@ -293,8 +293,16 @@
  */
 - (CMPolyShape*) addPolyWithPoints:(int)numberOfVertices offset:(cpVect)offset vertices:(cpVect)vertices, ...;
 
-- (CMPolyShape*) addPolyWithPoints:(NSArray*)points;
-
+/**
+ * Constructs a new poly shape with the specified vertices. The
+ * NSArray must be filled with string with the following formatting:
+ * {x,y} (including the brackets)
+ *
+ * @param vertices an array containing the vertices.
+ *
+ * @return The polygon shape.
+ */
+- (CMPolyShape*) addPolyWithPoints:(NSArray*)vertices;
 
 /**
  * Create a new Segment shape associated with this body.
