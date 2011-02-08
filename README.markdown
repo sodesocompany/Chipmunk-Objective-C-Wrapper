@@ -10,6 +10,12 @@ Version details:
 
 Current head release:
 
+8 February 2010:
+
+CMArbiter: Added the method: - (BOOL)isFirstContact;
+
+This method indicates if the collision is the first contact, can be used in the pre-solve and post-solve phase of the collision.
+
 6 February 2010:
 
 - Added the CMLoader class which allows you to load a complete space configuration from a .plist file.
