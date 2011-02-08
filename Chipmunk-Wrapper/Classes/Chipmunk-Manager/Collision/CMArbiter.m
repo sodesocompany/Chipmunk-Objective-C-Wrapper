@@ -56,6 +56,10 @@
 	return (BOOL)mArbiter->swappedColl;
 }
 
+- (BOOL)isFirstContact {
+	return cpArbiterIsFirstContact(mArbiter);
+}
+
 /**
  * Default dealloc method.
  */
