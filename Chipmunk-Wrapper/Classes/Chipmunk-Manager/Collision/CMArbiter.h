@@ -30,6 +30,8 @@
  * Creates a new arbiter based on the chipmunk arbiter.
  *
  * @param arbiter the Chipmunk arbiter.
+ *
+ * @return the arbiter instance.
  */
 - (id)initWithCpArbiter:(cpArbiter*)arbiter;
 
@@ -39,11 +41,15 @@
 
 /**
  * Returns the first shape.
+ *
+ * @return the first shape.
  */
 - (CMShape*)shapeA;
 
 /**
  * Returns the second shape.
+ *
+ * @return the second shape.
  */
 - (CMShape*)shapeB;
 
@@ -63,12 +69,23 @@
 
 /**
  * Returns the number of contacts that occured in this collision.
+ *
+ * @return the number of contacts.
  */
 - (int)numberOfContacts;
 
 /**
  * Flag indicating if the shapes (shapeA and shapeB) are swapped.
+ *
+ * @return YES when the shapes are swapped, otherwise NO.
  */
 - (BOOL)areShapesSwapped;
+
+/**
+ * Returns YES if this is the first step that the shapes touched. 
+ *
+ * This method can only be used in the pre-solve and post-solve phase of a collision.
+ */
+- (BOOL)isFirstContact;
 
 @end
