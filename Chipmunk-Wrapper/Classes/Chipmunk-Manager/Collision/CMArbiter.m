@@ -43,7 +43,24 @@
 - (int)numberOfContacts {
 	return mArbiter->numContacts;
 }
+/*
+- (CMContactPointSet*)getContactPoints {
+	CMContactPointSet *cmContactPointSet = [[[CMContactPointSet alloc] init] autorelease];
 
+	cpContactPointSet contactPointSet= cpArbiterGetContactPointSet(arbiter);
+	for (int index = 0; index < contactPointSet.count; index++) {
+
+		CMContactPoint *cmContactPoint = [[[CMContactPoint alloc] init] autorelease];
+		[cmContactPoint setPoint:contactPointSet.points[index].point]; // cpvect
+		[cmContactPoint setNormal:contactPointSet.points[index].normal]; // cpvect
+		[cmContactPoint setDistance:contactPointSet.points[index].distance];
+
+		[cmContactPointSet addObject:cmContactPoint];
+	}
+
+	return cmContactPointSet;
+}
+*/
 - (void)setElasticity:(float)elasticity {
 	mArbiter->e = elasticity;
 }
