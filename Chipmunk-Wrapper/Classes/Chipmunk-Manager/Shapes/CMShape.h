@@ -95,6 +95,13 @@
 - (void)setLayer:(cpLayers)layer;
 
 /**
+ *  A boolean value if this shape is a sensor or not. Sensors only call collision callbacks, and never generate real collisions.
+ *
+ * @param isSensor YES if this shape is a sensor.
+ */
+- (void)setSensor:(BOOL)isSensor;
+
+/**
  * Associates an object with this shape, it is not used by Chipmunk but can be used
  * to create a binding between an Sparrow object and a cpShape.
  *
