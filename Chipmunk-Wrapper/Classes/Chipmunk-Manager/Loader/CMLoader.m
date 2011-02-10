@@ -1,23 +1,23 @@
-//
-//  CMLoader.m
-//  ChipmunkWrapper
-//
-//  Created by Ronald Mathies on 2/6/11.
-//  Copyright 2011 Sodeso. All rights reserved.
-//
+	//
+	//  CMLoader.m
+	//  ChipmunkWrapper
+	//
+	//  Created by Ronald Mathies on 2/6/11.
+	//  Copyright 2011 Sodeso. All rights reserved.
+	//
 
 #import "CMLoader.h"
 
-// --- Static variables ----------------------------------------------------------------------------
+	// --- Static variables ----------------------------------------------------------------------------
 
-// --- Static inline methods -----------------------------------------------------------------------
+	// --- Static inline methods -----------------------------------------------------------------------
 
 static inline cpVect CPVectFromString(NSString *position) {
 	CGPoint point = CGPointFromString(position);
 	return cpv(point.x, point.y);
 }
 
-// --- private interface ---------------------------------------------------------------------------
+	// --- private interface ---------------------------------------------------------------------------
 
 @interface CMLoader ()
 
@@ -32,10 +32,11 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mass: 5<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;moment: 0<br/>
  *
+ * @param listerer listener that recieves events about bodies and shapes.
  * @param cmSpace the space for which this body is created.
  * @param bodyConfig the configuration of the shape.
  */
-+ (void) createBody:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig;
++ (void) createBody:(id)listener cmSpace:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig;
 
 /**
  * Constructs a new circle shape, the definition in the .plist file would look like:
@@ -369,15 +370,19 @@ static inline cpVect CPVectFromString(NSString *position) {
 
 @implementation CMLoader
 
-+ (void) loadFromConfiguration:(CMSpace *)cmSpace configuration:(NSString *)configuration {
++ (void)loadFromConfiguration:(id)listener cmSpace:(CMSpace*)cmSpace configuration:(NSString *)configuration {
+	if (![listener conformsToProtocol:@protocol(CMLoaderListenerProtocol)]  ) {
+		[NSException raise:NSInternalInconsistencyException format:@"The listener doesn't confirm o the LoaderListenerProtocol.", NSStringFromSelector(_cmd)];
+	}
+	
 	NSString *pathToConfig = [[NSBundle mainBundle] pathForResource:configuration ofType:@"plist"];
 	NSDictionary *spaceConfig = [NSDictionary dictionaryWithContentsOfFile:pathToConfig];
 	
 	NSArray *bodies = [spaceConfig valueForKey:@"bodies"];
 	for (NSDictionary *bodyConfig in bodies) {
-		[self createBody:cmSpace bodyConfig:bodyConfig];
+		[self createBody:listener cmSpace:cmSpace bodyConfig:bodyConfig];
 	};
-
+	
 	
 	NSArray *constraints = [spaceConfig valueForKey:@"constraints"];
 	for (NSDictionary *constraintConfig in constraints) {
@@ -409,18 +414,36 @@ static inline cpVect CPVectFromString(NSString *position) {
 		}
 		
 		[self updateConstraintWithGeneralProperties:cmConstraint constraintConfig:constraintConfig];
+		
+		if ([listener respondsToSelector:@selector(constraintBeforeAddToSpace:)]) {
+			[listener constraintBeforeAddToSpace:cmConstraint];
+		}
+		
 		[cmConstraint addToSpace];
+		
+		if ([listener respondsToSelector:@selector(constraintAfterAddToSpace:)]) {
+			[listener constraintAfterAddToSpace:cmConstraint];
+		}
 	};
 }
 
-+ (void) createBody:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig {
++ (void) createBody:(id)listener cmSpace:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig {
 	NSNumber *mass = [bodyConfig valueForKey:@"mass"];
 	NSNumber *moment = [bodyConfig valueForKey:@"moment"];
 	
 	CMBody *cmBody = [cmSpace addBodyWithMass:[mass floatValue] moment:[moment floatValue]];
 	[cmBody setName:[bodyConfig valueForKey:@"name"]];
 	[cmBody setPositionUsingVect:CPVectFromString([bodyConfig valueForKey:@"position"])];
+	
+	if ([listener respondsToSelector:@selector(bodyBeforeAddToSpace:)]) {
+		[listener bodyBeforeAddToSpace:cmBody];
+	}
+	
 	[cmBody addToSpace];
+	
+	if ([listener respondsToSelector:@selector(bodyAfterAddToSpace:)]) {
+		[listener bodyAfterAddToSpace:cmBody];
+	}
 	
 	NSArray *shapes = [bodyConfig valueForKey:@"shapes"];
 	for (NSDictionary *shapeConfig in shapes) {
@@ -440,7 +463,16 @@ static inline cpVect CPVectFromString(NSString *position) {
 		}
 		
 		[cmShape setName:[shapeConfig valueForKey:@"name"]];
+		
+		if ([listener respondsToSelector:@selector(shapeBeforeAddToSpace:)]) {
+			[listener shapeBeforeAddToSpace:cmShape];
+		}
+		
 		[cmShape addToSpace];
+		
+		if ([listener respondsToSelector:@selector(shapeAfterAddToSpace:)]) {
+			[listener shapeAfterAddToSpace:cmShape];
+		}
 	}
 }
 
@@ -460,14 +492,14 @@ static inline cpVect CPVectFromString(NSString *position) {
 + (CMShape*) createRectangleShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
 	NSNumber *width = [shapeConfig valueForKey:@"width"];
 	NSNumber *height = [shapeConfig valueForKey:@"height"];
-
+	
 	NSString *offset = [shapeConfig valueForKey:@"offset"];
 	if (offset != nil) {
 		return [cmBody addRectangleWithWidth:[width floatValue] height:[height floatValue] offset:CPVectFromString(offset)];
 	} else {
 		return [cmBody addRectangleWithWidth:[width floatValue] height:[height floatValue]];
 	}
-
+	
 }
 
 
@@ -475,7 +507,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *radius = [shapeConfig valueForKey:@"radius"];
 	cpVect from = CPVectFromString([shapeConfig valueForKey:@"from"]);
 	cpVect to = CPVectFromString([shapeConfig valueForKey:@"to"]);
-
+	
 	return [cmBody addSegmentFrom:from to:to radius:[radius floatValue]];
 }
 
@@ -519,10 +551,10 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *restLength = [constraintConfig valueForKey:@"restLength"];
 	NSNumber *stiffness = [constraintConfig valueForKey:@"stiffness"];
 	NSNumber *damping = [constraintConfig valueForKey:@"damping"];
-
+	
 	cpVect anchor1 = CPVectFromString([constraintConfig valueForKey:@"anchor1"]);
 	cpVect anchor2 = CPVectFromString([constraintConfig valueForKey:@"anchor2"]);
-
+	
 	return [from addDampedSpringConstraintWithBody:to anchor1:anchor1 anchor2:anchor2 restLength:[restLength floatValue] stiffness:[stiffness floatValue] damping:[damping floatValue]];	
 }
 

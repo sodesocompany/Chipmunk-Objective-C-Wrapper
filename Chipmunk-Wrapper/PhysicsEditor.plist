@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bodies</key>
+	<dict>
+		<key>square</key>
+		<dict>
+			<key>anchorpoint</key>
+			<string>0.50000,0.50000</string>
+			<key>mass</key>
+			<real>2</real>
+			<key>moment</key>
+			<real>0</real>
+			<key>fixtures</key>
+			<array>
+				<dict>
+					<key>polygons</key>
+					<array>
+						<array>
+							<string>{ -25.00000,25.00000 }</string>
+							<string>{ 25.00000,25.00000 }</string>
+							<string>{ 25.00000,-25.00000 }</string>
+							<string>{ -25.00000,-25.00000 }</string>
+						</array>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

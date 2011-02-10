@@ -10,6 +10,30 @@ Version details:
 
 Current head release:
 
+
+10 Februari 2010:
+
+- Added the CMPhysicsEditorLoader
+
+Just like the CMLoader this is also a loader. The difference is that this loader can load files that have
+been created using the PhysicsEditor (http://www.physicseditor.de/). This product is still in beta and
+support for it is not yet completed but i am working with the author to get it all working. (.plist files
+will still change). So don't use it yet.
+
+- Added the CMLoaderListenerProtocol
+
+This is a callback mechanism for when objects have been loaded from .plist files. All methods are optional
+and you can choose which callbacks you want to recieve. There are two different methods per type (body, shape, constraint).
+One method is called before the object is added to the space and the other for when the object has been added to the space.
+
+This can be used for example to attach Sparrow objects to a body so that the position and angle will be updated when
+using the step function of chipmunk.
+
+- CMShape: added the - (void)setSensor:(BOOL)isSensor; method to mark a shape as being a sensor.
+- CMLoader: added the ability the load polygons from a .plist file.
+- Added a new demo: PhysicsEditorDemo (not stable, still working on this with the author of PhysicsEditor)
+- Added a new demo: LoaderDemo
+
 8 February 2010:
 
 CMArbiter: Added the method: - (BOOL)isFirstContact;

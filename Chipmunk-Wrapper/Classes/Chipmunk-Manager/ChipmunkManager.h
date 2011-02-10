@@ -15,7 +15,9 @@
 
 #import "chipmunk.h"
 
+#import "CMLoaderListenerProtocol.h"
 #import "CMLoader.h"
+#import "CMPhysicsEditorLoader.h"
 
 #import "CMData.h"
 #import "CMObject.h"

@@ -1,12 +1,12 @@
 //
-//  DampedRotaryConstraintDemo.m
+//  PhysicsEditorDemo.m
 //  Chipmunk
 //
 //  Created by Ronald Mathies on 12/27/10.
 //  Copyright 2010 Sodeso. All rights reserved.
 //
 
-#import "ConfigurationDemo.h"
+#import "PhysicsEditorDemo.h"
 
 // --- Static variables ----------------------------------------------------------------------------
 
@@ -14,7 +14,7 @@
 
 // --- private interface ---------------------------------------------------------------------------
 
-@interface ConfigurationDemo ()
+@interface PhysicsEditorDemo ()
 
 - (void)initializeChipmunkObjects;
 
@@ -22,10 +22,14 @@
 
 // --- Class implementation ------------------------------------------------------------------------
 
-@implementation ConfigurationDemo
+@implementation PhysicsEditorDemo
 
 - (void) initializeChipmunkObjects {
-	[CMLoader loadFromConfiguration:mSpace configuration:@"Demo"];
+	[CMPhysicsEditorLoader loadFromConfiguration:self cmSpace:mSpace configuration:@"PhysicsEditor"];
+}
+
+- (void)bodyBeforeAddToSpace:(CMBody*)cmBody {
+	[cmBody setPositionUsingVect:cpv(160,240)];
 }
 
 @end

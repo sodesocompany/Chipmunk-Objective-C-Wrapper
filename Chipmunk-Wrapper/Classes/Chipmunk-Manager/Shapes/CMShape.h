@@ -95,7 +95,8 @@
 - (void)setLayer:(cpLayers)layer;
 
 /**
- *  A boolean value if this shape is a sensor or not. Sensors only call collision callbacks, and never generate real collisions.
+ * A boolean value if this shape is a sensor or not. Sensors only 
+ * call collision callbacks, and never generate real collisions.
  *
  * @param isSensor YES if this shape is a sensor.
  */

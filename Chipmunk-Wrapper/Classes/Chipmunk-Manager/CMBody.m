@@ -195,7 +195,6 @@
 	[mShapes addObject:shape];
 	
 	return shape;
-	
 }
 
 - (CMSegmentShape*) addSegmentFrom:(cpVect)from to:(cpVect)to radius:(float)radius {

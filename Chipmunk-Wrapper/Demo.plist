@@ -91,9 +91,10 @@
 					<string>polygon</string>
 					<key>vertices</key>
 					<array>
-						<string>{-2.8,3.1}</string>
-						<string>{8.8,-9.1}</string>
-						<string>{-3.0,-8.9}</string>
+						<string>{ -25.00000,25.00000 }</string>
+						<string>{ 25.00000,25.00000 }</string>
+						<string>{ 25.00000,-25.00000 }</string>
+						<string>{ -25.00000,-25.00000 }</string>
 					</array>
 				</dict>
 			</array>

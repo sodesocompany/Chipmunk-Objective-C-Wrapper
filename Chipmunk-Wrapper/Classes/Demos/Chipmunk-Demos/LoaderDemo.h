@@ -1,5 +1,5 @@
 //
-//  ConfigurationDemo.h
+//  LoaderDemo.h
 //  Chipmunk
 //
 //  Created by Ronald Mathies on 12/27/10.
@@ -14,7 +14,7 @@
 
 // --- Interface ---------------------------------------------------------------------------------------
 
-@interface ConfigurationDemo : BaseDemo {
+@interface LoaderDemo : BaseDemo <CMLoaderListenerProtocol> {
 
 }
 

@@ -11,16 +11,17 @@
 @class CMSpace;
 
 /**
- * The CMLoader class can be used to load complete definitions of bodies and shapes with
- * their constraints into the space. It can be done individual (single body at a time) or
- * multimple at the same time.
+ * The CMPhysicsEditorLoader class can be used to load complete definitions of bodies and shapes
+ * from a .plist file that has been created using the PhysicsEditor application.
+ *
+ * http://www.physicseditor.de/
  */
-@interface CMLoader : NSObject {
+@interface CMPhysicsEditorLoader : NSObject {
 	
 }
 
 /**
- * Loads the configuration from the specified .plist and add's it to the
+ * Loads the configuration from the specified .plist and add it to the
  * space.
  *
  * @param listerer listener that recieves events about bodies and shapes.
