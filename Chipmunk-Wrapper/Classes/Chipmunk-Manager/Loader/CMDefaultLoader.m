@@ -1,25 +1,25 @@
-	//
-	//  CMLoader.m
-	//  ChipmunkWrapper
-	//
-	//  Created by Ronald Mathies on 2/6/11.
-	//  Copyright 2011 Sodeso. All rights reserved.
-	//
+//
+//  CMDefaultLoader.m
+//  ChipmunkWrapper
+//
+//  Created by Ronald Mathies on 2/6/11.
+//  Copyright 2011 Sodeso. All rights reserved.
+//
 
-#import "CMLoader.h"
+#import "CMDefaultLoader.h"
 
-	// --- Static variables ----------------------------------------------------------------------------
+// --- Static variables ----------------------------------------------------------------------------
 
-	// --- Static inline methods -----------------------------------------------------------------------
+// --- Static inline methods -----------------------------------------------------------------------
 
 static inline cpVect CPVectFromString(NSString *position) {
 	CGPoint point = CGPointFromString(position);
 	return cpv(point.x, point.y);
 }
 
-	// --- private interface ---------------------------------------------------------------------------
+// --- private interface ---------------------------------------------------------------------------
 
-@interface CMLoader ()
+@interface CMDefaultLoader ()
 
 /**
  * Constructs a new body, the definition in the .plist file would look like:
@@ -368,7 +368,9 @@ static inline cpVect CPVectFromString(NSString *position) {
 
 @end
 
-@implementation CMLoader
+// --- Class implementation ------------------------------------------------------------------------
+
+@implementation CMDefaultLoader
 
 + (void)loadFromConfiguration:(id)listener cmSpace:(CMSpace*)cmSpace configuration:(NSString *)configuration {
 	if (![listener conformsToProtocol:@protocol(CMLoaderListenerProtocol)]  ) {

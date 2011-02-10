@@ -1,12 +1,12 @@
 //
-//  LoaderDemo.m
-//  Chipmunk
+//  CMContactPoint.m
+//  ChipmunkWrapper
 //
-//  Created by Ronald Mathies on 12/27/10.
-//  Copyright 2010 Sodeso. All rights reserved.
+//  Created by Ronald Mathies on 2/10/11.
+//  Copyright 2011 Sodeso. All rights reserved.
 //
 
-#import "LoaderDemo.h"
+#import "CMContactPoint.h"
 
 // --- Static variables ----------------------------------------------------------------------------
 
@@ -14,18 +14,16 @@
 
 // --- private interface ---------------------------------------------------------------------------
 
-@interface LoaderDemo ()
-
-- (void)initializeChipmunkObjects;
+@interface CMContactPoint ()
 
 @end
 
 // --- Class implementation ------------------------------------------------------------------------
 
-@implementation LoaderDemo
+@implementation CMContactPoint
 
-- (void) initializeChipmunkObjects {
-	[CMLoader loadFromConfiguration:self cmSpace:mSpace configuration:@"Demo"];
-}
+@synthesize point = mPoint;
+@synthesize normal = mNormal;
+@synthesize distance = mDistance;
 
 @end

@@ -11,7 +11,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		A112805612FED21B00696CFE /* LoaderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A112805512FED21B00696CFE /* LoaderDemo.m */; };
+		A112805612FED21B00696CFE /* DefaultLoaderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A112805512FED21B00696CFE /* DefaultLoaderDemo.m */; };
 		A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A124299412F94D7D00318730 /* NewtonsCradleDemo.m */; };
 		A1242C2E12FB1D9D00318730 /* BlocksDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1242C2D12FB1D9D00318730 /* BlocksDemo.m */; };
 		A1242D0612FB537300318730 /* ManyBlocksDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1242D0412FB537300318730 /* ManyBlocksDemo.m */; };
@@ -31,7 +31,7 @@
 		A178467F12EF651E00EE1713 /* CMArbiter.m in Sources */ = {isa = PBXBuildFile; fileRef = A178467E12EF651E00EE1713 /* CMArbiter.m */; };
 		A17846FA12F0810A00EE1713 /* TheoJansenDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A17846F812F0810A00EE1713 /* TheoJansenDemo.m */; };
 		A1906EB012FF119800FFF013 /* Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1906EAF12FF119800FFF013 /* Demo.plist */; };
-		A19070371300567200FFF013 /* CMLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A19070361300567200FFF013 /* CMLoader.m */; };
+		A19070371300567200FFF013 /* CMDefaultLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A19070361300567200FFF013 /* CMDefaultLoader.m */; };
 		A19EA7C812EA1D080073D2A1 /* DampedRotarySpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */; };
 		A19EA7C912EA1D080073D2A1 /* DampedSpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B612EA1D070073D2A1 /* DampedSpringConstraintDemo.m */; };
 		A19EA7CA12EA1D080073D2A1 /* GearJointConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B812EA1D070073D2A1 /* GearJointConstraintDemo.m */; };
@@ -74,6 +74,9 @@
 		A1C70AD812DCE403003C506C /* CMShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C70AC412DCE403003C506C /* CMShape.m */; };
 		A1C70ADC12DCE430003C506C /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C70ADA12DCE430003C506C /* left.png */; };
 		A1C70ADD12DCE430003C506C /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C70ADB12DCE430003C506C /* right.png */; };
+		A1CF124C13045225005CB7AE /* CMContactPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF124B13045225005CB7AE /* CMContactPoint.m */; };
+		A1CF127A130457D9005CB7AE /* CMExplosionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF1279130457D9005CB7AE /* CMExplosionEffect.m */; };
+		A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */; };
 		A1F9B6F812DCE56F0087394D /* CMCollisionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */; };
 		A1F9B72A12DCE5B30087394D /* SPDebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B72912DCE5B30087394D /* SPDebugDraw.m */; };
 /* End PBXBuildFile section */
@@ -110,8 +113,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ChipmunkWrapper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkWrapper_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ChipmunkWrapper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ChipmunkWrapper-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		A112805412FED21B00696CFE /* LoaderDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoaderDemo.h; sourceTree = "<group>"; };
-		A112805512FED21B00696CFE /* LoaderDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoaderDemo.m; sourceTree = "<group>"; };
+		A112805412FED21B00696CFE /* DefaultLoaderDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultLoaderDemo.h; sourceTree = "<group>"; };
+		A112805512FED21B00696CFE /* DefaultLoaderDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultLoaderDemo.m; sourceTree = "<group>"; };
 		A124299312F94D7D00318730 /* NewtonsCradleDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewtonsCradleDemo.h; sourceTree = "<group>"; };
 		A124299412F94D7D00318730 /* NewtonsCradleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewtonsCradleDemo.m; sourceTree = "<group>"; };
 		A1242C2C12FB1D9D00318730 /* BlocksDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlocksDemo.h; sourceTree = "<group>"; };
@@ -143,8 +146,8 @@
 		A17846F812F0810A00EE1713 /* TheoJansenDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheoJansenDemo.m; sourceTree = "<group>"; };
 		A17846F912F0810A00EE1713 /* TheoJansenDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheoJansenDemo.h; sourceTree = "<group>"; };
 		A1906EAF12FF119800FFF013 /* Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demo.plist; sourceTree = "<group>"; };
-		A19070351300567200FFF013 /* CMLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoader.h; sourceTree = "<group>"; };
-		A19070361300567200FFF013 /* CMLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLoader.m; sourceTree = "<group>"; };
+		A19070351300567200FFF013 /* CMDefaultLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDefaultLoader.h; sourceTree = "<group>"; };
+		A19070361300567200FFF013 /* CMDefaultLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDefaultLoader.m; sourceTree = "<group>"; };
 		A19EA7B312EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DampedRotarySpringConstraintDemo.h; sourceTree = "<group>"; };
 		A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DampedRotarySpringConstraintDemo.m; sourceTree = "<group>"; };
 		A19EA7B512EA1D070073D2A1 /* DampedSpringConstraintDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DampedSpringConstraintDemo.h; sourceTree = "<group>"; };
@@ -256,6 +259,12 @@
 		A1C70AC412DCE403003C506C /* CMShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMShape.m; sourceTree = "<group>"; };
 		A1C70ADA12DCE430003C506C /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		A1C70ADB12DCE430003C506C /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		A1CF124A13045225005CB7AE /* CMContactPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMContactPoint.h; sourceTree = "<group>"; };
+		A1CF124B13045225005CB7AE /* CMContactPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMContactPoint.m; sourceTree = "<group>"; };
+		A1CF1278130457D9005CB7AE /* CMExplosionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMExplosionEffect.h; sourceTree = "<group>"; };
+		A1CF1279130457D9005CB7AE /* CMExplosionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExplosionEffect.m; sourceTree = "<group>"; };
+		A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionEffectDemo.m; sourceTree = "<group>"; };
+		A1CF12AA130470FA005CB7AE /* ExplosionEffectDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplosionEffectDemo.h; sourceTree = "<group>"; };
 		A1F9B6F612DCE56F0087394D /* CMCollisionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCollisionHandler.h; sourceTree = "<group>"; };
 		A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCollisionHandler.m; sourceTree = "<group>"; };
 		A1F9B72812DCE5B30087394D /* SPDebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDebugDraw.h; sourceTree = "<group>"; };
@@ -369,8 +378,8 @@
 			children = (
 				A1A2E80C13032567004E2A34 /* CMPhysicsEditorLoader.h */,
 				A1A2E80D13032567004E2A34 /* CMPhysicsEditorLoader.m */,
-				A19070351300567200FFF013 /* CMLoader.h */,
-				A19070361300567200FFF013 /* CMLoader.m */,
+				A19070351300567200FFF013 /* CMDefaultLoader.h */,
+				A19070361300567200FFF013 /* CMDefaultLoader.m */,
 				A1A2E890130341F1004E2A34 /* CMLoaderListenerProtocol.h */,
 			);
 			path = Loader;
@@ -379,10 +388,12 @@
 		A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A1CF12AA130470FA005CB7AE /* ExplosionEffectDemo.h */,
+				A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */,
 				A1A2E81613032A7D004E2A34 /* PhysicsEditorDemo.h */,
 				A1A2E81513032A7D004E2A34 /* PhysicsEditorDemo.m */,
-				A112805412FED21B00696CFE /* LoaderDemo.h */,
-				A112805512FED21B00696CFE /* LoaderDemo.m */,
+				A112805412FED21B00696CFE /* DefaultLoaderDemo.h */,
+				A112805512FED21B00696CFE /* DefaultLoaderDemo.m */,
 				A17846F912F0810A00EE1713 /* TheoJansenDemo.h */,
 				A17846F812F0810A00EE1713 /* TheoJansenDemo.m */,
 				A19EA7D512EA1D380073D2A1 /* SlideJointConstraintDemo.h */,
@@ -481,6 +492,7 @@
 		A1C70A9712DCE403003C506C /* Chipmunk-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A1CF1277130457D9005CB7AE /* Effects */,
 				A19070341300567200FFF013 /* Loader */,
 				A1C70A9E12DCE403003C506C /* Collision */,
 				A1C70AA112DCE403003C506C /* Constraints */,
@@ -510,6 +522,8 @@
 				A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */,
 				A178467D12EF651E00EE1713 /* CMArbiter.h */,
 				A178467E12EF651E00EE1713 /* CMArbiter.m */,
+				A1CF124A13045225005CB7AE /* CMContactPoint.h */,
+				A1CF124B13045225005CB7AE /* CMContactPoint.m */,
 			);
 			path = Collision;
 			sourceTree = "<group>";
@@ -579,6 +593,15 @@
 				A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */,
 			);
 			path = Demos;
+			sourceTree = "<group>";
+		};
+		A1CF1277130457D9005CB7AE /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				A1CF1278130457D9005CB7AE /* CMExplosionEffect.h */,
+				A1CF1279130457D9005CB7AE /* CMExplosionEffect.m */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 		A1F9B72712DCE5B30087394D /* Sparrow */ = {
@@ -733,10 +756,13 @@
 				A124299512F94D7D00318730 /* NewtonsCradleDemo.m in Sources */,
 				A1242C2E12FB1D9D00318730 /* BlocksDemo.m in Sources */,
 				A1242D0612FB537300318730 /* ManyBlocksDemo.m in Sources */,
-				A112805612FED21B00696CFE /* LoaderDemo.m in Sources */,
-				A19070371300567200FFF013 /* CMLoader.m in Sources */,
+				A112805612FED21B00696CFE /* DefaultLoaderDemo.m in Sources */,
+				A19070371300567200FFF013 /* CMDefaultLoader.m in Sources */,
 				A1A2E80E13032567004E2A34 /* CMPhysicsEditorLoader.m in Sources */,
 				A1A2E81713032A7D004E2A34 /* PhysicsEditorDemo.m in Sources */,
+				A1CF124C13045225005CB7AE /* CMContactPoint.m in Sources */,
+				A1CF127A130457D9005CB7AE /* CMExplosionEffect.m in Sources */,
+				A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

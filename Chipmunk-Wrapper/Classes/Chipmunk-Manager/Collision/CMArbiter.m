@@ -41,26 +41,27 @@
 }
 
 - (int)numberOfContacts {
+	// Same as cpArbiterGetCount(mArbiter);
 	return mArbiter->numContacts;
 }
-/*
-- (CMContactPointSet*)getContactPoints {
-	CMContactPointSet *cmContactPointSet = [[[CMContactPointSet alloc] init] autorelease];
 
-	cpContactPointSet contactPointSet= cpArbiterGetContactPointSet(arbiter);
+- (NSArray*)contactPoints {
+	cpContactPointSet contactPointSet= cpArbiterGetContactPointSet(mArbiter);
+	
+	NSMutableArray *contactPoints = [NSMutableArray arrayWithCapacity:contactPointSet.count];
 	for (int index = 0; index < contactPointSet.count; index++) {
-
+		
 		CMContactPoint *cmContactPoint = [[[CMContactPoint alloc] init] autorelease];
-		[cmContactPoint setPoint:contactPointSet.points[index].point]; // cpvect
-		[cmContactPoint setNormal:contactPointSet.points[index].normal]; // cpvect
-		[cmContactPoint setDistance:contactPointSet.points[index].distance];
+		[cmContactPoint setPoint:contactPointSet.points[index].point];
+		[cmContactPoint setNormal:contactPointSet.points[index].normal];
+		[cmContactPoint setDistance:contactPointSet.points[index].dist];
 
-		[cmContactPointSet addObject:cmContactPoint];
+		[contactPoints addObject:cmContactPoint];
 	}
 
-	return cmContactPointSet;
+	return contactPoints;
 }
-*/
+
 - (void)setElasticity:(float)elasticity {
 	mArbiter->e = elasticity;
 }

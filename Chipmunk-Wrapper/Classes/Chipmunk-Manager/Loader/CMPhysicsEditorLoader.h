@@ -1,10 +1,10 @@
-	//
-	//  CMLoader.h
-	//  ChipmunkWrapper
-	//
-	//  Created by Ronald Mathies on 2/6/11.
-	//  Copyright 2011 Sodeso. All rights reserved.
-	//
+//
+//  CMLoader.h
+//  ChipmunkWrapper
+//
+//  Created by Ronald Mathies on 2/6/11.
+//  Copyright 2011 Sodeso. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
@@ -19,6 +19,10 @@
 @interface CMPhysicsEditorLoader : NSObject {
 	
 }
+
+///---------------------------------------------------------------------------------------
+/// @name Operations
+///---------------------------------------------------------------------------------------
 
 /**
  * Loads the configuration from the specified .plist and add it to the

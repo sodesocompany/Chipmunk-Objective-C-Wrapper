@@ -1,29 +1,30 @@
-	//
-	//  CMPhysicsEditorLoader.m
-	//  ChipmunkWrapper
-	//
-	//  Created by Ronald Mathies on 2/6/11.
-	//  Copyright 2011 Sodeso. All rights reserved.
-	//
+//
+//  CMPhysicsEditorLoader.m
+//  ChipmunkWrapper
+//
+//  Created by Ronald Mathies on 2/6/11.
+//  Copyright 2011 Sodeso. All rights reserved.
+//
 
 #import "CMPhysicsEditorLoader.h"
 
-	// --- Static variables ----------------------------------------------------------------------------
+// --- Static variables ----------------------------------------------------------------------------
 
-	// --- Static inline methods -----------------------------------------------------------------------
+// --- Static inline methods -----------------------------------------------------------------------
 
 static inline cpVect CPVectFromString(NSString *position) {
 	CGPoint point = CGPointFromString(position);
 	return cpv(point.x, point.y);
 }
 
-	// --- private interface ---------------------------------------------------------------------------
+// --- private interface ---------------------------------------------------------------------------
 
 @interface CMPhysicsEditorLoader ()
 
 /**
  * Constructs a new body.
  *
+ * @param listerer listener that recieves events about bodies and shapes.
  * @param cmSpace the space for which this body is created.
  * @param bodyConfig the configuration of the shape.
  * @param name the name of the body.
@@ -31,6 +32,8 @@ static inline cpVect CPVectFromString(NSString *position) {
 + (void) createBody:(id)listener cmSpace:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig name:(NSString*)name;
 
 @end
+
+// --- Class implementation ------------------------------------------------------------------------
 
 @implementation CMPhysicsEditorLoader
 

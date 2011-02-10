@@ -70,7 +70,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 20;
+			selected = 21;
 		}
 	
 		[self switchDemo];
@@ -82,7 +82,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 21) {
+		if (selected == 22) {
 			selected = 0;
 		}
 	
@@ -175,12 +175,16 @@
 			demo = [[ManyBlocksDemo alloc] init];
 			break;
 		case 19:
-			[textField setText:@"Loader Demo"];
-			demo = [[LoaderDemo alloc] init];
+			[textField setText:@"Default Loader Demo"];
+			demo = [[DefaultLoaderDemo alloc] init];
 			break;
 		case 20:
 			[textField setText:@"PhysicsEditor Demo"];
 			demo = [[PhysicsEditorDemo alloc] init];
+			break;
+		case 21:
+			[textField setText:@"Explosion Effect Demo"];
+			demo = [[ExplosionEffectDemo alloc] init];
 			break;
 	}
 	

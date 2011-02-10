@@ -1,10 +1,10 @@
-	//
-	//  CMLoader.h
-	//  ChipmunkWrapper
-	//
-	//  Created by Ronald Mathies on 2/6/11.
-	//  Copyright 2011 Sodeso. All rights reserved.
-	//
+//
+//  CMDefaultLoader.h
+//  ChipmunkWrapper
+//
+//  Created by Ronald Mathies on 2/6/11.
+//  Copyright 2011 Sodeso. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
@@ -15,9 +15,13 @@
  * their constraints into the space. It can be done individual (single body at a time) or
  * multimple at the same time.
  */
-@interface CMLoader : NSObject {
+@interface CMDefaultLoader : NSObject {
 	
 }
+
+///---------------------------------------------------------------------------------------
+/// @name Operations
+///---------------------------------------------------------------------------------------
 
 /**
  * Loads the configuration from the specified .plist and add's it to the

@@ -13,6 +13,38 @@ Current head release:
 
 10 Februari 2010:
 
+- Added: CMExplosionEffect
+
+This is really cool, using the CMExplosionEffect you can simulate an ... explotion..
+It is very easy to use, you only need to specify where, how big, what radius and optionally a
+layer and a group:
+
+[CMExplosionEffect perform:mSpace position:[spPoint toCpVect] radius:150 force:800];
+
+See the demo for some cool effects.
+
+- Changed CMTypes:
+
+#define CP_GROUP_TYPE unsigned int
+#define CP_LAYERS_TYPE unsigned int
+
+It is better to have them as an unsigned int since it is more powerfull then.
+Check out the documentation over at:
+
+  http://files.slembcke.net/chipmunk/release/ChipmunkLatest-Docs/
+  And then especially the section "Filtering Collisions".
+
+- Renamed CMLoader to CMDefaultLoader
+
+Makes it clear that this is the default loader variant that is directly supported
+and doesn't receive sudden changes.
+
+- Renamed LoaderDemo to DefaultLoaderDemo
+
+- CMArbiter: Added the method: - (NSArray*)contactPoints;
+
+Returns all the contact points that occured during this collision.
+
 - Added the CMPhysicsEditorLoader
 
 Just like the CMLoader this is also a loader. The difference is that this loader can load files that have

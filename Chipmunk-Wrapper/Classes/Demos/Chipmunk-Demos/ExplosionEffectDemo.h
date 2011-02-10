@@ -1,5 +1,5 @@
 //
-//  CarDemo.h
+//  ExplossionEffectDemo.h
 //  Chipmunk
 //
 //  Created by Ronald Mathies on 12/27/10.
@@ -12,11 +12,9 @@
 
 // --- Types ---------------------------------------------------------------------------------------
 
-#define CAR_GROUP_TYPE 100
-
 // --- Interface ---------------------------------------------------------------------------------------
 
-@interface CarDemo : BaseDemo {
+@interface ExplosionEffectDemo : BaseDemo {
 
 }
 

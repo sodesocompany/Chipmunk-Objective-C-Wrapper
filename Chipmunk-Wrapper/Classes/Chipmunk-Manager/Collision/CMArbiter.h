@@ -75,6 +75,14 @@
 - (int)numberOfContacts;
 
 /**
+ * Retourns an array containing CMContactPoint objects that 
+ * describe all the contact points.
+ *
+ * @return all the contact points.
+ */
+- (NSArray*)contactPoints;
+
+/**
  * Flag indicating if the shapes (shapeA and shapeB) are swapped.
  *
  * @return YES when the shapes are swapped, otherwise NO.

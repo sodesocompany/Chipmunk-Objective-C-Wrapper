@@ -28,8 +28,9 @@
 #include "NewtonsCradleDemo.h"
 #include "BlocksDemo.h"
 #include "ManyBlocksDemo.h"
-#include "LoaderDemo.h"
+#include "DefaultLoaderDemo.h"
 #include "PhysicsEditorDemo.h"
+#include "ExplosionEffectDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

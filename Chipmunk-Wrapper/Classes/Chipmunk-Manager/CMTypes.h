@@ -13,7 +13,8 @@ typedef enum {
 	CMCollisionSeparate
 } CollisionMoment;
 
-#define CP_GROUP_TYPE id
+#define CP_GROUP_TYPE unsigned int
+#define CP_LAYERS_TYPE unsigned int
 #define CP_COLLISION_TYPE_TYPE id
 #define CP_DATA_POINTER_TYPE id
 
