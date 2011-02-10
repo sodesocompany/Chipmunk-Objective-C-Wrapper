@@ -50,6 +50,9 @@
 	mCpShape->layers = layer;
 }
 
+- (void)setSensor:(BOOL)isSensor {
+	mCpShape->sensor = isSensor;
+}
 #pragma mark -
 
 #pragma mark Data
