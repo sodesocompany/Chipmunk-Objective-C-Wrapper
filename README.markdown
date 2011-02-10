@@ -23,6 +23,10 @@ layer and a group:
 
 See the demo for some cool effects.
 
+- Changed CMArbiter: added the method: - (NSArray*)contactPoints;
+
+This will return all the contact points (an array of CMContactPoint objects) at the moment of colission.
+
 - Changed CMTypes:
 
 #define CP_GROUP_TYPE unsigned int
