@@ -77,6 +77,8 @@
 		A1CF124C13045225005CB7AE /* CMContactPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF124B13045225005CB7AE /* CMContactPoint.m */; };
 		A1CF127A130457D9005CB7AE /* CMExplosionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF1279130457D9005CB7AE /* CMExplosionEffect.m */; };
 		A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */; };
+		A1CF13D813058FE7005CB7AE /* BuoyancyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */; };
+		A1CF14F01305B322005CB7AE /* CMInvocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */; };
 		A1F9B6F812DCE56F0087394D /* CMCollisionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */; };
 		A1F9B72A12DCE5B30087394D /* SPDebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B72912DCE5B30087394D /* SPDebugDraw.m */; };
 /* End PBXBuildFile section */
@@ -265,6 +267,10 @@
 		A1CF1279130457D9005CB7AE /* CMExplosionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMExplosionEffect.m; sourceTree = "<group>"; };
 		A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionEffectDemo.m; sourceTree = "<group>"; };
 		A1CF12AA130470FA005CB7AE /* ExplosionEffectDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplosionEffectDemo.h; sourceTree = "<group>"; };
+		A1CF13D613058FE7005CB7AE /* BuoyancyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuoyancyDemo.h; sourceTree = "<group>"; };
+		A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuoyancyDemo.m; sourceTree = "<group>"; };
+		A1CF14EE1305B322005CB7AE /* CMInvocationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInvocationUtils.h; sourceTree = "<group>"; };
+		A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMInvocationUtils.m; sourceTree = "<group>"; };
 		A1F9B6F612DCE56F0087394D /* CMCollisionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCollisionHandler.h; sourceTree = "<group>"; };
 		A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCollisionHandler.m; sourceTree = "<group>"; };
 		A1F9B72812DCE5B30087394D /* SPDebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDebugDraw.h; sourceTree = "<group>"; };
@@ -388,6 +394,8 @@
 		A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A1CF13D613058FE7005CB7AE /* BuoyancyDemo.h */,
+				A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */,
 				A1CF12AA130470FA005CB7AE /* ExplosionEffectDemo.h */,
 				A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */,
 				A1A2E81613032A7D004E2A34 /* PhysicsEditorDemo.h */,
@@ -492,6 +500,7 @@
 		A1C70A9712DCE403003C506C /* Chipmunk-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A1CF14ED1305B322005CB7AE /* Utils */,
 				A1CF1277130457D9005CB7AE /* Effects */,
 				A19070341300567200FFF013 /* Loader */,
 				A1C70A9E12DCE403003C506C /* Collision */,
@@ -602,6 +611,15 @@
 				A1CF1279130457D9005CB7AE /* CMExplosionEffect.m */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		A1CF14ED1305B322005CB7AE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A1CF14EE1305B322005CB7AE /* CMInvocationUtils.h */,
+				A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A1F9B72712DCE5B30087394D /* Sparrow */ = {
@@ -763,6 +781,8 @@
 				A1CF124C13045225005CB7AE /* CMContactPoint.m in Sources */,
 				A1CF127A130457D9005CB7AE /* CMExplosionEffect.m in Sources */,
 				A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */,
+				A1CF13D813058FE7005CB7AE /* BuoyancyDemo.m in Sources */,
+				A1CF14F01305B322005CB7AE /* CMInvocationUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

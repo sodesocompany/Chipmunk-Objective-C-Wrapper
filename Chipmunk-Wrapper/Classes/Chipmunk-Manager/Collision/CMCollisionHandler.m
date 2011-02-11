@@ -1,32 +1,24 @@
-//
-//  CMCollisionHandler.m
-//  Chipmunk
-//
-//  Created by Ronald Mathies on 1/7/11.
-//  Copyright 2011 Sodeso. All rights reserved.
-//
+	//
+	//  CMCollisionHandler.m
+	//  Chipmunk
+	//
+	//  Created by Ronald Mathies on 1/7/11.
+	//  Copyright 2011 Sodeso. All rights reserved.
+	//
 
 #import "CMCollisionHandler.h"
 
-// --- Static variables ----------------------------------------------------------------------------
+	// --- Static variables ----------------------------------------------------------------------------
 
-// --- Static inline methods -----------------------------------------------------------------------
+	// --- Static inline methods -----------------------------------------------------------------------
 
-// --- private interface ---------------------------------------------------------------------------
+	// --- private interface ---------------------------------------------------------------------------
 
 @interface CMCollisionHandler ()
 
-/**
- * Constructs a new invocation method.
- *
- * @param target the target to be invoked.
- * @param selector the selector to be invoked.
- */
-- (NSInvocation*)constructInvocation:(id)target selector:(SEL)selector;
-
 @end
 
-// --- Class implementation ------------------------------------------------------------------------
+	// --- Class implementation ------------------------------------------------------------------------
 
 @implementation CMCollisionHandler
 
@@ -56,34 +48,20 @@
 }
 
 - (void)setInvocationBegin:(id)target selector:(SEL)selector {
-	NSInvocation *invocation = [self constructInvocation:target selector:selector];
+	NSInvocation *invocation = [CMInvocationUtils constructInvocation:target selector:selector];
 	[self setInvocationBegin:invocation];
 }
 
 - (void)setInvocationPreSolve:(id)target selector:(SEL)selector {
-	[self setInvocationPreSolve:[self constructInvocation:target selector:selector]];
+	[self setInvocationPreSolve:[CMInvocationUtils constructInvocation:target selector:selector]];
 }
 
 - (void)setInvocationPostSolve:(id)target selector:(SEL)selector {
-	[self setInvocationPostSolve:[self constructInvocation:target selector:selector]];
+	[self setInvocationPostSolve:[CMInvocationUtils constructInvocation:target selector:selector]];
 }
 
 - (void)setInvocationSeparate:(id)target selector:(SEL)selector {
-	[self setInvocationSeparate:[self constructInvocation:target selector:selector]];
-}
-
-- (NSInvocation*)constructInvocation:(id)target selector:(SEL)selector {
-	if (target != nil && selector != nil) {
-		NSMethodSignature * sig = [[target class] instanceMethodSignatureForSelector:selector];
-		NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:sig];
-	
-		[invocation setTarget:target];
-		[invocation setSelector:selector];
-	
-		return invocation;
-	} else {
-		return nil;
-	}
+	[self setInvocationSeparate:[CMInvocationUtils constructInvocation:target selector:selector]];
 }
 
 /**

@@ -15,6 +15,9 @@
 
 #import "chipmunk.h"
 
+// Utilities
+#import "CMInvocationUtils.h"
+
 // Loaders
 #import "CMLoaderListenerProtocol.h"
 #import "CMDefaultLoader.h"

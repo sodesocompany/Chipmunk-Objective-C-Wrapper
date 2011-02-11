@@ -12,6 +12,40 @@
 
 // --- Static inline methods -----------------------------------------------------------------------
 
+static void velocity_function(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt) {
+	CMData *cmData = (CMData*)body->data;
+	CMBody *cmBody = (CMBody*)[cmData object];
+	
+	NSInvocation *invocation = [cmBody velocityFunction];
+	
+	@try {
+		[invocation setArgument:&cmBody atIndex:2];
+		[invocation setArgument:&gravity atIndex:3];
+		[invocation setArgument:&damping atIndex:4];
+		[invocation setArgument:&dt atIndex:5];
+	} @catch (NSException *e) {
+			// No biggie, continue!
+	}
+	
+	[invocation invoke];
+}
+
+static void position_function(cpBody *body, cpFloat dt) {
+	CMData *cmData = (CMData*)body->data;
+	CMBody *cmBody = (CMBody*)[cmData object];
+	
+	NSInvocation *invocation = [cmBody velocityFunction];
+	
+	@try {
+		[invocation setArgument:&cmBody atIndex:2];
+		[invocation setArgument:&dt atIndex:3];
+	} @catch (NSException *e) {
+			// No biggie, continue!
+	}
+	
+	[invocation invoke];
+}
+
 // --- private interface ---------------------------------------------------------------------------
 
 @interface CMBody ()
@@ -25,12 +59,14 @@
 @synthesize cpBody = mCpBody;
 @synthesize shapes = mShapes;
 @synthesize constraints = mConstraints;
+@synthesize velocityFunction = mVelocityFunction;
+@synthesize positionFunction = mPositionFunction;
 
 - (id) initWithMass:(float)mass moment:(float)moment {
 	if (self = [super init]) {
 		mCpBody = cpBodyNew(mass, moment);
 		mCpBody->data =[[CMData createWithObject:self] retain];
-
+		
 		mShapes = [[NSMutableArray alloc] init];
 		mConstraints = [[NSMutableArray alloc] init];
 	}
@@ -61,6 +97,24 @@
 
 - (void) setVelocity:(cpVect)velocity {
 	cpBodySetVel(mCpBody, velocity);
+}
+
+- (void) setVelocityFunction:(id)target selector:(SEL)selector {
+	if (mVelocityFunction != nil) {
+		[mVelocityFunction release];
+	}
+	
+	mVelocityFunction = [[CMInvocationUtils constructInvocation:target selector:selector] retain];
+	mCpBody->velocity_func = velocity_function;
+}
+
+- (void) setPositionFunction:(id)target selector:(SEL)selector {
+	if (mPositionFunction != nil) {
+		[mPositionFunction release];
+	}
+	
+	mPositionFunction = [[CMInvocationUtils constructInvocation:target selector:selector] retain];	
+	mCpBody->position_func = position_function;
 }
 
 - (void) setForce:(cpVect)force {
@@ -173,7 +227,7 @@
 	[shape setSpace:mSpace];
 	[mShapes addObject:shape];
 	va_end(args);
-
+	
 	return shape;
 }
 
@@ -301,7 +355,7 @@
 	CMSlideJointConstraint *constraint = [[[CMSlideJointConstraint alloc] initBetweenBody:self andBody:cmBody anchor1:anchor1 anchor2:anchor2 min:min max:max] autorelease];
 	[constraint setSpace:mSpace];
 	[mConstraints addObject:constraint];
-
+	
 	return constraint;
 }
 
@@ -311,12 +365,20 @@
  * Default dealloc method.
  */
 - (void) dealloc {
+	if (mVelocityFunction != nil) {
+		[mVelocityFunction release];
+	}
+	
+	if (mPositionFunction != nil) {
+		[mPositionFunction release];
+	}
+	
 	[mConstraints release];
 	[mShapes release];
 	
 	CMData *cmData = mCpBody->data;
 	[cmData release];
-
+	
 	mCpBody->data = NULL;
 	
 	if (!cpBodyIsStatic(mCpBody)) {

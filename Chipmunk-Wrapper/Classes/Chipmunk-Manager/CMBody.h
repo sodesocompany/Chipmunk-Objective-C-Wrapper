@@ -33,12 +33,15 @@
  * the complete object.
  */
 @interface CMBody : CMObject {
-
+	
 @private	
 	cpBody *mCpBody;
 	
 	NSMutableArray *mShapes;
 	NSMutableArray *mConstraints;
+	
+	NSInvocation *mVelocityFunction;
+	NSInvocation *mPositionFunction;
 }
 
 /**
@@ -47,6 +50,8 @@
 @property (nonatomic, readonly) cpBody *cpBody;
 @property (nonatomic, readonly) NSMutableArray *shapes;
 @property (nonatomic, readonly) NSMutableArray *constraints;
+@property (nonatomic, readonly) NSInvocation *velocityFunction;
+@property (nonatomic, readonly) NSInvocation *positionFunction;
 
 ///---------------------------------------------------------------------------------------
 /// @name Initialization
@@ -98,6 +103,34 @@
  * @param velocity Velocity of the body.
  */
 - (void) setVelocity:(cpVect)velocity;
+
+/**
+ * Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+ * applying simply gravity. Its unlikely that youll need to override the position integration function, and if you do you should
+ * carefully study how the default function (cpBodyUpdatePosition()) works.
+ *
+ * The selector should have the following signature:
+ *
+ * - (void)velocityFunction:(CMBody*)cmBody gravity:(cpVect)gravity damping:(float)damping dt:(float)dt;
+ *
+ * @param target the target object that contains the select. 
+ * @param selector the selector to invoke.
+ */
+- (void) setVelocityFunction:(id)target selector:(SEL)selector;
+
+/**
+ * Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+ * applying simply gravity. Its unlikely that youll need to override the position integration function, and if you do you should
+ * carefully study how the default function (cpBodyUpdatePosition()) works.
+ *
+ * The selector should have the following signature:
+ *
+ * 
+ * - (void)positionFunction:(CMBody*)cmBody dt:(float)dt;
+ * @param target the target object that contains the select. 
+ * @param selector the selector to invoke.
+ */
+- (void) setPositionFunction:(id)target selector:(SEL)selector;
 
 /**
  * Sets the force.
@@ -182,7 +215,9 @@
 #pragma mark Operations
 
 /**
- * Apply an impulse to this body at a relative offset from the center of gravity. Both the impulse and the offset are in world coordinates. offset is relative to the position of the body, but not the rotation.
+ * Apply an impulse to this body at a relative offset from the center of gravity. Both the 
+ * impulse and the offset are in world coordinates. offset is relative to the position of 
+ * the body, but not the rotation.
  *
  * @param impulse the impulse relative to the center of gravity.
  * @param offset the offset relative to the body.
@@ -190,7 +225,8 @@
 - (void) applyImpulse:(cpVect)impulse offset:(cpVect)offset;
 
 /**
- * Apply (accumulate) the force on the body at a relative offset (important!) from the center of gravity. Both the force and offset are in world coordinates.
+ * Apply (accumulate) the force on the body at a relative offset (important!) from the center
+ * of gravity. Both the force and offset are in world coordinates.
  *
  * @param force the force
  * @param offset the offset
@@ -342,44 +378,44 @@
 - (CMPinJointConstraint*) addPinJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2;
 
 /**
-  * Constructs a new damped rotary constraint.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param restAngle The angular offset the spring attempts to keep between the two bodies. 
-  * @param stiffness The young's modulus of the spring.  (http://en.wikipedia.org/wiki/Young%27s_modulus)
-  * @param damping The amount of viscous damping to apply. 
-  */
+ * Constructs a new damped rotary constraint.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param restAngle The angular offset the spring attempts to keep between the two bodies. 
+ * @param stiffness The young's modulus of the spring.  (http://en.wikipedia.org/wiki/Young%27s_modulus)
+ * @param damping The amount of viscous damping to apply. 
+ */
 - (CMDampedRotarySpringConstraint*) addDampedRotaryConstraintWithBody:(CMBody*)cmBody restAngle:(float)restAngle stiffness:(float)stiffness damping:(float)damping;
 
 /**
-  * Constructs a new damped spring.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param anchor1 The anchor point on the first body. 
-  * @param anchor2 The anchor point on the second body. 
-  * @param restLength The length the spring wants to contract or expand to. 
-  * @param stiffness The young's modulus of the spring.  (http://en.wikipedia.org/wiki/Young%27s_modulus)
-  * @param damping The amount of viscous damping to apply. 
-  */
+ * Constructs a new damped spring.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param anchor1 The anchor point on the first body. 
+ * @param anchor2 The anchor point on the second body. 
+ * @param restLength The length the spring wants to contract or expand to. 
+ * @param stiffness The young's modulus of the spring.  (http://en.wikipedia.org/wiki/Young%27s_modulus)
+ * @param damping The amount of viscous damping to apply. 
+ */
 - (CMDampedSpringConstraint*) addDampedSpringConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 restLength:(float)restLength stiffness:(float)stiffness damping:(float)damping;
 
 /**
-  * Constructs a new gear joint constraint.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param phase The angular offset of the ratchet positions in radians. 
-  * @param ratio The angle in radians of each ratchet position. Negative values cause the ratchet to operate in the opposite direction. 
-  */
+ * Constructs a new gear joint constraint.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param phase The angular offset of the ratchet positions in radians. 
+ * @param ratio The angle in radians of each ratchet position. Negative values cause the ratchet to operate in the opposite direction. 
+ */
 - (CMGearJointConstraint*) addGearJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratio:(float)ratio;
 
 /**
-  * Constructs a new groove joint constraint.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param grooveA The start of the line segment on the first body. 
-  * @param grooveB The end of the line segment on the second body. 
-  * @param anchor1 The anchor point on the second body that is held to the line segment on the first. 
-  */
+ * Constructs a new groove joint constraint.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param grooveA The start of the line segment on the first body. 
+ * @param grooveB The end of the line segment on the second body. 
+ * @param anchor1 The anchor point on the second body that is held to the line segment on the first. 
+ */
 - (CMGrooveJointConstraint*) addGrooveJointConstraintWithBody:(CMBody*)cmBody grooveA:(cpVect)grooveA grooveB:(cpVect)grooveB anchor1:(cpVect)anchor1;
 
 /**
@@ -392,29 +428,29 @@
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2;
 
 /**
-  * Constructs a new pivot joing using two anchors.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param pivot The pivot coordinate in the world. 
-  */
+ * Constructs a new pivot joing using two anchors.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param pivot The pivot coordinate in the world. 
+ */
 - (CMPivotJointConstraint*) addPivotJointConstraintWithBody:(CMBody*)cmBody pivot:(cpVect)pivot;
 
 /**
-  * Constructs a new pivot joint using a pivot.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param phase The phase.
-  * @param ratchet The ratchet.
-  */
+ * Constructs a new pivot joint using a pivot.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param phase The phase.
+ * @param ratchet The ratchet.
+ */
 - (CMRatchetJointConstraint*) addRatchetJointConstraintWithBody:(CMBody*)cmBody phase:(float)phase ratchet:(float)ratchet;
 
 /**
-  * Constructs a new rotary limit constraint.
-  *
-  * @param cmBody The body which will function as the second body of the constraint.
-  * @param min The minimum angular delta of the joint in radians. 
-  * @param max The maximum angular delta of the joint in radians. 
-  */
+ * Constructs a new rotary limit constraint.
+ *
+ * @param cmBody The body which will function as the second body of the constraint.
+ * @param min The minimum angular delta of the joint in radians. 
+ * @param max The maximum angular delta of the joint in radians. 
+ */
 - (CMRotaryLimitConstraint*) addRotaryLimitConstraintWithBody:(CMBody*)cmBody min:(float)min max:(float)max;
 
 /**

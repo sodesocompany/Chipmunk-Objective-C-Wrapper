@@ -68,7 +68,7 @@ const float horizontalHeight1 = 10;
 	SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
 	if (touch) {
 		SPPoint *spPoint = [touch locationInSpace:self];
-		[CMExplosionEffect perform:mSpace position:[spPoint toCpVect] radius:150 force:800 layer:CP_ALL_LAYERS group:CP_NO_GROUP];
+		[CMExplosionEffect perform:mSpace position:[spPoint toCpVect] radius:150 force:800];
 	}
 }
 @end
