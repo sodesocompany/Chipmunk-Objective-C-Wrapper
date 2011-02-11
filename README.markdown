@@ -10,6 +10,27 @@ Version details:
 
 Current head release:
 
+11 Februari 2010:
+
+- Added CMInvocationUtils class
+
+Simple class which creates a NSInvocation based on a given target and selector.
+
+- CMBody added the method:
+
+- (void) setVelocityFunction:(id)target selector:(SEL)selector;
+
+The selector has the following signature:
+
+- (void)velocityFunction:(CMBody*)cmBody gravity:(cpVect)gravity damping:(float)damping dt:(float)dt;
+
+- CMBody added the method:
+
+- (void) setVelocityFunction:(id)target selector:(SEL)selector;
+
+The selector has the following signature:
+
+- (void)positionFunction:(CMBody*)cmBody dt:(float)dt;
 
 10 Februari 2010:
 
