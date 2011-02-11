@@ -70,7 +70,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 21;
+			selected = 22;
 		}
 	
 		[self switchDemo];
@@ -82,7 +82,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 22) {
+		if (selected == 23) {
 			selected = 0;
 		}
 	
@@ -185,6 +185,10 @@
 		case 21:
 			[textField setText:@"Explosion Effect Demo"];
 			demo = [[ExplosionEffectDemo alloc] init];
+			break;
+		case 22:
+			[textField setText:@"Buoyancy Demo"];
+			demo = [[BuoyancyDemo alloc] init];
 			break;
 	}
 	

@@ -31,6 +31,7 @@
 #include "DefaultLoaderDemo.h"
 #include "PhysicsEditorDemo.h"
 #include "ExplosionEffectDemo.h"
+#include "BuoyancyDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 
