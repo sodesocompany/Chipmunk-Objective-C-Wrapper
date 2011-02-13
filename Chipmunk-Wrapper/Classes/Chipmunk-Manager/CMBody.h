@@ -234,6 +234,26 @@
 - (void) applyForce:(cpVect)force offset:(cpVect)offset;
 
 /**
+ * Default rigid body velocity integration function. Updates the velocity of 
+ * the body using Euler integration.
+ *
+ * @param gravity the gravidy
+ * @param damping the damping
+ * @param dt dt
+ */
+- (void) updateVelocity:(cpVect)gravity damping:(float)damping dt:(float)dt;
+
+/**
+ * Default rigid body position integration function. Updates the position of the body using 
+ * Euler integration. Unlike the velocity function, it’s unlikely you’ll want to override 
+ * this function. If you do, make sure you understand it’s source code as it’s an 
+ * important part of the collision/joint correction process.
+ *
+ * @param dt dt
+ */
+- (void) updatePosition:(float)dt;
+
+/**
  * Zero both the forces and torques accumulated on body.
  */
 - (void) resetForces;

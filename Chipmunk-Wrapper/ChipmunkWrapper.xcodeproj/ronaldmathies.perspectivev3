@@ -290,14 +290,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>41</integer>
+									<integer>49</integer>
+									<integer>47</integer>
 									<integer>39</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 636}, {368, 1311}}</string>
+							<string>{{0, 162}, {368, 1311}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -314,7 +315,7 @@
 							<real>368</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>352 -157 2019 1370 0 0 2560 1418 </string>
+						<string>341 -21 2019 1370 0 0 2560 1418 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -332,7 +333,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>A135121511985E0F007C9395</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BaseDemo.m</string>
+								<string>BuoyancyDemo.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -340,11 +341,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A135121611985E0F007C9395</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BaseDemo.m</string>
+										<string>BuoyancyDemo.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A1CF158B1305E977005CB7AE</string>
+										<string>A1CF1620130825CF005CB7AE</string>
 										<key>history</key>
 										<array>
 											<string>A12CC0D612CA8D42003D1970</string>
@@ -433,7 +434,6 @@
 											<string>A112801512FECAEF00696CFE</string>
 											<string>A112802712FECC2A00696CFE</string>
 											<string>A112803E12FED0C900696CFE</string>
-											<string>A112804C12FED20500696CFE</string>
 											<string>A112805F12FED2E900696CFE</string>
 											<string>A112814612FEE61900696CFE</string>
 											<string>A112824712FEF2FF00696CFE</string>
@@ -474,8 +474,6 @@
 											<string>A19070EA1301B5FA00FFF013</string>
 											<string>A1A2E8FE13035576004E2A34</string>
 											<string>A1A2E93113035615004E2A34</string>
-											<string>A1CF121113044DB3005CB7AE</string>
-											<string>A1CF122C13044E11005CB7AE</string>
 											<string>A1CF123613044EDE005CB7AE</string>
 											<string>A1CF123813044EDE005CB7AE</string>
 											<string>A1CF1240130451A7005CB7AE</string>
@@ -523,14 +521,17 @@
 											<string>A1CF148A13059CAA005CB7AE</string>
 											<string>A1CF14B713059F8E005CB7AE</string>
 											<string>A1CF14BC1305A019005CB7AE</string>
-											<string>A1CF14F61305E109005CB7AE</string>
-											<string>A1CF14F81305E109005CB7AE</string>
 											<string>A1CF151F1305E5FC005CB7AE</string>
-											<string>A1CF152F1305E6A6005CB7AE</string>
 											<string>A1CF15391305E6ED005CB7AE</string>
-											<string>A1CF15881305E977005CB7AE</string>
 											<string>A1CF15891305E977005CB7AE</string>
-											<string>A1CF158A1305E977005CB7AE</string>
+											<string>A1CF15CB13081AAB005CB7AE</string>
+											<string>A1CF160F130823FA005CB7AE</string>
+											<string>A1CF1610130823FA005CB7AE</string>
+											<string>A1CF16161308252E005CB7AE</string>
+											<string>A1CF16181308252E005CB7AE</string>
+											<string>A1CF161D130825CF005CB7AE</string>
+											<string>A1CF161E130825CF005CB7AE</string>
+											<string>A1CF161F130825CF005CB7AE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -546,7 +547,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1629, 1102}}</string>
 								<key>RubberWindowFrame</key>
-								<string>352 -157 2019 1370 0 0 2560 1418 </string>
+								<string>341 -21 2019 1370 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -571,7 +572,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1629, 195}}</string>
 										<key>RubberWindowFrame</key>
-										<string>352 -157 2019 1370 0 0 2560 1418 </string>
+										<string>341 -21 2019 1370 0 0 2560 1418 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -868,13 +869,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>A1CF15851305E93F005CB7AE</string>
 		<string>A1CF120C13044D9F005CB7AE</string>
 		<string>A1CF120D13044D9F005CB7AE</string>
 		<string>/Users/ronaldmathies/Development/XCode/Chipmunk-Objective-C-Wrapper/Chipmunk-Wrapper/ChipmunkWrapper.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>352 -157 2019 1370 0 0 2560 1418 </string>
+	<string>341 -21 2019 1370 0 0 2560 1418 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

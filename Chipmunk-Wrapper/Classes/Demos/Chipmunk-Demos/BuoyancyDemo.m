@@ -49,7 +49,8 @@
 - (void)velocityFunction:(CMBody*)cmBody gravity:(cpVect)gravity damping:(float)damping dt:(float)dt {
 	cpBody *body = [cmBody cpBody];
 
-	cpBodyResetForces(body);
+	[cmBody resetForces];
+	
 	int numx = 20;
 	int numy = 4;
 	
@@ -66,12 +67,13 @@
 				cpVect v = cpvadd(body->v, cpvmult(cpvperp(r), body->w));
 				cpVect f_damp = cpvmult(v, -0.0003*cpvlength(v));
 				cpVect f = cpvadd(cpv(0, 2.0), f_damp);
-				cpBodyApplyForce(body, f, r);
+				
+				[cmBody applyForce:f offset:r];
 			}
 		}
 	}
-	
-	cpBodyUpdateVelocity(body, gravity, damping, dt);
+
+	[cmBody updateVelocity:gravity damping:damping dt:dt];
 }
 
 @end

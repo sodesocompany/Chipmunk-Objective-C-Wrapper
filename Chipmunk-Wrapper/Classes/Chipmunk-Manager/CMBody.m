@@ -171,6 +171,15 @@ static void position_function(cpBody *body, cpFloat dt) {
 	cpBodyApplyForce(mCpBody, force, offset);
 }
 
+- (void) updateVelocity:(cpVect)gravity damping:(float)damping dt:(float)dt {
+	cpBodyUpdateVelocity(mCpBody, gravity, damping, dt);
+}
+
+- (void) updatePosition:(float)dt {
+	cpBodyUpdatePosition(mCpBody, dt);
+}
+
+
 - (void) resetForces {
 	cpBodyResetForces(mCpBody);
 }

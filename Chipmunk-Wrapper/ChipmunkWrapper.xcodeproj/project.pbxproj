@@ -46,7 +46,6 @@
 		A19EA7FC12EA1FF90073D2A1 /* BaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7FA12EA1FF90073D2A1 /* BaseDemo.m */; };
 		A1A2E80E13032567004E2A34 /* CMPhysicsEditorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A2E80D13032567004E2A34 /* CMPhysicsEditorLoader.m */; };
 		A1A2E81713032A7D004E2A34 /* PhysicsEditorDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A2E81513032A7D004E2A34 /* PhysicsEditorDemo.m */; };
-		A1A2E860130339E1004E2A34 /* PhysicsEditor.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1A2E85F130339E1004E2A34 /* PhysicsEditor.plist */; };
 		A1A78FD512DDCB47006FC41B /* SPPoint+Chipmunk.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A78FD412DDCB47006FC41B /* SPPoint+Chipmunk.m */; };
 		A1A78FD812DDCB51006FC41B /* CMData.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A78FD712DDCB51006FC41B /* CMData.m */; };
 		A1A7926712DDF160006FC41B /* CMObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A7926612DDF160006FC41B /* CMObject.m */; };
@@ -79,6 +78,7 @@
 		A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */; };
 		A1CF13D813058FE7005CB7AE /* BuoyancyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */; };
 		A1CF14F01305B322005CB7AE /* CMInvocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */; };
+		A1CF16011308234C005CB7AE /* PhysicsEditor.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1CF16001308234C005CB7AE /* PhysicsEditor.plist */; };
 		A1F9B6F812DCE56F0087394D /* CMCollisionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */; };
 		A1F9B72A12DCE5B30087394D /* SPDebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B72912DCE5B30087394D /* SPDebugDraw.m */; };
 /* End PBXBuildFile section */
@@ -178,7 +178,6 @@
 		A1A2E80D13032567004E2A34 /* CMPhysicsEditorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPhysicsEditorLoader.m; sourceTree = "<group>"; };
 		A1A2E81513032A7D004E2A34 /* PhysicsEditorDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsEditorDemo.m; sourceTree = "<group>"; };
 		A1A2E81613032A7D004E2A34 /* PhysicsEditorDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsEditorDemo.h; sourceTree = "<group>"; };
-		A1A2E85F130339E1004E2A34 /* PhysicsEditor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhysicsEditor.plist; sourceTree = "<group>"; };
 		A1A2E890130341F1004E2A34 /* CMLoaderListenerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLoaderListenerProtocol.h; sourceTree = "<group>"; };
 		A1A78FD312DDCB47006FC41B /* SPPoint+Chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPPoint+Chipmunk.h"; sourceTree = "<group>"; };
 		A1A78FD412DDCB47006FC41B /* SPPoint+Chipmunk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPPoint+Chipmunk.m"; sourceTree = "<group>"; };
@@ -271,6 +270,7 @@
 		A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuoyancyDemo.m; sourceTree = "<group>"; };
 		A1CF14EE1305B322005CB7AE /* CMInvocationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInvocationUtils.h; sourceTree = "<group>"; };
 		A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMInvocationUtils.m; sourceTree = "<group>"; };
+		A1CF16001308234C005CB7AE /* PhysicsEditor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhysicsEditor.plist; sourceTree = "<group>"; };
 		A1F9B6F612DCE56F0087394D /* CMCollisionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCollisionHandler.h; sourceTree = "<group>"; };
 		A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCollisionHandler.m; sourceTree = "<group>"; };
 		A1F9B72812DCE5B30087394D /* SPDebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDebugDraw.h; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A1A2E85F130339E1004E2A34 /* PhysicsEditor.plist */,
+				A1CF16001308234C005CB7AE /* PhysicsEditor.plist */,
 				A1906EAF12FF119800FFF013 /* Demo.plist */,
 				A1C70AD912DCE430003C506C /* images */,
 				A1351399119868D9007C9395 /* MainWindow.xib */,
@@ -714,7 +714,7 @@
 				A1C70ADD12DCE430003C506C /* right.png in Resources */,
 				A178431112ECCB6800EE1713 /* football.png in Resources */,
 				A1906EB012FF119800FFF013 /* Demo.plist in Resources */,
-				A1A2E860130339E1004E2A34 /* PhysicsEditor.plist in Resources */,
+				A1CF16011308234C005CB7AE /* PhysicsEditor.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

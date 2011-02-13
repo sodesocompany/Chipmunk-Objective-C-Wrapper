@@ -12,6 +12,27 @@ Current head release:
 
 11 Februari 2010:
 
+The PhysicsEditor can now export correct defined polygon shapes, even when they are
+concave / convex. This is a major improvement. There are still some changes that need
+to be made like setting the momentum on bodies and the friction, elasticity on the shapes
+but it's getting there.
+
+- Added a new demo: BuoyancyDemo
+
+Demonstrates the buoyancy of water, it is however somewhat limited that when
+you add a constraint the effects might be strange (for example when you
+drag the block arround in the upper part of the screen).
+
+Without any constraints the blocks behave normal and it all works fine.
+
+- CMBody added the method: - (void) updateVelocity:(cpVect)gravity damping:(float)damping dt:(float)dt;
+- CMBody added the method: - (void) updatePosition:(float)dt;
+
+- Modified the PhysicsEditorDemo to include a nicer polygon demo.
+
+Due to valantines day i couln't resist and join the whole thing with a nicer demo,
+so the demo now includes a heart shaped polygon model.
+
 - Added CMInvocationUtils class
 
 Simple class which creates a NSInvocation based on a given target and selector.
