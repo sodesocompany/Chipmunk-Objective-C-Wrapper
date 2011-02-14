@@ -70,7 +70,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 22;
+			selected = 23;
 		}
 	
 		[self switchDemo];
@@ -82,7 +82,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 23) {
+		if (selected == 24) {
 			selected = 0;
 		}
 	
@@ -189,6 +189,10 @@
 		case 22:
 			[textField setText:@"Buoyancy Demo"];
 			demo = [[BuoyancyDemo alloc] init];
+			break;
+		case 23:
+			[textField setText:@"Sensor Demo"];
+			demo = [[SensorDemo alloc] init];
 			break;
 	}
 	

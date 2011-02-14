@@ -193,6 +193,22 @@
  */
 - (CMBody*)findBody:(NSString*)name;
 
+/**
+ * Add func to be called before cpSpaceStep() returns. obj and data will be passed to your function.
+ * Only the last callback registered for any unique value of obj will be recorded. You can add 
+ * post-step callbacks from outside of other callback functions, but they won’t be called until
+ * cpSpaceStep() is called again.
+ *
+ * A selector should have the following signature:
+ *
+ * - (void)someCallbackAfterStep:(id)data;
+ *
+ * @param target the target object that will recieve the event.
+ * @param selector the selector method that will recieve the event.
+ * @param data the argument that will be passed along.
+ */
+- (void)addPostStepCallback:(id)target selector:(SEL)selector data:(id)data;
+
 ///---------------------------------------------------------------------------------------
 /// @name Collision detection
 ///---------------------------------------------------------------------------------------
@@ -200,14 +216,14 @@
 /**
  * Adds a default collision handler which will respond to all collisions.
  *
- * A selector should have the following arguments:
+ * A selector should have the following signature:
  *
  * - (BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
  *
  * About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
  * by changes the CMTypes.h file.
  *
- * @param target the target object thet will recieve the event.
+ * @param target the target object that will recieve the event.
  * @param begin the selector method that will recieve the begin event.
  * @param preSolve the selector method that will recieve the preSolve event.
  * @param postSolve the selector method that will recieve the postSolve event.
@@ -219,9 +235,12 @@
 /**
  * Adds a default collision handler which will respond to all collisions.
  *
- * A selector should have the following arguments:
+ * A selector should have the following signature:
  *
- * - (BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
+ * - (void) collisionListenerBetweenBallAndSquare:(CMArbiter*)arbiter space:(CMSpace*)space;
+ *
+ * The only selector that expects back a BOOL is the begin selector. So all the other selectors
+ * can be void.
  *
  * About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
  * by changes the CMTypes.h file.

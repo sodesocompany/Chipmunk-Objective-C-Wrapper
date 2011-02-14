@@ -32,6 +32,7 @@
 #include "PhysicsEditorDemo.h"
 #include "ExplosionEffectDemo.h"
 #include "BuoyancyDemo.h"
+#include "SensorDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

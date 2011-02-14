@@ -10,6 +10,14 @@ Version details:
 
 Current head release:
 
+14 Februari 2010:
+
+- Added a new demo: SensorDemo
+- Added the class CMPostCallbackHandler for handling the post step callbacks.
+- CMSpace: Added the method: - (void)addPostStepCallback:(id)target selector:(SEL)selector data:(id)data;
+
+Add a function that will be called after the space / step has completed, you can register multiple callbacks.
+
 11 Februari 2010:
 
 The PhysicsEditor can now export correct defined polygon shapes, even when they are

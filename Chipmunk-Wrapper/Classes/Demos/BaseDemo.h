@@ -48,5 +48,6 @@
 - (void)startDemo;
 - (void)stopDemo;
 
+- (void)step:(SPEnterFrameEvent *)event;
 
 @end

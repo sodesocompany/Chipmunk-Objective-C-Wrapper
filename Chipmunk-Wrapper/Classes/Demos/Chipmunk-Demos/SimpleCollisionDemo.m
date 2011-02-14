@@ -34,6 +34,7 @@
 	[mSpace addDefaultCollisionHandler:self begin:@selector(defaultBegin:space:) preSolve:@selector(defaultPreSolve:space:) postSolve:@selector(defaultPostSolve:space:) separate:@selector(defaultSeparate:space:) ignoreContainmentCollisions:YES];
 	
 	CMBody *body1 = [mSpace addBodyWithMass:2.0f moment:1];
+	[body1 setName:@"body1"];
 	[body1 setPositionUsingVect:pos1];
 	[body1 addToSpace];
 	
@@ -44,6 +45,7 @@
 	[shape1 addToSpace];
 	
 	CMBody *body2 = [mSpace addBodyWithMass:2.0f moment:1];
+	[body2 setName:@"body2"];
 	[body2 setPositionUsingVect:pos2];
 	[body2 addToSpace];	
 	
@@ -54,6 +56,7 @@
 	[shape2 addToSpace];
 
 	CMBody *body3 = [mSpace addBodyWithMass:2.0f moment:1];
+	[body3 setName:@"body3"];
 	[body3 setPositionUsingVect:pos3];
 	[body3 addToSpace];	
 	
@@ -69,6 +72,7 @@
 	NSLog(@"Collision: begin (between %@ and %@)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	[arbiter setElasticity:0.0f];
 	[arbiter setFriction:0.0f];
+
 	return YES;
 }
 
@@ -86,7 +90,5 @@
 	NSLog(@"Collision: separate (between %@ and %@)", [[arbiter shapeA] collisionType], [[arbiter shapeB] collisionType]);
 	return YES;
 }
-
-
 
 @end

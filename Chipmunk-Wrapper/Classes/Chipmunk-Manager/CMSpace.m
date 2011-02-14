@@ -12,6 +12,24 @@
 
 // --- Static inline methods -----------------------------------------------------------------------
 
+static void postStepCallback(cpSpace *space, cpShape *shape, void *data) {
+	CMPostCallbackHandler *handler = (CMPostCallbackHandler*)data;
+	NSInvocation *invocation = [handler postCallback];
+	id handlerData = [handler data];
+	@try {
+		[invocation setArgument:&handlerData atIndex:2];
+	}
+	@catch (NSException *e) {
+		//No biggie, continue!
+	}
+	
+	[invocation invoke];
+	
+	// CMPostCallbackHandlers are only used once
+	// so we need to release them after being used.
+	[handler release];
+}
+
 static int handleInvocations(CollisionMoment moment, cpArbiter *arbiter, struct cpSpace *space, void *data) {
 	CMCollisionHandler *handler = (CMCollisionHandler*)data;
 	if ([handler ignoreContainmentCollision]) {
@@ -234,6 +252,13 @@ void updateShape(void *cpShapePtr, void* unused) {
 
 - (void)removeBody:(CMBody*)body {
 	[mBodies removeObject:body];
+}
+
+- (void)addPostStepCallback:(id)target selector:(SEL)selector data:(id)data {
+	CMPostCallbackHandler *postCallbackHandler = [[CMPostCallbackHandler alloc] initWithTarget:target selector:selector];
+	[postCallbackHandler setData:data];
+	
+	cpSpaceAddPostStepCallback(mCpSpace, (cpPostStepFunc)postStepCallback, postCallbackHandler, postCallbackHandler);
 }
 
 -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions {

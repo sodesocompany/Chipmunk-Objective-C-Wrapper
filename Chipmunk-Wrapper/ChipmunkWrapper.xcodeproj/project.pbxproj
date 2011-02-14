@@ -24,6 +24,8 @@
 		A1527AB711BD8F8100995392 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1527AB611BD8F8100995392 /* OpenAL.framework */; };
 		A1527AF811BD8F9000995392 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1527AF711BD8F9000995392 /* AVFoundation.framework */; };
 		A1527AFC11BD8F9900995392 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1527AFB11BD8F9900995392 /* AudioToolbox.framework */; };
+		A15DD82F13098BD400275266 /* CMPostCallbackHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DD82E13098BD400275266 /* CMPostCallbackHandler.m */; };
+		A15DD8E31309B6E900275266 /* SensorDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DD8E11309B6E900275266 /* SensorDemo.m */; };
 		A178431112ECCB6800EE1713 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = A178431012ECCB6800EE1713 /* football.png */; };
 		A178431B12ECCBA600EE1713 /* BallDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431A12ECCBA600EE1713 /* BallDemo.m */; };
 		A178431E12ECCC0700EE1713 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431D12ECCC0700EE1713 /* Ball.m */; };
@@ -136,6 +138,10 @@
 		A1527AB611BD8F8100995392 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		A1527AF711BD8F9000995392 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1527AFB11BD8F9900995392 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A15DD82D13098BD400275266 /* CMPostCallbackHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMPostCallbackHandler.h; sourceTree = "<group>"; };
+		A15DD82E13098BD400275266 /* CMPostCallbackHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMPostCallbackHandler.m; sourceTree = "<group>"; };
+		A15DD8E11309B6E900275266 /* SensorDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorDemo.m; sourceTree = "<group>"; };
+		A15DD8E21309B6E900275266 /* SensorDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorDemo.h; sourceTree = "<group>"; };
 		A178431012ECCB6800EE1713 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		A178431912ECCBA600EE1713 /* BallDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallDemo.h; sourceTree = "<group>"; };
 		A178431A12ECCBA600EE1713 /* BallDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallDemo.m; sourceTree = "<group>"; };
@@ -379,6 +385,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A15DD82C13098BD400275266 /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				A15DD82D13098BD400275266 /* CMPostCallbackHandler.h */,
+				A15DD82E13098BD400275266 /* CMPostCallbackHandler.m */,
+			);
+			path = Callbacks;
+			sourceTree = "<group>";
+		};
 		A19070341300567200FFF013 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +409,8 @@
 		A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A15DD8E21309B6E900275266 /* SensorDemo.h */,
+				A15DD8E11309B6E900275266 /* SensorDemo.m */,
 				A1CF13D613058FE7005CB7AE /* BuoyancyDemo.h */,
 				A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */,
 				A1CF12AA130470FA005CB7AE /* ExplosionEffectDemo.h */,
@@ -500,6 +517,7 @@
 		A1C70A9712DCE403003C506C /* Chipmunk-Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A15DD82C13098BD400275266 /* Callbacks */,
 				A1CF14ED1305B322005CB7AE /* Utils */,
 				A1CF1277130457D9005CB7AE /* Effects */,
 				A19070341300567200FFF013 /* Loader */,
@@ -783,6 +801,8 @@
 				A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */,
 				A1CF13D813058FE7005CB7AE /* BuoyancyDemo.m in Sources */,
 				A1CF14F01305B322005CB7AE /* CMInvocationUtils.m in Sources */,
+				A15DD82F13098BD400275266 /* CMPostCallbackHandler.m in Sources */,
+				A15DD8E31309B6E900275266 /* SensorDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

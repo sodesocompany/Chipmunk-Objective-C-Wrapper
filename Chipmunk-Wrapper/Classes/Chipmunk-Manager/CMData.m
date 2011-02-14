@@ -36,13 +36,4 @@
 	return [[[CMData alloc] initWithObject:object] autorelease];
 }
 
-/*
-- (void) dealloc {
-	[mData release];
-	[mObject release];
-	
-	[super dealloc];
-}
-*/
-
 @end

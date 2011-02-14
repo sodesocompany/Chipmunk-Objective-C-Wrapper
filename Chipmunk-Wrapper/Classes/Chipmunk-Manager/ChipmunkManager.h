@@ -57,6 +57,7 @@
 #import "CMContactPoint.h"
 #import "CMArbiter.h"
 #import "CMCollisionHandler.h"
+#import "CMPostCallbackHandler.h"
 
 // Space
 #import "CMSpace.h"
