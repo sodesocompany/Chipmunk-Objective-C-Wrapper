@@ -12,6 +12,8 @@ Current head release:
 
 14 Februari 2010:
 
+- Updated the demo.plist with the new fields
+- Added friction, elasticity and sensor to the CMDefaultLoader
 - Added a new demo: SensorDemo
 - Added the class CMPostCallbackHandler for handling the post step callbacks.
 - CMSpace: Added the method: - (void)addPostStepCallback:(id)target selector:(SEL)selector data:(id)data;

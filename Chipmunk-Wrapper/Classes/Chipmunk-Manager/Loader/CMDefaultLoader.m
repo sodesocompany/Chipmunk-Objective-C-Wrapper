@@ -49,6 +49,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: circleShape<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: circle<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius: 15<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset: {10,10} (optional)<br/>
  *
@@ -68,6 +71,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: rectangleShape<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: rectangle<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 20<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 20<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset: {10,10} (optional)<br/>
@@ -88,6 +94,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: segmentShape<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: segment<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius: 3<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from: {-15,-15}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to: {15,15}<br/>
@@ -109,6 +118,9 @@ static inline cpVect CPVectFromString(NSString *position) {
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: polyShape<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: polygon<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertices:<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0: {-2.8,3.1}<br/>
  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1: {8.8,-9.1}<br/>
@@ -118,6 +130,15 @@ static inline cpVect CPVectFromString(NSString *position) {
  * @param shapeConfig the configuration of the shape.
  */
 + (CMShape*) createPolygonShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig;
+
+/**
+ * Sets the general properties of a shape (friction, elasticity, sensor, etc...) which
+ * are shared among all constraints.
+ *
+ * @param cmShape the shape.
+ * @param shapeConfig the configuration of the shape.
+ */
++ (void)updateShapeWithGeneralProperties:(CMShape*)cmShape shapeConfig:(NSDictionary*)shapeConfig;
 
 /**
  * Constructs a pin joint constraint, the definition in the .plist file would look like:
@@ -481,12 +502,16 @@ static inline cpVect CPVectFromString(NSString *position) {
 + (CMShape*) createCircleShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
 	NSNumber *radius = [shapeConfig valueForKey:@"radius"];
 	
+	CMShape *cmShape = nil;
 	NSString *offset = [shapeConfig valueForKey:@"offset"];
 	if (offset != nil) {
-		return [cmBody addCircleWithRadius:[radius floatValue] offset:CPVectFromString(offset)];
+		cmShape = [cmBody addCircleWithRadius:[radius floatValue] offset:CPVectFromString(offset)];
 	} else {
-		return [cmBody addCircleWithRadius:[radius floatValue]];
+		cmShape = [cmBody addCircleWithRadius:[radius floatValue]];
 	}
+	
+	[self updateShapeWithGeneralProperties:cmShape shapeConfig:shapeConfig];
+	return cmShape;
 }
 
 
@@ -495,13 +520,16 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *width = [shapeConfig valueForKey:@"width"];
 	NSNumber *height = [shapeConfig valueForKey:@"height"];
 	
+	CMShape *cmShape = nil;
 	NSString *offset = [shapeConfig valueForKey:@"offset"];
 	if (offset != nil) {
-		return [cmBody addRectangleWithWidth:[width floatValue] height:[height floatValue] offset:CPVectFromString(offset)];
+		cmShape = [cmBody addRectangleWithWidth:[width floatValue] height:[height floatValue] offset:CPVectFromString(offset)];
 	} else {
-		return [cmBody addRectangleWithWidth:[width floatValue] height:[height floatValue]];
+		cmShape = [cmBody addRectangleWithWidth:[width floatValue] height:[height floatValue]];
 	}
 	
+	[self updateShapeWithGeneralProperties:cmShape shapeConfig:shapeConfig];
+	return cmShape;
 }
 
 
@@ -509,13 +537,37 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSNumber *radius = [shapeConfig valueForKey:@"radius"];
 	cpVect from = CPVectFromString([shapeConfig valueForKey:@"from"]);
 	cpVect to = CPVectFromString([shapeConfig valueForKey:@"to"]);
-	
-	return [cmBody addSegmentFrom:from to:to radius:[radius floatValue]];
+
+	CMShape *cmShape = [cmBody addSegmentFrom:from to:to radius:[radius floatValue]];
+	[self updateShapeWithGeneralProperties:cmShape shapeConfig:shapeConfig];
+
+	return cmShape;
 }
 
 + (CMShape*) createPolygonShape:(CMBody*)cmBody shapeConfig:(NSDictionary*)shapeConfig {
 	NSArray *vertices = [shapeConfig valueForKey:@"vertices"];
-	return [cmBody addPolyWithPoints:vertices];
+
+	CMShape *cmShape = [cmBody addPolyWithPoints:vertices];
+	[self updateShapeWithGeneralProperties:cmShape shapeConfig:shapeConfig];
+
+	return cmShape;
+}
+
++ (void)updateShapeWithGeneralProperties:(CMShape*)cmShape shapeConfig:(NSDictionary*)shapeConfig {
+	NSString *friction = [shapeConfig valueForKey:@"friction"];
+	if (friction != nil) {
+		[cmShape setFriction:[friction floatValue]];
+	}
+		
+	NSString *elasticity = [shapeConfig valueForKey:@"elasticity"];
+	if (elasticity != nil) {
+		[cmShape setElasticity:[elasticity floatValue]];
+	}
+	
+	NSString *sensor = [shapeConfig valueForKey:@"sensor"];
+	if (sensor != nil) {
+		[cmShape setSensor:[sensor boolValue]];
+	}
 }
 
 + (CMConstraint*) createPinJointConstraint:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {

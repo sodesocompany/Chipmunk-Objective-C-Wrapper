@@ -20,8 +20,14 @@
 					<string>myCircle</string>
 					<key>type</key>
 					<string>circle</string>
+					<key>friction</key>
+					<real>0.7</real>
+					<key>elasticity</key>
+					<integer>1</integer>
+					<key>sensor</key>
+					<false/>
 					<key>radius</key>
-					<string>15</string>
+					<integer>15</integer>
 				</dict>
 			</array>
 		</dict>
@@ -41,6 +47,12 @@
 					<string>mySegment</string>
 					<key>type</key>
 					<string>segment</string>
+					<key>friction</key>
+					<real>0.7</real>
+					<key>elasticity</key>
+					<integer>1</integer>
+					<key>sensor</key>
+					<false/>
 					<key>radius</key>
 					<integer>20</integer>
 					<key>from</key>
@@ -66,6 +78,12 @@
 					<string>myRect</string>
 					<key>type</key>
 					<string>rectangle</string>
+					<key>friction</key>
+					<real>0.7</real>
+					<key>elasticity</key>
+					<integer>1</integer>
+					<key>sensor</key>
+					<false/>
 					<key>width</key>
 					<integer>15</integer>
 					<key>height</key>
@@ -89,6 +107,10 @@
 					<string>myPolygon</string>
 					<key>type</key>
 					<string>polygon</string>
+					<key>friction</key>
+					<real>0.7</real>
+					<key>elasticity</key>
+					<integer>1</integer>
 					<key>sensor</key>
 					<false/>
 					<key>vertices</key>
