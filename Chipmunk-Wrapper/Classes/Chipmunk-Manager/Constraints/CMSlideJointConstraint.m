@@ -26,7 +26,6 @@
 	if (self = [super init]) {
 		cpBody *body1 = [cmBody cpBody];
 		cpBody *body2 = [andCmBody cpBody];
-		
 		mCpConstraint = cpSlideJointNew(body1, body2, anchor1, anchor2, min, max);
 		mCpConstraint->data =[[CMData createWithObject:self] retain];
 	}

@@ -31,6 +31,7 @@
 		A15DD9CD130ADEBA00275266 /* ImplosionEffectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DD9CC130ADEBA00275266 /* ImplosionEffectDemo.m */; };
 		A15DDA09130AE73E00275266 /* CMQueryFunctionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDA08130AE73E00275266 /* CMQueryFunctionHandler.m */; };
 		A15DDB48130C2B3A00275266 /* PlanetDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDB46130C2B3A00275266 /* PlanetDemo.m */; };
+		A15DDCE7130C6B4400275266 /* LayerCollisionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDCE5130C6B4400275266 /* LayerCollisionDemo.m */; };
 		A178431112ECCB6800EE1713 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = A178431012ECCB6800EE1713 /* football.png */; };
 		A178431B12ECCBA600EE1713 /* BallDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431A12ECCBA600EE1713 /* BallDemo.m */; };
 		A178431E12ECCC0700EE1713 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431D12ECCC0700EE1713 /* Ball.m */; };
@@ -156,6 +157,8 @@
 		A15DDA08130AE73E00275266 /* CMQueryFunctionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQueryFunctionHandler.m; sourceTree = "<group>"; };
 		A15DDB46130C2B3A00275266 /* PlanetDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetDemo.m; sourceTree = "<group>"; };
 		A15DDB47130C2B3A00275266 /* PlanetDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanetDemo.h; sourceTree = "<group>"; };
+		A15DDCE5130C6B4400275266 /* LayerCollisionDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerCollisionDemo.m; sourceTree = "<group>"; };
+		A15DDCE6130C6B4400275266 /* LayerCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerCollisionDemo.h; sourceTree = "<group>"; };
 		A178431012ECCB6800EE1713 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		A178431912ECCBA600EE1713 /* BallDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallDemo.h; sourceTree = "<group>"; };
 		A178431A12ECCBA600EE1713 /* BallDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallDemo.m; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 				A19EA7C612EA1D080073D2A1 /* SimpleMotorJointConstraintDemo.m */,
 				A178460612EF49B700EE1713 /* SimpleCollisionDemo.h */,
 				A178460712EF49B700EE1713 /* SimpleCollisionDemo.m */,
+				A15DDCE6130C6B4400275266 /* LayerCollisionDemo.h */,
+				A15DDCE5130C6B4400275266 /* LayerCollisionDemo.m */,
 				A1AF693612EC3C36006322AF /* CarDemo.h */,
 				A1AF693512EC3C36006322AF /* CarDemo.m */,
 				A1AEBC0412F8B362001A45B2 /* RopeDemo.h */,
@@ -827,6 +832,7 @@
 				A15DD9CD130ADEBA00275266 /* ImplosionEffectDemo.m in Sources */,
 				A15DDA09130AE73E00275266 /* CMQueryFunctionHandler.m in Sources */,
 				A15DDB48130C2B3A00275266 /* PlanetDemo.m in Sources */,
+				A15DDCE7130C6B4400275266 /* LayerCollisionDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

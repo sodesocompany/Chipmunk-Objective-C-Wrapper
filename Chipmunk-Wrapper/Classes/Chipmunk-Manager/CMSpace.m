@@ -221,7 +221,7 @@ void updateShape(void *cpShapePtr, void* unused) {
 }
 
 - (CMShape*)queryFirstByVect:(cpVect)point {
-	return [self queryFirstByVect:point layers:1<<31 group:CP_NO_GROUP];
+	return [self queryFirstByVect:point layers:CP_ALL_LAYERS group:CP_NO_GROUP];
 }
 
 - (CMShape*)queryFirstByPoint:(SPPoint*)point layers:(cpLayers)layers group:(cpGroup)group {

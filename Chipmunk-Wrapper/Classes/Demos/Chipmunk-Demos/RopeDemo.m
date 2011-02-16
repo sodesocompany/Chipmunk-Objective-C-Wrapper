@@ -56,8 +56,9 @@
 		[circleShape addToSpace];
 		
 		if (previousBody != nil) {
-			CMPivotJointConstraint *pjc2 = [newBody addPivotJointConstraintWithBody:previousBody pivot:cpv(320.0f / 2.0f, 20.0f + (index * 10.0f))];
-			[pjc2 addToSpace];
+			CMPinJointConstraint *pjc3 = [newBody addPinJointConstraintWithBody:previousBody anchor1:cpvzero anchor2:cpvzero];
+			[pjc3 setDistance:10.0f];
+			[pjc3 addToSpace];
 		}
 		
 		previousBody = newBody;

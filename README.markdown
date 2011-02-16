@@ -13,7 +13,15 @@ Current head release:
 TODO:
 - Document all the new methods that have been created since Februari 12
 
-16 Februari 2010:
+17 Februari 2011:
+
+- Added a new demo: LayerCollisionDemo
+
+This demo demonstrates how to use layers when using collisions. (some can collide with others, some can not).
+
+- Fixed a bug in the - (CMShape*)queryFirstByVect:(cpVect)point method. Not all layers were searched correctly.
+
+16 Februari 2011:
 
 - Added the CMSprite class which is a sub-class of SPSprite, it allows you to do direct loading of a CMObject using
 parameters.. HIGHLY EXPERIMENTAL and could be removed in the future.
@@ -31,7 +39,7 @@ Just like the ExplosionEffectDemo but then an implosion.
 
 The signature for the selector should look like:
 
-- (void)performImpExplosion:(cpBB*)boundingBox cmShape:(CMShape*)cmShape data:(id)data;
+- (void)doSomethingWithShape:(cpBB*)boundingBox cmShape:(CMShape*)cmShape data:(id)data;
 
 Alows you to loop through all the shapes that are available within the specified bounding box using the specified selector.
 
@@ -58,10 +66,10 @@ Alows you to loop through all the shapes that are available within the specified
 
 - CMShape: Renamed the method: - (id)getData; to: - (id)data;
 - CMBody: Renamed the method: - (id)getData; to: - (id)data;
-- CMBlastEffect: Added implotion methods, so now explosion and implosion is available.
+- CMBlastEffect: Added implotion methods, so now explosion and implosion are available.
 - Refactored CMExplosionEffect to CMBlastEffect.
 
-14 Februari 2010:
+14 Februari 2011:
 
 - Updated the demo.plist with the new fields
 - Added friction, elasticity and sensor to the CMDefaultLoader
@@ -71,7 +79,7 @@ Alows you to loop through all the shapes that are available within the specified
 
 Add a function that will be called after the space / step has completed, you can register multiple callbacks.
 
-11 Februari 2010:
+11 Februari 2011:
 
 The PhysicsEditor can now export correct defined polygon shapes, even when they are
 concave / convex. This is a major improvement. There are still some changes that need
@@ -114,7 +122,7 @@ The selector has the following signature:
 
 - (void)positionFunction:(CMBody*)cmBody dt:(float)dt;
 
-10 Februari 2010:
+10 Februari 2011:
 
 - Added: CMExplosionEffect
 
@@ -173,13 +181,13 @@ using the step function of chipmunk.
 - Added a new demo: PhysicsEditorDemo (not stable, still working on this with the author of PhysicsEditor)
 - Added a new demo: LoaderDemo
 
-8 February 2010:
+8 February 2011:
 
 CMArbiter: Added the method: - (BOOL)isFirstContact;
 
 This method indicates if the collision is the first contact, can be used in the pre-solve and post-solve phase of the collision.
 
-6 February 2010:
+6 February 2011:
 
 - Added the CMLoader class which allows you to load a complete space configuration from a .plist file.
 Check out the documentation and the sample Demo.plist for usage.
@@ -198,7 +206,7 @@ Check out the documentation and the sample Demo.plist for usage.
 
 - (CMRectShape*) addRectWithWidth:.... renamed to: - (CMRectShape*) addRectangleWithWidth:....
 
-4 February 2010:
+4 February 2011:
 
 General note:
 
@@ -247,7 +255,7 @@ at the specified point. The layers and group information is used to identify mor
 - CMBody: Added the method: - (void)setLayer:(cpLayers)layer;
 - Changed collision handling: the types (A & B) are now defined as cpCollisionType
 
-3 February 2010:
+3 February 2011:
 
 - Dit a lot of code cleanup
 - Changed the default chipmunk step size for the demo's now it's set to 1/15th, looks more smooth.
@@ -258,13 +266,13 @@ at the specified point. The layers and group information is used to identify mor
 - Fixed disabling UIAccelerometer, is now removed on dealloc of demo (might cause bugs)
 - Added the ability to disable UIAccelerometer in demos (programmatically)
 
-2 February 2010:
+2 February 2011:
 
 - Added a new demo: RopeDemo
 - Added a new demo: Newtons Cradle
 - Added setIterations on the CMSpace, read the API doc in the source before changing this.
 
-1 February 2010 and before:
+1 February 2011 and before:
 
 - Fixed CMCollisionHandler bug (resulting in a BAD_EXEC)
 - Fixed a number of memory leaks

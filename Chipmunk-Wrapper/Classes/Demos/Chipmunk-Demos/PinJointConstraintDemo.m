@@ -47,8 +47,8 @@
 	[shape2 addToSpace];
 	
 	// Create the pin joint constraint between them.
-	CMConstraint *dampedRotaryConstraint = [body1 addPinJointConstraintWithBody:body2 anchor1:cpv(15,0) anchor2:cpv(-15,0)];
-	[dampedRotaryConstraint addToSpace];
+	CMConstraint *pinJointConstraint = [body1 addPinJointConstraintWithBody:body2 anchor1:cpv(15,0) anchor2:cpv(-15,0)];
+	[pinJointConstraint addToSpace];
 }
 
 @end

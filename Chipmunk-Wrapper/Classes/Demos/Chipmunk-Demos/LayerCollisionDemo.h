@@ -1,5 +1,5 @@
 //
-//  SimpleCollisionDemo.h
+//  LayerCollisionDemo.h
 //  Chipmunk
 //
 //  Created by Ronald Mathies on 12/27/10.
@@ -12,13 +12,13 @@
 
 // --- Types ---------------------------------------------------------------------------------------
 
-#define CIRCLE_1_COLLISION_TYPE @"circle1"
-#define CIRCLE_2_COLLISION_TYPE @"circle2"
-#define RECT_COLLISION_TYPE @"rect"
+#define CIRCLE_COLLISION_TYPE @"circle"
+#define SQUARE_COLLISION_TYPE @"square"
+#define RECTANGLE_COLLISION_TYPE @"rectangle"
 
 // --- Interface ---------------------------------------------------------------------------------------
 
-@interface SimpleCollisionDemo : BaseDemo {
+@interface LayerCollisionDemo : BaseDemo {
 
 }
 

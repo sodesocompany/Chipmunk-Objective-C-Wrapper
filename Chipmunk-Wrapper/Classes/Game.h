@@ -22,6 +22,7 @@
 #include "PolyDemo.h"
 #include "CarDemo.h"
 #include "TheoJansenDemo.h"
+#include "LayerCollisionDemo.h"
 #include "SimpleCollisionDemo.h"
 #include "BallDemo.h"
 #include "RopeDemo.h"

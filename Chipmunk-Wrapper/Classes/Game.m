@@ -70,7 +70,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 25;
+			selected = 26;
 		}
 	
 		[self switchDemo];
@@ -82,7 +82,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 26) {
+		if (selected == 27) {
 			selected = 0;
 		}
 	
@@ -151,54 +151,58 @@
 			demo = [[SimpleCollisionDemo alloc] init];
 			break;
 		case 13:
+			[textField setText:@"Layer Collision Demo"];
+			demo = [[LayerCollisionDemo alloc] init];
+			break;
+		case 14:
 			[textField setText:@"Sparrow Ball Demo"];
 			demo = [[BallDemo alloc] init];
 			break;
-		case 14:
+		case 15:
 			[textField setText:@"Theo Jansen Demo"];
 			demo = [[TheoJansenDemo alloc] init];
 			break;
-		case 15:
+		case 16:
 			[textField setText:@"Rope Demo"];
 			demo = [[RopeDemo alloc] init];
 			break;
-		case 16:
+		case 17:
 			[textField setText:@"Newtons Cradle Demo"];
 			demo = [[NewtonsCradleDemo alloc] init];
 			break;
-		case 17:
+		case 18:
 			[textField setText:@"Blocks Demo"];
 			demo = [[BlocksDemo alloc] init];
 			break;
-		case 18:
+		case 19:
 			[textField setText:@"Many Blocks Demo"];
 			demo = [[ManyBlocksDemo alloc] init];
 			break;
-		case 19:
+		case 20:
 			[textField setText:@"Default Loader Demo"];
 			demo = [[DefaultLoaderDemo alloc] init];
 			break;
-		case 20:
+		case 21:
 			[textField setText:@"PhysicsEditor Demo"];
 			demo = [[PhysicsEditorDemo alloc] init];
 			break;
-		case 21:
+		case 22:
 			[textField setText:@"Explosion Effect Demo"];
 			demo = [[ExplosionEffectDemo alloc] init];
 			break;
-		case 22:
+		case 23:
 			[textField setText:@"Implosion Effect Demo"];
 			demo = [[ImplosionEffectDemo alloc] init];
 			break;
-		case 23:
+		case 24:
 			[textField setText:@"Buoyancy Demo"];
 			demo = [[BuoyancyDemo alloc] init];
 			break;
-		case 24:
+		case 25:
 			[textField setText:@"Sensor Demo"];
 			demo = [[SensorDemo alloc] init];
 			break;
-		case 25:
+		case 26:
 			[textField setText:@"Planet Demo"];
 			demo = [[PlanetDemo alloc] init];
 			break;
