@@ -30,8 +30,16 @@
 	mCpShape->e = elasticity;
 }
 
+- (float)elasticity {
+	return mCpShape->e;
+}
+
 - (void)setFriction:(float)friction {
 	mCpShape->u = friction;
+}
+
+- (float)friction {
+	return mCpShape->u;
 }
 
 - (void)setCollisionType:(cpCollisionType)type {
@@ -46,13 +54,30 @@
 	mCpShape->group = group;
 }
 
+- (cpGroup)group {
+	return mCpShape->group;
+}
+
 - (void)setLayer:(cpLayers)layer {
 	mCpShape->layers = layer;
+}
+
+- (cpLayers)layer {
+	return mCpShape->layers;
 }
 
 - (void)setSensor:(BOOL)isSensor {
 	mCpShape->sensor = isSensor;
 }
+
+- (BOOL)sensor {
+	return mCpShape->sensor;
+}
+
+- (cpBB)boundingBox {
+	return mCpShape->bb;
+}
+
 #pragma mark -
 
 #pragma mark Data
@@ -62,7 +87,7 @@
 	[cmData setData:data];
 }
 
-- (id)getData {
+- (id)data {
 	CMData *cmData = (CMData*)mCpShape->data;
 	return [cmData data];
 }
@@ -71,7 +96,7 @@
 
 #pragma mark Operations
 
-- (CMBody*) getBody {
+- (CMBody*) body {
 	CMData *cmData = (CMData*)mCpShape->body->data;
 	return [cmData object];
 }
@@ -87,7 +112,7 @@
 }
 
 - (void) removeFromSpace {
-	[[self getBody] removeShape:self];
+	[[self body] removeShape:self];
 }
 
 #pragma mark -

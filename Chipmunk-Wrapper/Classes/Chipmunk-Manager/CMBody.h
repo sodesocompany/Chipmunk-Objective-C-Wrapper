@@ -89,6 +89,8 @@
  */
 - (void)setMass:(float)mass;
 
+- (float)mass;
+
 /**
  * Set the moment.
  *
@@ -97,12 +99,16 @@
  */
 - (void)setMoment:(float)moment;
 
+- (float)moment;
+
 /**
  * Sets the velocity of the body.
  *
  * @param velocity Velocity of the body.
  */
 - (void) setVelocity:(cpVect)velocity;
+
+- (cpVect)velocity;
 
 /**
  * Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
@@ -141,6 +147,8 @@
  */
 - (void) setForce:(cpVect)force;
 
+- (cpVect)force;
+
 /**
  * Sets the position.
  *
@@ -155,6 +163,8 @@
  */
 - (void) setPositionUsingPoint:(SPPoint*)coordinate;
 
+- (cpVect)position;
+
 /**
  * Sets the angle of this body.
  *
@@ -168,7 +178,7 @@
 /**
  * Returns the current rotational angle of the body in radians.
  */
-- (float) getAngle;
+- (float) angle;
 
 /**
  * Sets the angulair velocity.
@@ -176,6 +186,8 @@
  * @param velocity the velocity.
  */
 - (void) setAngularVelocity:(float)velocity;
+
+- (float)angularVelocity;
 
 /**
  * Sets the torque
@@ -189,7 +201,7 @@
  *
  * Does not reset automatically as in some physics engines.
  */
-- (float) getTorque;
+- (float)torque;
 
 /**
  * Associates an object with this body, it is not used by Chipmunk but can be used
@@ -204,7 +216,7 @@
  *
  * @return the associated object with this body.
  */
-- (id)getData;
+- (id)data;
 
 #pragma mark -
 

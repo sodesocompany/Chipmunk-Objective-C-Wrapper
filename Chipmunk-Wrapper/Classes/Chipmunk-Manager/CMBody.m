@@ -91,12 +91,24 @@ static void position_function(cpBody *body, cpFloat dt) {
 	cpBodySetMass(mCpBody, mass);
 }
 
+- (float)mass {
+	return cpBodyGetMass(mCpBody);
+}
+
 - (void)setMoment:(float)moment {
 	cpBodySetMoment(mCpBody, moment);
 }
 
+- (float)moment {
+	return cpBodyGetMoment(mCpBody);
+}
+
 - (void) setVelocity:(cpVect)velocity {
 	cpBodySetVel(mCpBody, velocity);
+}
+
+- (cpVect) velocity {
+	return cpBodyGetVel(mCpBody);
 }
 
 - (void) setVelocityFunction:(id)target selector:(SEL)selector {
@@ -121,6 +133,10 @@ static void position_function(cpBody *body, cpFloat dt) {
 	mCpBody->f = force;
 }
 
+- (cpVect)force {
+	return mCpBody->f;
+}
+
 - (void) setPositionUsingVect:(cpVect)coordinate {
 	mCpBody->p = coordinate;
 }
@@ -129,11 +145,15 @@ static void position_function(cpBody *body, cpFloat dt) {
 	mCpBody->p = [coordinate toCpVect];
 }
 
+- (cpVect) position {
+	return mCpBody->p;
+}
+
 - (void) setAngle:(float)angle {
 	cpBodySetAngle(mCpBody, angle);
 }
 
-- (float) getAngle {
+- (float) angle {
 	return mCpBody->a;
 }
 
@@ -141,20 +161,24 @@ static void position_function(cpBody *body, cpFloat dt) {
 	mCpBody->w = velocity;
 }
 
+- (float) angularVelocity {
+	return mCpBody->w;
+}
+
 - (void) setTorque:(float)torque {
 	mCpBody->t = torque;
 }
 
-- (float) getTorque {
+- (float) torque {
 	return mCpBody->t;
-} 
+}
 
 - (void)setData:(id)data {
 	CMData *cmData = (CMData*)mCpBody->data;
 	[cmData setData:data];
 }
 
-- (id)getData {
+- (id) data {
 	CMData *cmData = (CMData*)mCpBody->data;
 	return [cmData data];
 }

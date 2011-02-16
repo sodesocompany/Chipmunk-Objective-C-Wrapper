@@ -209,6 +209,8 @@
  */
 - (void)addPostStepCallback:(id)target selector:(SEL)selector data:(id)data;
 
+- (void)forEachShape:(id)target selector:(SEL)selector boundingBox:(cpBB)boundingBox data:(id)data;
+
 ///---------------------------------------------------------------------------------------
 /// @name Collision detection
 ///---------------------------------------------------------------------------------------

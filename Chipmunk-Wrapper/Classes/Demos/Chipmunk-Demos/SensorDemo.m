@@ -44,7 +44,7 @@ static float frand_unit() {
  }
 
 - (BOOL) collisionBetweenCatchSensorAndBallBegin:(CMArbiter*)arbiter space:(CMSpace*)space {
-	[mSpace addPostStepCallback:self selector:@selector(removeBall:) data:[[arbiter shapeA] getBody]];
+	[mSpace addPostStepCallback:self selector:@selector(removeBall:) data:[[arbiter shapeA] body]];
 	return NO;
 }
 

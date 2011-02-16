@@ -1,25 +1,25 @@
 //
-//  ExplossionEffectDemo.m
+//  ImplosionEffectDemo.m
 //  Chipmunk
 //
 //  Created by Ronald Mathies on 12/27/10.
 //  Copyright 2010 Sodeso. All rights reserved.
 //
 
-#import "ExplosionEffectDemo.h"
+#import "ImplosionEffectDemo.h"
 
 // --- Static variables ----------------------------------------------------------------------------
 
-const float horizontalOffset1 = 70;
+const float horizontalOffset2 = 70;
 
-const float verticalHeight1 = 40;
-const float horizontalHeight1 = 10;
+const float verticalHeight2 = 40;
+const float horizontalHeight2 = 10;
 
 // --- Static inline methods -----------------------------------------------------------------------
 
 // --- private interface ---------------------------------------------------------------------------
 
-@interface ExplosionEffectDemo ()
+@interface ImplosionEffectDemo ()
 
 - (void)initializeChipmunkObjects;
 - (void)createBlock:(cpVect)position width:(float)width height:(float)height;
@@ -28,7 +28,7 @@ const float horizontalHeight1 = 10;
 
 // --- Class implementation ------------------------------------------------------------------------
 
-@implementation ExplosionEffectDemo
+@implementation ImplosionEffectDemo
 
 - (BOOL)disableAccelerometer {
 	return YES;
@@ -39,15 +39,15 @@ const float horizontalHeight1 = 10;
 	
 	for (int index = 0; index < 4; index++) {
 		for (int count = 0; count < 5; count++) {
-			[self createBlock:cpv(horizontalOffset1 + 5 + (count * 40),y - verticalHeight1 / 2.0f) width:10 height:verticalHeight1];
+			[self createBlock:cpv(horizontalOffset2 + 5 + (count * 40),y - verticalHeight2 / 2.0f) width:10 height:verticalHeight2];
 		}	
 	
-		y = y - verticalHeight1;
+		y = y - verticalHeight2;
 		for (int count = 0; count < 4; count++) {
-			[self createBlock:cpv(horizontalOffset1 + 5 + 20 + (count * 40),y - horizontalHeight1 / 2.0f) width:40 height:horizontalHeight1];
+			[self createBlock:cpv(horizontalOffset2 + 5 + 20 + (count * 40),y - horizontalHeight2 / 2.0f) width:40 height:horizontalHeight2];
 		}
 		
-		y = y - horizontalHeight1;
+		y = y - horizontalHeight2;
 	}
 	
 	[self addEventListener:@selector(removeBlock:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
@@ -70,7 +70,7 @@ const float horizontalHeight1 = 10;
 		SPPoint *spPoint = [touch locationInSpace:self];
 		CMBlastEffect *effect = [[CMBlastEffect alloc] init];
 		
-		[effect explosion:mSpace position:[spPoint toCpVect] radius:150 force:800];
+		[effect implosion:mSpace position:[spPoint toCpVect] radius:150 force:800];
 		[effect release];
 	}
 }

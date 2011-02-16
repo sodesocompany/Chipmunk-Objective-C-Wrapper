@@ -12,6 +12,25 @@
 
 // --- Static inline methods -----------------------------------------------------------------------
 
+static void forEachShapeQueryFuncion(cpBB *boundingBox, cpShape *shape, CMQueryFunctionHandler *context) {
+	NSInvocation *invocation = [context queryFunction];
+	
+	CMData *cmData = shape->data;
+	CMShape *cmShape = (CMShape*)[cmData object];
+	
+	id data = [context data];
+	@try {
+		[invocation setArgument:&boundingBox atIndex:2];
+		[invocation setArgument:&cmShape atIndex:3];
+		[invocation setArgument:&data atIndex:4];
+	}
+	@catch (NSException *e) {
+		//No biggie, continue!
+	}
+	
+	[invocation invoke];
+}
+
 static void postStepCallback(cpSpace *space, cpShape *shape, void *data) {
 	CMPostCallbackHandler *handler = (CMPostCallbackHandler*)data;
 	NSInvocation *invocation = [handler postCallback];
@@ -260,6 +279,14 @@ void updateShape(void *cpShapePtr, void* unused) {
 	
 	cpSpaceAddPostStepCallback(mCpSpace, (cpPostStepFunc)postStepCallback, postCallbackHandler, postCallbackHandler);
 }
+
+- (void)forEachShape:(id)target selector:(SEL)selector boundingBox:(cpBB)boundingBox data:(id)data {
+	CMQueryFunctionHandler *queryFunctionHandler = [[CMQueryFunctionHandler alloc] initWithTarget:target selector:selector];
+	[queryFunctionHandler setData:data];
+	cpSpaceHashQuery(mCpSpace->activeShapes, &boundingBox, boundingBox, (cpSpaceHashQueryFunc)forEachShapeQueryFuncion, queryFunctionHandler);
+	[queryFunctionHandler release];
+}
+
 
 -(void)addDefaultCollisionHandler:(id)target begin:(SEL)begin preSolve:(SEL)preSolve postSolve:(SEL)postSolve separate:(SEL)separate ignoreContainmentCollisions:(BOOL)ignoreContainmentCollisions {
 	CM_CREATE_POOL(pool);

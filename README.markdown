@@ -10,6 +10,57 @@ Version details:
 
 Current head release:
 
+TODO:
+- Document all the new methods that have been created since Februari 12
+
+16 Februari 2010:
+
+- Added the CMSprite class which is a sub-class of SPSprite, it allows you to do direct loading of a CMObject using
+parameters.. HIGHLY EXPERIMENTAL and could be removed in the future.
+
+- Added a new demo: PlanetDemo
+
+Really cool demo which displays two planets and a object that flies by it will be attracted to
+the planets as if the planets have gravity.
+
+- Added a new demo: ImplosionEffectDemo 
+
+Just like the ExplosionEffectDemo but then an implosion.
+
+- CMSpace: Added the methods: - (void)forEachShape:(id)target selector:(SEL)selector boundingBox:(cpBB)boundingBox data:(id)data;
+
+The signature for the selector should look like:
+
+- (void)performImpExplosion:(cpBB*)boundingBox cmShape:(CMShape*)cmShape data:(id)data;
+
+Alows you to loop through all the shapes that are available within the specified bounding box using the specified selector.
+
+- CMShape: Added the methods:
+
+- (float)elasticity;
+- (float)friction;
+- (cpCollisionType)collisionType;
+- (cpGroup)group;
+- (cpLayers)layer;
+- (BOOL)sensor;
+- (cpBB)boundingBox;
+
+- CMBody: Added the methods:
+
+- (float)mass;
+- (float)moment;
+- (cpVect)velocity;
+- (cpVect)force;
+- (cpVect)position;
+- (float) angle;
+- (float)angularVelocity;
+- (float)torque;
+
+- CMShape: Renamed the method: - (id)getData; to: - (id)data;
+- CMBody: Renamed the method: - (id)getData; to: - (id)data;
+- CMBlastEffect: Added implotion methods, so now explosion and implosion is available.
+- Refactored CMExplosionEffect to CMBlastEffect.
+
 14 Februari 2010:
 
 - Updated the demo.plist with the new fields

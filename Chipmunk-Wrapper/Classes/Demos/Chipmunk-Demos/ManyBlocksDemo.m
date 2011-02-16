@@ -81,7 +81,7 @@ const float horizontalHeight = 10;
 		SPPoint *spPoint = [touch locationInSpace:self];
 		CMShape *shape = [mSpace queryFirstByPoint:spPoint];
 		if (shape != nil) {
-			CMBody *body = [shape getBody];
+			CMBody *body = [shape body];
 			[body removeFromSpace];
 		}
 	}

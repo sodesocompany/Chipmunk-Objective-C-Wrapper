@@ -43,6 +43,8 @@
  */
 - (void)setElasticity:(float)elasticity;
 
+- (float)elasticity;
+
 /**
  * Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.
  *
@@ -52,6 +54,8 @@
   * @param friction a value 0f 0.0 is frictionless
  */
 - (void)setFriction:(float)friction;
+
+- (float)friction;
 
 /**
  * A user defined collision type which can be used to identify a type
@@ -80,6 +84,8 @@
  */
 - (void)setGroup:(cpGroup)group;
 
+- (cpGroup)group;
+
 /**
  * Shapes only collide if they are in the same bit-planes. 
  * i.e. (a->layers & b->layers) != 0 By default, a shape 
@@ -94,6 +100,8 @@
  */
 - (void)setLayer:(cpLayers)layer;
 
+- (cpLayers)layer;
+
 /**
  * A boolean value if this shape is a sensor or not. Sensors only 
  * call collision callbacks, and never generate real collisions.
@@ -101,6 +109,10 @@
  * @param isSensor YES if this shape is a sensor.
  */
 - (void)setSensor:(BOOL)isSensor;
+
+- (BOOL)sensor;
+
+- (cpBB)boundingBox;
 
 /**
  * Associates an object with this shape, it is not used by Chipmunk but can be used
@@ -115,7 +127,7 @@
  *
  * @return the associated object with this body.
  */
-- (id)getData;
+- (id)data;
 
 #pragma mark -
 
@@ -130,7 +142,7 @@
  *
  * @return the body associated with this shape.
  */
-- (CMBody*) getBody;
+- (CMBody*) body;
 
 /**
  * Add this shape to the Chipmunk space.

@@ -44,6 +44,7 @@
 
 - (void)showHideDebugDraw;
 - (BOOL)disableAccelerometer;
+- (BOOL)disableWindowContainment;
 
 - (void)startDemo;
 - (void)stopDemo;

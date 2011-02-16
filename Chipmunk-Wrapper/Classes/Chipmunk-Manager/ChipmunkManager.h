@@ -48,7 +48,7 @@
 #import "CMSlideJointConstraint.h"
 
 // Effects
-#import "CMExplosionEffect.h"
+#import "CMBlastEffect.h"
 
 // Body
 #import "CMBody.h"
@@ -58,6 +58,7 @@
 #import "CMArbiter.h"
 #import "CMCollisionHandler.h"
 #import "CMPostCallbackHandler.h"
+#import "CMQueryFunctionHandler.h"
 
 // Space
 #import "CMSpace.h"
