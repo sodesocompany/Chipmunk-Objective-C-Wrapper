@@ -33,4 +33,20 @@
 	return self;
 }
 
+- (void)setMin:(float)min {
+	cpRotaryLimitJointSetMin(mCpConstraint, min);
+}
+
+-(float)min {
+	return cpRotaryLimitJointGetMin(mCpConstraint);
+}
+
+- (void)setMax:(float)max {
+	cpRotaryLimitJointSetMax(mCpConstraint, max);
+}
+
+- (float)max {
+	return cpRotaryLimitJointGetMax(mCpConstraint);
+}
+
 @end

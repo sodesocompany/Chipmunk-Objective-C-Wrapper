@@ -33,4 +33,12 @@
 	return self;
 }
 
+- (void)setRate:(float)rate {
+	cpSimpleMotorSetRate(mCpConstraint, rate);
+}
+
+- (float)rate {
+	return cpSimpleMotorGetRate(mCpConstraint);
+}
+
 @end

@@ -34,4 +34,18 @@
  */
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody rate:(float)rate;
 
+/**
+ * The relative rotation speed of the two bodies in radians per second.
+ *
+ * @param rate the relative rotation speed of the two bodies in radians per second. 
+ */
+- (void)setRate:(float)rate;
+
+/**
+ * Returns the relative rotation speed of the two bodies in radians per second. 
+ *
+ * @return the relative rotation speed of the two bodies in radians per second. 
+ */
+- (float)rate;
+
 @end

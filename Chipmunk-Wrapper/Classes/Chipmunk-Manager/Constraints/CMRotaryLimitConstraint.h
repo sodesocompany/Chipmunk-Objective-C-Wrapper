@@ -35,4 +35,32 @@
   */
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody min:(float)min max:(float)max;
 
+/**
+ * Sets the minimum angular delta of the joint in radians.
+ *
+ * @param min the minimum angular delta of the joint in radians.
+ */
+- (void)setMin:(float)min;
+
+/**
+ * Returns the minimum angular delta of the joint in radians.
+ *
+ * @returns the minimum angular delta of the joint in radians.
+ */
+-(float)min;
+
+/**
+ * Sets the maximum angular delta of the joint in radians.
+ *
+ * @param max the maximum angular delta of the joint in radians.
+ */
+- (void)setMax:(float)max;
+
+/**
+ * Returns the maximum angular delta of the joint in radians.
+ *
+ * @return the maximum angular delta of the joint in radians.
+ */
+- (float)max;
+
 @end

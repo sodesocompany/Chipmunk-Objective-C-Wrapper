@@ -33,4 +33,20 @@
 	return self;
 }
 
+- (void)setPhase:(float)phase {
+	cpRatchetJointSetPhase(mCpConstraint, phase);
+}
+
+- (float)phase {
+	return cpRatchetJointGetPhase(mCpConstraint);
+}
+
+- (void)setRatchet:(float)ratchet {
+	cpRatchetJointSetRatchet(mCpConstraint, ratchet);
+}
+
+- (float)ratchet {
+	return cpRatchetJointGetRatchet(mCpConstraint);
+}
+
 @end

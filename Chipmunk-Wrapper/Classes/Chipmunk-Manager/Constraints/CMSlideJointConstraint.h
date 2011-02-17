@@ -65,4 +65,32 @@
  */
 - (cpVect)anchor2;
 
+/**
+ * Sets the minimum allowed distance between anchor points.
+ *
+ * @param min the minimum allowed distance between anchor points.
+ */
+- (void)setMin:(float)min;
+
+/**
+ * Returns minimum allowed distance between anchor points.
+ *
+ * @returns the minimum allowed distance between anchor points.
+ */
+-(float)min;
+
+/**
+ * Sets the maximum allowed distance between anchor points. 
+ *
+ * @param max the maximum allowed distance between anchor points. 
+ */
+- (void)setMax:(float)max;
+
+/**
+ * Returns the maximum allowed distance between anchor points. 
+ *
+ * @return maximum allowed distance between anchor points. 
+ */
+- (float)max;
+
 @end

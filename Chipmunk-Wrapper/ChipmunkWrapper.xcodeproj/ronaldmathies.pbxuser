@@ -1037,6 +1037,22 @@
 			A15DDE06130DACCA00275266 /* PBXTextBookmark */ = A15DDE06130DACCA00275266 /* PBXTextBookmark */;
 			A15DDE07130DACCA00275266 /* PBXTextBookmark */ = A15DDE07130DACCA00275266 /* PBXTextBookmark */;
 			A15DDE08130DACCA00275266 /* PBXTextBookmark */ = A15DDE08130DACCA00275266 /* PBXTextBookmark */;
+			A15DDE0F130DAE3100275266 /* PBXTextBookmark */ = A15DDE0F130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE10130DAE3100275266 /* PBXTextBookmark */ = A15DDE10130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE11130DAE3100275266 /* PBXTextBookmark */ = A15DDE11130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE12130DAE3100275266 /* PBXTextBookmark */ = A15DDE12130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE13130DAE3100275266 /* PBXTextBookmark */ = A15DDE13130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE14130DAE3100275266 /* PBXTextBookmark */ = A15DDE14130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE15130DAE3100275266 /* PBXTextBookmark */ = A15DDE15130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE16130DAE3100275266 /* PBXTextBookmark */ = A15DDE16130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE17130DAE3100275266 /* PBXTextBookmark */ = A15DDE17130DAE3100275266 /* PBXTextBookmark */;
+			A15DDE20130DB15800275266 /* PBXTextBookmark */ = A15DDE20130DB15800275266 /* PBXTextBookmark */;
+			A15DDE21130DB15800275266 /* PBXTextBookmark */ = A15DDE21130DB15800275266 /* PBXTextBookmark */;
+			A15DDE22130DB15800275266 /* PBXTextBookmark */ = A15DDE22130DB15800275266 /* PBXTextBookmark */;
+			A15DDE23130DB15800275266 /* PBXTextBookmark */ = A15DDE23130DB15800275266 /* PBXTextBookmark */;
+			A15DDE24130DB15800275266 /* PBXTextBookmark */ = A15DDE24130DB15800275266 /* PBXTextBookmark */;
+			A15DDE25130DB15800275266 /* PBXTextBookmark */ = A15DDE25130DB15800275266 /* PBXTextBookmark */;
+			A15DDE26130DB15800275266 /* PBXTextBookmark */ = A15DDE26130DB15800275266 /* PBXTextBookmark */;
 			A17841FD12EC76B700EE1713 = A17841FD12EC76B700EE1713 /* PBXTextBookmark */;
 			A178431512ECCB8800EE1713 = A178431512ECCB8800EE1713 /* PBXBookmark */;
 			A178437B12ECCE7800EE1713 = A178437B12ECCE7800EE1713 /* PBXTextBookmark */;
@@ -2648,7 +2664,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -11227,7 +11243,7 @@
 		fRef = A1C70AB612DCE403003C506C /* CMSlideJointConstraint.h */;
 		name = "CMSlideJointConstraint.h: 66";
 		rLen = 0;
-		rLoc = 1730;
+		rLoc = 2360;
 		rType = 0;
 		vrLen = 1737;
 		vrLoc = 0;
@@ -11237,7 +11253,7 @@
 		fRef = A1C70AB712DCE403003C506C /* CMSlideJointConstraint.m */;
 		name = "CMSlideJointConstraint.m: 52";
 		rLen = 0;
-		rLoc = 1394;
+		rLoc = 1659;
 		rType = 0;
 		vrLen = 1394;
 		vrLoc = 0;
@@ -11407,10 +11423,170 @@
 		fRef = A1C70AB112DCE403003C506C /* CMRatchetJointConstraint.m */;
 		name = "CMRatchetJointConstraint.m: 35";
 		rLen = 0;
-		rLoc = 1034;
+		rLoc = 1344;
 		rType = 0;
 		vrLen = 1040;
 		vrLoc = 0;
+	};
+	A15DDE0F130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA612DCE403003C506C /* CMDampedSpringConstraint.h */;
+		name = "CMDampedSpringConstraint.h: 42";
+		rLen = 222;
+		rLoc = 1472;
+		rType = 0;
+		vrLen = 1674;
+		vrLoc = 600;
+	};
+	A15DDE10130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA412DCE403003C506C /* CMDampedRotarySpringConstraint.h */;
+		name = "CMDampedRotarySpringConstraint.h: 54";
+		rLen = 605;
+		rLoc = 1693;
+		rType = 0;
+		vrLen = 1646;
+		vrLoc = 659;
+	};
+	A15DDE11130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA912DCE403003C506C /* CMGearJointConstraint.m */;
+		name = "CMGearJointConstraint.m: 36";
+		rLen = 141;
+		rLoc = 1020;
+		rType = 0;
+		vrLen = 1312;
+		vrLoc = 0;
+	};
+	A15DDE12130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AA812DCE403003C506C /* CMGearJointConstraint.h */;
+		name = "CMGearJointConstraint.h: 46";
+		rLen = 7;
+		rLoc = 1393;
+		rType = 0;
+		vrLen = 1754;
+		vrLoc = 139;
+	};
+	A15DDE13130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB112DCE403003C506C /* CMRatchetJointConstraint.m */;
+		name = "CMRatchetJointConstraint.m: 44";
+		rLen = 108;
+		rLoc = 1184;
+		rType = 0;
+		vrLen = 1350;
+		vrLoc = 0;
+	};
+	A15DDE14130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB012DCE403003C506C /* CMRatchetJointConstraint.h */;
+		name = "CMRatchetJointConstraint.h: 65";
+		rLen = 0;
+		rLoc = 1874;
+		rType = 0;
+		vrLen = 1708;
+		vrLoc = 173;
+	};
+	A15DDE15130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB212DCE403003C506C /* CMRotaryLimitConstraint.h */;
+		name = "CMRotaryLimitConstraint.h: 24";
+		rLen = 0;
+		rLoc = 506;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 0;
+	};
+	A15DDE16130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB312DCE403003C506C /* CMRotaryLimitConstraint.m */;
+		name = "CMRotaryLimitConstraint.m: 37";
+		rLen = 0;
+		rLoc = 1315;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 0;
+	};
+	A15DDE17130DAE3100275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB312DCE403003C506C /* CMRotaryLimitConstraint.m */;
+		name = "CMRotaryLimitConstraint.m: 37";
+		rLen = 0;
+		rLoc = 1315;
+		rType = 0;
+		vrLen = 1026;
+		vrLoc = 0;
+	};
+	A15DDE20130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB512DCE403003C506C /* CMSimpleMotorConstraint.m */;
+		name = "CMSimpleMotorConstraint.m: 36";
+		rLen = 139;
+		rLoc = 1002;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 0;
+	};
+	A15DDE21130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB412DCE403003C506C /* CMSimpleMotorConstraint.h */;
+		name = "CMSimpleMotorConstraint.h: 46";
+		rLen = 0;
+		rLoc = 1317;
+		rType = 0;
+		vrLen = 1424;
+		vrLoc = 0;
+	};
+	A15DDE22130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB212DCE403003C506C /* CMRotaryLimitConstraint.h */;
+		name = "CMRotaryLimitConstraint.h: 38";
+		rLen = 624;
+		rLoc = 1071;
+		rType = 0;
+		vrLen = 1564;
+		vrLoc = 138;
+	};
+	A15DDE23130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB312DCE403003C506C /* CMRotaryLimitConstraint.m */;
+		name = "CMRotaryLimitConstraint.m: 36";
+		rLen = 287;
+		rLoc = 1021;
+		rType = 0;
+		vrLen = 1315;
+		vrLoc = 0;
+	};
+	A15DDE24130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB712DCE403003C506C /* CMSlideJointConstraint.m */;
+		name = "CMSlideJointConstraint.m: 63";
+		rLen = 0;
+		rLoc = 1607;
+		rType = 0;
+		vrLen = 1485;
+		vrLoc = 174;
+	};
+	A15DDE25130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB612DCE403003C506C /* CMSlideJointConstraint.h */;
+		name = "CMSlideJointConstraint.h: 39";
+		rLen = 0;
+		rLoc = 1280;
+		rType = 0;
+		vrLen = 1593;
+		vrLoc = 138;
+	};
+	A15DDE26130DB15800275266 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A1C70AB612DCE403003C506C /* CMSlideJointConstraint.h */;
+		name = "CMSlideJointConstraint.h: 39";
+		rLen = 0;
+		rLoc = 1280;
+		rType = 0;
+		vrLen = 1231;
+		vrLoc = 1131;
 	};
 	A17841FD12EC76B700EE1713 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -11914,7 +12090,7 @@
 		fRef = A1C70AB312DCE403003C506C /* CMRotaryLimitConstraint.m */;
 		name = "CMRotaryLimitConstraint.m: 37";
 		rLen = 0;
-		rLoc = 1026;
+		rLoc = 1315;
 		rType = 0;
 		vrLen = 1026;
 		vrLoc = 0;
@@ -12906,7 +13082,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1305, 1275}}";
 			sepNavSelRange = "{1693, 605}";
-			sepNavVisRange = "{750, 1555}";
+			sepNavVisRange = "{659, 1646}";
 		};
 	};
 	A1C70AA512DCE403003C506C /* CMDampedRotarySpringConstraint.m */ = {
@@ -12918,7 +13094,7 @@
 	};
 	A1C70AA612DCE403003C506C /* CMDampedSpringConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1556, 1725}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1556, 1680}}";
 			sepNavSelRange = "{1472, 222}";
 			sepNavVisRange = "{600, 1674}";
 		};
@@ -12933,14 +13109,14 @@
 	A1C70AA812DCE403003C506C /* CMGearJointConstraint.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1305, 1005}}";
-			sepNavSelRange = "{1844, 0}";
+			sepNavSelRange = "{1393, 7}";
 			sepNavVisRange = "{139, 1754}";
 		};
 	};
 	A1C70AA912DCE403003C506C /* CMGearJointConstraint.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1305, 871}}";
-			sepNavSelRange = "{1194, 0}";
+			sepNavSelRange = "{1020, 141}";
 			sepNavVisRange = "{0, 1312}";
 		};
 	};
@@ -12988,58 +13164,58 @@
 	};
 	A1C70AB012DCE403003C506C /* CMRatchetJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1305, 871}}";
-			sepNavSelRange = "{531, 0}";
-			sepNavVisRange = "{0, 1193}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 1020}}";
+			sepNavSelRange = "{1874, 0}";
+			sepNavVisRange = "{173, 1708}";
 		};
 	};
 	A1C70AB112DCE403003C506C /* CMRatchetJointConstraint.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1305, 871}}";
-			sepNavSelRange = "{1034, 0}";
-			sepNavVisRange = "{0, 1040}";
+			sepNavSelRange = "{1184, 108}";
+			sepNavVisRange = "{0, 1350}";
 		};
 	};
 	A1C70AB212DCE403003C506C /* CMRotaryLimitConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1305, 1189}}";
-			sepNavSelRange = "{506, 0}";
-			sepNavVisRange = "{0, 1076}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 1005}}";
+			sepNavSelRange = "{1071, 624}";
+			sepNavVisRange = "{138, 1564}";
 		};
 	};
 	A1C70AB312DCE403003C506C /* CMRotaryLimitConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1568, 1082}}";
-			sepNavSelRange = "{1026, 0}";
-			sepNavVisRange = "{0, 1026}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 871}}";
+			sepNavSelRange = "{1021, 287}";
+			sepNavVisRange = "{0, 1315}";
 		};
 	};
 	A1C70AB412DCE403003C506C /* CMSimpleMotorConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1305, 1189}}";
-			sepNavSelRange = "{528, 0}";
-			sepNavVisRange = "{0, 1037}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 871}}";
+			sepNavSelRange = "{1317, 0}";
+			sepNavVisRange = "{0, 1424}";
 		};
 	};
 	A1C70AB512DCE403003C506C /* CMSimpleMotorConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 766}}";
-			sepNavSelRange = "{933, 0}";
-			sepNavVisRange = "{0, 1007}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 871}}";
+			sepNavSelRange = "{1002, 139}";
+			sepNavVisRange = "{0, 1148}";
 		};
 	};
 	A1C70AB612DCE403003C506C /* CMSlideJointConstraint.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1305, 1189}}";
-			sepNavSelRange = "{1730, 0}";
-			sepNavVisRange = "{0, 1737}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 1455}}";
+			sepNavSelRange = "{1280, 0}";
+			sepNavVisRange = "{1131, 1231}";
 		};
 	};
 	A1C70AB712DCE403003C506C /* CMSlideJointConstraint.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1305, 1189}}";
-			sepNavSelRange = "{1394, 0}";
-			sepNavVisRange = "{0, 1394}";
+			sepNavIntBoundsRect = "{{0, 0}, {1305, 1020}}";
+			sepNavSelRange = "{1607, 0}";
+			sepNavVisRange = "{174, 1485}";
 		};
 	};
 	A1C70AB812DCE403003C506C /* drawSpace.c */ = {

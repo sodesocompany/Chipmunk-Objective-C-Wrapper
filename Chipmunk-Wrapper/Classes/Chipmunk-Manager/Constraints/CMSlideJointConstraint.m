@@ -48,4 +48,20 @@
 	return cpSlideJointGetAnchr2(mCpConstraint);
 }
 
+- (void)setMin:(float)min {
+	cpSlideJointSetMin(mCpConstraint, min);
+}
+
+-(float)min {
+	return cpSlideJointGetMin(mCpConstraint);
+}
+
+- (void)setMax:(float)max {
+	cpSlideJointSetMax(mCpConstraint, max);
+}
+
+- (float)max {
+	return cpSlideJointGetMax(mCpConstraint);
+}
+
 @end
