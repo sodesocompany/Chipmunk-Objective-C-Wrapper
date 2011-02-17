@@ -60,7 +60,6 @@
 	CMShape *planetShape = [planet addCircleWithRadius:30.0f];
 	[planetShape setElasticity:1.0f];
 	[planetShape setFriction:1.0f];
-	[planetShape setLayer:1];
 	[planetShape addToSpace];
 }
 
