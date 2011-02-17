@@ -45,6 +45,7 @@
 - (void)showHideDebugDraw;
 - (BOOL)disableAccelerometer;
 - (BOOL)disableWindowContainment;
+- (BOOL)disableDefaultTouchHandler;
 
 - (void)startDemo;
 - (void)stopDemo;

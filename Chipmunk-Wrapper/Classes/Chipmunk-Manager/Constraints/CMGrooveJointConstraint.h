@@ -36,4 +36,46 @@
   */
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody grooveA:(cpVect)grooveA grooveB:(cpVect)grooveB anchor1:(cpVect)anchor1;
 
+/**
+ * Set the start of the line segment on the first body.
+ *
+ * @param grooveA the start of the line segment on the first body.
+ */
+- (void)setGrooveA:(cpVect)grooveA;
+
+/**
+ * Returns the start of the line segment on the first body.
+ *
+ * @param grooveB the start of the line segment on the first body.
+ */
+- (cpVect)grooveA;
+
+/**
+ * Sets the end of the line segment on the first body. 
+ *
+ * @param grooveB The end of the line segment on the first body. 
+ */
+- (void)setGrooveB:(cpVect)grooveB;
+
+/**
+ * Returns the end of the line segment on the first body. 
+ *
+ * @return The end of the line segment on the first body. 
+ */
+- (cpVect)grooveB;
+
+/**
+ * Changes the first anchor point.
+ *
+ * @param anchor1 the new anchor point.
+ */
+- (void)setAnchor1:(cpVect)anchor1;
+
+/**
+ * Returns the first anchor point.
+ *
+ * @return the first anchor point.
+ */
+- (cpVect)anchor1;
+
 @end

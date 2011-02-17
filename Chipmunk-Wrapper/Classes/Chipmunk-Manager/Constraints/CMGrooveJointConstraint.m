@@ -33,4 +33,29 @@
 	return self;
 }
 
+
+- (void)setGrooveA:(cpVect)grooveA {
+	cpGrooveJointSetGrooveA(mCpConstraint, grooveA);
+}
+
+- (cpVect)grooveA {
+	return cpGrooveJointGetGrooveA(mCpConstraint);
+}
+
+- (void)setGrooveB:(cpVect)grooveB {
+	cpGrooveJointSetGrooveB(mCpConstraint, grooveB);
+}
+
+- (cpVect)grooveB {
+	return cpGrooveJointGetGrooveB(mCpConstraint);
+}
+
+- (void)setAnchor1:(cpVect)anchor1 {
+	cpDampedSpringSetAnchr1(mCpConstraint, anchor1);
+}
+
+- (cpVect)anchor1 {
+	return cpDampedSpringGetAnchr1(mCpConstraint);
+}
+
 @end

@@ -70,7 +70,7 @@
 		selected--;
 	
 		if (selected < 0) {
-			selected = 26;
+			selected = 27;
 		}
 	
 		[self switchDemo];
@@ -82,7 +82,7 @@
 	if (touch) {
 		selected++;
 	
-		if (selected == 27) {
+		if (selected == 28) {
 			selected = 0;
 		}
 	
@@ -205,6 +205,10 @@
 		case 26:
 			[textField setText:@"Planet Demo"];
 			demo = [[PlanetDemo alloc] init];
+			break;
+		case 27:
+			[textField setText:@"Follow Path Demo"];
+			demo = [[FollowPathDemo alloc] init];
 			break;
 	}
 	

@@ -32,6 +32,7 @@
 		A15DDA09130AE73E00275266 /* CMQueryFunctionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDA08130AE73E00275266 /* CMQueryFunctionHandler.m */; };
 		A15DDB48130C2B3A00275266 /* PlanetDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDB46130C2B3A00275266 /* PlanetDemo.m */; };
 		A15DDCE7130C6B4400275266 /* LayerCollisionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDCE5130C6B4400275266 /* LayerCollisionDemo.m */; };
+		A15DDD29130D7ED100275266 /* FollowPathDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A15DDD27130D7ED100275266 /* FollowPathDemo.m */; };
 		A178431112ECCB6800EE1713 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = A178431012ECCB6800EE1713 /* football.png */; };
 		A178431B12ECCBA600EE1713 /* BallDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431A12ECCBA600EE1713 /* BallDemo.m */; };
 		A178431E12ECCC0700EE1713 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = A178431D12ECCC0700EE1713 /* Ball.m */; };
@@ -159,6 +160,8 @@
 		A15DDB47130C2B3A00275266 /* PlanetDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanetDemo.h; sourceTree = "<group>"; };
 		A15DDCE5130C6B4400275266 /* LayerCollisionDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerCollisionDemo.m; sourceTree = "<group>"; };
 		A15DDCE6130C6B4400275266 /* LayerCollisionDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerCollisionDemo.h; sourceTree = "<group>"; };
+		A15DDD27130D7ED100275266 /* FollowPathDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowPathDemo.m; sourceTree = "<group>"; };
+		A15DDD28130D7ED100275266 /* FollowPathDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowPathDemo.h; sourceTree = "<group>"; };
 		A178431012ECCB6800EE1713 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
 		A178431912ECCBA600EE1713 /* BallDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallDemo.h; sourceTree = "<group>"; };
 		A178431A12ECCBA600EE1713 /* BallDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallDemo.m; sourceTree = "<group>"; };
@@ -426,6 +429,8 @@
 		A19EA7B012EA1D070073D2A1 /* Chipmunk-Demos */ = {
 			isa = PBXGroup;
 			children = (
+				A15DDD28130D7ED100275266 /* FollowPathDemo.h */,
+				A15DDD27130D7ED100275266 /* FollowPathDemo.m */,
 				A15DDB47130C2B3A00275266 /* PlanetDemo.h */,
 				A15DDB46130C2B3A00275266 /* PlanetDemo.m */,
 				A15DD8E21309B6E900275266 /* SensorDemo.h */,
@@ -833,6 +838,7 @@
 				A15DDA09130AE73E00275266 /* CMQueryFunctionHandler.m in Sources */,
 				A15DDB48130C2B3A00275266 /* PlanetDemo.m in Sources */,
 				A15DDCE7130C6B4400275266 /* LayerCollisionDemo.m in Sources */,
+				A15DDD29130D7ED100275266 /* FollowPathDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

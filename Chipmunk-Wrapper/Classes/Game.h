@@ -36,6 +36,7 @@
 #include "BuoyancyDemo.h"
 #include "SensorDemo.h"
 #include "PlanetDemo.h"
+#include "FollowPathDemo.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 

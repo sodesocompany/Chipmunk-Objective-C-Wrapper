@@ -41,7 +41,10 @@ static double timeCount = 0;
 		
 		mTouchBody = [[mSpace addBody] retain];
 		[mTouchBody addToSpace];
-		[self addEventListener:@selector(force:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		
+		if (![self disableDefaultTouchHandler]) {
+			[self addEventListener:@selector(force:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		}
 		
 		if (![self disableAccelerometer]) {
 			UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
@@ -83,6 +86,10 @@ static double timeCount = 0;
 }
 
 - (BOOL)disableWindowContainment {
+	return NO;
+}
+
+- (BOOL)disableDefaultTouchHandler {
 	return NO;
 }
 

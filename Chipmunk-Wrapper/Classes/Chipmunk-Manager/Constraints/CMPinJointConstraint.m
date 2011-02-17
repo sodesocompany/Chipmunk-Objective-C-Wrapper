@@ -34,7 +34,27 @@
 }
 
 - (void)setDistance:(float)distance {
-	((cpPinJoint*)mCpConstraint)->dist = distance;
+	cpPinJointSetDist(mCpConstraint, distance);
+}
+
+- (float)distance {
+	return cpPinJointGetDist(mCpConstraint);
+}
+
+- (void)setAnchor1:(cpVect)anchor1 {
+	cpPinJointSetAnchr1(mCpConstraint, anchor1);
+}
+
+- (cpVect)anchor1 {
+	return cpPinJointGetAnchr1(mCpConstraint);
+}
+
+- (void)setAnchor2:(cpVect)anchor2 {
+	cpPinJointSetAnchr2(mCpConstraint, anchor2);
+}
+
+- (cpVect)anchor2 {
+	return cpPinJointGetAnchr2(mCpConstraint);
 }
 
 @end

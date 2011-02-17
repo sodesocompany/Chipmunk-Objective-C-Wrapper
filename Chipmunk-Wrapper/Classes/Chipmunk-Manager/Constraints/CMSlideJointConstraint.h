@@ -37,5 +37,32 @@
  */
 - (id) initBetweenBody:(CMBody*)cmBody andBody:(CMBody*)andCmBody anchor1:(cpVect)anchor1 anchor2:(cpVect)anchor2 min:(float)min max:(float)max;
 
+/**
+ * Changes the first anchor point.
+ *
+ * @param anchor1 the new anchor point.
+ */
+- (void)setAnchor1:(cpVect)anchor1;
+
+/**
+ * Returns the first anchor point.
+ *
+ * @return the first anchor point.
+ */
+- (cpVect)anchor1;
+
+/**
+ * Changes the second anchor point.
+ *
+ * @param anchor2 the new anchor point.
+ */
+- (void)setAnchor2:(cpVect)anchor2;
+
+/**
+ * Returns the second anchor point.
+ *
+ * @return the second anchor point.
+ */
+- (cpVect)anchor2;
 
 @end

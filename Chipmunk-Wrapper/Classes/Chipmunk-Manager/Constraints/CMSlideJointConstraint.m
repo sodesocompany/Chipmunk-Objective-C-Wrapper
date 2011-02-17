@@ -32,4 +32,20 @@
 	return self;
 }
 
+- (void)setAnchor1:(cpVect)anchor1 {
+	cpSlideJointSetAnchr1(mCpConstraint, anchor1);
+}
+
+- (cpVect)anchor1 {
+	return cpSlideJointGetAnchr1(mCpConstraint);
+}
+
+- (void)setAnchor2:(cpVect)anchor2 {
+	cpSlideJointSetAnchr2(mCpConstraint, anchor2);
+}
+
+- (cpVect)anchor2 {
+	return cpSlideJointGetAnchr2(mCpConstraint);
+}
+
 @end

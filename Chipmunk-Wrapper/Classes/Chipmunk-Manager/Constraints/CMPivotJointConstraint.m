@@ -44,4 +44,20 @@
 	return self;
 }
 
+- (void)setAnchor1:(cpVect)anchor1 {
+	cpPivotJointSetAnchr1(mCpConstraint, anchor1);
+}
+
+- (cpVect)anchor1 {
+	return cpPivotJointGetAnchr1(mCpConstraint);
+}
+
+- (void)setAnchor2:(cpVect)anchor2 {
+	cpPivotJointSetAnchr2(mCpConstraint, anchor2);
+}
+
+- (cpVect)anchor2 {
+	return cpPivotJointGetAnchr2(mCpConstraint);
+}
+
 @end

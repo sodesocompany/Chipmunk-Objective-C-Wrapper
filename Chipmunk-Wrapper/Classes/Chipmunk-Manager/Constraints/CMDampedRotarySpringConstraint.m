@@ -33,4 +33,32 @@
 	return self;
 }
 
+
+- (void)setRestAngle:(float)restAngle {
+	cpDampedRotarySpringSetRestAngle(mCpConstraint, restAngle);
+}
+
+- (float)restAngle {
+	return cpDampedRotarySpringGetRestAngle(mCpConstraint);
+}
+
+- (void)setStiffness:(float)stiffness {
+	cpDampedRotarySpringSetStiffness(mCpConstraint, stiffness);
+}
+
+- (float)stiffness {
+	return cpDampedRotarySpringGetStiffness(mCpConstraint);
+}
+
+- (void)setDamping:(float)damping {
+	cpDampedRotarySpringSetDamping(mCpConstraint, damping);
+}
+
+- (float)damping {
+	return cpDampedRotarySpringGetDamping(mCpConstraint);
+}
+
+
+
+
 @end

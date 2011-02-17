@@ -33,4 +33,21 @@
 	return self;
 }
 
+- (void)setPhase:(float)phase {
+	cpGearJointSetPhase(mCpConstraint, phase);
+}
+
+- (float)phase {
+	return cpGearJointGetPhase(mCpConstraint);
+}
+
+- (void)setRatio:(float)ratio {
+	cpGearJointSetRatio(mCpConstraint, ratio);
+}
+
+- (float)ratio {
+	return cpGearJointGetRatio(mCpConstraint);
+}
+
+
 @end

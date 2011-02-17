@@ -33,4 +33,44 @@
 	return self;
 }
 
+- (void)setAnchor1:(cpVect)anchor1 {
+	cpDampedSpringSetAnchr1(mCpConstraint, anchor1);
+}
+
+- (cpVect)anchor1 {
+	return cpDampedSpringGetAnchr1(mCpConstraint);
+}
+
+- (void)setAnchor2:(cpVect)anchor2 {
+	cpDampedSpringSetAnchr2(mCpConstraint, anchor2);
+}
+
+- (cpVect)anchor2 {
+	return cpDampedSpringGetAnchr2(mCpConstraint);
+}
+
+- (void)setRestLength:(float)restLength {
+	cpDampedSpringSetRestLength(mCpConstraint, restLength);
+}
+
+- (float)restLength {
+	return cpDampedSpringGetRestLength(mCpConstraint);
+}
+
+- (void)setStiffness:(float)stiffness {
+	cpDampedSpringSetStiffness(mCpConstraint, stiffness);
+}
+
+- (float)stiffness {
+	return cpDampedRotarySpringGetStiffness(mCpConstraint);
+}
+
+- (void)setDamping:(float)damping {
+	cpDampedSpringSetDamping(mCpConstraint, damping);
+}
+
+- (float)damping {
+	return cpDampedSpringGetDamping(mCpConstraint);
+}
+
 @end
