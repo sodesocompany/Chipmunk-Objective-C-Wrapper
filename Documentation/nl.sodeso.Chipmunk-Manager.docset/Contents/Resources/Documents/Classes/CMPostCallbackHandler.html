@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>CMData Class Reference</title>
+		<title>CMPostCallbackHandler Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
 		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
@@ -16,7 +16,7 @@
 			</div>
 			<div id="header">
 				<div class="section-header">
-					<h1 class="title title-header">CMData Class Reference</h1>
+					<h1 class="title title-header">CMPostCallbackHandler Class Reference</h1>
 				</div>		
 			</div>
 			<div id="container">	
@@ -27,7 +27,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CMData.h<br />CMData.m</td>
+	<td class="specification-value">CMPostCallbackHandler.h<br />CMPostCallbackHandler.m</td>
 </tr>
 					</tbody></table></div>
 				
@@ -36,7 +36,8 @@
 				<div class="section section-overview">
 					<h2 class="subtitle subtitle-overview">Overview</h2>
 					
-<p>The <a href="#//api/name/data">data</a> container is used to wrap a user <a href="#//api/name/object">object</a></p>
+<p>Class containing the method and <a href="#//api/name/data">data</a> that needs to be invoked
+after the postStepCallback has executed.</p>
 
 				</div>
 				
@@ -51,16 +52,14 @@
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/data"> data</a></code>
-		<span class="tooltip">The user <a href="#//api/name/object">object</a>.</span>
+		<code><a href="#//api/name/postCallback"> postCallback</a></code>
+		<span class="tooltip">The post callback invocation method.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/object"> object</a></code>
-		<span class="tooltip">The <a href="#//api/name/object">object</a> associated with this <a href="#//api/name/data">data</a> <a href="#//api/name/object">object</a> (for example the <a href="CMBody.html">CMBody</a>, <a href="CMShape.html">CMShape</a> etc..)
-in this way we can find back from Chipmunk -> Chipmunk Manager when we receive a cpXXX
-class.</span>
+		<code><a href="#//api/name/data"> data</a></code>
+		<span class="tooltip">The <a href="#//api/name/data">data</a> that will be passed along to the selector.</span>
 	</span>
 	
 </li>
@@ -71,14 +70,20 @@ class.</span>
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithObject:">- initWithObject:</a></code>
-		<span class="tooltip">Constucts a new <a href="#//api/name/data">data</a> container.</span>
+		<code><a href="#//api/name/initWithTarget:selector:">- initWithTarget:selector:</a></code>
+		<span class="tooltip">Default initialization method.</span>
 	</span>
 	
-</li><li>
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createWithObject:">+ createWithObject:</a></code>
-		<span class="tooltip">Creates a new (autoreleased) <a href="#//api/name/data">data</a> container.</span>
+		<code><a href="#//api/name/dealloc">- dealloc</a></code>
+		<span class="tooltip">Default <a href="#//api/name/dealloc">dealloc</a> method.</span>
 	</span>
 	
 </li>
@@ -90,78 +95,68 @@ class.</span>
 				
 				
 				
-				<div class="section section-methods">
-					<h2 class="subtitle subtitle-methods">Class Methods</h2>
-					
-					<div class="section-method">
-	<a name="//api/name/createWithObject:" title="createWithObject:"></a>
-	<h3 class="subsubtitle method-title">createWithObject:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Creates a new (autoreleased) <a href="#//api/name/data">data</a> container.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>+ (CMData *)createWithObject:(id)<em>object</em></code></div>
-	
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>object</em></dt>
-			<dd>the <a href="#//api/name/object">object</a> to which it is associated.</dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMData.h</code><br />
-	</div>				
-	
-	
-</div>
-					
-				</div>
-				
 				
 				
 				<div class="section section-methods">
 					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 					
 					<div class="section-method">
-	<a name="//api/name/initWithObject:" title="initWithObject:"></a>
-	<h3 class="subsubtitle method-title">initWithObject:</h3>
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="subsubtitle method-title">dealloc</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Constucts a new <a href="#//api/name/data">data</a> container.</p>
+		<p>Default <a href="#//api/name/dealloc">dealloc</a> method.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithObject:(id)<em>object</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMPostCallbackHandler.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/initWithTarget:selector:" title="initWithTarget:selector:"></a>
+	<h3 class="subsubtitle method-title">initWithTarget:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default initialization method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithTarget:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>object</em></dt>
-			<dd>the <a href="#//api/name/object">object</a> to which it is associated.</dd>
+			<dt><em>target</em></dt>
+			<dd>the target to invoke.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector to invoke.</dd>
 		</dl>
 		
 	</div>
@@ -178,7 +173,7 @@ class.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMData.h</code><br />
+		<code class="declared-in-ref">CMPostCallbackHandler.h</code><br />
 	</div>				
 	
 	
@@ -198,11 +193,11 @@ class.</span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The user <a href="#//api/name/object">object</a>.</p>
+		<p>The <a href="#//api/name/data">data</a> that will be passed along to the selector.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id data</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) id data</code></div>
 	
 	
 	
@@ -217,26 +212,24 @@ class.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMData.h</code><br />
+		<code class="declared-in-ref">CMPostCallbackHandler.h</code><br />
 	</div>				
 	
 	
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/object" title="object"></a>
-	<h3 class="subsubtitle method-title">object</h3>
+	<a name="//api/name/postCallback" title="postCallback"></a>
+	<h3 class="subsubtitle method-title">postCallback</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/object">object</a> associated with this <a href="#//api/name/data">data</a> <a href="#//api/name/object">object</a> (for example the <a href="CMBody.html">CMBody</a>, <a href="CMShape.html">CMShape</a> etc..)
-in this way we can find back from Chipmunk -> Chipmunk Manager when we receive a cpXXX
-class.</p>
+		<p>The post callback invocation method.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id object</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSInvocation *postCallback</code></div>
 	
 	
 	
@@ -251,7 +244,7 @@ class.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMData.h</code><br />
+		<code class="declared-in-ref">CMPostCallbackHandler.h</code><br />
 	</div>				
 	
 	

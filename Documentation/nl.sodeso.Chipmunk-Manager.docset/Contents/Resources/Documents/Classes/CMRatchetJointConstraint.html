@@ -52,7 +52,32 @@
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initBetweenBody:andBody:phase:ratchet:">- initBetweenBody:andBody:phase:ratchet:</a></code>
-		<span class="tooltip">Constructs a new ratchet joint constraint.</span>
+		<span class="tooltip">Constructs a new <a href="#//api/name/ratchet">ratchet</a> joint constraint.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPhase:">- setPhase:</a></code>
+		<span class="tooltip">The angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/phase">- phase</a></code>
+		<span class="tooltip">Returns the angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setRatchet:">- setRatchet:</a></code>
+		<span class="tooltip">Sets the angle in radians of each <a href="#//api/name/ratchet">ratchet</a> position.
+Negative values cause the <a href="#//api/name/ratchet">ratchet</a> to operate in the opposite direction.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/ratchet">- ratchet</a></code>
+		<span class="tooltip">Returns the angle in radians of each <a href="#//api/name/ratchet">ratchet</a> position.</span>
 	</span>
 	
 </li>
@@ -76,7 +101,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Constructs a new ratchet joint constraint.</p>
+		<p>Constructs a new <a href="#//api/name/ratchet">ratchet</a> joint constraint.</p>
 	</div>		
 	
 	
@@ -98,13 +123,172 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>phase</em></dt>
-			<dd>The angular offset of the ratchet positions in radians.</dd>
+			<dd>The angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>ratchet</em></dt>
-			<dd>The angle in radians of each ratchet position. Negative values cause the ratchet to operate in the opposite direction.
+			<dd>The angle in radians of each <a href="#//api/name/ratchet">ratchet</a> position. Negative values cause the <a href="#//api/name/ratchet">ratchet</a> to operate in the opposite direction.
   </dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMRatchetJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/phase" title="phase"></a>
+	<h3 class="subsubtitle method-title">phase</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)phase</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMRatchetJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/ratchet" title="ratchet"></a>
+	<h3 class="subsubtitle method-title">ratchet</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the angle in radians of each <a href="#//api/name/ratchet">ratchet</a> position.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)ratchet</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the angle in radians of each <a href="#//api/name/ratchet">ratchet</a> position.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMRatchetJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setPhase:" title="setPhase:"></a>
+	<h3 class="subsubtitle method-title">setPhase:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setPhase:(float)<em>phase</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>phase</em></dt>
+			<dd>the angular offset of the <a href="#//api/name/ratchet">ratchet</a> positions in radians.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMRatchetJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setRatchet:" title="setRatchet:"></a>
+	<h3 class="subsubtitle method-title">setRatchet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the angle in radians of each <a href="#//api/name/ratchet">ratchet</a> position.
+Negative values cause the <a href="#//api/name/ratchet">ratchet</a> to operate in the opposite direction.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setRatchet:(float)<em>ratchet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ratchet</em></dt>
+			<dd>the angle</dd>
 		</dl>
 		
 	</div>
@@ -142,7 +326,7 @@
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

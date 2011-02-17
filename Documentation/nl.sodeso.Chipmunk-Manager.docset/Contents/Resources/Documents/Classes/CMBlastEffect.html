@@ -1,0 +1,504 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMBlastEffect Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMBlastEffect Class Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMBlastEffect.h<br />CMBlastEffect.m</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>The explosion effect can be used to force a group of bodies to
+act like an explosion event took place.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					<h3 class="subsubtitle task-title">Operators</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/implosion:position:radius:force:">- implosion:position:radius:force:</a></code>
+		<span class="tooltip">Generates an implosion effect.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/implosion:position:radius:force:layer:group:">- implosion:position:radius:force:layer:group:</a></code>
+		<span class="tooltip">Generates an implosion effect.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/explosion:position:radius:force:">- explosion:position:radius:force:</a></code>
+		<span class="tooltip">Generates an explosion effect.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/explosion:position:radius:force:layer:group:">- explosion:position:radius:force:layer:group:</a></code>
+		<span class="tooltip">Generates an explosion effect.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/perform:position:radius:force:layer:group:explosion:">- perform:position:radius:force:layer:group:explosion:</a></code>
+		<span class="tooltip">Performs the blast.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/performImpExplosion:cmShape:data:">- performImpExplosion:cmShape:data:</a></code>
+		<span class="tooltip">Performs the implosion / explosion callback method.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/explosion:position:radius:force:" title="explosion:position:radius:force:"></a>
+	<h3 class="subsubtitle method-title">explosion:position:radius:force:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates an explosion effect.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)explosion:(CMSpace *)<em>cmSpace</em> position:(cpVect)<em>position</em> radius:(float)<em>radius</em> force:(float)<em>force</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd>the origin of the explotion</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the area affected (all shapes that are completely present within the area are affected</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>the amounth of force the explosion has.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBlastEffect.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/explosion:position:radius:force:layer:group:" title="explosion:position:radius:force:layer:group:"></a>
+	<h3 class="subsubtitle method-title">explosion:position:radius:force:layer:group:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates an explosion effect.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)explosion:(CMSpace *)<em>cmSpace</em> position:(cpVect)<em>position</em> radius:(float)<em>radius</em> force:(float)<em>force</em> layer:(cpLayers)<em>layer</em> group:(cpGroup)<em>group</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd>the origin of the explotion</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the area affected (all shapes that are completely present within the area are affected</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>the amounth of force the explosion has.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layer</em></dt>
+			<dd>the layer</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd>the group</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBlastEffect.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/implosion:position:radius:force:" title="implosion:position:radius:force:"></a>
+	<h3 class="subsubtitle method-title">implosion:position:radius:force:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates an implosion effect.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)implosion:(CMSpace *)<em>cmSpace</em> position:(cpVect)<em>position</em> radius:(float)<em>radius</em> force:(float)<em>force</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd>the origin of the explotion</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the area affected (all shapes that are completely present within the area are affected</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>the amounth of force the implotion has.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBlastEffect.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/implosion:position:radius:force:layer:group:" title="implosion:position:radius:force:layer:group:"></a>
+	<h3 class="subsubtitle method-title">implosion:position:radius:force:layer:group:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates an implosion effect.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)implosion:(CMSpace *)<em>cmSpace</em> position:(cpVect)<em>position</em> radius:(float)<em>radius</em> force:(float)<em>force</em> layer:(cpLayers)<em>layer</em> group:(cpGroup)<em>group</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd>the origin of the explotion</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the area affected (all shapes that are completely present within the area are affected</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>the amounth of force the implotion has.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layer</em></dt>
+			<dd>the layer</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd>the group</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBlastEffect.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/perform:position:radius:force:layer:group:explosion:" title="perform:position:radius:force:layer:group:explosion:"></a>
+	<h3 class="subsubtitle method-title">perform:position:radius:force:layer:group:explosion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs the blast.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)perform:(CMSpace *)<em>cmSpace</em> position:(cpVect)<em>position</em> radius:(float)<em>radius</em> force:(float)<em>force</em> layer:(cpLayers)<em>layer</em> group:(cpGroup)<em>group</em> explosion:(BOOL)<em>explosion</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>position</em></dt>
+			<dd>the origin of the explotion</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>radius</em></dt>
+			<dd>the area affected (all shapes that are completely present within the area are affected</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>force</em></dt>
+			<dd>the amounth of force the implotion has.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>layer</em></dt>
+			<dd>the layer</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>group</em></dt>
+			<dd>the group</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>explosion</em></dt>
+			<dd>YES if it is an explosion, NO when it is an implosion</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBlastEffect.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/performImpExplosion:cmShape:data:" title="performImpExplosion:cmShape:data:"></a>
+	<h3 class="subsubtitle method-title">performImpExplosion:cmShape:data:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs the implosion / explosion callback method.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)performImpExplosion:(cpBB *)<em>boundingBox</em> cmShape:(CMShape *)<em>cmShape</em> data:(id)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundingBox</em></dt>
+			<dd>the bounding box.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmShape</em></dt>
+			<dd>the shape that is being handled.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd>the data that is passed along, in this case the <a href="CMBlastEffectData.html">CMBlastEffectData</a></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBlastEffect.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

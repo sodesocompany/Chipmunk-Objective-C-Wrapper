@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CMLoaderListenerProtocol Protocol Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
+	</head>
+	<body>
+		<article>
+			<div class="main-navigation navigation-top">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="header">
+				<div class="section-header">
+					<h1 class="title title-header">CMLoaderListenerProtocol Protocol Reference</h1>
+				</div>		
+			</div>
+			<div id="container">	
+				
+				<div class="section section-specification"><table cellspacing="0"><tbody>
+					<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">CMLoaderListenerProtocol.h</td>
+</tr>
+					</tbody></table></div>
+				
+				
+				
+				<div class="section section-overview">
+					<h2 class="subtitle subtitle-overview">Overview</h2>
+					
+<p>This protocol can be added to an object so it will receive callbacks about when
+a body, shape or constraint has been constructed and when it has been added
+to the space.</p>
+
+<p>This allows you to make modifications to the objects or attach
+a Sparrow object to the body so it runs in the updates for the positions
+and angles.</p>
+
+				</div>
+				
+				
+				
+				
+				<div class="section section-tasks">
+					<h2 class="subtitle subtitle-tasks">Tasks</h2>
+					
+					
+
+					<ul class="task-list">
+						<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bodyBeforeAddToSpace:">- bodyBeforeAddToSpace:</a></code>
+		<span class="tooltip">Callback when a body has been created but not yet added to the space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bodyAfterAddToSpace:">- bodyAfterAddToSpace:</a></code>
+		<span class="tooltip">Callback when a body has been created and has been added to the space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shapeBeforeAddToSpace:">- shapeBeforeAddToSpace:</a></code>
+		<span class="tooltip">Callback when a shape has been created and has been attached to the body
+but not yet added to the space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shapeAfterAddToSpace:">- shapeAfterAddToSpace:</a></code>
+		<span class="tooltip">Callback when a shape has been created and has been attached to the body
+and has been added to the space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/constraintBeforeAddToSpace:">- constraintBeforeAddToSpace:</a></code>
+		<span class="tooltip">Callback when a constraint has been created and has been attached to both the bodies
+but not yet added to the space.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/constraintAfterAddToSpace:">- constraintAfterAddToSpace:</a></code>
+		<span class="tooltip">Callback when a constraint has been created and has been attached to both the bodies
+and has been added to the space.</span>
+	</span>
+	
+</li>
+					</ul>
+					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				<div class="section section-methods">
+					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/bodyAfterAddToSpace:" title="bodyAfterAddToSpace:"></a>
+	<h3 class="subsubtitle method-title">bodyAfterAddToSpace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Callback when a body has been created and has been added to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)bodyAfterAddToSpace:(CMBody *)<em>cmBody</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoaderListenerProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/bodyBeforeAddToSpace:" title="bodyBeforeAddToSpace:"></a>
+	<h3 class="subsubtitle method-title">bodyBeforeAddToSpace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Callback when a body has been created but not yet added to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)bodyBeforeAddToSpace:(CMBody *)<em>cmBody</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmBody</em></dt>
+			<dd>the body</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoaderListenerProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/constraintAfterAddToSpace:" title="constraintAfterAddToSpace:"></a>
+	<h3 class="subsubtitle method-title">constraintAfterAddToSpace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Callback when a constraint has been created and has been attached to both the bodies
+and has been added to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)constraintAfterAddToSpace:(CMConstraint *)<em>cmConstraint</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmConstraint</em></dt>
+			<dd>the constraint</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoaderListenerProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/constraintBeforeAddToSpace:" title="constraintBeforeAddToSpace:"></a>
+	<h3 class="subsubtitle method-title">constraintBeforeAddToSpace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Callback when a constraint has been created and has been attached to both the bodies
+but not yet added to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)constraintBeforeAddToSpace:(CMConstraint *)<em>cmConstraint</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmConstraint</em></dt>
+			<dd>the constraint</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoaderListenerProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/shapeAfterAddToSpace:" title="shapeAfterAddToSpace:"></a>
+	<h3 class="subsubtitle method-title">shapeAfterAddToSpace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Callback when a shape has been created and has been attached to the body
+and has been added to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shapeAfterAddToSpace:(CMShape *)<em>cmShape</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmShape</em></dt>
+			<dd>the shape</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoaderListenerProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/shapeBeforeAddToSpace:" title="shapeBeforeAddToSpace:"></a>
+	<h3 class="subsubtitle method-title">shapeBeforeAddToSpace:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Callback when a shape has been created and has been attached to the body
+but not yet added to the space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)shapeBeforeAddToSpace:(CMShape *)<em>cmShape</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmShape</em></dt>
+			<dd>the shape</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMLoaderListenerProtocol.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+				</div>
+				
+				
+				
+				
+			</div>
+			<div class="main-navigation navigation-bottom">
+				<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+			</div>
+			<div id="footer">
+				<hr />
+				<div class="footer-copyright">
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
+					
+					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

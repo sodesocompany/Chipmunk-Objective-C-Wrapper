@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>CMLoader Class Reference</title>
+		<title>CMDefaultLoader Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
 		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
@@ -16,7 +16,7 @@
 			</div>
 			<div id="header">
 				<div class="section-header">
-					<h1 class="title title-header">CMLoader Class Reference</h1>
+					<h1 class="title title-header">CMDefaultLoader Class Reference</h1>
 				</div>		
 			</div>
 			<div id="container">	
@@ -27,7 +27,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CMLoader.h<br />CMLoader.m</td>
+	<td class="specification-value">CMDefaultLoader.h<br />CMDefaultLoader.m</td>
 </tr>
 					</tbody></table></div>
 				
@@ -36,7 +36,7 @@
 				<div class="section section-overview">
 					<h2 class="subtitle subtitle-overview">Overview</h2>
 					
-<p>The <a href="CMLoader.html">CMLoader</a> class can be used to load complete definitions of bodies and shapes with
+<p>The CMLoader class can be used to load complete definitions of bodies and shapes with
 their constraints into the space. It can be done individual (single body at a time) or
 multimple at the same time.</p>
 
@@ -48,12 +48,12 @@ multimple at the same time.</p>
 				<div class="section section-tasks">
 					<h2 class="subtitle subtitle-tasks">Tasks</h2>
 					
-					<h3 class="subsubtitle task-title">Other Methods</h3>
+					<h3 class="subsubtitle task-title">Operations</h3>
 
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/loadFromConfiguration:configuration:">+ loadFromConfiguration:configuration:</a></code>
+		<code><a href="#//api/name/loadFromConfiguration:cmSpace:configuration:">+ loadFromConfiguration:cmSpace:configuration:</a></code>
 		<span class="tooltip">Loads the configuration from the specified .plist and add's it to the
 space.</span>
 	</span>
@@ -66,7 +66,7 @@ space.</span>
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/createBody:bodyConfig:">+ createBody:bodyConfig:</a></code>
+		<code><a href="#//api/name/createBody:cmSpace:bodyConfig:">+ createBody:cmSpace:bodyConfig:</a></code>
 		<span class="tooltip">Constructs a new body, the definition in the .plist file would look like:</span>
 	</span>
 	
@@ -92,6 +92,13 @@ space.</span>
 	<span class="tooltip">
 		<code><a href="#//api/name/createPolygonShape:shapeConfig:">+ createPolygonShape:shapeConfig:</a></code>
 		<span class="tooltip">Constructs a new polygon shape, the definition in the .plist file would look like:</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateShapeWithGeneralProperties:shapeConfig:">+ updateShapeWithGeneralProperties:shapeConfig:</a></code>
+		<span class="tooltip">Sets the general properties of a shape (friction, elasticity, sensor, etc...) which
+are shared among all constraints.</span>
 	</span>
 	
 </li><li>
@@ -161,6 +168,18 @@ space.</span>
 are shared among all constraints.</span>
 	</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fromBody:constraintConfig:">+ fromBody:constraintConfig:</a></code>
+		<span class="tooltip">Retrieves the fromBody from the <a href="CMSpace.html">CMSpace</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/toBody:constraintConfig:">+ toBody:constraintConfig:</a></code>
+		<span class="tooltip">Retrieves the toBody from the <a href="CMSpace.html">CMSpace</a>.</span>
+	</span>
+	
 </li>
 					</ul>
 					
@@ -174,8 +193,8 @@ are shared among all constraints.</span>
 					<h2 class="subtitle subtitle-methods">Class Methods</h2>
 					
 					<div class="section-method">
-	<a name="//api/name/createBody:bodyConfig:" title="createBody:bodyConfig:"></a>
-	<h3 class="subsubtitle method-title">createBody:bodyConfig:</h3>
+	<a name="//api/name/createBody:cmSpace:bodyConfig:" title="createBody:cmSpace:bodyConfig:"></a>
+	<h3 class="subsubtitle method-title">createBody:cmSpace:bodyConfig:</h3>
 	
 	
 	
@@ -184,7 +203,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createBody:(CMSpace *)<em>cmSpace</em> bodyConfig:(NSDictionary *)<em>bodyConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)createBody:(id)<em>listener</em> cmSpace:(CMSpace *)<em>cmSpace</em> bodyConfig:(NSDictionary *)<em>bodyConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -198,6 +217,11 @@ are shared among all constraints.</span>
 		<dl class="argument-def parameter-def">
 			<dt><em>bodyConfig</em></dt>
 			<dd>the configuration of the shape.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listerer</em></dt>
+			<dd>listener that recieves events about bodies and shapes.</dd>
 		</dl>
 		
 	</div>
@@ -229,7 +253,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -246,7 +270,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createCircleShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMShape *)createCircleShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -281,6 +305,9 @@ are shared among all constraints.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: circleShape<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: circle<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius: 15<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset: {10,10} (optional)<br/></p>
 		
@@ -294,7 +321,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -311,7 +338,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createDampedRotarySpringConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createDampedRotarySpringConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -362,7 +389,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -379,7 +406,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createDampedSpringConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createDampedSpringConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -432,7 +459,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -449,7 +476,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createGearJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createGearJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -499,7 +526,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -516,7 +543,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createGrooveJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createGrooveJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -567,7 +594,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -584,7 +611,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createPinJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createPinJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -635,7 +662,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -652,7 +679,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createPivotJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createPivotJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -707,7 +734,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -724,7 +751,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createPolygonShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMShape *)createPolygonShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -759,6 +786,9 @@ are shared among all constraints.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: polyShape<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: polygon<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertices:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0: {-2.8,3.1}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1: {8.8,-9.1}<br/>
@@ -774,7 +804,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -791,7 +821,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createRatchetJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createRatchetJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -841,7 +871,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -858,7 +888,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createRectangleShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMShape *)createRectangleShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -893,6 +923,9 @@ are shared among all constraints.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: rectangleShape<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: rectangle<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: 20<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: 20<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset: {10,10} (optional)<br/></p>
@@ -907,7 +940,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -924,7 +957,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createRotaryLimitConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createRotaryLimitConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -974,7 +1007,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -991,7 +1024,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createSegmentShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMShape *)createSegmentShape:(CMBody *)<em>cmBody</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1026,6 +1059,9 @@ are shared among all constraints.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 0<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: segmentShape<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: segment<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;friction: 0.7 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elasticity: 1.0 (optional)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sensor: false (optional)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radius: 3<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from: {-15,-15}<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to: {15,15}<br/>
@@ -1041,7 +1077,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -1058,7 +1094,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createSimpleMotorConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createSimpleMotorConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1107,7 +1143,7 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -1124,7 +1160,7 @@ are shared among all constraints.</span>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)createSlideJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMConstraint *)createSlideJointConstraint:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1176,25 +1212,24 @@ are shared among all constraints.</span>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/loadFromConfiguration:configuration:" title="loadFromConfiguration:configuration:"></a>
-	<h3 class="subsubtitle method-title">loadFromConfiguration:configuration:</h3>
+	<a name="//api/name/fromBody:constraintConfig:" title="fromBody:constraintConfig:"></a>
+	<h3 class="subsubtitle method-title">fromBody:constraintConfig:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Loads the configuration from the specified .plist and add's it to the
-space.</p>
+		<p>Retrieves the fromBody from the <a href="CMSpace.html">CMSpace</a>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>+ (void)loadFromConfiguration:(CMSpace *)<em>cmSpace</em> configuration:(NSString *)<em>configuration</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (CMBody *)fromBody:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1202,12 +1237,12 @@ space.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>cmSpace</em></dt>
-			<dd>the space.</dd>
+			<dd>the space to retrieve the body from.</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>configuration</em></dt>
-			<dd>the name of the .plist wile (without the extension)</dd>
+			<dt><em>constraintConfig</em></dt>
+			<dd>the configuration of the constraint.</dd>
 		</dl>
 		
 	</div>
@@ -1224,7 +1259,107 @@ space.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.h</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/loadFromConfiguration:cmSpace:configuration:" title="loadFromConfiguration:cmSpace:configuration:"></a>
+	<h3 class="subsubtitle method-title">loadFromConfiguration:cmSpace:configuration:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the configuration from the specified .plist and add's it to the
+space.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)loadFromConfiguration:(id)<em>listener</em> cmSpace:(CMSpace *)<em>cmSpace</em> configuration:(NSString *)<em>configuration</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>configuration</em></dt>
+			<dd>the name of the .plist wile (without the extension)</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listerer</em></dt>
+			<dd>listener that recieves events about bodies and shapes.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDefaultLoader.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/toBody:constraintConfig:" title="toBody:constraintConfig:"></a>
+	<h3 class="subsubtitle method-title">toBody:constraintConfig:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves the toBody from the <a href="CMSpace.html">CMSpace</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (CMBody *)toBody:(CMSpace *)<em>cmSpace</em> constraintConfig:(NSDictionary *)<em>constraintConfig</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmSpace</em></dt>
+			<dd>the space to retrieve the body from.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>constraintConfig</em></dt>
+			<dd>the configuration of the constraint.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -1272,7 +1407,55 @@ are shared among all constraints.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMLoader.m</code><br />
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/updateShapeWithGeneralProperties:shapeConfig:" title="updateShapeWithGeneralProperties:shapeConfig:"></a>
+	<h3 class="subsubtitle method-title">updateShapeWithGeneralProperties:shapeConfig:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the general properties of a shape (friction, elasticity, sensor, etc...) which
+are shared among all constraints.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)updateShapeWithGeneralProperties:(CMShape *)<em>cmShape</em> shapeConfig:(NSDictionary *)<em>shapeConfig</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cmShape</em></dt>
+			<dd>the shape.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>shapeConfig</em></dt>
+			<dd>the configuration of the shape.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDefaultLoader.m</code><br />
 	</div>				
 	
 	
@@ -1295,7 +1478,7 @@ are shared among all constraints.</p>
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

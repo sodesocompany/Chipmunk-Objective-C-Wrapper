@@ -68,6 +68,18 @@ the complete object.</p>
 		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
 	</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/velocityFunction"> velocityFunction</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/positionFunction"> positionFunction</a></code>
+		<span class="tooltip">The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</span>
+	</span>
+	
 </li>
 					</ul>
 					
@@ -77,7 +89,7 @@ the complete object.</p>
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithMass:moment:">- initWithMass:moment:</a></code>
-		<span class="tooltip">Constructs a new <a href="CMBody.html">CMBody</a> object with the given mass and moment.</span>
+		<span class="tooltip">Constructs a new <a href="CMBody.html">CMBody</a> object with the given <a href="#//api/name/mass">mass</a> and <a href="#//api/name/moment">moment</a>.</span>
 	</span>
 	
 </li><li>
@@ -95,67 +107,119 @@ the complete object.</p>
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setMass:">- setMass:</a></code>
-		<span class="tooltip">Set the mass.</span>
+		<span class="tooltip">Set the <a href="#//api/name/mass">mass</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mass">- mass</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/mass">mass</a> of the body.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setMoment:">- setMoment:</a></code>
-		<span class="tooltip">Set the moment.</span>
+		<span class="tooltip">Set the <a href="#//api/name/moment">moment</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/moment">- moment</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/moment">moment</a> of the body.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setVelocity:">- setVelocity:</a></code>
-		<span class="tooltip">Sets the velocity of the body.</span>
+		<span class="tooltip">Sets the <a href="#//api/name/velocity">velocity</a> of the body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/velocity">- velocity</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/velocity">velocity</a> of the body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setVelocityFunction:selector:">- setVelocityFunction:selector:</a></code>
+		<span class="tooltip">Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+applying simply gravity. Its unlikely that youll need to override the <a href="#//api/name/position">position</a> integration function, and if you do you should
+carefully study how the default function (cpBodyUpdatePosition()) works.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPositionFunction:selector:">- setPositionFunction:selector:</a></code>
+		<span class="tooltip">Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+applying simply gravity. Its unlikely that youll need to override the <a href="#//api/name/position">position</a> integration function, and if you do you should
+carefully study how the default function (cpBodyUpdatePosition()) works.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setForce:">- setForce:</a></code>
-		<span class="tooltip">Sets the force.</span>
+		<span class="tooltip">Sets the <a href="#//api/name/force">force</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/force">- force</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/force">force</a>.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setPositionUsingVect:">- setPositionUsingVect:</a></code>
-		<span class="tooltip">Sets the position.</span>
+		<span class="tooltip">Sets the <a href="#//api/name/position">position</a>.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setPositionUsingPoint:">- setPositionUsingPoint:</a></code>
-		<span class="tooltip">Sets the position.</span>
+		<span class="tooltip">Sets the <a href="#//api/name/position">position</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/position">- position</a></code>
+		<span class="tooltip">Returns the current <a href="#//api/name/position">position</a> of the body.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setAngle:">- setAngle:</a></code>
-		<span class="tooltip">Sets the angle of this body.</span>
+		<span class="tooltip">Sets the <a href="#//api/name/angle">angle</a> of this body.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getAngle">- getAngle</a></code>
-		<span class="tooltip">Returns the current rotational angle of the body in radians.</span>
+		<code><a href="#//api/name/angle">- angle</a></code>
+		<span class="tooltip">Returns the current rotational <a href="#//api/name/angle">angle</a> of the body in radians.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setAngularVelocity:">- setAngularVelocity:</a></code>
-		<span class="tooltip">Sets the angulair velocity.</span>
+		<span class="tooltip">Sets the angulair <a href="#//api/name/velocity">velocity</a>.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/angularVelocity">- angularVelocity</a></code>
+		<span class="tooltip">Returns the angular <a href="#//api/name/velocity">velocity</a>.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setTorque:">- setTorque:</a></code>
-		<span class="tooltip">Sets the torque</span>
+		<span class="tooltip">Sets the <a href="#//api/name/torque">torque</a></span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getTorque">- getTorque</a></code>
-		<span class="tooltip">Current torque being applied to the body.</span>
+		<code><a href="#//api/name/torque">- torque</a></code>
+		<span class="tooltip">Current <a href="#//api/name/torque">torque</a> being applied to the body.</span>
 	</span>
 	
 </li><li>
@@ -167,7 +231,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getData">- getData</a></code>
+		<code><a href="#//api/name/data">- data</a></code>
 		<span class="tooltip">Returns the associated object with this body.</span>
 	</span>
 	
@@ -180,13 +244,32 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/applyImpulse:offset:">- applyImpulse:offset:</a></code>
-		<span class="tooltip">Apply an impulse to this body at a relative offset from the center of gravity. Both the impulse and the offset are in world coordinates. offset is relative to the position of the body, but not the rotation.</span>
+		<span class="tooltip">Apply an impulse to this body at a relative offset from the center of gravity. Both the
+impulse and the offset are in world coordinates. offset is relative to the <a href="#//api/name/position">position</a> of
+the body, but not the rotation.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/applyForce:offset:">- applyForce:offset:</a></code>
-		<span class="tooltip">Apply (accumulate) the force on the body at a relative offset (important!) from the center of gravity. Both the force and offset are in world coordinates.</span>
+		<span class="tooltip">Apply (accumulate) the <a href="#//api/name/force">force</a> on the body at a relative offset (important!) from the center
+of gravity. Both the <a href="#//api/name/force">force</a> and offset are in world coordinates.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateVelocity:damping:dt:">- updateVelocity:damping:dt:</a></code>
+		<span class="tooltip">Default rigid body <a href="#//api/name/velocity">velocity</a> integration function. Updates the <a href="#//api/name/velocity">velocity</a> of
+the body using Euler integration.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updatePosition:">- updatePosition:</a></code>
+		<span class="tooltip">Default rigid body <a href="#//api/name/position">position</a> integration function. Updates the <a href="#//api/name/position">position</a> of the body using
+Euler integration. Unlike the <a href="#//api/name/velocity">velocity</a> function, it’s unlikely you’ll want to override
+this function. If you do, make sure you understand it’s source code as it’s an
+important part of the collision/joint correction process.</span>
 	</span>
 	
 </li><li>
@@ -500,8 +583,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>damping</em></dt>
-			<dd>The amount of viscous damping to apply.
-  </dd>
+			<dd>The amount of viscous damping to apply.</dd>
 		</dl>
 		
 	</div>
@@ -568,8 +650,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>damping</em></dt>
-			<dd>The amount of viscous damping to apply.
-  </dd>
+			<dd>The amount of viscous damping to apply.</dd>
 		</dl>
 		
 	</div>
@@ -621,8 +702,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>ratio</em></dt>
-			<dd>The angle in radians of each ratchet position. Negative values cause the ratchet to operate in the opposite direction.
-  </dd>
+			<dd>The <a href="#//api/name/angle">angle</a> in radians of each ratchet <a href="#//api/name/position">position</a>. Negative values cause the ratchet to operate in the opposite direction.</dd>
 		</dl>
 		
 	</div>
@@ -679,8 +759,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>anchor1</em></dt>
-			<dd>The anchor point on the second body that is held to the line segment on the first.
-  </dd>
+			<dd>The anchor point on the second body that is held to the line segment on the first.</dd>
 		</dl>
 		
 	</div>
@@ -831,8 +910,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>pivot</em></dt>
-			<dd>The pivot coordinate in the world.
-  </dd>
+			<dd>The pivot coordinate in the world.</dd>
 		</dl>
 		
 	</div>
@@ -1052,8 +1130,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>ratchet</em></dt>
-			<dd>The ratchet.
-  </dd>
+			<dd>The ratchet.</dd>
 		</dl>
 		
 	</div>
@@ -1214,8 +1291,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>max</em></dt>
-			<dd>The maximum angular delta of the joint in radians.
-  </dd>
+			<dd>The maximum angular delta of the joint in radians.</dd>
 		</dl>
 		
 	</div>
@@ -1314,7 +1390,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>rate</em></dt>
-			<dd>the rate (angle) how much it should rotate within a single frame.</dd>
+			<dd>the rate (<a href="#//api/name/angle">angle</a>) how much it should rotate within a single frame.</dd>
 		</dl>
 		
 	</div>
@@ -1432,13 +1508,88 @@ NSArray must be filled with string with the following formatting:
 </div>
 					
 					<div class="section-method">
+	<a name="//api/name/angle" title="angle"></a>
+	<h3 class="subsubtitle method-title">angle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current rotational <a href="#//api/name/angle">angle</a> of the body in radians.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)angle</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the current rotational <a href="#//api/name/angle">angle</a> of the body in radians.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/angularVelocity" title="angularVelocity"></a>
+	<h3 class="subsubtitle method-title">angularVelocity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the angular <a href="#//api/name/velocity">velocity</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)angularVelocity</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the angular <a href="#//api/name/velocity">velocity</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/applyForce:offset:" title="applyForce:offset:"></a>
 	<h3 class="subsubtitle method-title">applyForce:offset:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Apply (accumulate) the force on the body at a relative offset (important!) from the center of gravity. Both the force and offset are in world coordinates.</p>
+		<p>Apply (accumulate) the <a href="#//api/name/force">force</a> on the body at a relative offset (important!) from the center
+of gravity. Both the <a href="#//api/name/force">force</a> and offset are in world coordinates.</p>
 	</div>		
 	
 	
@@ -1450,7 +1601,7 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>force</em></dt>
-			<dd>the force</dd>
+			<dd>the <a href="#//api/name/force">force</a></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1485,7 +1636,9 @@ NSArray must be filled with string with the following formatting:
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Apply an impulse to this body at a relative offset from the center of gravity. Both the impulse and the offset are in world coordinates. offset is relative to the position of the body, but not the rotation.</p>
+		<p>Apply an impulse to this body at a relative offset from the center of gravity. Both the
+impulse and the offset are in world coordinates. offset is relative to the <a href="#//api/name/position">position</a> of
+the body, but not the rotation.</p>
 	</div>		
 	
 	
@@ -1526,40 +1679,8 @@ NSArray must be filled with string with the following formatting:
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/getAngle" title="getAngle"></a>
-	<h3 class="subsubtitle method-title">getAngle</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns the current rotational angle of the body in radians.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (float)getAngle</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMBody.h</code><br />
-	</div>				
-	
-	
-</div>
-					
-					<div class="section-method">
-	<a name="//api/name/getData" title="getData"></a>
-	<h3 class="subsubtitle method-title">getData</h3>
+	<a name="//api/name/data" title="data"></a>
+	<h3 class="subsubtitle method-title">data</h3>
 	
 	
 	
@@ -1568,7 +1689,7 @@ NSArray must be filled with string with the following formatting:
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)getData</code></div>
+	<div class="method-subsection method-declaration"><code>- (id)data</code></div>
 	
 	
 	
@@ -1595,31 +1716,27 @@ NSArray must be filled with string with the following formatting:
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/getTorque" title="getTorque"></a>
-	<h3 class="subsubtitle method-title">getTorque</h3>
+	<a name="//api/name/force" title="force"></a>
+	<h3 class="subsubtitle method-title">force</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Current torque being applied to the body.</p>
+		<p>Returns the <a href="#//api/name/force">force</a>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (float)getTorque</code></div>
+	<div class="method-subsection method-declaration"><code>- (cpVect)force</code></div>
 	
 	
 	
 	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		
-		<p>Current torque being applied to the body.</p>
-		
-		<p>Does not reset automatically as in some physics engines.</p>
-		
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/force">force</a>.</p>
 	</div>
+	
+	
 	
 	
 	
@@ -1688,7 +1805,7 @@ NSArray must be filled with string with the following formatting:
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Constructs a new <a href="CMBody.html">CMBody</a> object with the given mass and moment.</p>
+		<p>Constructs a new <a href="CMBody.html">CMBody</a> object with the given <a href="#//api/name/mass">mass</a> and <a href="#//api/name/moment">moment</a>.</p>
 	</div>		
 	
 	
@@ -1705,8 +1822,8 @@ NSArray must be filled with string with the following formatting:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>moment</em></dt>
-			<dd>Moment of inertia (MoI or sometimes just moment) of the body.
-The moment is like the rotational mass of a body.</dd>
+			<dd>Moment of inertia (MoI or sometimes just <a href="#//api/name/moment">moment</a>) of the body.
+The <a href="#//api/name/moment">moment</a> is like the rotational <a href="#//api/name/mass">mass</a> of a body.</dd>
 		</dl>
 		
 	</div>
@@ -1716,6 +1833,117 @@ The moment is like the rotational mass of a body.</dd>
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>the new <a href="CMBody.html">CMBody</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/mass" title="mass"></a>
+	<h3 class="subsubtitle method-title">mass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/mass">mass</a> of the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)mass</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/mass">mass</a> of the body.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/moment" title="moment"></a>
+	<h3 class="subsubtitle method-title">moment</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/moment">moment</a> of the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)moment</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/moment">moment</a> of the body.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/position" title="position"></a>
+	<h3 class="subsubtitle method-title">position</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current <a href="#//api/name/position">position</a> of the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)position</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the current <a href="#//api/name/position">position</a> of the body.</p>
 	</div>
 	
 	
@@ -1889,7 +2117,7 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the angle of this body.</p>
+		<p>Sets the <a href="#//api/name/angle">angle</a> of this body.</p>
 	</div>		
 	
 	
@@ -1901,7 +2129,7 @@ The moment is like the rotational mass of a body.</dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>angle</em></dt>
-			<dd>the angle in radians.</dd>
+			<dd>the <a href="#//api/name/angle">angle</a> in radians.</dd>
 		</dl>
 		
 	</div>
@@ -1913,7 +2141,7 @@ The moment is like the rotational mass of a body.</dd>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		
-		<p>Sets the angle of this body.</p>
+		<p>Sets the <a href="#//api/name/angle">angle</a> of this body.</p>
 		
 		<p>When using Sparrow you can use the SP_D2R function
 to convert from degrees to radians.</p>
@@ -1941,7 +2169,7 @@ to convert from degrees to radians.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the angulair velocity.</p>
+		<p>Sets the angulair <a href="#//api/name/velocity">velocity</a>.</p>
 	</div>		
 	
 	
@@ -1953,7 +2181,7 @@ to convert from degrees to radians.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>velocity</em></dt>
-			<dd>the velocity.</dd>
+			<dd>the <a href="#//api/name/velocity">velocity</a>.</dd>
 		</dl>
 		
 	</div>
@@ -2026,7 +2254,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the force.</p>
+		<p>Sets the <a href="#//api/name/force">force</a>.</p>
 	</div>		
 	
 	
@@ -2038,7 +2266,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>force</em></dt>
-			<dd>Current force being applied to the body.</dd>
+			<dd>Current <a href="#//api/name/force">force</a> being applied to the body.</dd>
 		</dl>
 		
 	</div>
@@ -2050,7 +2278,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		
-		<p>Sets the force.</p>
+		<p>Sets the <a href="#//api/name/force">force</a>.</p>
 		
 		<p>Does not reset automatically as in some physics engines.</p>
 		
@@ -2077,7 +2305,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set the mass.</p>
+		<p>Set the <a href="#//api/name/mass">mass</a>.</p>
 	</div>		
 	
 	
@@ -2089,7 +2317,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>mass</em></dt>
-			<dd>the mass of the body.</dd>
+			<dd>the <a href="#//api/name/mass">mass</a> of the body.</dd>
 		</dl>
 		
 	</div>
@@ -2119,7 +2347,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Set the moment.</p>
+		<p>Set the <a href="#//api/name/moment">moment</a>.</p>
 	</div>		
 	
 	
@@ -2131,8 +2359,8 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpBody"
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>moment</em></dt>
-			<dd>of inertia (MoI or sometimes just moment) of the body.
-The moment is like the rotational mass of a body.</dd>
+			<dd>of inertia (MoI or sometimes just <a href="#//api/name/moment">moment</a>) of the body.
+The <a href="#//api/name/moment">moment</a> is like the rotational <a href="#//api/name/mass">mass</a> of a body.</dd>
 		</dl>
 		
 	</div>
@@ -2156,13 +2384,73 @@ The moment is like the rotational mass of a body.</dd>
 </div>
 					
 					<div class="section-method">
+	<a name="//api/name/setPositionFunction:selector:" title="setPositionFunction:selector:"></a>
+	<h3 class="subsubtitle method-title">setPositionFunction:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+applying simply gravity. Its unlikely that youll need to override the <a href="#//api/name/position">position</a> integration function, and if you do you should
+carefully study how the default function (cpBodyUpdatePosition()) works.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setPositionFunction:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that contains the select.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector to invoke.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+applying simply gravity. Its unlikely that youll need to override the <a href="#//api/name/position">position</a> integration function, and if you do you should
+carefully study how the default function (cpBodyUpdatePosition()) works.</p>
+		
+		<p>The selector should have the following signature:<ul><li>(void)positionFunction:(CMBody*)cmBody dt:(float)dt;</li></ul></p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/setPositionUsingPoint:" title="setPositionUsingPoint:"></a>
 	<h3 class="subsubtitle method-title">setPositionUsingPoint:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the position.</p>
+		<p>Sets the <a href="#//api/name/position">position</a>.</p>
 	</div>		
 	
 	
@@ -2204,7 +2492,7 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the position.</p>
+		<p>Sets the <a href="#//api/name/position">position</a>.</p>
 	</div>		
 	
 	
@@ -2246,7 +2534,7 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the torque</p>
+		<p>Sets the <a href="#//api/name/torque">torque</a></p>
 	</div>		
 	
 	
@@ -2258,7 +2546,7 @@ The moment is like the rotational mass of a body.</dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>torque</em></dt>
-			<dd>the torque</dd>
+			<dd>the <a href="#//api/name/torque">torque</a></dd>
 		</dl>
 		
 	</div>
@@ -2288,7 +2576,7 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets the velocity of the body.</p>
+		<p>Sets the <a href="#//api/name/velocity">velocity</a> of the body.</p>
 	</div>		
 	
 	
@@ -2324,6 +2612,66 @@ The moment is like the rotational mass of a body.</dd>
 </div>
 					
 					<div class="section-method">
+	<a name="//api/name/setVelocityFunction:selector:" title="setVelocityFunction:selector:"></a>
+	<h3 class="subsubtitle method-title">setVelocityFunction:selector:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+applying simply gravity. Its unlikely that youll need to override the <a href="#//api/name/position">position</a> integration function, and if you do you should
+carefully study how the default function (cpBodyUpdatePosition()) works.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setVelocityFunction:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that contains the select.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector to invoke.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Integration function types. You can write your own integration functions to create your own body behaviors that go beyond
+applying simply gravity. Its unlikely that youll need to override the <a href="#//api/name/position">position</a> integration function, and if you do you should
+carefully study how the default function (cpBodyUpdatePosition()) works.</p>
+		
+		<p>The selector should have the following signature:<ul><li>(void)velocityFunction:(CMBody*)cmBody gravity:(cpVect)gravity damping:(float)damping dt:(float)dt;</li></ul></p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/sleep" title="sleep"></a>
 	<h3 class="subsubtitle method-title">sleep</h3>
 	
@@ -2338,6 +2686,182 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/torque" title="torque"></a>
+	<h3 class="subsubtitle method-title">torque</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Current <a href="#//api/name/torque">torque</a> being applied to the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)torque</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Current <a href="#//api/name/torque">torque</a> being applied to the body.</p>
+		
+		<p>Does not reset automatically as in some physics engines.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/updatePosition:" title="updatePosition:"></a>
+	<h3 class="subsubtitle method-title">updatePosition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default rigid body <a href="#//api/name/position">position</a> integration function. Updates the <a href="#//api/name/position">position</a> of the body using
+Euler integration. Unlike the <a href="#//api/name/velocity">velocity</a> function, it’s unlikely you’ll want to override
+this function. If you do, make sure you understand it’s source code as it’s an
+important part of the collision/joint correction process.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)updatePosition:(float)<em>dt</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dt</em></dt>
+			<dd>dt</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/updateVelocity:damping:dt:" title="updateVelocity:damping:dt:"></a>
+	<h3 class="subsubtitle method-title">updateVelocity:damping:dt:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default rigid body <a href="#//api/name/velocity">velocity</a> integration function. Updates the <a href="#//api/name/velocity">velocity</a> of
+the body using Euler integration.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)updateVelocity:(cpVect)<em>gravity</em> damping:(float)<em>damping</em> dt:(float)<em>dt</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gravity</em></dt>
+			<dd>the gravidy</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>damping</em></dt>
+			<dd>the damping</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dt</em></dt>
+			<dd>dt</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/velocity" title="velocity"></a>
+	<h3 class="subsubtitle method-title">velocity</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/velocity">velocity</a> of the body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)velocity</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/velocity">velocity</a> of the body.</p>
+	</div>
 	
 	
 	
@@ -2459,6 +2983,38 @@ The moment is like the rotational mass of a body.</dd>
 </div>
 					
 					<div class="section-method">
+	<a name="//api/name/positionFunction" title="positionFunction"></a>
+	<h3 class="subsubtitle method-title">positionFunction</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInvocation *positionFunction</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
 	<a name="//api/name/shapes" title="shapes"></a>
 	<h3 class="subsubtitle method-title">shapes</h3>
 	
@@ -2470,6 +3026,38 @@ The moment is like the rotational mass of a body.</dd>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSMutableArray *shapes</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMBody.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/velocityFunction" title="velocityFunction"></a>
+	<h3 class="subsubtitle method-title">velocityFunction</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Chipmunk <a href="#//api/name/cpBody">cpBody</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSInvocation *velocityFunction</code></div>
 	
 	
 	
@@ -2503,7 +3091,7 @@ The moment is like the rotational mass of a body.</dd>
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

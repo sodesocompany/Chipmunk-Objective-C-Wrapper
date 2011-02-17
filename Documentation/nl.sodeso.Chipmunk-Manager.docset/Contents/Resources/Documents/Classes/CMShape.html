@@ -64,14 +64,27 @@
 						<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setElasticity:">- setElasticity:</a></code>
-		<span class="tooltip">Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a ìperfectî bounce.
+		<span class="tooltip">Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a "perfect" bounce.
 However due to inaccuracies in the simulation using 1.0 or greater is not recommended however.</span>
 	</span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/elasticity">- elasticity</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/elasticity">elasticity</a> of the shape.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/setFriction:">- setFriction:</a></code>
-		<span class="tooltip">Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.</span>
+		<span class="tooltip">Friction coefficient. Chipmunk uses the Coulomb <a href="#//api/name/friction">friction</a> model, a value of 0.0 is frictionless.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/friction">- friction</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/friction">friction</a> coefficient. Chipmunk uses the Coulomb
+<a href="#//api/name/friction">friction</a> model, a value of 0.0 is frictionless.</span>
 	</span>
 	
 </li><li>
@@ -90,9 +103,15 @@ of object on screen. (is used by the collision detection)</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setGroup:">- setGroup:</a></code>
-		<span class="tooltip">Shapes in the same non-zero group do not generate collisions.
+		<span class="tooltip">Shapes in the same non-zero <a href="#//api/name/group">group</a> do not generate collisions.
 Useful when creating an object out of many shapes that you
 don’t want to self collide. Defaults to CP<em>NO</em>GROUP.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/group">- group</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/group">group</a>.</span>
 	</span>
 	
 </li><li>
@@ -105,6 +124,32 @@ occupies all bit-planes.</span>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/layer">- layer</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/layer">layer</a> bit mask.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setSensor:">- setSensor:</a></code>
+		<span class="tooltip">A boolean value if this shape is a <a href="#//api/name/sensor">sensor</a> or not. Sensors only
+call collision callbacks, and never generate real collisions.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sensor">- sensor</a></code>
+		<span class="tooltip">Flag indicating if this shape is a <a href="#//api/name/sensor">sensor</a> or not.Sensors only
+call collision callbacks, and never generate real collisions.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/boundingBox">- boundingBox</a></code>
+		<span class="tooltip">Returns the bounding box of this shape.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/setData:">- setData:</a></code>
 		<span class="tooltip">Associates an object with this shape, it is not used by Chipmunk but can be used
 to create a binding between an Sparrow object and a <a href="#//api/name/cpShape">cpShape</a>.</span>
@@ -112,8 +157,8 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getData">- getData</a></code>
-		<span class="tooltip">Returns the associated object with this body.</span>
+		<code><a href="#//api/name/data">- data</a></code>
+		<span class="tooltip">Returns the associated object with this <a href="#//api/name/body">body</a>.</span>
 	</span>
 	
 </li>
@@ -124,8 +169,8 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getBody">- getBody</a></code>
-		<span class="tooltip">Returns the body associated with this shape.</span>
+		<code><a href="#//api/name/body">- body</a></code>
+		<span class="tooltip">Returns the <a href="#//api/name/body">body</a> associated with this shape.</span>
 	</span>
 	
 </li><li>
@@ -137,7 +182,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/addToSpaceAsStatic">- addToSpaceAsStatic</a></code>
-		<span class="tooltip">Add this body to the Chipmunk space as a static object.</span>
+		<span class="tooltip">Add this <a href="#//api/name/body">body</a> to the Chipmunk space as a static object.</span>
 	</span>
 	
 </li><li>
@@ -199,7 +244,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Add this body to the Chipmunk space as a static object.</p>
+		<p>Add this <a href="#//api/name/body">body</a> to the Chipmunk space as a static object.</p>
 	</div>		
 	
 	
@@ -207,6 +252,80 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/body" title="body"></a>
+	<h3 class="subsubtitle method-title">body</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/body">body</a> associated with this shape.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CMBody *)body</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/body">body</a> associated with this shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/boundingBox" title="boundingBox"></a>
+	<h3 class="subsubtitle method-title">boundingBox</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the bounding box of this shape.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpBB)boundingBox</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the bounding box of this shape.</p>
+	</div>
 	
 	
 	
@@ -262,24 +381,24 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/getBody" title="getBody"></a>
-	<h3 class="subsubtitle method-title">getBody</h3>
+	<a name="//api/name/data" title="data"></a>
+	<h3 class="subsubtitle method-title">data</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the body associated with this shape.</p>
+		<p>Returns the associated object with this <a href="#//api/name/body">body</a>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (CMBody *)getBody</code></div>
+	<div class="method-subsection method-declaration"><code>- (id)data</code></div>
 	
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>the body associated with this shape.</p>
+		<p>the associated object with this <a href="#//api/name/body">body</a>.</p>
 	</div>
 	
 	
@@ -299,24 +418,147 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/getData" title="getData"></a>
-	<h3 class="subsubtitle method-title">getData</h3>
+	<a name="//api/name/elasticity" title="elasticity"></a>
+	<h3 class="subsubtitle method-title">elasticity</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the associated object with this body.</p>
+		<p>Returns the <a href="#//api/name/elasticity">elasticity</a> of the shape.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)getData</code></div>
+	<div class="method-subsection method-declaration"><code>- (float)elasticity</code></div>
 	
 	
 	
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>the associated object with this body.</p>
+		<p>the <a href="#//api/name/elasticity">elasticity</a> of the shape.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/friction" title="friction"></a>
+	<h3 class="subsubtitle method-title">friction</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/friction">friction</a> coefficient. Chipmunk uses the Coulomb
+<a href="#//api/name/friction">friction</a> model, a value of 0.0 is frictionless.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)friction</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/friction">friction</a></p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Returns the <a href="#//api/name/friction">friction</a> coefficient. Chipmunk uses the Coulomb
+<a href="#//api/name/friction">friction</a> model, a value of 0.0 is frictionless.</p>
+		
+		<p>For a listing of various frictions see:
+<a href="http://www.roymech.co.uk/Useful">http://www.roymech.co.uk/Useful</a><em>Tables/Tribology/co</em>of_frict.htm</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/group" title="group"></a>
+	<h3 class="subsubtitle method-title">group</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/group">group</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpGroup)group</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/group">group</a> (defalts to CP<em>NO</em>GROUP)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/layer" title="layer"></a>
+	<h3 class="subsubtitle method-title">layer</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/layer">layer</a> bit mask.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpLayers)layer</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/layer">layer</a> bit mask.</p>
 	</div>
 	
 	
@@ -350,6 +592,44 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/sensor" title="sensor"></a>
+	<h3 class="subsubtitle method-title">sensor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag indicating if this shape is a <a href="#//api/name/sensor">sensor</a> or not.Sensors only
+call collision callbacks, and never generate real collisions.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)sensor</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES when this shape is a <a href="#//api/name/sensor">sensor</a>, NO if not.</p>
+	</div>
 	
 	
 	
@@ -471,7 +751,7 @@ to create a binding between an Sparrow object and a <a href="#//api/name/cpShape
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a ìperfectî bounce.
+		<p>Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a "perfect" bounce.
 However due to inaccuracies in the simulation using 1.0 or greater is not recommended however.</p>
 	</div>		
 	
@@ -514,7 +794,7 @@ However due to inaccuracies in the simulation using 1.0 or greater is not recomm
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.</p>
+		<p>Friction coefficient. Chipmunk uses the Coulomb <a href="#//api/name/friction">friction</a> model, a value of 0.0 is frictionless.</p>
 	</div>		
 	
 	
@@ -538,7 +818,7 @@ However due to inaccuracies in the simulation using 1.0 or greater is not recomm
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		
-		<p>Friction coefficient. Chipmunk uses the Coulomb friction model, a value of 0.0 is frictionless.</p>
+		<p>Friction coefficient. Chipmunk uses the Coulomb <a href="#//api/name/friction">friction</a> model, a value of 0.0 is frictionless.</p>
 		
 		<p>For a listing of various frictions see:
 <a href="http://www.roymech.co.uk/Useful">http://www.roymech.co.uk/Useful</a><em>Tables/Tribology/co</em>of_frict.htm</p>
@@ -566,7 +846,7 @@ However due to inaccuracies in the simulation using 1.0 or greater is not recomm
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Shapes in the same non-zero group do not generate collisions.
+		<p>Shapes in the same non-zero <a href="#//api/name/group">group</a> do not generate collisions.
 Useful when creating an object out of many shapes that you
 don’t want to self collide. Defaults to CP<em>NO</em>GROUP.</p>
 	</div>		
@@ -580,7 +860,7 @@ don’t want to self collide. Defaults to CP<em>NO</em>GROUP.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>group</em></dt>
-			<dd>the group</dd>
+			<dd>the <a href="#//api/name/group">group</a></dd>
 		</dl>
 		
 	</div>
@@ -624,7 +904,7 @@ occupies all bit-planes.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>layer</em></dt>
-			<dd>the layer</dd>
+			<dd>the <a href="#//api/name/layer">layer</a> bit mask.</dd>
 		</dl>
 		
 	</div>
@@ -646,6 +926,49 @@ unfamiliar with how to use them. Defaults to CP<em>ALL</em>LAYERS.</p>
 		<p><a href="http://en.wikipedia.org/wiki/Mask_(computing)">http://en.wikipedia.org/wiki/Mask_(computing)</a>#top</p>
 		
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMShape.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setSensor:" title="setSensor:"></a>
+	<h3 class="subsubtitle method-title">setSensor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A boolean value if this shape is a <a href="#//api/name/sensor">sensor</a> or not. Sensors only
+call collision callbacks, and never generate real collisions.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setSensor:(BOOL)<em>isSensor</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>isSensor</em></dt>
+			<dd>YES if this shape is a <a href="#//api/name/sensor">sensor</a>.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
 	
 	
 	
@@ -713,7 +1036,7 @@ unfamiliar with how to use them. Defaults to CP<em>ALL</em>LAYERS.</p>
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

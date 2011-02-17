@@ -56,6 +56,66 @@ While a spring is not technically a constraint, the damper is. The spring forces
 		<span class="tooltip">Constructs a new damped spring.</span>
 	</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setAnchor1:">- setAnchor1:</a></code>
+		<span class="tooltip">Changes the first anchor point.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/anchor1">- anchor1</a></code>
+		<span class="tooltip">Returns the first anchor point.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setAnchor2:">- setAnchor2:</a></code>
+		<span class="tooltip">Changes the second anchor point.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/anchor2">- anchor2</a></code>
+		<span class="tooltip">Returns the second anchor point.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setRestLength:">- setRestLength:</a></code>
+		<span class="tooltip">The length the spring wants to contract or expand to.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restLength">- restLength</a></code>
+		<span class="tooltip">Returns the length the spring wants to contract or expand to.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setStiffness:">- setStiffness:</a></code>
+		<span class="tooltip">The young's modulus of the spring.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stiffness">- stiffness</a></code>
+		<span class="tooltip">Returns the the young's modulus of the spring.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDamping:">- setDamping:</a></code>
+		<span class="tooltip">The amount of viscous <a href="#//api/name/damping">damping</a> to apply.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/damping">- damping</a></code>
+		<span class="tooltip">Returns the amount of viscous <a href="#//api/name/damping">damping</a> to apply.</span>
+	</span>
+	
 </li>
 					</ul>
 					
@@ -69,6 +129,117 @@ While a spring is not technically a constraint, the damper is. The spring forces
 				
 				<div class="section section-methods">
 					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/anchor1" title="anchor1"></a>
+	<h3 class="subsubtitle method-title">anchor1</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first anchor point.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)anchor1</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the first anchor point.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/anchor2" title="anchor2"></a>
+	<h3 class="subsubtitle method-title">anchor2</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the second anchor point.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)anchor2</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the second anchor point.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/damping" title="damping"></a>
+	<h3 class="subsubtitle method-title">damping</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the amount of viscous <a href="#//api/name/damping">damping</a> to apply.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)damping</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the amount of viscous <a href="#//api/name/damping">damping</a> to apply.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
 					
 					<div class="section-method">
 	<a name="//api/name/initBetweenBody:andBody:anchor1:anchor2:restLength:stiffness:damping:" title="initBetweenBody:andBody:anchor1:anchor2:restLength:stiffness:damping:"></a>
@@ -119,13 +290,306 @@ While a spring is not technically a constraint, the damper is. The spring forces
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>damping</em></dt>
-			<dd>The amount of viscous damping to apply.
+			<dd>The amount of viscous <a href="#//api/name/damping">damping</a> to apply.
   </dd>
 		</dl>
 		
 	</div>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/restLength" title="restLength"></a>
+	<h3 class="subsubtitle method-title">restLength</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the length the spring wants to contract or expand to.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)restLength</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the length the spring wants to contract or expand to.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setAnchor1:" title="setAnchor1:"></a>
+	<h3 class="subsubtitle method-title">setAnchor1:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Changes the first anchor point.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setAnchor1:(cpVect)<em>anchor1</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>the new anchor point.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setAnchor2:" title="setAnchor2:"></a>
+	<h3 class="subsubtitle method-title">setAnchor2:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Changes the second anchor point.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setAnchor2:(cpVect)<em>anchor2</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor2</em></dt>
+			<dd>the new anchor point.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setDamping:" title="setDamping:"></a>
+	<h3 class="subsubtitle method-title">setDamping:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The amount of viscous <a href="#//api/name/damping">damping</a> to apply.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setDamping:(float)<em>damping</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>damping</em></dt>
+			<dd>the amount of viscous <a href="#//api/name/damping">damping</a> to apply.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setRestLength:" title="setRestLength:"></a>
+	<h3 class="subsubtitle method-title">setRestLength:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The length the spring wants to contract or expand to.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setRestLength:(float)<em>restLength</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>restLength</em></dt>
+			<dd>the length the spring wants to contract or expand to.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setStiffness:" title="setStiffness:"></a>
+	<h3 class="subsubtitle method-title">setStiffness:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The young's modulus of the spring.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setStiffness:(float)<em>stiffness</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>stiffness</em></dt>
+			<dd>the young's modulus of the spring.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>The young's modulus of the spring.</p>
+		
+		<p>(<a href="http://en.wikipedia.org/wiki/Young%27s_modulus)">http://en.wikipedia.org/wiki/Young%27s_modulus)</a></p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMDampedSpringConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/stiffness" title="stiffness"></a>
+	<h3 class="subsubtitle method-title">stiffness</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the the young's modulus of the spring.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (float)stiffness</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the young's modulus of the spring.</p>
+	</div>
 	
 	
 	
@@ -158,7 +622,7 @@ While a spring is not technically a constraint, the damper is. The spring forces
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

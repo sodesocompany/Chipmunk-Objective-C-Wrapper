@@ -55,6 +55,42 @@
 		<span class="tooltip">Constructs a new groove joint constraint.</span>
 	</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setGrooveA:">- setGrooveA:</a></code>
+		<span class="tooltip">Set the start of the line segment on the first body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/grooveA">- grooveA</a></code>
+		<span class="tooltip">Returns the start of the line segment on the first body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setGrooveB:">- setGrooveB:</a></code>
+		<span class="tooltip">Sets the end of the line segment on the first body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/grooveB">- grooveB</a></code>
+		<span class="tooltip">Returns the end of the line segment on the first body.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setAnchor1:">- setAnchor1:</a></code>
+		<span class="tooltip">Changes the first anchor point.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/anchor1">- anchor1</a></code>
+		<span class="tooltip">Returns the first anchor point.</span>
+	</span>
+	
 </li>
 					</ul>
 					
@@ -68,6 +104,117 @@
 				
 				<div class="section section-methods">
 					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					
+					<div class="section-method">
+	<a name="//api/name/anchor1" title="anchor1"></a>
+	<h3 class="subsubtitle method-title">anchor1</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the first anchor point.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)anchor1</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the first anchor point.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMGrooveJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/grooveA" title="grooveA"></a>
+	<h3 class="subsubtitle method-title">grooveA</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the start of the line segment on the first body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)grooveA</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the start of the line segment on the first body.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMGrooveJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/grooveB" title="grooveB"></a>
+	<h3 class="subsubtitle method-title">grooveB</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the end of the line segment on the first body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (cpVect)grooveB</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The end of the line segment on the first body.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMGrooveJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
 					
 					<div class="section-method">
 	<a name="//api/name/initBetweenBody:andBody:grooveA:grooveB:anchor1:" title="initBetweenBody:andBody:grooveA:grooveB:anchor1:"></a>
@@ -132,6 +279,132 @@
 	
 </div>
 					
+					<div class="section-method">
+	<a name="//api/name/setAnchor1:" title="setAnchor1:"></a>
+	<h3 class="subsubtitle method-title">setAnchor1:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Changes the first anchor point.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setAnchor1:(cpVect)<em>anchor1</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>anchor1</em></dt>
+			<dd>the new anchor point.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMGrooveJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setGrooveA:" title="setGrooveA:"></a>
+	<h3 class="subsubtitle method-title">setGrooveA:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the start of the line segment on the first body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setGrooveA:(cpVect)<em>grooveA</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grooveA</em></dt>
+			<dd>the start of the line segment on the first body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMGrooveJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/setGrooveB:" title="setGrooveB:"></a>
+	<h3 class="subsubtitle method-title">setGrooveB:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the end of the line segment on the first body.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setGrooveB:(cpVect)<em>grooveB</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>grooveB</em></dt>
+			<dd>The end of the line segment on the first body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMGrooveJointConstraint.h</code><br />
+	</div>				
+	
+	
+</div>
+					
 				</div>
 				
 				
@@ -147,7 +420,7 @@
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					

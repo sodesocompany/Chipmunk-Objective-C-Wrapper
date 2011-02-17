@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>CMRectShape Class Reference</title>
+		<title>CMPhysicsEditorLoader Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
 		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
@@ -16,7 +16,7 @@
 			</div>
 			<div id="header">
 				<div class="section-header">
-					<h1 class="title title-header">CMRectShape Class Reference</h1>
+					<h1 class="title title-header">CMPhysicsEditorLoader Class Reference</h1>
 				</div>		
 			</div>
 			<div id="container">	
@@ -24,10 +24,10 @@
 				<div class="section section-specification"><table cellspacing="0"><tbody>
 					<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="CMShape.html">CMShape</a> : <a href="CMObject.html">CMObject</a> : NSObject</td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CMRectShape.h<br />CMRectShape.m</td>
+	<td class="specification-value">CMPhysicsEditorLoader.h<br />CMPhysicsEditorLoader.m</td>
 </tr>
 					</tbody></table></div>
 				
@@ -36,8 +36,10 @@
 				<div class="section section-overview">
 					<h2 class="subtitle subtitle-overview">Overview</h2>
 					
-<p>A convenient shape, it is in basic a poly shape but the calculation of the various
-polygons is done for you.</p>
+<p>The <a href="CMPhysicsEditorLoader.html">CMPhysicsEditorLoader</a> class can be used to load complete definitions of bodies and shapes
+from a .plist file that has been created using the PhysicsEditor application.</p>
+
+<p><a href="http://www.physicseditor.de/">http://www.physicseditor.de/</a></p>
 
 				</div>
 				
@@ -47,19 +49,26 @@ polygons is done for you.</p>
 				<div class="section section-tasks">
 					<h2 class="subtitle subtitle-tasks">Tasks</h2>
 					
-					
-<h3 class="subsubtitle task-title">Initialization</h3>
+					<h3 class="subsubtitle task-title">Operations</h3>
+
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithBody:width:height:">- initWithBody:width:height:</a></code>
-		<span class="tooltip">Constructs a new CMRect object with the specified width and height.</span>
+		<code><a href="#//api/name/loadFromConfiguration:cmSpace:configuration:">+ loadFromConfiguration:cmSpace:configuration:</a></code>
+		<span class="tooltip">Loads the configuration from the specified .plist and add it to the
+space.</span>
 	</span>
 	
-</li><li>
+</li>
+					</ul>
+					
+					<h3 class="subsubtitle task-title">Other Methods</h3>
+
+					<ul class="task-list">
+						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithBody:width:height:offset:">- initWithBody:width:height:offset:</a></code>
-		<span class="tooltip">Constructs a new CMRect object with the specified width and height.</span>
+		<code><a href="#//api/name/createBody:cmSpace:bodyConfig:name:">+ createBody:cmSpace:bodyConfig:name:</a></code>
+		<span class="tooltip">Constructs a new body.</span>
 	</span>
 	
 </li>
@@ -71,41 +80,44 @@ polygons is done for you.</p>
 				
 				
 				
-				
-				
 				<div class="section section-methods">
-					<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+					<h2 class="subtitle subtitle-methods">Class Methods</h2>
 					
 					<div class="section-method">
-	<a name="//api/name/initWithBody:width:height:" title="initWithBody:width:height:"></a>
-	<h3 class="subsubtitle method-title">initWithBody:width:height:</h3>
+	<a name="//api/name/createBody:cmSpace:bodyConfig:name:" title="createBody:cmSpace:bodyConfig:name:"></a>
+	<h3 class="subsubtitle method-title">createBody:cmSpace:bodyConfig:name:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Constructs a new CMRect object with the specified width and height.</p>
+		<p>Constructs a new body.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithBody:(CMBody *)<em>cmBody</em> width:(float)<em>width</em> height:(float)<em>height</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)createBody:(id)<em>listener</em> cmSpace:(CMSpace *)<em>cmSpace</em> bodyConfig:(NSDictionary *)<em>bodyConfig</em> name:(NSString *)<em>name</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>cmBody</em></dt>
-			<dd>the body to wich this shape is associated.</dd>
+			<dt><em>cmSpace</em></dt>
+			<dd>the space for which this body is created.</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>width</em></dt>
-			<dd>the width of the rectangle (full-width, not half-width).</dd>
+			<dt><em>bodyConfig</em></dt>
+			<dd>the configuration of the shape.</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>height</em></dt>
-			<dd>the height of the rectangle (full-height, not half-height).</dd>
+			<dt><em>name</em></dt>
+			<dd>the name of the body.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>listerer</em></dt>
+			<dd>listener that recieves events about bodies and shapes.</dd>
 		</dl>
 		
 	</div>
@@ -122,47 +134,43 @@ polygons is done for you.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMRectShape.h</code><br />
+		<code class="declared-in-ref">CMPhysicsEditorLoader.m</code><br />
 	</div>				
 	
 	
 </div>
 					
 					<div class="section-method">
-	<a name="//api/name/initWithBody:width:height:offset:" title="initWithBody:width:height:offset:"></a>
-	<h3 class="subsubtitle method-title">initWithBody:width:height:offset:</h3>
+	<a name="//api/name/loadFromConfiguration:cmSpace:configuration:" title="loadFromConfiguration:cmSpace:configuration:"></a>
+	<h3 class="subsubtitle method-title">loadFromConfiguration:cmSpace:configuration:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Constructs a new CMRect object with the specified width and height.</p>
+		<p>Loads the configuration from the specified .plist and add it to the
+space.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (id)initWithBody:(CMBody *)<em>cmBody</em> width:(float)<em>width</em> height:(float)<em>height</em> offset:(cpVect)<em>offset</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)loadFromConfiguration:(id)<em>listener</em> cmSpace:(CMSpace *)<em>cmSpace</em> configuration:(NSString *)<em>configuration</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>cmBody</em></dt>
-			<dd>the body to wich this shape is associated.</dd>
+			<dt><em>cmSpace</em></dt>
+			<dd>the space.</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>width</em></dt>
-			<dd>the width of the rectangle (full-width, not half-width).</dd>
+			<dt><em>configuration</em></dt>
+			<dd>the name of the .plist wile (without the extension)</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>height</em></dt>
-			<dd>the height of the rectangle (full-height, not half-height).</dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>offset</em></dt>
-			<dd>the offset of the shape in relation to the body.</dd>
+			<dt><em>listerer</em></dt>
+			<dd>listener that recieves events about bodies and shapes.</dd>
 		</dl>
 		
 	</div>
@@ -179,13 +187,15 @@ polygons is done for you.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMRectShape.h</code><br />
+		<code class="declared-in-ref">CMPhysicsEditorLoader.h</code><br />
 	</div>				
 	
 	
 </div>
 					
 				</div>
+				
+				
 				
 				
 				

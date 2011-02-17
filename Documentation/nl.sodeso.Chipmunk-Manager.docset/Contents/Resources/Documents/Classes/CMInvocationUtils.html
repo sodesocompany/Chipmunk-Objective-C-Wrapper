@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>CMObject Class Reference</title>
+		<title>CMInvocationUtils Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
 		<meta name="generator" content="appledoc 2.0.1 (build 530)" />
@@ -16,7 +16,7 @@
 			</div>
 			<div id="header">
 				<div class="section-header">
-					<h1 class="title title-header">CMObject Class Reference</h1>
+					<h1 class="title title-header">CMInvocationUtils Class Reference</h1>
 				</div>		
 			</div>
 			<div id="container">	
@@ -27,7 +27,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">CMObject.h<br />CMObject.m</td>
+	<td class="specification-value">CMInvocationUtils.h<br />CMInvocationUtils.m</td>
 </tr>
 					</tbody></table></div>
 				
@@ -36,8 +36,7 @@
 				<div class="section section-overview">
 					<h2 class="subtitle subtitle-overview">Overview</h2>
 					
-<p>The <a href="CMObject.html">CMObject</a> functions as a base class for a number of other classes
-which all have a relation with the <a href="#//api/name/space">space</a>.</p>
+<p><ul><li>Utility class for creating NSINvocation objects.</li></ul></p>
 
 				</div>
 				
@@ -52,14 +51,8 @@ which all have a relation with the <a href="#//api/name/space">space</a>.</p>
 					<ul class="task-list">
 						<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/space"> space</a></code>
-		<span class="tooltip">The <a href="#//api/name/space">space</a> under which this object was created.</span>
-	</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/name"> name</a></code>
-		<span class="tooltip">A user customizable <a href="#//api/name/name">name</a> for this instance.</span>
+		<code><a href="#//api/name/constructInvocation:selector:">+ constructInvocation:selector:</a></code>
+		<span class="tooltip"><ul><li>Constructs a new NSInvocation with the specified target and selector.</li></ul></span>
 	</span>
 	
 </li>
@@ -71,30 +64,37 @@ which all have a relation with the <a href="#//api/name/space">space</a>.</p>
 				
 				
 				
-				
-				
-				
-				
 				<div class="section section-methods">
-					<h2 class="subtitle subtitle-methods">Properties</h2>
+					<h2 class="subtitle subtitle-methods">Class Methods</h2>
 					
 					<div class="section-method">
-	<a name="//api/name/name" title="name"></a>
-	<h3 class="subsubtitle method-title">name</h3>
+	<a name="//api/name/constructInvocation:selector:" title="constructInvocation:selector:"></a>
+	<h3 class="subsubtitle method-title">constructInvocation:selector:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A user customizable <a href="#//api/name/name">name</a> for this instance.</p>
+		<p><ul><li>Constructs a new NSInvocation with the specified target and selector.</li></ul></p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSString *name</code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSInvocation *)constructInvocation:(id)<em>target</em> selector:(SEL)<em>selector</em></code></div>
 	
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p><ul><li>Constructs a new NSInvocation with the specified target and selector.</li></ul></p>
+		
+		<p>*<ul><li>@param target the target to invoke.</li></ul><ul><li>@param selector the selector to invoke.</li></ul></p>
+		
+		<p>*<ul><li>@return the NSInvocation or nil when one of the parameters is not correct.</li></ul></p>
+		
+	</div>
 	
 	
 	
@@ -104,45 +104,17 @@ which all have a relation with the <a href="#//api/name/space">space</a>.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMObject.h</code><br />
-	</div>				
-	
-	
-</div>
-					
-					<div class="section-method">
-	<a name="//api/name/space" title="space"></a>
-	<h3 class="subsubtitle method-title">space</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/space">space</a> under which this object was created.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CMSpace *space</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">CMObject.h</code><br />
+		<code class="declared-in-ref">CMInvocationUtils.h</code><br />
 	</div>				
 	
 	
 </div>
 					
 				</div>
+				
+				
+				
+				
 				
 				
 			</div>

@@ -184,6 +184,21 @@ group information.</span>
 		<span class="tooltip">Finds a body with the specified name.</span>
 	</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addPostStepCallback:selector:data:">- addPostStepCallback:selector:data:</a></code>
+		<span class="tooltip">Add func to be called before cpSpaceStep() returns. obj and data will be passed to your function.
+Only the last callback registered for any unique value of obj will be recorded. You can add
+post-step callbacks from outside of other callback functions, but they won’t be called until
+cpSpaceStep() is called again.</span>
+	</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/forEachShape:selector:boundingBox:data:">- forEachShape:selector:boundingBox:data:</a></code>
+		<span class="tooltip">Calls the specified selector with every shape this is present within the specified bounding box.</span>
+	</span>
+	
 </li>
 					</ul>
 					
@@ -382,7 +397,10 @@ group information.</span>
 		
 		<p>Adds a default collision handler which will respond to all collisions.</p>
 		
-		<p>A selector should have the following arguments:<ul><li>(BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter<strong>)arbiter space:(CMSpace</strong>)space;</li></ul></p>
+		<p>A selector should have the following signature:<ul><li>(void) collisionListenerBetweenBallAndSquare:(CMArbiter<strong>)arbiter space:(CMSpace</strong>)space;</li></ul></p>
+		
+		<p>The only selector that expects back a BOOL is the begin selector. So all the other selectors
+can be void.</p>
 		
 		<p>About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
 by changes the CMTypes.h file.</p>
@@ -488,7 +506,7 @@ by changes the CMTypes.h file.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>target</em></dt>
-			<dd>the target object thet will recieve the event.</dd>
+			<dd>the target object that will recieve the event.</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -527,10 +545,77 @@ by changes the CMTypes.h file.</p>
 		
 		<p>Adds a default collision handler which will respond to all collisions.</p>
 		
-		<p>A selector should have the following arguments:<ul><li>(BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter<strong>)arbiter space:(CMSpace</strong>)space;</li></ul></p>
+		<p>A selector should have the following signature:<ul><li>(BOOL) collisionListenerBetweenBallAndSquare:(CMArbiter<strong>)arbiter space:(CMSpace</strong>)space;</li></ul></p>
 		
 		<p>About the cpCollisionType type, the cpCollisionType type is by default 'id' (keyword), you can override this
 by changes the CMTypes.h file.</p>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/addPostStepCallback:selector:data:" title="addPostStepCallback:selector:data:"></a>
+	<h3 class="subsubtitle method-title">addPostStepCallback:selector:data:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add func to be called before cpSpaceStep() returns. obj and data will be passed to your function.
+Only the last callback registered for any unique value of obj will be recorded. You can add
+post-step callbacks from outside of other callback functions, but they won’t be called until
+cpSpaceStep() is called again.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addPostStepCallback:(id)<em>target</em> selector:(SEL)<em>selector</em> data:(id)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector method that will recieve the event.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd>the argument that will be passed along.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		
+		<p>Add func to be called before cpSpaceStep() returns. obj and data will be passed to your function.
+Only the last callback registered for any unique value of obj will be recorded. You can add
+post-step callbacks from outside of other callback functions, but they won’t be called until
+cpSpaceStep() is called again.</p>
+		
+		<p>A selector should have the following signature:<ul><li>(void)someCallbackAfterStep:(id)data;</li></ul></p>
 		
 	</div>
 	
@@ -689,6 +774,63 @@ by changes the CMTypes.h file.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>name</em></dt>
 			<dd>the name of the body.</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">CMSpace.h</code><br />
+	</div>				
+	
+	
+</div>
+					
+					<div class="section-method">
+	<a name="//api/name/forEachShape:selector:boundingBox:data:" title="forEachShape:selector:boundingBox:data:"></a>
+	<h3 class="subsubtitle method-title">forEachShape:selector:boundingBox:data:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calls the specified selector with every shape this is present within the specified bounding box.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)forEachShape:(id)<em>target</em> selector:(SEL)<em>selector</em> boundingBox:(cpBB)<em>boundingBox</em> data:(id)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>target</em></dt>
+			<dd>the target object that will be called.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selector</em></dt>
+			<dd>the selector that will be invoked.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>boundingBox</em></dt>
+			<dd>the area to look for shapes.</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd>the data that needs to be passed along.</dd>
 		</dl>
 		
 	</div>
@@ -1369,7 +1511,7 @@ for most simple games.</p>
 			<div id="footer">
 				<hr />
 				<div class="footer-copyright">
-					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-07)</span><br />
+					<p><span class="copyright">&copy; 2011 Sodeso. All rights reserved. (Last updated: 2011-02-17)</span><br />
 					
 					<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.1 (build 530)</a>.</span></p>
 					
