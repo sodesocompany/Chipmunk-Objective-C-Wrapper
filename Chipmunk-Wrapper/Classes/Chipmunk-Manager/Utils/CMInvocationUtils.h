@@ -24,13 +24,13 @@
 ///---------------------------------------------------------------------------------------
 
 /**
-  * Constructs a new NSInvocation with the specified target and selector.
-  *
-  * @param target the target to invoke.
-  * @param selector the selector to invoke.
-  *
-  * @return the NSInvocation or nil when one of the parameters is not correct.
-  */
+ * Constructs a new NSInvocation with the specified target and selector.
+ *
+ * @param target the target to invoke.
+ * @param selector the selector to invoke.
+ *
+ * @return the NSInvocation or nil when one of the parameters is not correct.
+ */
 + (NSInvocation*)constructInvocation:(id)target selector:(SEL)selector;
 
 @end

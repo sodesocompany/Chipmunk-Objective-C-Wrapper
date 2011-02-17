@@ -15,13 +15,21 @@ TODO:
 
 17 Februari 2011:
 
+- Added a new demo: FollowPathDemo
+
+This demo demonstrates how you can let a body follow a path that is set out by using the touch interface. Where you touch
+the shape will go to.
+
+- Modified all constraints to include all their methods for setting their properties.
+- Updated the documentation with missing API documentation.
+
+16 Februari 2011:
+
 - Added a new demo: LayerCollisionDemo
 
 This demo demonstrates how to use layers when using collisions. (some can collide with others, some can not).
 
 - Fixed a bug in the - (CMShape*)queryFirstByVect:(cpVect)point method. Not all layers were searched correctly.
-
-16 Februari 2011:
 
 - Added the CMSprite class which is a sub-class of SPSprite, it allows you to do direct loading of a CMObject using
 parameters.. HIGHLY EXPERIMENTAL and could be removed in the future.

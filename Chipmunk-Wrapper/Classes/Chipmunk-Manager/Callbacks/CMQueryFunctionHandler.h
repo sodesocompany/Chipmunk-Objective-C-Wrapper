@@ -40,6 +40,9 @@
 
 /**
  * Default initialization method.
+ *
+ * @param target the target to call the selector on
+ * @param selector the selector
  */
 - (id)initWithTarget:(id)target selector:(SEL)selector;
 

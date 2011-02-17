@@ -24,8 +24,19 @@
 	
 }
 
+/**
+ * The point
+ */
 @property (nonatomic, assign) cpVect point;
+
+/**
+ * The normal
+ */
 @property (nonatomic, assign) cpVect normal;
+
+/**
+ * The distance
+ */
 @property (nonatomic, assign) float distance;
 
 @end

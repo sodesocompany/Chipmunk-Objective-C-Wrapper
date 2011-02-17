@@ -36,13 +36,18 @@
 #pragma mark Properties
 
 /**
- * Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a ìperfectî bounce. 
+ * Elasticity of the shape. A value of 0.0 gives no bounce, while a value of 1.0 will give a "perfect" bounce. 
  * However due to inaccuracies in the simulation using 1.0 or greater is not recommended however.
  *
   * @param elasticity a value between 0.0 and (adviced) 1.0
  */
 - (void)setElasticity:(float)elasticity;
 
+/**
+ * Returns the elasticity of the shape.
+ *
+ * @return the elasticity of the shape.
+ */
 - (float)elasticity;
 
 /**
@@ -55,6 +60,15 @@
  */
 - (void)setFriction:(float)friction;
 
+/**
+ * Returns the friction coefficient. Chipmunk uses the Coulomb 
+ * friction model, a value of 0.0 is frictionless.
+ *
+ * For a listing of various frictions see:
+ * http://www.roymech.co.uk/Useful_Tables/Tribology/co_of_frict.htm
+ *
+ * @return the friction
+ */
 - (float)friction;
 
 /**
@@ -84,6 +98,11 @@
  */
 - (void)setGroup:(cpGroup)group;
 
+/**
+ * Returns the group.
+ *
+ * @return the group (defalts to CP_NO_GROUP)
+ */
 - (cpGroup)group;
 
 /**
@@ -96,10 +115,15 @@
  *
  * http://en.wikipedia.org/wiki/Mask_(computing)#top
  *
- * @param layer the layer
+ * @param layer the layer bit mask.
  */
 - (void)setLayer:(cpLayers)layer;
 
+/**
+ * Returns the layer bit mask.
+ *
+ * @return the layer bit mask.
+ */
 - (cpLayers)layer;
 
 /**
@@ -110,8 +134,19 @@
  */
 - (void)setSensor:(BOOL)isSensor;
 
+/**
+ * Flag indicating if this shape is a sensor or not.Sensors only 
+ * call collision callbacks, and never generate real collisions.
+ *
+ * @return YES when this shape is a sensor, NO if not.
+ */
 - (BOOL)sensor;
 
+/**
+ * Returns the bounding box of this shape.
+ *
+ * @return the bounding box of this shape.
+ */
 - (cpBB)boundingBox;
 
 /**

@@ -209,6 +209,14 @@
  */
 - (void)addPostStepCallback:(id)target selector:(SEL)selector data:(id)data;
 
+/**
+ * Calls the specified selector with every shape this is present within the specified bounding box.
+ *
+ * @param target the target object that will be called.
+ * @param selector the selector that will be invoked.
+ * @param boundingBox the area to look for shapes.
+ * @param data the data that needs to be passed along.
+ */
 - (void)forEachShape:(id)target selector:(SEL)selector boundingBox:(cpBB)boundingBox data:(id)data;
 
 ///---------------------------------------------------------------------------------------

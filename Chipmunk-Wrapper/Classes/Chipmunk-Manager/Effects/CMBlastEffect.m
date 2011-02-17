@@ -44,7 +44,26 @@
 
 @interface CMBlastEffect ()
 
+/**
+ * Performs the blast.
+ *
+ * @param cmSpace the space.
+ * @param position the origin of the explotion
+ * @param radius the area affected (all shapes that are completely present within the area are affected
+ * @param force the amounth of force the implotion has.
+ * @param layer the layer
+ * @param group the group
+ * @param explosion YES if it is an explosion, NO when it is an implosion
+ */
 - (void)perform:(CMSpace*)cmSpace position:(cpVect)position radius:(float)radius force:(float)force layer:(cpLayers)layer group:(cpGroup)group explosion:(BOOL)explosion;
+
+/**
+ * Performs the implosion / explosion callback method.
+ *
+ * @param boundingBox the bounding box.
+ * @param cmShape the shape that is being handled.
+ * @param data the data that is passed along, in this case the CMBlastEffectData
+ */
 - (void)performImpExplosion:(cpBB*)boundingBox cmShape:(CMShape*)cmShape data:(id)data;
 
 @end

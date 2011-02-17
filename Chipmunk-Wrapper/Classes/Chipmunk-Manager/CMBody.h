@@ -89,6 +89,11 @@
  */
 - (void)setMass:(float)mass;
 
+/**
+ * Returns the mass of the body.
+ *
+ * @return the mass of the body.
+ */
 - (float)mass;
 
 /**
@@ -99,6 +104,11 @@
  */
 - (void)setMoment:(float)moment;
 
+/**
+ * Returns the moment of the body.
+ *
+ * @return the moment of the body.
+ */
 - (float)moment;
 
 /**
@@ -108,6 +118,11 @@
  */
 - (void) setVelocity:(cpVect)velocity;
 
+/**
+ * Returns the velocity of the body.
+ *
+ * @return the velocity of the body.
+ */
 - (cpVect)velocity;
 
 /**
@@ -131,8 +146,8 @@
  *
  * The selector should have the following signature:
  *
- * 
  * - (void)positionFunction:(CMBody*)cmBody dt:(float)dt;
+ *
  * @param target the target object that contains the select. 
  * @param selector the selector to invoke.
  */
@@ -147,6 +162,11 @@
  */
 - (void) setForce:(cpVect)force;
 
+/**
+ * Returns the force.
+ *
+ * @return the force.
+ */
 - (cpVect)force;
 
 /**
@@ -163,6 +183,11 @@
  */
 - (void) setPositionUsingPoint:(SPPoint*)coordinate;
 
+/**
+ * Returns the current position of the body.
+ *
+ * @return the current position of the body.
+ */
 - (cpVect)position;
 
 /**
@@ -177,6 +202,8 @@
 
 /**
  * Returns the current rotational angle of the body in radians.
+ *
+ * @return the current rotational angle of the body in radians.
  */
 - (float) angle;
 
@@ -187,6 +214,11 @@
  */
 - (void) setAngularVelocity:(float)velocity;
 
+/**
+ * Returns the angular velocity.
+ *
+ * @return the angular velocity.
+ */
 - (float)angularVelocity;
 
 /**

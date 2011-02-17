@@ -235,8 +235,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,7 +275,10 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>A1C70A9712DCE403003C506C</string>
 								<string>A15DD82C13098BD400275266</string>
+								<string>A1CF14ED1305B322005CB7AE</string>
 								<string>A1CF1277130457D9005CB7AE</string>
+								<string>A19070341300567200FFF013</string>
+								<string>A1C70A9E12DCE403003C506C</string>
 								<string>A1C70AA112DCE403003C506C</string>
 								<string>A1C70ABA12DCE403003C506C</string>
 								<string>A1F9B72712DCE5B30087394D</string>
@@ -295,15 +296,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>39</integer>
-									<integer>18</integer>
+									<integer>68</integer>
+									<integer>65</integer>
 									<integer>6</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 147}, {368, 1285}}</string>
+							<string>{{0, 36}, {368, 1285}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -331,12 +332,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>A135121511985E0F007C9395</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CMSlideJointConstraint.h</string>
+								<string>CMSprite.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,11 +347,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A135121611985E0F007C9395</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CMSlideJointConstraint.h</string>
+										<string>CMSprite.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>A15DDE26130DB15800275266</string>
+										<string>A15DDE67130DBC0900275266</string>
 										<key>history</key>
 										<array>
 											<string>A12CC0D612CA8D42003D1970</string>
@@ -414,33 +417,23 @@
 											<string>A1906EF612FF189A00FFF013</string>
 											<string>A1906EF812FF189A00FFF013</string>
 											<string>A1906FAF12FF25B200FFF013</string>
-											<string>A1906FEF12FF29A900FFF013</string>
 											<string>A1906FF012FF29A900FFF013</string>
-											<string>A1906FF312FF29A900FFF013</string>
-											<string>A1906FF412FF29A900FFF013</string>
-											<string>A1907040130057AF00FFF013</string>
-											<string>A190705413008B5600FFF013</string>
 											<string>A190709813009F6600FFF013</string>
 											<string>A19070D01301AFFD00FFF013</string>
 											<string>A19070D71301B2CF00FFF013</string>
 											<string>A19070EA1301B5FA00FFF013</string>
 											<string>A1A2E93113035615004E2A34</string>
-											<string>A1CF126313045735005CB7AE</string>
 											<string>A1CF126613045735005CB7AE</string>
 											<string>A1CF126713045735005CB7AE</string>
 											<string>A1CF126A13045735005CB7AE</string>
-											<string>A1CF1283130458B2005CB7AE</string>
 											<string>A1CF12F8130476E1005CB7AE</string>
 											<string>A1CF133513047F32005CB7AE</string>
 											<string>A1CF133B13047F32005CB7AE</string>
 											<string>A1CF133E13047F32005CB7AE</string>
 											<string>A1CF135113048062005CB7AE</string>
-											<string>A1CF13AC1304FED9005CB7AE</string>
-											<string>A1CF13AD1304FED9005CB7AE</string>
 											<string>A1CF13E21305917C005CB7AE</string>
 											<string>A1CF13E31305917C005CB7AE</string>
 											<string>A1CF1420130595F0005CB7AE</string>
-											<string>A1CF14B713059F8E005CB7AE</string>
 											<string>A1CF14BC1305A019005CB7AE</string>
 											<string>A1CF160F130823FA005CB7AE</string>
 											<string>A1CF16161308252E005CB7AE</string>
@@ -449,7 +442,6 @@
 											<string>A15DD8501309900F00275266</string>
 											<string>A15DD898130991B500275266</string>
 											<string>A15DD8EA1309B70200275266</string>
-											<string>A15DD9061309BCCD00275266</string>
 											<string>A15DD9071309BCCD00275266</string>
 											<string>A15DD90B1309BD1600275266</string>
 											<string>A15DD9841309CCBA00275266</string>
@@ -467,7 +459,6 @@
 											<string>A15DDA20130AE9F300275266</string>
 											<string>A15DDA21130AE9F300275266</string>
 											<string>A15DDA24130AE9F300275266</string>
-											<string>A15DDA26130AE9F300275266</string>
 											<string>A15DDAAE130B193800275266</string>
 											<string>A15DDAAF130B193800275266</string>
 											<string>A15DDAB2130B193800275266</string>
@@ -475,17 +466,12 @@
 											<string>A15DDAE6130B1F0200275266</string>
 											<string>A15DDB06130B25BA00275266</string>
 											<string>A15DDB13130B261E00275266</string>
-											<string>A15DDB14130B261E00275266</string>
 											<string>A15DDB3A130C292500275266</string>
 											<string>A15DDB57130C2E7700275266</string>
 											<string>A15DDB59130C2E7700275266</string>
 											<string>A15DDB92130C341400275266</string>
-											<string>A15DDC20130C55B900275266</string>
-											<string>A15DDC21130C55B900275266</string>
-											<string>A15DDC23130C55B900275266</string>
 											<string>A15DDC27130C55B900275266</string>
 											<string>A15DDC28130C55B900275266</string>
-											<string>A15DDC29130C55B900275266</string>
 											<string>A15DDC41130C56CB00275266</string>
 											<string>A15DDC6D130C5AB600275266</string>
 											<string>A15DDCAB130C5EEA00275266</string>
@@ -493,7 +479,6 @@
 											<string>A15DDCF5130C6E7C00275266</string>
 											<string>A15DDCF7130C6E7C00275266</string>
 											<string>A15DDCFA130C6E7C00275266</string>
-											<string>A15DDD05130C6EFE00275266</string>
 											<string>A15DDD12130C70C900275266</string>
 											<string>A15DDD15130C70C900275266</string>
 											<string>A15DDD36130D841300275266</string>
@@ -533,17 +518,13 @@
 											<string>A15DDD92130D87E900275266</string>
 											<string>A15DDDB3130D88AF00275266</string>
 											<string>A15DDDF8130DACCA00275266</string>
-											<string>A15DDDF9130DACCA00275266</string>
-											<string>A15DDDFB130DACCA00275266</string>
 											<string>A15DDDFE130DACCA00275266</string>
-											<string>A15DDE00130DACCA00275266</string>
 											<string>A15DDE01130DACCA00275266</string>
 											<string>A15DDE02130DACCA00275266</string>
 											<string>A15DDE03130DACCA00275266</string>
 											<string>A15DDE04130DACCA00275266</string>
 											<string>A15DDE05130DACCA00275266</string>
 											<string>A15DDE0F130DAE3100275266</string>
-											<string>A15DDE10130DAE3100275266</string>
 											<string>A15DDE11130DAE3100275266</string>
 											<string>A15DDE12130DAE3100275266</string>
 											<string>A15DDE13130DAE3100275266</string>
@@ -552,8 +533,32 @@
 											<string>A15DDE21130DB15800275266</string>
 											<string>A15DDE22130DB15800275266</string>
 											<string>A15DDE23130DB15800275266</string>
-											<string>A15DDE24130DB15800275266</string>
-											<string>A15DDE25130DB15800275266</string>
+											<string>A15DDE27130DB84800275266</string>
+											<string>A15DDE28130DB84800275266</string>
+											<string>A15DDE29130DB84800275266</string>
+											<string>A15DDE2A130DB84800275266</string>
+											<string>A15DDE2B130DB84800275266</string>
+											<string>A15DDE2C130DB84800275266</string>
+											<string>A15DDE2D130DB84800275266</string>
+											<string>A15DDE2F130DB84800275266</string>
+											<string>A15DDE30130DB84800275266</string>
+											<string>A15DDE36130DB84800275266</string>
+											<string>A15DDE3A130DB88F00275266</string>
+											<string>A15DDE3F130DB8C000275266</string>
+											<string>A15DDE42130DB95000275266</string>
+											<string>A15DDE46130DB96D00275266</string>
+											<string>A15DDE49130DB9D600275266</string>
+											<string>A15DDE4A130DB9D600275266</string>
+											<string>A15DDE4B130DB9D600275266</string>
+											<string>A15DDE55130DBA9700275266</string>
+											<string>A15DDE59130DBADC00275266</string>
+											<string>A15DDE5A130DBADC00275266</string>
+											<string>A15DDE5B130DBADC00275266</string>
+											<string>A15DDE5E130DBB6600275266</string>
+											<string>A15DDE5F130DBB6600275266</string>
+											<string>A15DDE62130DBB8700275266</string>
+											<string>A15DDE65130DBC0900275266</string>
+											<string>A15DDE66130DBC0900275266</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

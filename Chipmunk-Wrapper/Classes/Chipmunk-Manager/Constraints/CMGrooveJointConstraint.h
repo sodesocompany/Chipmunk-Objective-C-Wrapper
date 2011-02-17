@@ -46,7 +46,7 @@
 /**
  * Returns the start of the line segment on the first body.
  *
- * @param grooveB the start of the line segment on the first body.
+ * @return the start of the line segment on the first body.
  */
 - (cpVect)grooveA;
 

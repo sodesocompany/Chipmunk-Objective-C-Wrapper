@@ -70,6 +70,9 @@
 
 @end
 
+/**
+ * Data container holding information for the explosion / implosion.
+ */
 @interface CMBlastEffectData : NSObject {
 	
 @private
@@ -84,11 +87,34 @@
 	
 }
 
+/**
+ * Flag indicating if this is an explosion (YES) or implosion (NO)
+ */
 @property (nonatomic, readwrite) BOOL explosion;
+
+/**
+ * The blast radius
+ */
 @property (nonatomic, readwrite) float radius;
+
+/**
+ * The force released on the objects within the blast radius
+ */
 @property (nonatomic, readwrite) float force;
+
+/**
+ * The center position of the blast.
+ */
 @property (nonatomic, readwrite) cpVect position;
+
+/**
+ * The layers affected by the blast.
+ */
 @property (nonatomic, readwrite) cpLayers layer;
+
+/**
+ * The groups affected by the blast.
+ */
 @property (nonatomic, readwrite) cpGroup group;
 
 @end
