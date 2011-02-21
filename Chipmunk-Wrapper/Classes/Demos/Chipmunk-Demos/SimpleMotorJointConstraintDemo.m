@@ -25,22 +25,25 @@
 @implementation SimpleMotorJointConstraintDemo
 
 - (void) initializeChipmunkObjects {
+	cpVect position1 = cpv(320 / 2.0f, 480 * 0.25);
+	cpVect position2 = cpv(320 / 2.0f, 480 * 0.75);
+	
 	// Create the first body with its shape.
-	CMBody *body1 = [mSpace addBodyWithMass:100 moment:0.5];
-	[body1 setPositionUsingVect:cpv(320-106, 480-400)];
+	CMBody *body1 = [mSpace addBodyWithMass:1 moment:0.5];
+	[body1 setPositionUsingVect:position1];
 	[body1 addToSpace];
 	
-	CMShape *shape1 = [body1 addRectangleWithWidth:64 height:64];
+	CMShape *shape1 = [body1 addRectangleWithWidth:100 height:100];
 	[shape1 setElasticity:0.5];
 	[shape1 setFriction:0.5];
 	[shape1 addToSpace];
 	
 	// Create the second body with its shape.
-	CMBody *body2 = [mSpace addBodyWithMass:100 moment:0.5];
-	[body2 setPositionUsingVect:cpv(320-212, 480-400)];
+	CMBody *body2 = [mSpace addBodyWithMass:1 moment:0.5];
+	[body2 setPositionUsingVect:position2];
 	[body2 addToSpace];
 	
-	CMShape *shape2 = [body2 addRectangleWithWidth:64 height:64];
+	CMShape *shape2 = [body2 addRectangleWithWidth:100 height:100];
 	[shape2 setElasticity:0.5];
 	[shape2 setFriction:0.5];
 	[shape2 addToSpace];
@@ -48,13 +51,13 @@
 	CMBody *staticBody = [mSpace addStaticBody];
 
 	// Add some pivot joints to make sure the bodies stay in one place.
-	CMPivotJointConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:cpv(320-106, 480-400)];
+	CMPivotJointConstraint *pivotJointConstraint1 = [body1 addPivotJointConstraintWithBody:staticBody pivot:position1];
 	[pivotJointConstraint1 addToSpace];
-	CMPivotJointConstraint *pivotJointConstraint2 = [body2 addPivotJointConstraintWithBody:staticBody pivot:cpv(320-212, 480-400)];
+	CMPivotJointConstraint *pivotJointConstraint2 = [body2 addPivotJointConstraintWithBody:staticBody pivot:position2];
 	[pivotJointConstraint2 addToSpace];
 	
 	// Create the simple motor constraint between them.
-	CMSimpleMotorConstraint *simpleMotorConstraint = [body1 addSimpleMotorConstraintWithBody:body2 rate:10];
+	CMSimpleMotorConstraint *simpleMotorConstraint = [body1 addSimpleMotorConstraintWithBody:body2 rate:2];
 	[simpleMotorConstraint addToSpace];
 }
 

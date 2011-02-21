@@ -16,9 +16,8 @@
 
 @interface Game ()
 
-- (void)previousDemo:(SPEvent*)event;
-- (void)nextDemo:(SPEvent*)event;
-- (void)switchDemo;
+- (void)showOptionSelector;
+- (void)showDemo;
 
 @end
 
@@ -28,200 +27,122 @@
 
 - (id)initWithWidth:(float)width height:(float)height {
     if (self = [super initWithWidth:width height:height]) {
-		selected = -1;
+		mOptions = [[NSArray arrayWithObjects:
+							[Option createWithImage:@"SimpleMotorJoint.png" identifier:@"SimpleMotorJointConstraintDemo"], 
+							[Option createWithImage:@"DampedRotarySpring.png" identifier:@"DampedRotarySpringConstraintDemo"],
+							[Option createWithImage:@"DampedSpring.png" identifier:@"DampedSpringConstraintDemo"],
+							[Option createWithImage:@"SlideJoint.png" identifier:@"SlideJointConstraintDemo"],
+							[Option createWithImage:@"RotaryLimit.png" identifier:@"RotaryLimitConstraintDemo"],
+							[Option createWithImage:@"PinJoint.png" identifier:@"PinJointConstraintDemo"],
+							[Option createWithImage:@"RatchetJoint.png" identifier:@"RatchetJointConstraintDemo"],
+							[Option createWithImage:@"GrooveJoint.png" identifier:@"GrooveJointConstraintDemo"],
+							[Option createWithImage:@"PivotJoint.png" identifier:@"PivotJointConstraintDemo"], // -
+							[Option createWithImage:@"GearJoint.png" identifier:@"GearJointConstraintDemo"],
+							[Option createWithImage:@"Poly.png" identifier:@"PolyDemo"],
+							[Option createWithImage:@"Car.png" identifier:@"CarDemo"],
+							[Option createWithImage:@"SimpleCollision.png" identifier:@"SimpleCollisionDemo"],
+							[Option createWithImage:@"ComplexCollision.png" identifier:@"LayerCollisionDemo"],
+							[Option createWithImage:@"Ball.png" identifier:@"BallDemo"],
+							[Option createWithImage:@"" identifier:@"TheoJansenDemo"],
+							[Option createWithImage:@"Rope.png" identifier:@"RopeDemo"],
+							[Option createWithImage:@"NewtonsCradle.png" identifier:@"NewtonsCradleDemo"], // -
+							[Option createWithImage:@"Blocks.png" identifier:@"BlocksDemo"],
+							[Option createWithImage:@"ManyBlocks.png" identifier:@"ManyBlocksDemo"],
+							[Option createWithImage:@"DefaultLoader.png" identifier:@"DefaultLoaderDemo"],
+							[Option createWithImage:@"PhysicsEditor.png" identifier:@"PhysicsEditorDemo"],
+							[Option createWithImage:@"Explosion.png" identifier:@"ExplosionEffectDemo"],
+							[Option createWithImage:@"Implosion.png" identifier:@"ImplosionEffectDemo"],
+							[Option createWithImage:@"Buoyancy.png" identifier:@"BuoyancyDemo"],
+							[Option createWithImage:@"Sensor.png" identifier:@"SensorDemo"],
+							[Option createWithImage:@"Planet.png" identifier:@"PlanetDemo"],
+							[Option createWithImage:@"FollowPath.png" identifier:@"FollowPathDemo"], nil] retain];
 		
-		previousDemo = [SPImage imageWithContentsOfFile:@"left.png"];
-		previousDemo.x = 5;
-		previousDemo.y = 480 - 5 - 32;
-		[self addChild:previousDemo];
-		[previousDemo addEventListener:@selector(previousDemo:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		[self showOptionSelector];
 		
-		textField = [SPTextField textFieldWithText:@"Demo"];
-		[textField setColor:0xFFFFFF];
-		[textField setHAlign:SPHAlignCenter];
-		[textField setWidth:320 - ( 2 * 32) - 10];
-		[textField setHeight:32];
-		[textField setX:32 + 5];
-		[textField setY:480 - 5 - 32];
-		[textField addEventListener:@selector(showHideDebugDraw:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
-		
-		[self addChild:textField];
-		
-		nextDemo = [SPImage imageWithContentsOfFile:@"right.png"];
-		nextDemo.x = self.stage.width - 5 - [nextDemo width];
-		nextDemo.y = 480 - 5 - 32;
-		[self addChild:nextDemo];
-		[nextDemo addEventListener:@selector(nextDemo:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
-   }
+	}
 	
     return self;
 }
 
-- (void)showHideDebugDraw:(SPTouchEvent*)event {
-	SPTouch *touch = [[event touchesWithTarget:textField andPhase:SPTouchPhaseBegan] anyObject];
-	if (touch) {
-		[demo showHideDebugDraw];
-	}
+- (void)showOptionSelector {
+	mOptionSelector = [[OptionSelector alloc] initWithOptions:mOptions];
+	[mOptionSelector setDelegate:self];
+	[self addChild:mOptionSelector];
 }
 
-- (void)previousDemo:(SPTouchEvent*)event {
-	SPTouch *touch = [[event touchesWithTarget:previousDemo andPhase:SPTouchPhaseBegan] anyObject];
-	if (touch) {
-		selected--;
+- (void)selectedOption:(NSString*)identifier {
+	[self removeChild:mOptionSelector];
+	[mOptionSelector release];	
+
+	mSelectedOption = identifier;
+	[self showDemo];
+}
+
+- (void)showDemo {
+	mDemo = [[NSClassFromString(mSelectedOption) alloc] init];
+	[mDemo setDelegate:self];
+	[mDemo setWidth:320];
+	[mDemo setHeight:480];
 	
-		if (selected < 0) {
-			selected = 27;
+	[self addChild:mDemo];
+	
+	[mDemo startDemo];	
+}
+
+- (void)back {
+	[mDemo stopDemo];
+	[self removeChild:mDemo];
+	[self showOptionSelector];
+}
+
+- (void)previous {
+	for (int index = 0; index < [mOptions count]; index++) {
+		if ([[[mOptions objectAtIndex:index] identifier] isEqualToString:mSelectedOption]) {
+			
+			index--;
+			if (index <= 0) {
+				index = [mOptions count] - 1;
+			}
+			
+			mSelectedOption = [[mOptions objectAtIndex:index] identifier];
+			
+			break;
 		}
-	
-		[self switchDemo];
 	}
+	
+	[self removeChild:mDemo];
+	[self showDemo];
 }
 
-- (void)nextDemo:(SPTouchEvent*)event {
-	SPTouch *touch = [[event touchesWithTarget:nextDemo andPhase:SPTouchPhaseBegan] anyObject];
-	if (touch) {
-		selected++;
-	
-		if (selected == 28) {
-			selected = 0;
+- (void)next {
+	for (int index = 0; index < [mOptions count]; index++) {
+		if ([[[mOptions objectAtIndex:index] identifier] isEqualToString:mSelectedOption]) {
+			
+			index++;
+			if (index >= [mOptions count]) {
+				index = 0;
+			}
+			
+			mSelectedOption = [[mOptions objectAtIndex:index] identifier];
+			
+			break;
 		}
-	
-		[self switchDemo];
-	}
-}
-
-- (void)switchDemo {
-	if (demo != nil) {
-		[demo stopDemo];
-		[self removeChild:demo];
-		[demo release];
-	}
-		
-	switch (selected) {
-		case 0:
-			[textField setText:@"Simple Motor Joint"];
-			demo = [[SimpleMotorJointConstraintDemo alloc] init];
-			break;
-		case 1:
-			[textField setText:@"Damped Rotary"];
-			demo = [[DampedRotarySpringConstraintDemo alloc] init];
-			break;
-		case 2:
-			[textField setText:@"Damped Spring"];
-			demo = [[DampedSpringConstraintDemo alloc] init];
-			break;
-		case 3:
-			[textField setText:@"Slide Joint"];
-			demo = [[SlideJointConstraintDemo alloc] init];
-			break;
-		case 4:
-			[textField setText:@"Rotary Limit"];
-			demo = [[RotaryLimitConstraintDemo alloc] init];
-			break;
-		case 5:
-			[textField setText:@"Pin Joint"];
-			demo = [[PinJointConstraintDemo alloc] init];
-			break;
-		case 6:
-			[textField setText:@"Ratchet Joint"];
-			demo = [[RatchetJointConstraintDemo alloc] init];
-			break;
-		case 7:
-			[textField setText:@"Groove Joint"];
-			demo = [[GrooveJointConstraintDemo alloc] init];
-			break;
-		case 8:
-			[textField setText:@"Pivot Joint"];
-			demo = [[PivotJointConstraintDemo alloc] init];
-			break;
-		case 9:
-			[textField setText:@"Gear Joint"];
-			demo = [[GearJointConstraintDemo alloc] init];
-			break;
-		case 10:
-			[textField setText:@"Poly Demo"];
-			demo = [[PolyDemo alloc] init];
-			break;
-		case 11:
-			[textField setText:@"Car Demo"];
-			demo = [[CarDemo alloc] init];
-			break;			
-		case 12:
-			[textField setText:@"Simple Collision Demo"];
-			demo = [[SimpleCollisionDemo alloc] init];
-			break;
-		case 13:
-			[textField setText:@"Layer Collision Demo"];
-			demo = [[LayerCollisionDemo alloc] init];
-			break;
-		case 14:
-			[textField setText:@"Sparrow Ball Demo"];
-			demo = [[BallDemo alloc] init];
-			break;
-		case 15:
-			[textField setText:@"Theo Jansen Demo"];
-			demo = [[TheoJansenDemo alloc] init];
-			break;
-		case 16:
-			[textField setText:@"Rope Demo"];
-			demo = [[RopeDemo alloc] init];
-			break;
-		case 17:
-			[textField setText:@"Newtons Cradle Demo"];
-			demo = [[NewtonsCradleDemo alloc] init];
-			break;
-		case 18:
-			[textField setText:@"Blocks Demo"];
-			demo = [[BlocksDemo alloc] init];
-			break;
-		case 19:
-			[textField setText:@"Many Blocks Demo"];
-			demo = [[ManyBlocksDemo alloc] init];
-			break;
-		case 20:
-			[textField setText:@"Default Loader Demo"];
-			demo = [[DefaultLoaderDemo alloc] init];
-			break;
-		case 21:
-			[textField setText:@"PhysicsEditor Demo"];
-			demo = [[PhysicsEditorDemo alloc] init];
-			break;
-		case 22:
-			[textField setText:@"Explosion Effect Demo"];
-			demo = [[ExplosionEffectDemo alloc] init];
-			break;
-		case 23:
-			[textField setText:@"Implosion Effect Demo"];
-			demo = [[ImplosionEffectDemo alloc] init];
-			break;
-		case 24:
-			[textField setText:@"Buoyancy Demo"];
-			demo = [[BuoyancyDemo alloc] init];
-			break;
-		case 25:
-			[textField setText:@"Sensor Demo"];
-			demo = [[SensorDemo alloc] init];
-			break;
-		case 26:
-			[textField setText:@"Planet Demo"];
-			demo = [[PlanetDemo alloc] init];
-			break;
-		case 27:
-			[textField setText:@"Follow Path Demo"];
-			demo = [[FollowPathDemo alloc] init];
-			break;
 	}
 	
-	[demo setHeight:480 - 5 - 32];
-	
-	[self addChild:demo];
-	
-	[demo startDemo];
+	[self removeChild:mDemo];
+	[self showDemo];
 }
 
 - (void) dealloc {
-	[previousDemo release];
-	[nextDemo release];
+	if (mOptionSelector != nil) {
+		[mOptionSelector release];
+	}
+	
+	if (mDemo != nil) {
+		[mDemo release];
+	}
+	
+	[mOptions release];
 	
 	[super dealloc];
 }

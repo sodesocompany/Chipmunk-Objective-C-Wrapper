@@ -185,8 +185,7 @@ void updateShape(void *cpShapePtr, void* unused) {
 	CMBody *body = [self addStaticBody];
 	// TODO: Maybe not the best place..
 	[mBodies addObject:body];
-	
-	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height) to:cpv(width, height) radius:1];
+	CMSegmentShape *topWall =  [body addSegmentFrom:cpv(0, height + 1) to:cpv(width, height + 1) radius:1];
 	[topWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[topWall setElasticity:elasticity];
 	[topWall setFriction:friction];
@@ -196,12 +195,12 @@ void updateShape(void *cpShapePtr, void* unused) {
 	[rightWall setElasticity:elasticity];
 	[rightWall setFriction:friction];
 	
-	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 1) to:cpv(width, 1) radius:1];
+	CMSegmentShape *bottomWall = [body addSegmentFrom:cpv(0, 0) to:cpv(width, 0) radius:1];
 	[bottomWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[bottomWall setElasticity:elasticity];
 	[bottomWall setFriction:friction];
 	
-	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(0, 0) to:cpv(0, height) radius:1];
+	CMSegmentShape *leftWall = [body addSegmentFrom:cpv(-1, 0) to:cpv(-1, height) radius:1];
 	[leftWall setCollisionType:CM_WINDOW_CONTAINMENT_COLLISION_TYPE];
 	[leftWall setElasticity:elasticity];
 	[leftWall setFriction:friction];

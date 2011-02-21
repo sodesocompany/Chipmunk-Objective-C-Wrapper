@@ -9,48 +9,22 @@
 #import <Foundation/Foundation.h>
 
 #include "BaseDemo.h"
-#include "SimpleMotorJointConstraintDemo.h"
-#include "DampedRotarySpringConstraintDemo.h"
-#include "DampedSpringConstraintDemo.h"
-#include "GearJointConstraintDemo.h"
-#include "GrooveJointConstraintDemo.h"
-#include "PinJointConstraintDemo.h"
-#include "PivotJointConstraintDemo.h"
-#include "RatchetJointConstraintDemo.h"
-#include "RotaryLimitConstraintDemo.h"
-#include "SlideJointConstraintDemo.h"
-#include "PolyDemo.h"
-#include "CarDemo.h"
-#include "TheoJansenDemo.h"
-#include "LayerCollisionDemo.h"
-#include "SimpleCollisionDemo.h"
-#include "BallDemo.h"
-#include "RopeDemo.h"
-#include "NewtonsCradleDemo.h"
-#include "BlocksDemo.h"
-#include "ManyBlocksDemo.h"
-#include "DefaultLoaderDemo.h"
-#include "PhysicsEditorDemo.h"
-#include "ExplosionEffectDemo.h"
-#include "ImplosionEffectDemo.h"
-#include "BuoyancyDemo.h"
-#include "SensorDemo.h"
-#include "PlanetDemo.h"
-#include "FollowPathDemo.h"
+
+#include "OptionSelector.h"
+#include "Option.h"
 
 // --- Types ---------------------------------------------------------------------------------------
 
 // --- Interface ---------------------------------------------------------------------------------------
 
-@interface Game : SPStage <UIAccelerometerDelegate> {
+@interface Game : SPStage <SelectedOptionProtocol, DemoProtocol> {
 
 @private 
-	BaseDemo *demo;
-	int selected;
-	
-	SPImage *previousDemo;
-	SPImage *nextDemo;
-	SPTextField *textField;
+	NSArray *mOptions;
+	OptionSelector *mOptionSelector;
+
+	NSString *mSelectedOption;
+	BaseDemo *mDemo;
 }
 
 @end

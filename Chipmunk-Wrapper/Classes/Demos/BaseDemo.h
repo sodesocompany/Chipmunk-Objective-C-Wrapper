@@ -30,7 +30,14 @@
 	BOOL inverseGravity;
 	
 	SPTextField *frameRateTextField;
+	SPImage *backButton;
+	SPImage *rightButton;
+	SPImage *leftButton;
+	
+	id mDelegate;
 }
+
+@property (nonatomic, retain) id delegate;
 
 /**
   * Init method.
@@ -43,13 +50,18 @@
 - (void)initializeChipmunkObjects;
 
 - (void)showHideDebugDraw;
-- (BOOL)disableAccelerometer;
-- (BOOL)disableWindowContainment;
-- (BOOL)disableDefaultTouchHandler;
 
 - (void)startDemo;
 - (void)stopDemo;
 
 - (void)step:(SPEnterFrameEvent *)event;
+
+@end
+
+@protocol DemoProtocol
+
+- (void)back;
+- (void)previous;
+- (void)next;
 
 @end

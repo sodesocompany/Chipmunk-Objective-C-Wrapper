@@ -22,11 +22,17 @@ static double timeCount = 0;
 - (void)setupSpace;
 - (void)displayFrameRate:(double)passedTime;
 
+- (BOOL)disableAccelerometer;
+- (BOOL)disableWindowContainment;
+- (BOOL)disableDefaultTouchHandler;
+
 @end
 
 // --- Class implementation ------------------------------------------------------------------------
 
 @implementation BaseDemo
+
+@synthesize delegate = mDelegate;
 
 - (id) init {
 	if (self = [super init]) {
@@ -59,15 +65,60 @@ static double timeCount = 0;
 		frameRateTextField.x = 5;
 		frameRateTextField.y = 5;
 		[self addChild:frameRateTextField];
+		
+		backButton = [SPImage imageWithContentsOfFile:@"optionSelector.png"];
+		[backButton setX:10];
+		[backButton setY:480 - [backButton height] - 10];
+		[backButton addEventListener:@selector(backToOptionSelector:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		[self addChild:backButton];
+		
+		leftButton = [SPImage imageWithContentsOfFile:@"left_arrow_small.png"];
+		[leftButton setX:50];
+		[leftButton setY:480 - [leftButton height] - 10];
+		[leftButton addEventListener:@selector(previous:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		[self addChild:leftButton];
+
+		
+		rightButton = [SPImage imageWithContentsOfFile:@"right_arrow_small.png"];
+		[rightButton setX:90];
+		[rightButton setY:480 - [rightButton height] - 10];
+		[rightButton addEventListener:@selector(next:) atObject:self forType:SP_EVENT_TYPE_TOUCH];
+		[self addChild:rightButton];
+		
+		
 	}
 	return self;
 }
 
+- (void)backToOptionSelector:(SPTouchEvent*)event {
+	SPTouch *touch = [[event touchesWithTarget:backButton andPhase:SPTouchPhaseBegan] anyObject];
+	if (touch) {
+		[mDelegate back];
+	}
+}
+
+- (void)previous:(SPTouchEvent*)event {
+	SPTouch *touch = [[event touchesWithTarget:leftButton andPhase:SPTouchPhaseBegan] anyObject];
+	if (touch) {
+		[mDelegate previous];
+	}
+}
+
+- (void)next:(SPTouchEvent*)event {
+	SPTouch *touch = [[event touchesWithTarget:rightButton andPhase:SPTouchPhaseBegan] anyObject];
+	if (touch) {
+		[mDelegate next];
+	}
+}
+
+
 - (void)setupSpace {
+	// Setup the chipmunk space.
 	mSpace = [[CMSpace alloc] init];
 	[mSpace setSleepTimeThreshhold:5.0f];
 	[mSpace setIterations:25];
 	
+	// When applicable add the window containment.
 	if (![self disableWindowContainment]) {
 		[mSpace addWindowContainmentWithWidth:320 height:480 elasticity:0.0 friction:1.0];
 	}
@@ -172,6 +223,10 @@ static double timeCount = 0;
 	[debugDraw release];
 	[mTouchBody release];
 	[mSpace release];
+	[mDelegate release];
+	[backButton release];
+	[leftButton release];
+	[rightButton release];
 	
 	[super dealloc];
 }

@@ -33,7 +33,7 @@
 	[body1 setPositionUsingVect:pos1];
 	[body1 addToSpace];
 	
-	CMShape *shape1 = [body1 addCircleWithRadius:15.0f];
+	CMShape *shape1 = [body1 addCircleWithRadius:35.0f];
 	[shape1 setElasticity:0.0];
 	[shape1 setFriction:0.7];
 	[shape1 addToSpace];
@@ -42,13 +42,13 @@
 	[body2 setPositionUsingVect:pos2];
 	[body2 addToSpace];	
 	
-	CMShape *shape2 = [body2 addCircleWithRadius:15.0f];
+	CMShape *shape2 = [body2 addCircleWithRadius:35.0f];
 	[shape2 setElasticity:0.0];
 	[shape2 setFriction:0.7];
 	[shape2 addToSpace];
 
 	// Create the groove joint constraint between them.
-	CMConstraint *grooveJointConstraint = [body1 addGrooveJointConstraintWithBody:body2 grooveA:cpv(30,30) grooveB:cpv(30,-30) anchor1:cpv(-30,0)];
+	CMConstraint *grooveJointConstraint = [body1 addGrooveJointConstraintWithBody:body2 grooveA:cpv(70,70) grooveB:cpv(70,-70) anchor1:cpv(-70,0)];
 	[grooveJointConstraint addToSpace];
 	
 }

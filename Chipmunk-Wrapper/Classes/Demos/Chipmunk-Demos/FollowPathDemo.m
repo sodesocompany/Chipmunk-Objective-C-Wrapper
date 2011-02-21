@@ -36,7 +36,6 @@
 	[cmShape addToSpace];
 	
 	mCmStaticBody = [mSpace addStaticBody];
-	
 	mCmConstraint = [mCmBody addPivotJointConstraintWithBody:mCmStaticBody anchor1:cpvzero anchor2:cpv(60,60)];
 	
 	// Run around 80% of the speed.
@@ -73,7 +72,7 @@
 }
 
 - (void)force:(SPTouchEvent*)event {
-	SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseBegan] anyObject];
+	SPTouch *touch = [[event touchesWithTarget:self andPhase:SPTouchPhaseMoved] anyObject];
 	if (touch) {
 		SPPoint *spPoint = [touch locationInSpace:self];
 		[mCmConstraint setAnchor2:[spPoint toCpVect]];

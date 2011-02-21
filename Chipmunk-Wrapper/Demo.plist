@@ -33,37 +33,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>mySegmentBody</string>
-			<key>position</key>
-			<string>{160,240}</string>
-			<key>moment</key>
-			<integer>1</integer>
-			<key>mass</key>
-			<integer>1</integer>
-			<key>shapes</key>
-			<array>
-				<dict>
-					<key>name</key>
-					<string>mySegment</string>
-					<key>type</key>
-					<string>segment</string>
-					<key>friction</key>
-					<real>0.7</real>
-					<key>elasticity</key>
-					<integer>1</integer>
-					<key>sensor</key>
-					<false/>
-					<key>radius</key>
-					<integer>20</integer>
-					<key>from</key>
-					<string>{-15,-15}</string>
-					<key>to</key>
-					<string>{15,15}</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>myRectBody</string>
 			<key>position</key>
 			<string>{80,200}</string>
