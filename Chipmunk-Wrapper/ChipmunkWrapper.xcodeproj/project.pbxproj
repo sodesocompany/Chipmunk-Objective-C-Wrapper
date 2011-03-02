@@ -44,6 +44,7 @@
 		A178460812EF49B700EE1713 /* SimpleCollisionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A178460712EF49B700EE1713 /* SimpleCollisionDemo.m */; };
 		A178467F12EF651E00EE1713 /* CMArbiter.m in Sources */ = {isa = PBXBuildFile; fileRef = A178467E12EF651E00EE1713 /* CMArbiter.m */; };
 		A17846FA12F0810A00EE1713 /* TheoJansenDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A17846F812F0810A00EE1713 /* TheoJansenDemo.m */; };
+		A189F086131EA57B001B7C6F /* PhysicsEditor.plist in Resources */ = {isa = PBXBuildFile; fileRef = A189F085131EA57B001B7C6F /* PhysicsEditor.plist */; };
 		A1906EB012FF119800FFF013 /* Demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1906EAF12FF119800FFF013 /* Demo.plist */; };
 		A19070371300567200FFF013 /* CMDefaultLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A19070361300567200FFF013 /* CMDefaultLoader.m */; };
 		A19EA7C812EA1D080073D2A1 /* DampedRotarySpringConstraintDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A19EA7B412EA1D070073D2A1 /* DampedRotarySpringConstraintDemo.m */; };
@@ -89,7 +90,6 @@
 		A1CF12AB130470FA005CB7AE /* ExplosionEffectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF12A9130470FA005CB7AE /* ExplosionEffectDemo.m */; };
 		A1CF13D813058FE7005CB7AE /* BuoyancyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */; };
 		A1CF14F01305B322005CB7AE /* CMInvocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */; };
-		A1CF16011308234C005CB7AE /* PhysicsEditor.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1CF16001308234C005CB7AE /* PhysicsEditor.plist */; };
 		A1F9B6F812DCE56F0087394D /* CMCollisionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */; };
 		A1F9B72A12DCE5B30087394D /* SPDebugDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F9B72912DCE5B30087394D /* SPDebugDraw.m */; };
 		A1FC3B101311670700C7D1E1 /* optionSelector.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FC3B0F1311670700C7D1E1 /* optionSelector.png */; };
@@ -213,6 +213,7 @@
 		A178467E12EF651E00EE1713 /* CMArbiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMArbiter.m; sourceTree = "<group>"; };
 		A17846F812F0810A00EE1713 /* TheoJansenDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheoJansenDemo.m; sourceTree = "<group>"; };
 		A17846F912F0810A00EE1713 /* TheoJansenDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheoJansenDemo.h; sourceTree = "<group>"; };
+		A189F085131EA57B001B7C6F /* PhysicsEditor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhysicsEditor.plist; sourceTree = "<group>"; };
 		A1906EAF12FF119800FFF013 /* Demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Demo.plist; sourceTree = "<group>"; };
 		A19070351300567200FFF013 /* CMDefaultLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDefaultLoader.h; sourceTree = "<group>"; };
 		A19070361300567200FFF013 /* CMDefaultLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDefaultLoader.m; sourceTree = "<group>"; };
@@ -332,7 +333,6 @@
 		A1CF13D713058FE7005CB7AE /* BuoyancyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuoyancyDemo.m; sourceTree = "<group>"; };
 		A1CF14EE1305B322005CB7AE /* CMInvocationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInvocationUtils.h; sourceTree = "<group>"; };
 		A1CF14EF1305B322005CB7AE /* CMInvocationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMInvocationUtils.m; sourceTree = "<group>"; };
-		A1CF16001308234C005CB7AE /* PhysicsEditor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhysicsEditor.plist; sourceTree = "<group>"; };
 		A1F9B6F612DCE56F0087394D /* CMCollisionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCollisionHandler.h; sourceTree = "<group>"; };
 		A1F9B6F712DCE56F0087394D /* CMCollisionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCollisionHandler.m; sourceTree = "<group>"; };
 		A1F9B72812DCE5B30087394D /* SPDebugDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDebugDraw.h; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A1CF16001308234C005CB7AE /* PhysicsEditor.plist */,
+				A189F085131EA57B001B7C6F /* PhysicsEditor.plist */,
 				A1906EAF12FF119800FFF013 /* Demo.plist */,
 				A1C70AD912DCE430003C506C /* images */,
 				A1351399119868D9007C9395 /* MainWindow.xib */,
@@ -871,7 +871,6 @@
 				A135139A119868D9007C9395 /* MainWindow.xib in Resources */,
 				A178431112ECCB6800EE1713 /* football.png in Resources */,
 				A1906EB012FF119800FFF013 /* Demo.plist in Resources */,
-				A1CF16011308234C005CB7AE /* PhysicsEditor.plist in Resources */,
 				A15DDEA9130ED2E100275266 /* option.png in Resources */,
 				A15DE033130F273500275266 /* left_arrow.png in Resources */,
 				A15DE034130F273500275266 /* right_arrow.png in Resources */,
@@ -905,6 +904,7 @@
 				A1FC3D601312D37300C7D1E1 /* Sensor.png in Resources */,
 				A1FC3D631312D3C000C7D1E1 /* Planet.png in Resources */,
 				A1FC3D9E1312D4AC00C7D1E1 /* FollowPath.png in Resources */,
+				A189F086131EA57B001B7C6F /* PhysicsEditor.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,91 +8,105 @@
 			<key>ballon-icon</key>
 			<dict>
 				<key>anchorpoint</key>
-				<string>0.49219,0.44531</string>
-				<key>mass</key>
-				<real>1</real>
-				<key>elasticity</key>
-				<real>1</real>
-				<key>friction</key>
-				<real>0.7</real>
-				<key>fixtures</key>
-				<array>
+				<string>0.50000,0.50000</string>
+                <key>fixtures</key>
+                <array>
 
 					<dict>
-						<key>polygons</key>
+                        <key>mass</key>
+                        <real>2</real>
+                        <key>elasticity</key>
+                        <real>0.07</real>
+                        <key>friction</key>
+                        <real>0</real>
+                        <key>surface_velocity</key>
+                        <real>0</real>
+                        <key>layers</key>
+                        <integer>0</integer>
+                        <key>group</key>
+                        <integer>0</integer>
+                        <key>collision_type</key>
+                        <integer>0</integer>
+                        <key>isSensor</key>
+
+                           <false/>
+
+                        <key>polygons</key>
 						<array>
 
 							<array>
 	
-								<string>{ -2.50000,-10.00000 }</string>
+								<string>{ -3.50000,-17.00000 }</string>
 	
-								<string>{ 3.50000,-9.00000 }</string>
+								<string>{ 2.50000,-16.00000 }</string>
 	
-								<string>{ 7.00000,-18.00000 }</string>
+								<string>{ 5.50000,-24.00000 }</string>
 	
-								<string>{ 1.00000,-19.50000 }</string>
+								<string>{ 0.00000,-26.50000 }</string>
 	
-								<string>{ -6.00000,-18.00000 }</string>
+								<string>{ -1.50000,-27.00000 }</string>
+	
+								<string>{ -6.50000,-23.00000 }</string>
 
 							</array>
 
 							<array>
 	
-								<string>{ -12.00000,69.50000 }</string>
+								<string>{ -13.00000,62.50000 }</string>
 	
-								<string>{ 1.00000,62.50000 }</string>
+								<string>{ 0.00000,55.50000 }</string>
 	
-								<string>{ -2.50000,-10.00000 }</string>
+								<string>{ -3.50000,-17.00000 }</string>
 	
-								<string>{ -27.00000,7.50000 }</string>
+								<string>{ -28.00000,0.50000 }</string>
 	
-								<string>{ -41.50000,23.00000 }</string>
+								<string>{ -42.50000,16.00000 }</string>
 	
-								<string>{ -47.50000,37.00000 }</string>
+								<string>{ -48.50000,30.00000 }</string>
 	
-								<string>{ -42.50000,61.00000 }</string>
+								<string>{ -43.50000,54.00000 }</string>
 	
-								<string>{ -28.00000,70.50000 }</string>
+								<string>{ -29.00000,63.50000 }</string>
 
 							</array>
 
 							<array>
 	
-								<string>{ 36.00000,15.50000 }</string>
+								<string>{ 35.00000,8.50000 }</string>
 	
-								<string>{ 3.50000,-9.00000 }</string>
+								<string>{ 2.50000,-16.00000 }</string>
 	
-								<string>{ -2.50000,-10.00000 }</string>
+								<string>{ -3.50000,-17.00000 }</string>
 	
-								<string>{ 21.00000,71.50000 }</string>
+								<string>{ 0.00000,55.50000 }</string>
 	
-								<string>{ 22.00000,71.50000 }</string>
+								<string>{ 21.00000,64.50000 }</string>
 	
-								<string>{ 34.00000,68.50000 }</string>
+								<string>{ 33.00000,61.50000 }</string>
 	
-								<string>{ 43.50000,60.00000 }</string>
+								<string>{ 42.50000,53.00000 }</string>
 	
-								<string>{ 48.50000,40.00000 }</string>
+								<string>{ 47.50000,33.00000 }</string>
 
 							</array>
 
 							<array>
 	
-								<string>{ -42.50000,61.00000 }</string>
+								<string>{ -43.50000,54.00000 }</string>
 	
-								<string>{ -47.50000,37.00000 }</string>
+								<string>{ -48.50000,30.00000 }</string>
 	
-								<string>{ -47.50000,51.00000 }</string>
+								<string>{ -48.50000,44.00000 }</string>
 
 							</array>
 
 							<array>
 	
-								<string>{ 21.00000,71.50000 }</string>
+								<string>{ 21.00000,64.50000 }</string>
 	
-								<string>{ -2.50000,-10.00000 }</string>
+								<string>{ 0.00000,55.50000 }</string>
 	
-								<string>{ 1.00000,62.50000 }</string>
+								<string>{ 11.00000,62.50000 }</string>
 
 							</array>
 

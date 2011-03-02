@@ -55,9 +55,9 @@ static inline cpVect CPVectFromString(NSString *position) {
 
 + (void) createBody:(id)listener cmSpace:(CMSpace*)cmSpace bodyConfig:(NSDictionary*)bodyConfig name:(NSString*)name {
 	NSNumber *mass = [bodyConfig valueForKey:@"mass"];
-	NSNumber *moment = [bodyConfig valueForKey:@"moment"];
 	
-	CMBody *cmBody = [cmSpace addBodyWithMass:[mass floatValue] moment:[moment floatValue]];
+		//	CMBody *cmBody = [cmSpace addBodyWithMass:[mass floatValue] moment:[moment floatValue]];
+	CMBody *cmBody = [cmSpace addBodyWithMass:1 moment:0];
 	[cmBody setName:name];
 	
 	if ([listener respondsToSelector:@selector(bodyBeforeAddToSpace:)]) {
@@ -73,8 +73,29 @@ static inline cpVect CPVectFromString(NSString *position) {
 	NSArray *shapes = [bodyConfig valueForKey:@"fixtures"];
 	for (NSDictionary *shapeConfig in shapes) {
 		NSDictionary *polygons = [shapeConfig valueForKey:@"polygons"];
+		
+		NSNumber *elasticity = [shapeConfig valueForKey:@"elasticity"];
+		NSNumber *friction = [shapeConfig valueForKey:@"friction"];
+		NSNumber *layers = [shapeConfig	valueForKey:@"layers"];
+		NSNumber *group = [shapeConfig valueForKey:@"group"];
+		NSNumber *collisionType = [shapeConfig valueForKey:@"collision_type"];
+		NSNumber *isSensor = [shapeConfig valueForKey:@"isSensor"];
+		
 		for (NSArray *polygon in polygons) {
 			CMShape *cmShape = [cmBody addPolyWithPoints:polygon];
+			[cmShape setElasticity:[elasticity floatValue]];
+			[cmShape setFriction:[friction floatValue]];
+			
+			if ([layers floatValue] != 0) {
+				[cmShape setLayer:[layers floatValue]];
+			}	
+
+			if ([group floatValue] != 0) {
+				[cmShape setGroup:[group floatValue]];
+			}
+			
+			[cmShape setCollisionType:collisionType];
+			[cmShape setSensor:[isSensor boolValue]];
 			
 			if ([listener respondsToSelector:@selector(shapeBeforeAddToSpace:)]) {
 				[listener shapeBeforeAddToSpace:cmShape];
