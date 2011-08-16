@@ -62,7 +62,7 @@
 }
 
 - (float)stiffness {
-	return cpDampedRotarySpringGetStiffness(mCpConstraint);
+	return cpDampedSpringGetStiffness(mCpConstraint);
 }
 
 - (void)setDamping:(float)damping {
