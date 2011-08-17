@@ -719,7 +719,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 		[NSException raise:NSInternalInconsistencyException format:@"The fromBody could not be found in the space, is the name correct?.", NSStringFromSelector(_cmd)];
 	}
 	
-	return nil;
+	return cmBody;
 }
 
 + (CMBody*) toBody:(CMSpace*)cmSpace constraintConfig:(NSDictionary*)constraintConfig {
@@ -733,7 +733,7 @@ static inline cpVect CPVectFromString(NSString *position) {
 		[NSException raise:NSInternalInconsistencyException format:@"The toBody could not be found in the space, is the name correct?.", NSStringFromSelector(_cmd)];
 	}
 	
-	return nil;
+	return cmBody;
 }
 
 @end
